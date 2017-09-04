@@ -1,0 +1,7 @@
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/install.dir
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/list_install_components.dir
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/rebuild_cache.dir
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/ScintTutorial.dir
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/install/local.dir
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/install/strip.dir
+/home/galgoczi/simulation/ScintTutorial/build/CMakeFiles/edit_cache.dir

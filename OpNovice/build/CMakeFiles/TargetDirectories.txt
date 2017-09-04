@@ -1,0 +1,7 @@
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/install.dir
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/list_install_components.dir
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/rebuild_cache.dir
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/OpNovice.dir
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/install/strip.dir
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/install/local.dir
+/home/galgoczi/simulation/OpNovice/build/CMakeFiles/edit_cache.dir
