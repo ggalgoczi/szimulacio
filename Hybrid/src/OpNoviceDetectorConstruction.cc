@@ -59,7 +59,7 @@ OpNoviceDetectorConstruction::OpNoviceDetectorConstruction(G4double tw_p, G4doub
 
 
 {
-  fExpHall_x = fExpHall_y = fExpHall_z = 1.5*m;
+  fExpHall_x = fExpHall_y = fExpHall_z = 0.2*m;
   tw = tw_p;
   th = th_p;
   tl = tl_p;
@@ -109,6 +109,12 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4Material* tank2_mat = nist->FindOrBuildMaterial("G4_Si");
   //G4Element* Si = new G4Element("Silicium", "Si", z=14 , a=28.01*g/mole);
   //G4Material* Si = new G4Material("Silicium", density= 2.57*g/cm3, nelements=1);
+
+// Al
+//
+  G4Material* Al_mat = nist->FindOrBuildMaterial("G4_Al");
+  G4Material* Pb_mat = nist->FindOrBuildMaterial("G4_Pb");
+
 
 
 //PMMA, Polystyrene
@@ -385,8 +391,11 @@ G4double refractiveIndex3[] =
 
 //Scint1
 
+  G4double ScintX_mm = 150/2;
+  G4double ScintY_mm = 5/2; // height
+  G4double ScintZ_mm = 75/2;
 
-  G4Box* scint = new G4Box("scint",150/2*mm,5/2*mm,75/2*mm);
+  G4Box* scint = new G4Box("scint", ScintX_mm*mm, ScintY_mm*mm, ScintZ_mm*mm);
   G4LogicalVolume* scint_log = new G4LogicalVolume(scint,water,"scint",0,0,0);
 
   G4VPhysicalVolume* scint_phys;
@@ -401,9 +410,36 @@ G4double refractiveIndex3[] =
   G4LogicalVolume* up_log = new G4LogicalVolume(up,water,"up",0,0,0);
 
   G4VPhysicalVolume* up_phys;
-
   up_phys = new G4PVPlacement(0,G4ThreeVector((75+10)*mm,0,0.),up_log,
                       "up",expHall_log,
+                      false,0,checkOverlaps );
+
+// Pb box
+
+  G4double Pb_Box_Thickness_mm = 1./2; //note: half thickness must be given
+  G4double Pb_Box_Spacing_Y_mm = 1;  
+  G4Box* Pb_box = new G4Box("Pb_box",ScintX_mm*mm,  Pb_Box_Thickness_mm*mm, ScintZ_mm*mm);
+
+  G4VPhysicalVolume* Pb_phys;
+  G4SubtractionSolid* subtraction =
+    new G4SubtractionSolid("Pbbox-Holes", box, cyl);
+  
+  G4LogicalVolume* Pb_log = new G4LogicalVolume(subtraction, Pb_mat,"Pb_box",0,0,0);  
+  G4VPhysicalVolume* Pb_phys;
+  Pb_phys = new G4PVPlacement(0, G4ThreeVector(0, (ScintY_mm + Pb_Box_Thickness_mm + Pb_Box_Spacing_Y_mm)*mm,0.), Pb_log,
+                      "Pb_box",expHall_log,
+                      false,0,checkOverlaps );
+
+// Al box
+
+  G4double Al_Box_Thickness_mm = 2./2;
+  G4double Al_Box_Spacing_Y_mm = 9.5;  
+  G4Box* Al_box = new G4Box("Al_box",ScintX_mm*mm,  Al_Box_Thickness_mm*mm, ScintZ_mm*mm);
+  G4LogicalVolume* Al_log = new G4LogicalVolume(Al_box, Al_mat,"Al_box",0,0,0);
+
+  G4VPhysicalVolume* Al_phys;
+  Al_phys = new G4PVPlacement(0, G4ThreeVector(0, (ScintY_mm + Pb_Box_Thickness_mm + Pb_Box_Spacing_Y_mm + Al_Box_Thickness_mm + Al_Box_Spacing_Y_mm)*mm,0.), Al_log,
+                      "Al_box",expHall_log,
                       false,0,checkOverlaps );
 
 
