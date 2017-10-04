@@ -62,7 +62,7 @@ OpNovicePrimaryGeneratorAction::OpNovicePrimaryGeneratorAction()
   //FILE *f = fopen("file.txt", "w");
   //for(int k=0;k < 100;k++) fprintf(f,"%f\n",G4UniformRand());
   //fclose(f);
-  fParticleGun->SetParticleEnergy(60.0*keV);
+  fParticleGun->SetParticleEnergy(59.54*keV);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
