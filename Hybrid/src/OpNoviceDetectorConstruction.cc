@@ -1,33 +1,7 @@
-//
-// ********************************************************************
-// * License and Disclaimer                                           *
-// *                                                                  *
-// * The  Geant4 software  is  copyright of the Copyright Holders  of *
-// * the Geant4 Collaboration.  It is provided  under  the terms  and *
-// * conditions of the Geant4 Software License,  included in the file *
-// * LICENSE and available at  http://cern.ch/geant4/license .  These *
-// * include a list of copyright holders.                             *
-// *                                                                  *
-// * Neither the authors of this software system, nor their employing *
-// * institutes,nor the agencies providing financial support for this *
-// * work  make  any representation or  warranty, express or implied, *
-// * regarding  this  software system or assume any liability for its *
-// * use.  Please see the license in the file  LICENSE  and URL above *
-// * for the full disclaimer and the limitation of liability.         *
-// *                                                                  *
-// * This  code  implementation is the result of  the  scientific and *
-// * technical work of the GEANT4 collaboration.                      *
-// * By using,  copying,  modifying or  distributing the software (or *
-// * any work based  on the software)  you  agree  to acknowledge its *
-// * use  in  resulting  scientific  publications,  and indicate your *
-// * acceptance of all terms of the Geant4 Software license.          *
-// ********************************************************************
-//
+
 /// \file OpNovice/src/OpNoviceDetectorConstruction.cc
 /// \brief Implementation of the OpNoviceDetectorConstruction class
-//
-//
-//
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -57,7 +31,6 @@ OpNoviceDetectorConstruction::OpNoviceDetectorConstruction(G4double tw_p, G4doub
 //OpNoviceDetectorConstruction::OpNoviceDetectorConstruction(G4double th_p)
 // : G4VUserDetectorConstruction()
 
-
 {
   fExpHall_x = fExpHall_y = fExpHall_z = 0.2*m;
   tw = tw_p;
@@ -73,68 +46,42 @@ OpNoviceDetectorConstruction::~OpNoviceDetectorConstruction(){;}
 
 G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 {
-
-
-
-
-
-  // Get nist material manager (ez ad anyagot)
   G4NistManager* nist = G4NistManager::Instance();
 // ------------- Materials -------------
 
   G4double a, z, density;
   G4int nelements;
-
-  G4double density_psm;
-  G4double density_pmma;
+  G4double density_CsI;
 
 // Air
 //
   G4Element* N = new G4Element("Nitrogen", "N", z=7 , a=14.01*g/mole);
   G4Element* O = new G4Element("Oxygen"  , "O", z=8 , a=16.00*g/mole);
-
   G4Material* air = new G4Material("Air", density=1.29*mg/cm3, nelements=2);
   air->AddElement(N, 70.*perCent);
   air->AddElement(O, 30.*perCent);
 
-// Water
-//
-  G4Element* H = new G4Element("Hydrogen", "H", z=1 , a=1.01*g/mole);
-  G4Material* water = new G4Material("Water", density= 1.0*g/cm3, nelements=2);
-  water->AddElement(H, 2);
-  water->AddElement(O, 1);
-
 //Si
 //
-  G4Material* tank2_mat = nist->FindOrBuildMaterial("G4_Si");
-  //G4Element* Si = new G4Element("Silicium", "Si", z=14 , a=28.01*g/mole);
-  //G4Material* Si = new G4Material("Silicium", density= 2.57*g/cm3, nelements=1);
+  //G4Element* Si_mat = new G4Element("Silicium", "Si", z=14 , a=28.01*g/mole);
+  G4Material* Si_mat = new G4Material("Silicium", density= 2.57*g/cm3, nelements=1);
 
 // Al
 //
   G4Material* Al_mat = nist->FindOrBuildMaterial("G4_Al");
   G4Material* Pb_mat = nist->FindOrBuildMaterial("G4_Pb");
 
-
-
-//PMMA, Polystyrene
+// CsI (Tl)
 //
-	G4Element* C = new G4Element("Carbon", "C", z=6 , a=12.01*g/mole);
-    G4Material* pmma = new G4Material("PMMA", density_pmma = 1.190*g/cm3, nelements=3);
-    pmma->AddElement(C, 33.34*perCent);
-    pmma->AddElement(H, 53.33*perCent);
-    pmma->AddElement(O, 13.33*perCent);
+	a = 126.90447*g/mole;
+	G4Element* elI  = new G4Element("Iodine","I" , z= 53., a);
 
-    G4Material* psm = new G4Material("Polystyrene", density_psm = 1.05*g/cm3, nelements=2);
-    psm->AddElement(C, 50.00*perCent);
-    psm->AddElement(H, 50.00*perCent);
-
-    //G4Tubs* tube_in = new G4Tubs("Tube", 0*cm, (r-(0.003)), fTank_z, 0*deg, 360*deg);
-    //G4Tubs* tube_ring = new G4Tubs("Tube", (r-(0.003)), r, fTank_z, 0*deg, 360*deg);
-
-    //G4LogicalVolume* tubein_log = new G4LogicalVolume(tube_in,psm,"Tube_in");
-    //G4LogicalVolume* tubering_log = new G4LogicalVolume(tube_ring,pmma,"Tube_ring");
-
+	a = 132.90543*g/mole;
+	G4Element* elCs  = new G4Element("Oxygen"  ,"O" , z= 55., a);
+    G4Material* CsI = new G4Material("CsI", density_CsI = 4.51*g/cm3, nelements=2);
+    CsI->AddElement(elCs, 50.0*perCent);
+    CsI->AddElement(elI, 50.0*perCent);
+    
 //
 // ------------ Generate & Add Material Properties Table ------------
 //
@@ -151,7 +98,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   const G4int nEntries = sizeof(photonEnergy)/sizeof(G4double);
 
 //
-// Water
+// CsI
 //
   G4double refractiveIndex1[] =
             { 1.3435, 1.344,  1.3445, 1.345,  1.3455,
@@ -203,7 +150,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   myMPT1->AddProperty("SLOWCOMPONENT",photonEnergy, scintilSlow,     nEntries)
         ->SetSpline(true);
 
-  myMPT1->AddConstProperty("SCINTILLATIONYIELD",5./MeV);
+  myMPT1->AddConstProperty("SCINTILLATIONYIELD",2000./MeV);
   myMPT1->AddConstProperty("RESOLUTIONSCALE",1.0);
   myMPT1->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
   myMPT1->AddConstProperty("SLOWTIMECONSTANT",10.*ns);
@@ -267,13 +214,13 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4cout << "Water G4MaterialPropertiesTable" << G4endl;
   myMPT1->DumpTable();
 
-  water->SetMaterialPropertiesTable(myMPT1);
-  psm->SetMaterialPropertiesTable(myMPT1);
+  CsI->SetMaterialPropertiesTable(myMPT1);
+  //psm->SetMaterialPropertiesTable(myMPT1);
  
 
   // Set the Birks Constant for the Water scintillator
 
-  water->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
+  CsI->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
 
 //
 // PMMA
@@ -327,7 +274,7 @@ G4double refractiveIndex3[] =
   myMPT3->AddProperty("SLOWCOMPONENT",photonEnergy, scintilSlow3,     nEntries)
         ->SetSpline(true);
 
-  myMPT3->AddConstProperty("SCINTILLATIONYIELD",50./MeV);
+  myMPT3->AddConstProperty("SCINTILLATIONYIELD",5./MeV);
   myMPT3->AddConstProperty("RESOLUTIONSCALE",1.0);
   myMPT3->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
   myMPT3->AddConstProperty("SLOWTIMECONSTANT",10.*ns);
@@ -344,7 +291,7 @@ G4double refractiveIndex3[] =
   G4cout << "PMMA G4MaterialPropertiesTable" << G4endl;
   myMPT3->DumpTable();
 
-  pmma->SetMaterialPropertiesTable(myMPT3);
+  CsI->SetMaterialPropertiesTable(myMPT3);
 
 
 
@@ -387,16 +334,16 @@ G4double refractiveIndex3[] =
     = new G4LogicalVolume(expHall_box,air,"World",0,0,0);
 
   G4VPhysicalVolume* expHall_phys
-    = new G4PVPlacement(0,G4ThreeVector(),expHall_log,"World",0,false,0);
+    = new G4PVPlacement(0,G4ThreeVector(),expHall_log,"World",0,false,checkOverlaps);
 
 //Scint1
 
-  G4double ScintX_mm = 150/2;
-  G4double ScintY_mm = 5/2; // height
-  G4double ScintZ_mm = 75/2;
+  G4double ScintX_mm = 150./2;
+  G4double ScintY_mm = 5./2; // height
+  G4double ScintZ_mm = 75./2;
 
   G4Box* scint = new G4Box("scint", ScintX_mm*mm, ScintY_mm*mm, ScintZ_mm*mm);
-  G4LogicalVolume* scint_log = new G4LogicalVolume(scint,water,"scint",0,0,0);
+  G4LogicalVolume* scint_log = new G4LogicalVolume(scint,CsI,"scint",0,0,0);
 
   G4VPhysicalVolume* scint_phys;
 
@@ -406,11 +353,16 @@ G4double refractiveIndex3[] =
      
 //MPPC
 
-  G4Box* up = new G4Box("up",20/2*mm,8/2*mm,75/2*mm);
-  G4LogicalVolume* up_log = new G4LogicalVolume(up,water,"up",0,0,0);
+  G4double MPPCX_mm = 1./2;
+  G4double MPPCY_mm = 5./2; // height
+  G4double MPPCZ_mm = 10/2;
+
+
+  G4Box* up = new G4Box("up",MPPCX_mm*mm,MPPCY_mm*mm,MPPCZ_mm*mm);
+  G4LogicalVolume* up_log = new G4LogicalVolume(up,CsI,"up",0,0,0);
 
   G4VPhysicalVolume* up_phys;
-  up_phys = new G4PVPlacement(0,G4ThreeVector((75+10)*mm,0,0.),up_log,
+  up_phys = new G4PVPlacement(0,G4ThreeVector((ScintX_mm+MPPCX_mm)*mm,0,0.),up_log,
                       "up",expHall_log,
                       false,0,checkOverlaps );
 
@@ -421,15 +373,16 @@ G4double refractiveIndex3[] =
   G4Box* Pb_box = new G4Box("Pb_box",ScintX_mm*mm,  Pb_Box_Thickness_mm*mm, ScintZ_mm*mm);
 
   G4VPhysicalVolume* Pb_phys;
-  G4SubtractionSolid* subtraction =
+ /* G4SubtractionSolid* subtraction =
     new G4SubtractionSolid("Pbbox-Holes", box, cyl);
   
   G4LogicalVolume* Pb_log = new G4LogicalVolume(subtraction, Pb_mat,"Pb_box",0,0,0);  
   G4VPhysicalVolume* Pb_phys;
-  Pb_phys = new G4PVPlacement(0, G4ThreeVector(0, (ScintY_mm + Pb_Box_Thickness_mm + Pb_Box_Spacing_Y_mm)*mm,0.), Pb_log,
-                      "Pb_box",expHall_log,
+ // Pb_phys = new G4PVPlacement(0, G4ThreeVector(0, (ScintY_mm + Pb_Box_Thickness_mm + Pb_Box_Spacing_Y_mm)*mm,0.), Pb_log,
+  //                    "Pb_box",expHall_log,
                       false,0,checkOverlaps );
-
+  */
+  
 // Al box
 
   G4double Al_Box_Thickness_mm = 2./2;
@@ -443,108 +396,25 @@ G4double refractiveIndex3[] =
                       false,0,checkOverlaps );
 
 
-//checkOverlaps   
-
-
-
-
-
-//
-/*
-  G4Box* scint1 = new G4Box("scint1",tw*mm,th*mm,tl*mm);
-  G4LogicalVolume* scint1_log = new G4LogicalVolume(scint1,water,"scint1",0,0,0);
-  G4VPhysicalVolume* scint1_phys = new G4PVPlacement(0,G4ThreeVector(0,0,0*mm),scint1_log,"scint1",expHall_log,false,0);
-
-  G4Box* scint2 = new G4Box("scint2",tw*mm,th*mm,tl*mm);
-  G4LogicalVolume* scint2_log = new G4LogicalVolume(scint2,water,"scint2",0,0,0);
-  G4VPhysicalVolume* scint2_phys = new G4PVPlacement(myRotation,G4ThreeVector(11*mm,0,0*mm),scint2_log,"scint2",expHall_log,false,0);
-*/
-//  G4Box* scint3 = new G4Box("scint3",5*mm,5*mm,500*mm);
-//  G4LogicalVolume* scint3_log = new G4LogicalVolume(scint3,water,"scint3",0,0,0);
-//  G4VPhysicalVolume* scint3_phys = new G4PVPlacement(0,G4ThreeVector(22*mm,0,0*mm),scint3_log,"scint3",expHall_log,false,0);
-
-//  G4Box* scint4 = new G4Box("scint4",5*mm,5*mm,500*mm);
-//  G4LogicalVolume* scint4_log = new G4LogicalVolume(scint4,water,"scint4",0,0,0);
-//  G4VPhysicalVolume* scint4_phys = new G4PVPlacement(0,G4ThreeVector(33*mm,0,0*mm),scint4_log,"scint4",expHall_log,false,0);
-
-//  G4Box* scint5 = new G4Box("scint5",5*mm,5*mm,500*mm);
-//  G4LogicalVolume* scint5_log = new G4LogicalVolume(scint5,water,"scint5",0,0,0);
-//  G4VPhysicalVolume* scint5_phys = new G4PVPlacement(0,G4ThreeVector(44*mm,0,0*mm),scint5_log,"scint5",expHall_log,false,0);
-
-
-// Kollektor
-/*
-  G4Box* f1 = new G4Box("f1",tw*mm,th*mm,tw*mm);
-  G4LogicalVolume* f1_log = new G4LogicalVolume(f1,water,"f1",0,0,0);
-  G4VPhysicalVolume* f1_phys = new G4PVPlacement(0,G4ThreeVector(0,0,505*mm),f1_log,"f1",expHall_log,false,0);
-
-  G4Box* a1 = new G4Box("a1",tw*mm,th*mm,tw*mm);
-  G4LogicalVolume* a1_log = new G4LogicalVolume(a1,water,"a1",0,0,0);
-  G4VPhysicalVolume* a1_phys = new G4PVPlacement(0,G4ThreeVector(0,0,-505*mm),a1_log,"a1",expHall_log,false,0);
-
-  G4Box* f2 = new G4Box("f2",5*mm,5*mm,5*mm);
-  G4LogicalVolume* f2_log = new G4LogicalVolume(f2,water,"f2",0,0,0);
-  G4VPhysicalVolume* f2_phys = new G4PVPlacement(0,G4ThreeVector(0,0,495*mm),f2_log,"f2",scint2_log,false,0);
-
-  G4Box* a2 = new G4Box("a2",5*mm,5*mm,5*mm);
-  G4LogicalVolume* a2_log = new G4LogicalVolume(a2,water,"a2",0,0,0);
-  G4VPhysicalVolume* a2_phys = new G4PVPlacement(0,G4ThreeVector(0,0,-495*mm),a2_log,"a2",scint2_log,false,0);
-*/
-
-
-
-
-
 
 // ------------- Surfaces --------------
 //
 // Water -> Polystyrene Tank
 //
-  
-
-// scint surface
 //
   G4OpticalSurface* opWaterSurfaceS = new G4OpticalSurface("WaterSurfaceS");
   opWaterSurfaceS->SetType(dielectric_dielectric);
   opWaterSurfaceS->SetFinish(polishedbackpainted);
   opWaterSurfaceS->SetModel(unified);
-
-   
-   new G4LogicalBorderSurface("WaterSurfaceS",
+  new G4LogicalBorderSurface("WaterSurfaceS",
                                  scint_phys,expHall_phys,opWaterSurfaceS);
-   
-
-//   for (int i=0;i<10;i++) {
-//     new G4LogicalBorderSurface("WaterSurfaceS",
-//                                 up_phys[i],expHall_phys,opWaterSurfaceS);
-//   }
-
-//   for (int i=0;i<10;i++) {
-//     new G4LogicalBorderSurface("WaterSurfaceS",
-//                                 down_phys[i],expHall_phys,opWaterSurfaceS);
-//   }
-
- // new G4LogicalBorderSurface("WaterSurfaceS",
-//                                 f1_phys,expHall_phys,opWaterSurfaceS);
- 
- // new G4LogicalBorderSurface("WaterSurfaceS",
-  //                               a1_phys,expHall_phys,opWaterSurfaceS);
-
-
-
-
-
+  
 // Air Bubble
 //
 //    G4OpticalSurface* opAirSurface = new G4OpticalSurface("AirSurface");
 //    opAirSurface->SetType(dielectric_dielectric);
 //    opAirSurface->SetFinish(polished);
 //    opAirSurface->SetModel(glisur);
-
-
-
-
-
 //
 // Generate & Add Material Properties Table attached to the optical surfaces
 //
@@ -556,6 +426,10 @@ G4double refractiveIndex3[] =
   G4double specularLobe[num]    = {0.3, 0.3};
   G4double specularSpike[num]   = {0.2, 0.2};
   G4double backScatter[num]     = {0.2, 0.2};
+  G4double reflectivity[num] = {0.98, 0.98};
+
+  //G4double absorption2[num] = {0.01*mm, 0.01*mm};
+  //myST1->AddProperty("ABSLENGTH",                ephoton, absorption2, num);
 
   G4MaterialPropertiesTable* myST1 = new G4MaterialPropertiesTable();
 
@@ -563,6 +437,7 @@ G4double refractiveIndex3[] =
   myST1->AddProperty("SPECULARLOBECONSTANT",  ephoton, specularLobe,    num);
   myST1->AddProperty("SPECULARSPIKECONSTANT", ephoton, specularSpike,   num);
   myST1->AddProperty("BACKSCATTERCONSTANT",   ephoton, backScatter,     num);
+  myST1->AddProperty("REFLECTIVITY", ephoton, reflectivity, num);
 
   G4cout << "Water Surface G4MaterialPropertiesTable" << G4endl;
   myST1->DumpTable();

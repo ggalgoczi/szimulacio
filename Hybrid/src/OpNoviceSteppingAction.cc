@@ -105,17 +105,6 @@ G4VPhysicalVolume* postvolume  =
 	<<" "<<Gtime/ns<<" 2"<<std::endl;
     track->SetTrackStatus(fStopAndKill);}
 
-   
-   if (prevolume->GetName() == "down" && track->GetCreatorProcess()->GetProcessName()=="Scintillation"){
-    std::cout<<"ABCDEF "<<eventNumber<<" down "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
-	<<" "<<Gtime/ns<<" 1"<<std::endl;
-    track->SetTrackStatus(fStopAndKill);}
-
-   if (prevolume->GetName() == "down" && track->GetCreatorProcess()->GetProcessName()=="Cerenkov"){
-    std::cout<<"ABCDEF "<<eventNumber<<" down "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
-	<<" "<<Gtime/ns<<" 2"<<std::endl;
-    track->SetTrackStatus(fStopAndKill);}
-
 
 //   if (prevolume->GetName() == "f1" && track->GetCreatorProcess()->GetProcessName()=="Scintillation"){
 //    std::cout<<"ABCDEF "<<eventNumber<<" 1 "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
