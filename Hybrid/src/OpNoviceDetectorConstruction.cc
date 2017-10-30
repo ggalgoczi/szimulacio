@@ -85,8 +85,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4double a, z, density;
   G4int nelements;
 
-  G4double density_psm;
-  G4double density_pmma;
+  G4double density_CsI;
 
 // Air
 //
@@ -117,17 +116,18 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 
 
 
-//PMMA, Polystyrene
+// CsI
 //
-	G4Element* C = new G4Element("Carbon", "C", z=6 , a=12.01*g/mole);
-    G4Material* pmma = new G4Material("PMMA", density_pmma = 1.190*g/cm3, nelements=3);
-    pmma->AddElement(C, 33.34*perCent);
-    pmma->AddElement(H, 53.33*perCent);
-    pmma->AddElement(O, 13.33*perCent);
+	a = 126.90447*g/mole;
+	G4Element* elI  = new G4Element("Iodine","I" , z= 53., a);
 
-    G4Material* psm = new G4Material("Polystyrene", density_psm = 1.05*g/cm3, nelements=2);
-    psm->AddElement(C, 50.00*perCent);
-    psm->AddElement(H, 50.00*perCent);
+	a = 132.90543*g/mole;
+	G4Element* elCs  = new G4Element("Oxygen"  ,"O" , z= 55., a);
+    
+    G4Material* CsI = new G4Material("CsI", density_CsI = 4.51*g/cm3, nelements=2);
+    CsI->AddElement(elCs, 50.0*perCent);
+    CsI->AddElement(elI, 50.0*perCent);
+
 
     //G4Tubs* tube_in = new G4Tubs("Tube", 0*cm, (r-(0.003)), fTank_z, 0*deg, 360*deg);
     //G4Tubs* tube_ring = new G4Tubs("Tube", (r-(0.003)), r, fTank_z, 0*deg, 360*deg);
@@ -203,7 +203,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   myMPT1->AddProperty("SLOWCOMPONENT",photonEnergy, scintilSlow,     nEntries)
         ->SetSpline(true);
 
-  myMPT1->AddConstProperty("SCINTILLATIONYIELD",5./MeV);
+  myMPT1->AddConstProperty("SCINTILLATIONYIELD",2000./MeV);
   myMPT1->AddConstProperty("RESOLUTIONSCALE",1.0);
   myMPT1->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
   myMPT1->AddConstProperty("SLOWTIMECONSTANT",10.*ns);
@@ -268,7 +268,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   myMPT1->DumpTable();
 
   water->SetMaterialPropertiesTable(myMPT1);
-  psm->SetMaterialPropertiesTable(myMPT1);
+  //psm->SetMaterialPropertiesTable(myMPT1);
  
 
   // Set the Birks Constant for the Water scintillator
@@ -327,7 +327,7 @@ G4double refractiveIndex3[] =
   myMPT3->AddProperty("SLOWCOMPONENT",photonEnergy, scintilSlow3,     nEntries)
         ->SetSpline(true);
 
-  myMPT3->AddConstProperty("SCINTILLATIONYIELD",50./MeV);
+  myMPT3->AddConstProperty("SCINTILLATIONYIELD",5./MeV);
   myMPT3->AddConstProperty("RESOLUTIONSCALE",1.0);
   myMPT3->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
   myMPT3->AddConstProperty("SLOWTIMECONSTANT",10.*ns);
@@ -344,7 +344,7 @@ G4double refractiveIndex3[] =
   G4cout << "PMMA G4MaterialPropertiesTable" << G4endl;
   myMPT3->DumpTable();
 
-  pmma->SetMaterialPropertiesTable(myMPT3);
+  CsI->SetMaterialPropertiesTable(myMPT3);
 
 
 
@@ -391,9 +391,9 @@ G4double refractiveIndex3[] =
 
 //Scint1
 
-  G4double ScintX_mm = 150/2;
-  G4double ScintY_mm = 5/2; // height
-  G4double ScintZ_mm = 75/2;
+  G4double ScintX_mm = 150./2;
+  G4double ScintY_mm = 5./2; // height
+  G4double ScintZ_mm = 75./2;
 
   G4Box* scint = new G4Box("scint", ScintX_mm*mm, ScintY_mm*mm, ScintZ_mm*mm);
   G4LogicalVolume* scint_log = new G4LogicalVolume(scint,water,"scint",0,0,0);
@@ -406,11 +406,16 @@ G4double refractiveIndex3[] =
      
 //MPPC
 
-  G4Box* up = new G4Box("up",20/2*mm,8/2*mm,75/2*mm);
+  G4double MPPCX_mm = 1./2;
+  G4double MPPCY_mm = 5./2; // height
+  G4double MPPCZ_mm = 10/2;
+
+
+  G4Box* up = new G4Box("up",MPPCX_mm*mm,MPPCY_mm*mm,MPPCZ_mm*mm);
   G4LogicalVolume* up_log = new G4LogicalVolume(up,water,"up",0,0,0);
 
   G4VPhysicalVolume* up_phys;
-  up_phys = new G4PVPlacement(0,G4ThreeVector((75+10)*mm,0,0.),up_log,
+  up_phys = new G4PVPlacement(0,G4ThreeVector((ScintX_mm+MPPCX_mm)*mm,0,0.),up_log,
                       "up",expHall_log,
                       false,0,checkOverlaps );
 
@@ -421,15 +426,16 @@ G4double refractiveIndex3[] =
   G4Box* Pb_box = new G4Box("Pb_box",ScintX_mm*mm,  Pb_Box_Thickness_mm*mm, ScintZ_mm*mm);
 
   G4VPhysicalVolume* Pb_phys;
-  G4SubtractionSolid* subtraction =
+ /* G4SubtractionSolid* subtraction =
     new G4SubtractionSolid("Pbbox-Holes", box, cyl);
   
   G4LogicalVolume* Pb_log = new G4LogicalVolume(subtraction, Pb_mat,"Pb_box",0,0,0);  
   G4VPhysicalVolume* Pb_phys;
-  Pb_phys = new G4PVPlacement(0, G4ThreeVector(0, (ScintY_mm + Pb_Box_Thickness_mm + Pb_Box_Spacing_Y_mm)*mm,0.), Pb_log,
-                      "Pb_box",expHall_log,
+ // Pb_phys = new G4PVPlacement(0, G4ThreeVector(0, (ScintY_mm + Pb_Box_Thickness_mm + Pb_Box_Spacing_Y_mm)*mm,0.), Pb_log,
+  //                    "Pb_box",expHall_log,
                       false,0,checkOverlaps );
-
+  */
+  
 // Al box
 
   G4double Al_Box_Thickness_mm = 2./2;
@@ -556,6 +562,10 @@ G4double refractiveIndex3[] =
   G4double specularLobe[num]    = {0.3, 0.3};
   G4double specularSpike[num]   = {0.2, 0.2};
   G4double backScatter[num]     = {0.2, 0.2};
+  G4double reflectivity[num] = {0.9, 0.9};
+
+  //G4double absorption2[num] = {0.01*mm, 0.01*mm};
+  //myST1->AddProperty("ABSLENGTH",                ephoton, absorption2, num);
 
   G4MaterialPropertiesTable* myST1 = new G4MaterialPropertiesTable();
 
@@ -563,6 +573,7 @@ G4double refractiveIndex3[] =
   myST1->AddProperty("SPECULARLOBECONSTANT",  ephoton, specularLobe,    num);
   myST1->AddProperty("SPECULARSPIKECONSTANT", ephoton, specularSpike,   num);
   myST1->AddProperty("BACKSCATTERCONSTANT",   ephoton, backScatter,     num);
+  myST1->AddProperty("REFLECTIVITY", ephoton, reflectivity, num);
 
   G4cout << "Water Surface G4MaterialPropertiesTable" << G4endl;
   myST1->DumpTable();
