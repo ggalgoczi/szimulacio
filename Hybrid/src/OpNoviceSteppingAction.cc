@@ -38,6 +38,15 @@
 #include "G4RunManager.hh"
 #include "G4SystemOfUnits.hh"
 
+void filePutContents(const std::string& name, const std::string& content, bool append = false) {
+    std::ofstream outfile;
+    if (append)
+		outfile.open(name.c_str(), std::ios_base::app);
+    else
+        outfile.open(name.c_str());
+    outfile << content;
+}
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 OpNoviceSteppingAction::OpNoviceSteppingAction()
@@ -57,6 +66,7 @@ OpNoviceSteppingAction::~OpNoviceSteppingAction()
 
 void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
 {
+	
   G4int eventNumber = G4RunManager::GetRunManager()->
                                               GetCurrentEvent()->GetEventID();
 
@@ -65,17 +75,11 @@ void OpNoviceSteppingAction::UserSteppingAction(const G4Step* step)
      fScintillationCounter = 0;
      fCerenkovCounter = 0;
   }
-
   G4Track* track = step->GetTrack();
-  if(track->GetTrackStatus()!=fAlive) { return; } 
 
-  G4String ParticleName = track->GetDynamicParticle()->
-                                 GetParticleDefinition()->GetParticleName();
-
-//between World and Tank2
 G4VPhysicalVolume* prevolume  =
     step->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
-G4VPhysicalVolume* postvolume  =
+	G4VPhysicalVolume* postvolume  =
     step->GetPostStepPoint()->GetTouchableHandle()->GetVolume();
 
     G4double preX = step->GetPreStepPoint()->GetPosition().x();
@@ -84,6 +88,45 @@ G4VPhysicalVolume* postvolume  =
     G4double preKinE  = step->GetPreStepPoint()->GetKineticEnergy();	
     G4double Gtime  =  track->GetGlobalTime();	
     G4int copyNumber = step->GetPreStepPoint()->GetTouchableHandle()->GetCopyNumber();
+
+ G4String ParticleName = track->GetDynamicParticle()->
+                                 GetParticleDefinition()->GetParticleName();
+
+
+  
+  
+  if (track->GetDefinition()->GetParticleName()=="e-")
+		{
+			
+		std::ostringstream os;		
+		os <<eventNumber<<" Cpy"<<copyNumber<< "Steps before " << track->GetCurrentStepNumber() << " XYZ "<<preX/mm<<" "<<preY/mm<<" E: "<<preKinE/keV
+		<<" "<<Gtime/ns<<std::endl;
+				std::string var = os.str();	
+
+		
+		filePutContents("./electrons.txt",var,true);
+
+		//exit (EXIT_FAILURE);
+		}
+  
+ if (track->GetDefinition()->GetParticleName()=="e-" && track->GetCurrentStepNumber() == 1)
+		{
+			
+		std::ostringstream os;		
+		os <<preKinE/keV << track->GetCreatorProcess()->GetProcessName() << std::endl;
+		std::string var = os.str();	
+
+		
+		filePutContents("./electrons_newborn_energy.txt",var,true);
+
+		//exit (EXIT_FAILURE);
+		}
+	  
+  if(track->GetTrackStatus()!=fAlive) { return; } 
+
+ 
+//between World and Tank2
+
 //    if (preZ<-3*m)
 
 /*   if (prevolume->GetName() == "f1")
@@ -93,17 +136,46 @@ G4VPhysicalVolume* postvolume  =
 	track->SetTrackStatus(fStopAndKill);
 }*/
 
-    std::cout<<"MNOPQ "<<prevolume->GetName()<<std::endl;
+  //  std::cout<<"MNOPQ "<<prevolume->GetName()<<std::endl;
 
-   if (prevolume->GetName() == "up" && track->GetCreatorProcess()->GetProcessName()=="Scintillation"){
-    std::cout<<"ABCDEF "<<eventNumber<<" up "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
-	<<" "<<Gtime/ns<<" 1"<<std::endl;
-    track->SetTrackStatus(fStopAndKill);}
 
-   if (prevolume->GetName() == "up" && track->GetCreatorProcess()->GetProcessName()=="Cerenkov"){
+
+ /*  if (postvolume->GetName() == "up" && track->GetCreatorProcess()->GetProcessName()=="Scintillation")
+		{
+	
+
+		std::ofstream out("scints.txt",fstream::app);
+		std::streambuf *coutbuf = std::cout.rdbuf(); //save old buf
+		std::cout.rdbuf(out.rdbuf()); //redirect std::cout to out.txt!
+
+		std::cout<<"ABCDEF "<<eventNumber<<" up "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
+		<<" "<<Gtime/ns<<" 1"<<std::endl;
+		track->SetTrackStatus(fStopAndKill);
+
+		std::cout.rdbuf(coutbuf); //reset to standard output again
+
+		}*/
+
+  
+
+   if (postvolume->GetName() == "up" && track->GetCreatorProcess()->GetProcessName()=="Scintillation")
+		{
+		std::ostringstream oss;
+		oss <<eventNumber<<" "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
+		<<" "<<Gtime/ns<<std::endl;
+		track->SetTrackStatus(fStopAndKill);
+
+		std::string var = oss.str();	
+
+
+		filePutContents("./scint.txt",var,true);
+		}
+
+
+  /* if (prevolume->GetName() == "up" && track->GetCreatorProcess()->GetProcessName()=="Cerenkov"){
     std::cout<<"ABCDEF "<<eventNumber<<" up "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
 	<<" "<<Gtime/ns<<" 2"<<std::endl;
-    track->SetTrackStatus(fStopAndKill);}
+    track->SetTrackStatus(fStopAndKill);}*/
 
 
 //   if (prevolume->GetName() == "f1" && track->GetCreatorProcess()->GetProcessName()=="Scintillation"){
@@ -134,7 +206,7 @@ G4VPhysicalVolume* postvolume  =
 //	<<" "<<preZ/m<<" "<<preKinE/eV<<" "<<Gtime/ns<<std::endl;
 
 
- if (ParticleName == "opticalphoton" && preX>-5*mm && preX<5*mm)  std::cout<<"GHIJKL "<<track->GetTrackID()<<" "<<preKinE/eV<<" "<<Gtime/ns<<std::endl;
+// if (ParticleName == "opticalphoton" && preX>-5*mm && preX<5*mm)  std::cout<<"GHIJKL "<<track->GetTrackID()<<" "<<preKinE/eV<<" "<<Gtime/ns<<std::endl;
   if (ParticleName == "opticalphoton") return;
 
   const std::vector<const G4Track*>* secondaries =

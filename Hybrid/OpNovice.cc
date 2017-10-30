@@ -52,6 +52,7 @@
 #include "G4UImanager.hh"
 
 #include "OpNovicePhysicsList.hh"
+//#include "G4EmPenelopePhysics.hh"
 #include "OpNoviceDetectorConstruction.hh"
 
 #include "OpNoviceActionInitialization.hh"
@@ -133,6 +134,10 @@ int main(int argc,char** argv)
   runManager-> SetUserInitialization(new OpNoviceDetectorConstruction(0,0,0));
   // Physics list
   runManager-> SetUserInitialization(new OpNovicePhysicsList());
+  //runManager-> SetUserInitialization(new G4EmPenelopePhysics());
+  
+  
+  
   // User action initialization
   runManager->SetUserInitialization(new OpNoviceActionInitialization());
 

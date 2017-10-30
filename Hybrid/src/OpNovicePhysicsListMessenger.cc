@@ -83,8 +83,8 @@ void OpNovicePhysicsListMessenger::SetNewValue(G4UIcommand* command,
    {fPhysicsList->SetVerbose(fVerboseCmd->GetNewIntValue(newValue));}
 
   if( command == fCerenkovCmd )
-   {fPhysicsList->
-              SetNbOfPhotonsCerenkov(fCerenkovCmd->GetNewIntValue(newValue));}
+   {//fPhysicsList->        SetNbOfPhotonsCerenkov(fCerenkovCmd->GetNewIntValue(newValue));
+	   }
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

@@ -1,90 +1,110 @@
-//
-// ********************************************************************
-// * License and Disclaimer                                           *
-// *                                                                  *
-// * The  Geant4 software  is  copyright of the Copyright Holders  of *
-// * the Geant4 Collaboration.  It is provided  under  the terms  and *
-// * conditions of the Geant4 Software License,  included in the file *
-// * LICENSE and available at  http://cern.ch/geant4/license .  These *
-// * include a list of copyright holders.                             *
-// *                                                                  *
-// * Neither the authors of this software system, nor their employing *
-// * institutes,nor the agencies providing financial support for this *
-// * work  make  any representation or  warranty, express or implied, *
-// * regarding  this  software system or assume any liability for its *
-// * use.  Please see the license in the file  LICENSE  and URL above *
-// * for the full disclaimer and the limitation of liability.         *
-// *                                                                  *
-// * This  code  implementation is the result of  the  scientific and *
-// * technical work of the GEANT4 collaboration.                      *
-// * By using,  copying,  modifying or  distributing the software (or *
-// * any work based  on the software)  you  agree  to acknowledge its *
-// * use  in  resulting  scientific  publications,  and indicate your *
-// * acceptance of all terms of the Geant4 Software license.          *
-// ********************************************************************
-//
-//
-//
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#include "globals.hh"
 #include "OpNovicePhysicsList.hh"
-#include "OpNovicePhysicsListMessenger.hh"
+#include "globals.hh"
 
-#include "G4ParticleDefinition.hh"
-#include "G4ParticleTypes.hh"
-#include "G4ParticleTable.hh"
+#include "G4DecayPhysics.hh"
+#include "G4EmStandardPhysics.hh"
+#include "G4EmStandardPhysics_option1.hh"
+#include "G4EmStandardPhysics_option2.hh"
+#include "G4EmStandardPhysics_option3.hh"
+#include "G4EmStandardPhysics_option4.hh"
+//#include "G4EmStandardPhysicsGS.hh"
+#include "G4EmLowEPPhysics.hh"
+//#include "G4EmStandardPhysicsWVI.hh"
+//#include "G4EmStandardPhysicsGS.hh"
+//#include "G4EmStandardPhysicsSS.hh"
+#include "G4EmLivermorePhysics.hh"
+#include "G4EmPenelopePhysics.hh"
+#include "G4HadronElasticPhysics.hh"
+#include "G4HadronElasticPhysicsXS.hh"
+#include "G4HadronElasticPhysicsHP.hh"
+#include "G4HadronHElasticPhysics.hh"
+#include "G4ChargeExchangePhysics.hh"
+#include "G4NeutronTrackingCut.hh"
+#include "G4NeutronCrossSectionXS.hh"
+#include "G4StoppingPhysics.hh"
+#include "G4IonBinaryCascadePhysics.hh"
+#include "G4IonPhysics.hh"
+#include "G4EmExtraPhysics.hh"
 
-#include "G4BosonConstructor.hh"
-#include "G4LeptonConstructor.hh"
-#include "G4MesonConstructor.hh"
-#include "G4BaryonConstructor.hh"
-#include "G4IonConstructor.hh"
-#include "G4ShortLivedConstructor.hh"
+#include "G4HadronPhysicsFTFP_BERT.hh"
+#include "G4HadronPhysicsFTFP_BERT_HP.hh"
+#include "G4HadronPhysicsFTFP_BERT_TRV.hh"
+#include "G4HadronPhysicsFTF_BIC.hh"
+#include "G4HadronInelasticQBBC.hh"
+#include "G4HadronPhysicsQGSP_BERT.hh"
+#include "G4HadronPhysicsQGSP_BERT_HP.hh"
+#include "G4HadronPhysicsQGSP_BIC.hh"
+#include "G4HadronPhysicsQGSP_BIC_HP.hh"
+#include "G4HadronPhysicsQGSP_FTFP_BERT.hh"
+#include "G4HadronPhysicsQGS_BIC.hh"
 
-#include "G4ProcessManager.hh"
+#include "G4UnitsTable.hh"
+#include "G4SystemOfUnits.hh"
 
-#include "G4Cerenkov.hh"
-#include "G4Scintillation.hh"
-#include "G4OpAbsorption.hh"
-#include "G4OpRayleigh.hh"
-#include "G4OpMieHG.hh"
-#include "G4OpBoundaryProcess.hh"
+G4ThreadLocal G4int OpNovicePhysicsList::fVerboseLevel = 0;
+G4ThreadLocal G4int OpNovicePhysicsList::fMaxNumPhotonStep = 40;
+G4ThreadLocal G4Cerenkov* OpNovicePhysicsList::fCerenkovProcess = 0;
+G4ThreadLocal G4Scintillation* OpNovicePhysicsList::fScintillationProcess = 0;
+G4ThreadLocal G4OpAbsorption* OpNovicePhysicsList::fAbsorptionProcess = 0;
+G4ThreadLocal G4OpRayleigh* OpNovicePhysicsList::fRayleighScatteringProcess = 0;
+G4ThreadLocal G4OpMieHG* OpNovicePhysicsList::fMieHGScatteringProcess = 0;
+G4ThreadLocal G4OpBoundaryProcess* OpNovicePhysicsList::fBoundaryProcess = 0;
 
-#include "G4LossTableManager.hh"
-#include "G4EmSaturation.hh"
- 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/**
+ * @brief Constructor of Physics list
+ * 
+ * @param inPhysList	Name of Hadronic physics list
+ * 
+ **/
 
-OpNovicePhysicsList::OpNovicePhysicsList() 
- : G4VUserPhysicsList(),
-   fVerboseLebel(1)
+OpNovicePhysicsList::OpNovicePhysicsList()
+ : G4VModularPhysicsList(),fEmPhysicsList(0),fDecay(0)
 {
-  // default values.
-  G4Cerenkov::SetMaxNumPhotonsPerStep(20);
-  G4Cerenkov::SetMaxBetaChangePerStep(10.0);
-  G4Cerenkov::SetTrackSecondariesFirst(true);
+  fCutForParticle=1000;
 
-  G4Scintillation::SetScintillationYieldFactor(1.);
-  G4Scintillation::SetTrackSecondariesFirst(true);
-
-  fMessenger = new OpNovicePhysicsListMessenger(this);
+  G4LossTableManager::Instance();
+  defaultCutValue = fCutForParticle*micrometer;
+  fCutForGamma     = defaultCutValue;
+  fCutForElectron  = defaultCutValue;
+  fCutForPositron  = defaultCutValue;
+  fCutForProton    = defaultCutValue;
+  fCutForElectron  = defaultCutValue;
+  SetVerboseLevel(0);
+  
+  //! to do here
+  AddPhysicsList("emlowenergy");
+  scut=0; 
+  //!
+  
+  fDecay = new G4DecayPhysics();
+  
+  fParticleList = new G4DecayPhysics("decays"); /// Particles
+  
+  G4LossTableManager::Instance(); 
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Destructor of Physics list
 
-OpNovicePhysicsList::~OpNovicePhysicsList() { delete fMessenger; }
+OpNovicePhysicsList::~OpNovicePhysicsList()
+{
+  delete fDecay;
+  delete fParticleList;
+  delete fEmPhysicsList;
+  for(size_t i=0; i<fHadronPhys.size(); i++) {
+    delete fHadronPhys[i];
+  }
+}
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Void for Particle construction
 
 void OpNovicePhysicsList::ConstructParticle()
 {
-  // In this method, static member functions should be called
-  // for all particles which you want to use.
-  // This ensures that objects of these particle types will be
-  // created in the program.
-
+  fParticleList->ConstructParticle();
+   
+  fEmPhysicsList->ConstructParticle();
+  fDecay->ConstructParticle();
+  
   G4BosonConstructor bConstructor;
   bConstructor.ConstructParticle();
 
@@ -98,190 +118,390 @@ void OpNovicePhysicsList::ConstructParticle()
   rConstructor.ConstructParticle();
 
   G4IonConstructor iConstructor;
-  iConstructor.ConstructParticle(); 
+  iConstructor.ConstructParticle();
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Void for Physics construction
 
 void OpNovicePhysicsList::ConstructProcess()
 {
-  AddTransportation();
-  ConstructDecay();
-  ConstructEM();
-  ConstructOp();
+    if (verboseLevel > -1) {
+      G4cout << "PhysicsList::ConstructProcess start" << G4endl;
+    }
+    
+    /// transportation
+    
+    AddTransportation();
+    ConstructOp();
+
+    /// electromagnetic physics list
+    
+    fEmPhysicsList->ConstructProcess();
+
+    /// decay process
+    
+    fDecay->ConstructProcess();
+
+    
+    G4double lowEnergyEnd=1000*eV;
+      
+      /// Deexcitation
+      G4VAtomDeexcitation* de = new G4UAtomicDeexcitation();
+      de->SetFluo(false);
+      de->SetAuger(false);
+      de->SetPIXE(false);
+
+      switch(scut){
+      case 0:
+        fCutForParticle=pow(10,2);
+        de->SetFluo(true);
+        de->SetAuger(true);
+        de->SetPIXE(true);
+        lowEnergyEnd=1*keV;
+        break;
+
+      case 1:
+        fCutForParticle=pow(10,2);
+        de->SetFluo(true);
+        de->SetAuger(false);
+        de->SetPIXE(false);
+        lowEnergyEnd=10*keV;
+        break;
+
+      case 2:
+        fCutForParticle=pow(10,3);
+        de->SetFluo(true);
+        de->SetAuger(false);
+        de->SetPIXE(false);
+        lowEnergyEnd=100*keV;
+        break;
+
+      case 3:
+        fCutForParticle=pow(10,3);
+        de->SetFluo(false);
+        de->SetAuger(false);
+        de->SetPIXE(false);
+        lowEnergyEnd=100*keV;
+        break;
+
+      }
+
+    G4LossTableManager::Instance()->SetAtomDeexcitation(de);
+    G4ProductionCutsTable::GetProductionCutsTable()->SetEnergyRange(lowEnergyEnd, 1*GeV);
+
+    G4EmProcessOptions emOptions;
+
+    emOptions.SetMinEnergy(100*eV);
+    emOptions.SetMaxEnergy(100*TeV);
+    emOptions.SetDEDXBinning(12*10);
+    emOptions.SetLambdaBinning(12*10);
+
+
+    emOptions.SetMscStepLimitation(fUseSafety);
+    emOptions.SetStepFunction(0.2, 100*um);
+    
+    SetCuts();
+    
+    fParticleList->ConstructProcess();
+    for(size_t i=0; i<fHadronPhys.size(); i++) {
+    fHadronPhys[i]->ConstructProcess();
+  }
+
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Adding Hadronic physics list
 
-#include "G4Decay.hh"
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-void OpNovicePhysicsList::ConstructDecay()
+void OpNovicePhysicsList::AddPhysicsList(const G4String& name)
 {
-  // Add Decay Process
-  G4Decay* theDecayProcess = new G4Decay();
-  theParticleIterator->reset();
-  while( (*theParticleIterator)() ){
-    G4ParticleDefinition* particle = theParticleIterator->value();
-    G4ProcessManager* pmanager = particle->GetProcessManager();
-    if (theDecayProcess->IsApplicable(*particle)) {
-      pmanager ->AddProcess(theDecayProcess);
-      // set ordering for PostStepDoIt and AtRestDoIt
-      pmanager ->SetProcessOrdering(theDecayProcess, idxPostStep);
-      pmanager ->SetProcessOrdering(theDecayProcess, idxAtRest);
-    }
+  if (verboseLevel>0) {
+    G4cout << "PhysicsList::AddPhysicsList: <" << name << ">" << G4endl;
+  }
+  if (name == "emstandard_opt0") {
+  
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysics();
+    
+  } else if (name == "emstandard_opt1") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysics_option1();
+
+  } else if (name == "emstandard_opt2") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysics_option2();
+
+  } else if (name == "emstandard_opt3") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysics_option3();
+
+  } else if (name == "emstandard_opt4") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysics_option4();
+
+  }/* else if (name == "emstandardWVI") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysicsWVI();
+
+  } else if (name == "emstandardGS") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysicsGS();
+
+  
+  } else if (name == "emstandardSS") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmStandardPhysicsSS();
+
+  
+  } */else if (name == "empenelope") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmPenelopePhysics();
+
+  
+  } else if (name == "emlivermore") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmLivermorePhysics();
+  }
+    else if (name == "emlowenergy") {
+
+    delete fEmPhysicsList;
+    fEmPhysicsList = new G4EmLowEPPhysics();
+
+  } else if (name == "FTFP_BERT_EMV") {
+
+    AddPhysicsList("emstandard_opt1");
+    AddPhysicsList("FTFP_BERT");
+
+  } else if (name == "FTFP_BERT_EMX") {
+
+    AddPhysicsList("emstandard_opt2");
+    AddPhysicsList("FTFP_BERT");
+
+  } else if (name == "FTFP_BERT_EMY") {
+
+    AddPhysicsList("emstandard_opt3");
+    AddPhysicsList("FTFP_BERT");
+
+  } else if (name == "FTFP_BERT_EMZ") {
+
+    AddPhysicsList("emstandard_opt4");
+    AddPhysicsList("FTFP_BERT");
+
+  } else if (name == "FTFP_BERT") {
+
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsFTFP_BERT());
+
+  } else if (name == "FTFP_BERT_TRV") {
+
+    AddPhysicsList("emstandardGS");
+    SetBuilderList1(false);
+    fHadronPhys.push_back( new G4HadronPhysicsFTFP_BERT_TRV());
+
+  } else if (name == "FTF_BIC") {
+
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsFTF_BIC());
+
+  } else if (name == "QBBC") {
+
+    AddPhysicsList("emstandard_opt0");
+    SetBuilderList2();
+    fHadronPhys.push_back( new G4HadronInelasticQBBC());
+
+  } else if (name == "QGSP_BERT") {
+
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsQGSP_BERT());
+
+  } else if (name == "QGSP_FTFP_BERT") {
+
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsQGSP_FTFP_BERT());
+
+  } else if (name == "QGSP_FTFP_BERT_EMV") {
+
+    AddPhysicsList("emstandard_opt1");
+    AddPhysicsList("QGSP_FTFP_BERT");
+
+  } else if (name == "QGSP_BERT_EMV") {
+
+    AddPhysicsList("emstandard_opt1");
+    AddPhysicsList("QGSP_BERT");
+
+  } else if (name == "QGSP_BERT_EMX") {
+
+    AddPhysicsList("emstandard_opt2");
+    AddPhysicsList("QGSP_BERT");
+
+  } else if (name == "QGSP_BERT_HP") {
+
+    SetBuilderList0(true);
+    fHadronPhys.push_back( new G4HadronPhysicsQGSP_BERT_HP());
+
+  } else if (name == "QGSP_BIC") {
+
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsQGSP_BIC());
+
+  } else if (name == "QGSP_BIC_EMY") {
+
+    AddPhysicsList("emstandard_opt3");
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsQGSP_BIC());
+
+  } else if (name == "QGS_BIC") {
+
+    SetBuilderList0(false);
+    fHadronPhys.push_back( new G4HadronPhysicsQGS_BIC());
+
+  } else if (name == "QGSP_BIC_HP") {
+
+    SetBuilderList0(true);
+    fHadronPhys.push_back( new G4HadronPhysicsQGSP_BIC_HP());
+
+  } else {
+
+    G4cout << "PhysicsList::AddPhysicsList: <" << name << ">"
+           << " is not defined"
+           << G4endl;
   }
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-#include "G4ComptonScattering.hh"
-#include "G4GammaConversion.hh"
-#include "G4PhotoElectricEffect.hh"
-
-#include "G4eMultipleScattering.hh"
-#include "G4MuMultipleScattering.hh"
-#include "G4hMultipleScattering.hh"
-
-#include "G4eIonisation.hh"
-#include "G4eBremsstrahlung.hh"
-#include "G4eplusAnnihilation.hh"
-
-#include "G4MuIonisation.hh"
-#include "G4MuBremsstrahlung.hh"
-#include "G4MuPairProduction.hh"
-
-#include "G4hIonisation.hh"
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-void OpNovicePhysicsList::ConstructEM()
-{
-  theParticleIterator->reset();
-  while( (*theParticleIterator)() ){
-    G4ParticleDefinition* particle = theParticleIterator->value();
-    G4ProcessManager* pmanager = particle->GetProcessManager();
-    G4String particleName = particle->GetParticleName();
-
-    if (particleName == "gamma") {
-    // gamma
-      // Construct processes for gamma
-      pmanager->AddDiscreteProcess(new G4GammaConversion());
-      pmanager->AddDiscreteProcess(new G4ComptonScattering());
-      pmanager->AddDiscreteProcess(new G4PhotoElectricEffect());
-
-    } else if (particleName == "e-") {
-    //electron
-      // Construct processes for electron
-      pmanager->AddProcess(new G4eMultipleScattering(),-1, 1, 1);
-      pmanager->AddProcess(new G4eIonisation(),       -1, 2, 2);
-      pmanager->AddProcess(new G4eBremsstrahlung(),   -1, 3, 3);
-
-    } else if (particleName == "e+") {
-    //positron
-      // Construct processes for positron
-      pmanager->AddProcess(new G4eMultipleScattering(),-1, 1, 1);
-      pmanager->AddProcess(new G4eIonisation(),       -1, 2, 2);
-      pmanager->AddProcess(new G4eBremsstrahlung(),   -1, 3, 3);
-      pmanager->AddProcess(new G4eplusAnnihilation(),  0,-1, 4);
-
-    } else if( particleName == "mu+" ||
-               particleName == "mu-"    ) {
-    //muon
-     // Construct processes for muon
-     pmanager->AddProcess(new G4MuMultipleScattering(),-1, 1, 1);
-     pmanager->AddProcess(new G4MuIonisation(),      -1, 2, 2);
-     pmanager->AddProcess(new G4MuBremsstrahlung(),  -1, 3, 3);
-     pmanager->AddProcess(new G4MuPairProduction(),  -1, 4, 4);
-
-    } else {
-      if ((particle->GetPDGCharge() != 0.0) &&
-          (particle->GetParticleName() != "chargedgeantino") &&
-          !particle->IsShortLived()) {
-       // all others charged particles except geantino
-       pmanager->AddProcess(new G4hMultipleScattering(),-1,1,1);
-       pmanager->AddProcess(new G4hIonisation(),       -1,2,2);
-     }
-    }
-  }
-}
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-#include "G4Threading.hh"
+/// @brief Defining Optical physics processes
 
 void OpNovicePhysicsList::ConstructOp()
 {
-  G4Cerenkov* cerenkovProcess = new G4Cerenkov("Cerenkov");
-  G4Scintillation* scintillationProcess = new G4Scintillation("Scintillation");
-  G4OpAbsorption* absorptionProcess = new G4OpAbsorption();
-  G4OpRayleigh* rayleighScatteringProcess = new G4OpRayleigh();
-  G4OpMieHG* mieHGScatteringProcess = new G4OpMieHG();
-  G4OpBoundaryProcess* boundaryProcess = new G4OpBoundaryProcess();
+  fCerenkovProcess = new G4Cerenkov("Cerenkov");
+  fCerenkovProcess->SetMaxNumPhotonsPerStep(fMaxNumPhotonStep);
+  fCerenkovProcess->SetMaxBetaChangePerStep(10.0);
+  fCerenkovProcess->SetTrackSecondariesFirst(true);
+  fScintillationProcess = new G4Scintillation("Scintillation");
+  fScintillationProcess->SetScintillationYieldFactor(1.);
+  fScintillationProcess->SetTrackSecondariesFirst(true);
+  fAbsorptionProcess = new G4OpAbsorption();
+  fRayleighScatteringProcess = new G4OpRayleigh();
+  fMieHGScatteringProcess = new G4OpMieHG();
+  fBoundaryProcess = new G4OpBoundaryProcess();
 
-  cerenkovProcess->SetVerboseLevel(fVerboseLebel);
-  scintillationProcess->SetVerboseLevel(fVerboseLebel);
-  absorptionProcess->SetVerboseLevel(fVerboseLebel);
-  rayleighScatteringProcess->SetVerboseLevel(fVerboseLebel);
-  mieHGScatteringProcess->SetVerboseLevel(fVerboseLebel);
-  boundaryProcess->SetVerboseLevel(fVerboseLebel);
-  
-  // Use Birks Correction in the Scintillation process
-  if(!G4Threading::IsWorkerThread())
+  fCerenkovProcess->SetVerboseLevel(fVerboseLevel);
+  fScintillationProcess->SetVerboseLevel(fVerboseLevel);
+  fAbsorptionProcess->SetVerboseLevel(fVerboseLevel);
+  fRayleighScatteringProcess->SetVerboseLevel(fVerboseLevel);
+  fMieHGScatteringProcess->SetVerboseLevel(fVerboseLevel);
+  fBoundaryProcess->SetVerboseLevel(fVerboseLevel);
+
+  /// Use Birks Correction in the Scintillation process
+  /*if(G4Threading::IsMasterThread())
   {
     G4EmSaturation* emSaturation =
               G4LossTableManager::Instance()->EmSaturation();
-    G4Scintillation::AddSaturation(emSaturation);
-  }
+      fScintillationProcess->AddSaturation(emSaturation);
+  }*/
 
   theParticleIterator->reset();
   while( (*theParticleIterator)() ){
     G4ParticleDefinition* particle = theParticleIterator->value();
     G4ProcessManager* pmanager = particle->GetProcessManager();
     G4String particleName = particle->GetParticleName();
-    if (cerenkovProcess->IsApplicable(*particle)) {
-      pmanager->AddProcess(cerenkovProcess);
-      pmanager->SetProcessOrdering(cerenkovProcess,idxPostStep);
+    if (fCerenkovProcess->IsApplicable(*particle)) {
+      pmanager->AddProcess(fCerenkovProcess);
+      pmanager->SetProcessOrdering(fCerenkovProcess,idxPostStep);
     }
-    if (scintillationProcess->IsApplicable(*particle)) {
-      pmanager->AddProcess(scintillationProcess);
-      pmanager->SetProcessOrderingToLast(scintillationProcess, idxAtRest);
-      pmanager->SetProcessOrderingToLast(scintillationProcess, idxPostStep);
+    if (fScintillationProcess->IsApplicable(*particle)) {
+      pmanager->AddProcess(fScintillationProcess);
+      pmanager->SetProcessOrderingToLast(fScintillationProcess, idxAtRest);
+      pmanager->SetProcessOrderingToLast(fScintillationProcess, idxPostStep);
     }
     if (particleName == "opticalphoton") {
       G4cout << " AddDiscreteProcess to OpticalPhoton " << G4endl;
-      pmanager->AddDiscreteProcess(absorptionProcess);
-      pmanager->AddDiscreteProcess(rayleighScatteringProcess);
-      pmanager->AddDiscreteProcess(mieHGScatteringProcess);
-      pmanager->AddDiscreteProcess(boundaryProcess);
+      pmanager->AddDiscreteProcess(fAbsorptionProcess);
+      pmanager->AddDiscreteProcess(fRayleighScatteringProcess);
+      pmanager->AddDiscreteProcess(fMieHGScatteringProcess);
+      pmanager->AddDiscreteProcess(fBoundaryProcess);
     }
   }
 }
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Setting Verbose
 
 void OpNovicePhysicsList::SetVerbose(G4int verbose)
 {
-  fVerboseLebel = verbose;
+  fVerboseLevel = verbose;
+
+  fCerenkovProcess->SetVerboseLevel(fVerboseLevel);
+  fScintillationProcess->SetVerboseLevel(fVerboseLevel);
+  fAbsorptionProcess->SetVerboseLevel(fVerboseLevel);
+  fRayleighScatteringProcess->SetVerboseLevel(fVerboseLevel);
+  fMieHGScatteringProcess->SetVerboseLevel(fVerboseLevel);
+  fBoundaryProcess->SetVerboseLevel(fVerboseLevel);
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Hadronic build list #0
 
-void OpNovicePhysicsList::SetNbOfPhotonsCerenkov(G4int MaxNumber)
+void OpNovicePhysicsList::SetBuilderList0(G4bool flagHP)
 {
-  G4Cerenkov::SetMaxNumPhotonsPerStep(MaxNumber);
+  fHadronPhys.push_back( new G4EmExtraPhysics(verboseLevel));
+  if(flagHP) {
+    fHadronPhys.push_back( new G4HadronElasticPhysicsHP(verboseLevel) );
+  } else {
+    fHadronPhys.push_back( new G4HadronElasticPhysics(verboseLevel) );
+  }
+  fHadronPhys.push_back( new G4StoppingPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4IonPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// @brief Hadronic build list #1
+
+void OpNovicePhysicsList::SetBuilderList1(G4bool flagHP)
+{
+  fHadronPhys.push_back( new G4EmExtraPhysics(verboseLevel));
+  if(flagHP) {
+    fHadronPhys.push_back( new G4HadronElasticPhysicsHP(verboseLevel) );
+  } else {
+    fHadronPhys.push_back( new G4HadronHElasticPhysics(verboseLevel) );
+  }
+  fHadronPhys.push_back( new G4StoppingPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4IonPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
+}
+
+/// @brief Hadronic build list #2
+
+void OpNovicePhysicsList::SetBuilderList2()
+{
+  fHadronPhys.push_back( new G4EmExtraPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4HadronElasticPhysicsXS(verboseLevel) );
+  fHadronPhys.push_back( new G4StoppingPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4IonPhysics(verboseLevel));
+  fHadronPhys.push_back( new G4NeutronTrackingCut(verboseLevel));
+}
+
+/// @brief Setting cuts universally
 
 void OpNovicePhysicsList::SetCuts()
 {
-  //  " G4VUserPhysicsList::SetCutsWithDefault" method sets
-  //   the default cut value for all particle types
-  //
-  SetCutsWithDefault();
 
-  if (verboseLevel>0) DumpCutValuesTable();
+  if (verboseLevel >0)
+  {
+    G4cout << "PhysicsList::SetCuts:";
+    G4cout << "CutLength : " << G4BestUnit(defaultCutValue,"Length") << G4endl;
+  }
+
+  SetCutValue(fCutForGamma, "gamma"); /// set cut values for gamma at first and for e- second and next for e+,
+  SetCutValue(fCutForElectron, "e-"); /// because some processes for e+/e- need cut values for gamma
+  SetCutValue(fCutForPositron, "e+");
+  SetCutValue(fCutForProton, "proton");
+
+  if (verboseLevel>0) { DumpCutValuesTable(); }
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+/// End of file

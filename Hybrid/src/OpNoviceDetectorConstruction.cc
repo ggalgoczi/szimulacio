@@ -52,6 +52,8 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
   G4double a, z, density;
   G4int nelements;
   G4double density_CsI;
+  G4double density_MPPC_mat;
+
 
 // Air
 //
@@ -64,7 +66,10 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 //Si
 //
   //G4Element* Si_mat = new G4Element("Silicium", "Si", z=14 , a=28.01*g/mole);
-  G4Material* Si_mat = new G4Material("Silicium", density= 2.57*g/cm3, nelements=1);
+  a = 28.0*g/mole;
+  G4Element* Si  = new G4Element("Silicon"  ,"Si" , z= 14., a);
+  G4Material* MPPC_mat = new G4Material("MPPC", density_MPPC_mat = 4.51*g/cm3, nelements=1);
+  MPPC_mat->AddElement(Si, 100.0*perCent);
 
 // Al
 //
@@ -85,33 +90,27 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 //
 // ------------ Generate & Add Material Properties Table ------------
 //
-  G4double photonEnergy[] =
-            { 2.034*eV, 2.068*eV, 2.103*eV, 2.139*eV,
-              2.177*eV, 2.216*eV, 2.256*eV, 2.298*eV,
-              2.341*eV, 2.386*eV, 2.433*eV, 2.481*eV,
-              2.532*eV, 2.585*eV, 2.640*eV, 2.697*eV,
-              2.757*eV, 2.820*eV, 2.885*eV, 2.954*eV,
-              3.026*eV, 3.102*eV, 3.181*eV, 3.265*eV,
-              3.353*eV, 3.446*eV, 3.545*eV, 3.649*eV,
-              3.760*eV, 3.877*eV, 4.002*eV, 4.136*eV };
 
-  const G4int nEntries = sizeof(photonEnergy)/sizeof(G4double);
+  const G4int nEntries = 32;
+  printf("wtf\n");
+ G4double photonEnergy[nEntries] = {1.7712};
+ std::fill_n(photonEnergy, nEntries, 1.7712);
+
+ for(int w = 0; w < nEntries; w++) {photonEnergy[w] = (photonEnergy[w] + w * ((3.0996-1.7712) / nEntries))*eV;}
+ for(int w = 0; w < nEntries; w++) printf("%G4lf \n",photonEnergy[w]);
+ //return(0);
+
+  //const G4int nEntries = sizeof(photonEnergy)/sizeof(G4double);
 
 //
 // CsI
 //
-  G4double refractiveIndex1[] =
-            { 1.3435, 1.344,  1.3445, 1.345,  1.3455,
-              1.346,  1.3465, 1.347,  1.3475, 1.348,
-              1.3485, 1.3492, 1.35,   1.3505, 1.351,
-              1.3518, 1.3522, 1.3530, 1.3535, 1.354,
-              1.3545, 1.355,  1.3555, 1.356,  1.3568,
-              1.3572, 1.358,  1.3585, 1.359,  1.3595,
-              1.36,   1.3608};
+  G4double refractiveIndex1[nEntries] =
+            {1.79};
 
   assert(sizeof(refractiveIndex1) == sizeof(photonEnergy));
 
-  G4double absorption[] =
+  G4double absorption[] = //turned off
            {3.448*m,  4.082*m,  6.329*m,  9.174*m, 12.346*m, 13.889*m,
            15.152*m, 17.241*m, 18.868*m, 20.000*m, 26.316*m, 35.714*m,
            45.455*m, 47.619*m, 52.632*m, 52.632*m, 55.556*m, 52.632*m,
@@ -121,7 +120,7 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 
   assert(sizeof(absorption) == sizeof(photonEnergy));
 
-  G4double scintilFast[] =
+  G4double scintilFast[] = // not used now
             { 1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
               1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
               1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00,
@@ -143,18 +142,18 @@ G4VPhysicalVolume* OpNoviceDetectorConstruction::Construct()
 
   myMPT1->AddProperty("RINDEX",       photonEnergy, refractiveIndex1,nEntries)
         ->SetSpline(true);
-  myMPT1->AddProperty("ABSLENGTH",    photonEnergy, absorption,     nEntries)
-        ->SetSpline(true);
-  myMPT1->AddProperty("FASTCOMPONENT",photonEnergy, scintilFast,     nEntries)
-        ->SetSpline(true);
+//  myMPT1->AddProperty("ABSLENGTH",    photonEnergy, absorption,     nEntries)
+//        ->SetSpline(true);
+ // myMPT1->AddProperty("FASTCOMPONENT",photonEnergy, scintilFast,     nEntries)
+ //       ->SetSpline(true);
   myMPT1->AddProperty("SLOWCOMPONENT",photonEnergy, scintilSlow,     nEntries)
         ->SetSpline(true);
 
-  myMPT1->AddConstProperty("SCINTILLATIONYIELD",2000./MeV);
+  myMPT1->AddConstProperty("SCINTILLATIONYIELD",50/keV);
   myMPT1->AddConstProperty("RESOLUTIONSCALE",1.0);
-  myMPT1->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
-  myMPT1->AddConstProperty("SLOWTIMECONSTANT",10.*ns);
-  myMPT1->AddConstProperty("YIELDRATIO",0.8);
+  //myMPT1->AddConstProperty("FASTTIMECONSTANT", 1.*ns);
+  myMPT1->AddConstProperty("SLOWTIMECONSTANT",1000.*ns);
+  //myMPT1->AddConstProperty("YIELDRATIO",0.8);
 
   G4double energy_water[] = {
      1.56962*eV, 1.58974*eV, 1.61039*eV, 1.63157*eV,
@@ -291,7 +290,7 @@ G4double refractiveIndex3[] =
   G4cout << "PMMA G4MaterialPropertiesTable" << G4endl;
   myMPT3->DumpTable();
 
-  CsI->SetMaterialPropertiesTable(myMPT3);
+  MPPC_mat->SetMaterialPropertiesTable(myMPT3);
 
 
 
@@ -359,7 +358,7 @@ G4double refractiveIndex3[] =
 
 
   G4Box* up = new G4Box("up",MPPCX_mm*mm,MPPCY_mm*mm,MPPCZ_mm*mm);
-  G4LogicalVolume* up_log = new G4LogicalVolume(up,CsI,"up",0,0,0);
+  G4LogicalVolume* up_log = new G4LogicalVolume(up,MPPC_mat,"up",0,0,0);
 
   G4VPhysicalVolume* up_phys;
   up_phys = new G4PVPlacement(0,G4ThreeVector((ScintX_mm+MPPCX_mm)*mm,0,0.),up_log,
@@ -404,7 +403,7 @@ G4double refractiveIndex3[] =
 //
   G4OpticalSurface* opWaterSurfaceS = new G4OpticalSurface("WaterSurfaceS");
   opWaterSurfaceS->SetType(dielectric_dielectric);
-  opWaterSurfaceS->SetFinish(polishedbackpainted);
+  opWaterSurfaceS->SetFinish(polishedbackpainted); //ground??
   opWaterSurfaceS->SetModel(unified);
   new G4LogicalBorderSurface("WaterSurfaceS",
                                  scint_phys,expHall_phys,opWaterSurfaceS);
@@ -426,7 +425,7 @@ G4double refractiveIndex3[] =
   G4double specularLobe[num]    = {0.3, 0.3};
   G4double specularSpike[num]   = {0.2, 0.2};
   G4double backScatter[num]     = {0.2, 0.2};
-  G4double reflectivity[num] = {0.98, 0.98};
+  G4double reflectivity[num] = {0.995, 0.995};
 
   //G4double absorption2[num] = {0.01*mm, 0.01*mm};
   //myST1->AddProperty("ABSLENGTH",                ephoton, absorption2, num);

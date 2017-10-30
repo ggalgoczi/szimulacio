@@ -36,6 +36,15 @@
 #include "G4Track.hh"
 #include "G4ios.hh"
 
+void filePutContents2(const std::string& name, const std::string& content, bool append = false) {
+    std::ofstream outfile;
+    if (append)
+		outfile.open(name.c_str(), std::ios_base::app);
+    else
+        outfile.open(name.c_str());
+    outfile << content;
+}
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 OpNoviceStackingAction::OpNoviceStackingAction()
@@ -70,10 +79,17 @@ OpNoviceStackingAction::ClassifyNewTrack(const G4Track * aTrack)
 
 void OpNoviceStackingAction::NewStage()
 {
-  G4cout << "Number of Scintillation photons produced in this event : "
+  /*G4cout << "Number of Scintillation photons produced in this event : "
          << fScintillationCounter << G4endl;
   G4cout << "Number of Cerenkov photons produced in this event : "
-         << fCerenkovCounter << G4endl;
+         << fCerenkovCounter << G4endl;*/
+         
+         
+ 		std::ostringstream oss;
+		oss << fScintillationCounter <<std::endl;
+		std::string var = oss.str();	
+		filePutContents2("./Number_Photons_Created.txt",var,true);
+         
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
