@@ -25,7 +25,7 @@ def poisson_probability(actual, mean):
 
 
 bins_2 = np.arange(0, 20000, 20) # fixed bin size
-directory = '../build/'
+directory = '../resold/'
 angle = []
 counts = []
 for filename in os.listdir(directory):
@@ -86,7 +86,7 @@ for filename in os.listdir(directory):
 	
 	
 	
-	
+fig,axes = plt.subplots()	
 plt.errorbar(angle,counts,yerr=np.sqrt(counts), linestyle="None")
 #plt.scatter(angle, counts, alpha=0.5)
 plt.title('')
@@ -94,6 +94,7 @@ plt.xlabel('Angle')
 plt.ylabel('Number of particles detected')
 plt.ylim([1, 300])
 plt.xlim([0, 370])
+fig.savefig('reees.png', bbox_inches='tight')
 
 plt.show()	
 	
