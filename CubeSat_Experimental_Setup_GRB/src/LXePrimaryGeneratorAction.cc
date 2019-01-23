@@ -66,8 +66,19 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
 	
 
 // reading in energy spectras for particles:
+std::string infilename;
+std::string infileline;
 
- std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
+std::ifstream file("thefileforgun.txt");
+
+while (std::getline(file, infileline))
+    {
+	infilename = infileline;	
+    }
+
+
+// std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
+ std::ifstream in(infilename.c_str());
     std::string line;
     int i = 0;
 
@@ -85,137 +96,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
  
         }
         ++i;
-    }
-    in.close();   
-	in.open ("/home/galgoczi/cubesat/cosmic_spectras/band_correct.txt", std::fstream::in);
-
-	i = 0;
-    while (std::getline(in, line))
-    {	
-        float value;
-        std::stringstream ss2(line);
-        ElectronEnergyMin.push_back(std::vector<float>());
-
-        while (ss2 >> value)
-        {
-            ElectronEnergyMin[i].push_back(value);
-        } 
-        ++i;
-    }
-    in.close();
-	in.open("/home/galgoczi/cubesat/cosmic_spectras/500km_protons_max.txt", std::fstream::in);
-
-	i = 0;	
-    while (std::getline(in, line))
-    {
-        float value;
-        std::stringstream ss(line);
-
-        ProtonEnergyMax.push_back(std::vector<float>());
-
-        while (ss >> value)
-        {
-//			cout << ss;
-            ProtonEnergyMax[i].push_back(value);
- 
-        }
-        ++i;
-    }    
-    in.close();
-	in.open ("/home/galgoczi/cubesat/cosmic_spectras/500km_protons_min.txt", std::fstream::in);
-
-	i = 0;
-    while (std::getline(in, line))
-    {
-        float value;
-        std::stringstream ss(line);
-
-        ProtonEnergyMin.push_back(std::vector<float>());
-
-        while (ss >> value)
-        {
-//			cout << ss;
-            ProtonEnergyMin[i].push_back(value);
- 
-        }
-        ++i;
-    }
-    in.close();
-    
-    // Norming the propabilities
-    // Proton Min
-    double sum = 0;
-    double count = 0;
-	for (int i = 0; i < ProtonEnergyMin.size(); i++)
-		{
-		sum += ProtonEnergyMin[i][2];
-		}    
-	cout << "ProtonEnergyMin sum was" << " " << sum << "\n";		
-		
-	for (int i = 0; i < ProtonEnergyMin.size(); i++)
-		{
-		//	cout << ProtonEnergyMin[i][2] << " " << sum << "\n";
-		count += double(ProtonEnergyMin[i][2])/sum;		
-		ProtonEnergyMin[i].push_back(count);
-		}
-    // Proton Max
-    sum = 0;
-    count = 0;
-	for (int i = 0; i < ProtonEnergyMax.size(); i++)
-		{
-		sum += ProtonEnergyMax[i][2];
-		}    
-	cout << "ProtonEnergyMax sum was" << " " << sum << "\n";		
-		
-	for (int i = 0; i < ProtonEnergyMax.size(); i++)
-		{
-		//	cout << ProtonEnergyMin[i][2] << " " << sum << "\n";
-		count += double(ProtonEnergyMax[i][2])/sum;		
-		ProtonEnergyMax[i].push_back(count);
-		}    
-    // Electron Min
-    sum = 0;
-    count = 0;
-	for (int i = 0; i < ElectronEnergyMin.size(); i++)
-		{
-		sum += ElectronEnergyMin[i][2];
-		}    
-	cout << "ElectronEnergyMin sum was" << " " << sum << "\n";		
-		
-	for (int i = 0; i < ElectronEnergyMin.size(); i++)
-		{
-		//	cout << ProtonEnergyMin[i][2] << " " << sum << "\n";
-		count += double(ElectronEnergyMin[i][2])/sum;		
-		ElectronEnergyMin[i].push_back(count);
-		}    
-    // Electron Max
-    sum = 0;
-    count = 0;
-	for (int i = 0; i < ElectronEnergyMax.size(); i++)
-		{
-		sum += ElectronEnergyMax[i][2];
-		}    
-
-	cout << "ElectronEnergyMax sum was" << " " << sum << "\n";		
-	for (int i = 0; i < ElectronEnergyMax.size(); i++)
-		{
-		//	cout << ProtonEnergyMin[i][2] << " " << sum << "\n";
-			count += double(ElectronEnergyMax[i][2])/sum;
-			ElectronEnergyMax[i].push_back(count);
-		}    
-        
-            
-    // Printing out data from file
-    
-for (int i = 0; i < ElectronEnergyMin.size(); i++)
-	{
-    for (int j = 0; j < ElectronEnergyMin[i].size(); j++)
-		{
-        cout << ElectronEnergyMin[i][j] << " ";
-		}
-	cout << "\n";
-	} 
-	
+    }	 
     
 }
 
