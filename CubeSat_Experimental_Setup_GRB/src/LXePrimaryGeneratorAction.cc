@@ -55,6 +55,22 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
  
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
  
+// reading in type of particle
+
+
+std::string infilename;
+std::string infileline;
+
+std::ifstream file("particleforgun.txt");
+while (std::getline(file, infileline))
+    {
+	infilename = infileline;	
+    }
+
+// std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
+ std::ifstream in(infilename.c_str());
+ std::string line; 
+ 
   G4String particleName;
   fParticleGun->SetParticleDefinition(particleTable->
                                      FindParticle(particleName="gamma"));
@@ -66,16 +82,12 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
 	
 
 // reading in energy spectras for particles:
-std::string infilename;
-std::string infileline;
 
-std::ifstream file("thefileforgun.txt");
-
-while (std::getline(file, infileline))
+std::ifstream file2("thefileforgun.txt");
+while (std::getline(file2, infileline))
     {
 	infilename = infileline;	
     }
-
 
 // std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
  std::ifstream in(infilename.c_str());
@@ -86,18 +98,15 @@ while (std::getline(file, infileline))
     {
         float value;
         std::stringstream ss(line);
-
         ElectronEnergyMax.push_back(std::vector<float>());
-
         while (ss >> value)
         {
 //			cout << ss;
             ElectronEnergyMax[i].push_back(value);
- 
+
         }
         ++i;
-    }	 
-    
+    }	     
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
