@@ -50,10 +50,7 @@ class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   public:
 	G4ThreeVector position2;
     virtual void GeneratePrimaries(G4Event* anEvent);
-    std::vector<std::vector<float> > ProtonEnergyMin;
-    std::vector<std::vector<float> > ProtonEnergyMax;
-    std::vector<std::vector<float> > ElectronEnergyMin;
-    std::vector<std::vector<float> > ElectronEnergyMax;
+    std::vector<std::vector<float> > Particle_Energy;
   private:
 
     G4ParticleGun* fParticleGun;
