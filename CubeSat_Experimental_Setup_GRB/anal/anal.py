@@ -26,7 +26,7 @@ directory = './'
 angle = []
 counts = []
 for filename in os.listdir(directory):
- if filename.endswith(".txt") and not filename.endswith("scint.txt") and not filename.endswith("particleforgun.txt") and not filename.endswith("thefileforgun.txt")  and not filename.endswith("CMakeCache.txt"):
+if filename.endswith(".txt") and not filename.endswith("master.txt") and not filename.endswith("res.txt") and not filename.endswith("particleforgun.txt") and not filename.endswith("thefileforgun.txt")  and not filename.endswith("CMakeCache.txt"):
 	print filename
 	f = open(directory+filename, 'r')
 	w, h = 0, 11000000;
@@ -40,15 +40,26 @@ for filename in os.listdir(directory):
 		energies[EvNum].append(float(line.split()[4]))
 
 	for W in xrange(0,h-1):
-		sum_No.append(len(energies[W]))
+		if(len(energies[W]) != 0):
+			sum_No.append(len(energies[W]))
+
+	print "run"
+	with open('../build/res.txt', 'a') as the_file:
+		#for i in xrange(len(sum_No)-1):
+		if(sum_No[0]!=0): 	
+			the_file.write(str(sum_No[0])+'\n')
+		else:
+			the_file.write(str(0)+'\n')
+			
+	print "len",len(sum_No)
 
 	values, edges = np.histogram(sum_No, bins=bins_2)
 	for i in xrange(len(edges)-1):    
 		bins_centers.append((edges[i] + edges[i+1])/2)
 	bins_centers = np.array(bins_centers)
 	print filename,  np.count_nonzero(sum_No)
-	angle.append(float(filename[:-4])*10)
-	counts.append(np.count_nonzero(sum_No))
+	#angle.append(float(filename[:-4])*10)
+	#counts.append(np.count_nonzero(sum_No))
 	
 	
 	
@@ -91,7 +102,7 @@ plt.ylim([1, 300])
 plt.xlim([0, 370])
 fig.savefig('reees.png', bbox_inches='tight')
 
-plt.show()	
+#plt.show()	
 	
 	
 #	print(sum_No)

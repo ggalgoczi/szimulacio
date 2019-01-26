@@ -1,3 +1,0 @@
-gamma ../../cosmic_spectras/500km_electrons_max.txt
-gamma ../../cosmic_spectras/500km_electrons_max.txt
-gamma ../../cosmic_spectras/500km_electrons_max.txt
