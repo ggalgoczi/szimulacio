@@ -164,10 +164,10 @@ LXePrimaryGeneratorAction::~LXePrimaryGeneratorAction(){
 
 void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 //cout << "whaat\n" ;
-  cout << anEvent->GetEventID()  << "\n";
+  // cout << anEvent->GetEventID()  << "\n"; verbosehoz
   //exit(-1);
    if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
-   cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
+   //cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n"; verbosehoz
 
   G4double alpha = std::atan(position2[1]/position2[0]);
   
@@ -235,6 +235,6 @@ double energy = 0;
 //	cout << energy << "\n";
 
   fParticleGun->SetParticleEnergy(energy*MeV);
-  cout << "Energy was: " << energy << "\n";
+  //cout << "Energy was: " << energy << "\n"; verbosehoz
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }
