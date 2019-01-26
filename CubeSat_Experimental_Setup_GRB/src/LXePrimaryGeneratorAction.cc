@@ -56,24 +56,44 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
  
 // reading in type of particle
+// check if file exists and particle names are OK
 
-
-std::string infilename;
 std::string infileline;
+std::string infilename;
+std::string Part_Name;
 
 std::ifstream file("particleforgun.txt");
 while (std::getline(file, infileline))
     {
-	infilename = infileline;	
+	Part_Name = infileline;	
     }
-
+    
+    
+//cout << "aa " << Part_Name << "\n";
 // std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
+ 
+ /*
  std::ifstream in(infilename.c_str());
  std::string line; 
  
+    while (std::getline(in, line))
+    {
+        std::stringstream ss3(line);
+        ss3 >> ;
+        ElectronEnergyMax.push_back(std::vector<float>());
+        while (ss >> value)
+        {
+//			cout << ss;
+            ElectronEnergyMax[i].push_back(value);
+
+        }
+        ++i;
+    }	      
+ */
+ 
   G4String particleName;
   fParticleGun->SetParticleDefinition(particleTable->
-                                     FindParticle(particleName="gamma"));
+                                     FindParticle(particleName=Part_Name));
   //Default energy,position,momentum
   fParticleGun->SetParticleEnergy(59.54*keV);
   fParticleGun->SetParticlePosition(G4ThreeVector(-300,0.0001,0));
@@ -98,15 +118,40 @@ while (std::getline(file2, infileline))
     {
         float value;
         std::stringstream ss(line);
-        ElectronEnergyMax.push_back(std::vector<float>());
+        Particle_Energy.push_back(std::vector<float>());
         while (ss >> value)
         {
-//			cout << ss;
-            ElectronEnergyMax[i].push_back(value);
-
+		//	cout << value << " ";
+            Particle_Energy[i].push_back(value);
         }
+      //  cout << "\n";
+      //  cout << i << "\n";
         ++i;
-    }	     
+    }
+    
+    
+    
+    double sum = 0;
+    double count = 0;
+	for (int i = 0; i < Particle_Energy.size(); i++)
+		{
+		sum += Particle_Energy[i][1];
+		}    
+	//cout << "ElectronEnergyMin sum was" << " " << sum << "\n";		
+		
+	for (int i = 0; i < Particle_Energy.size(); i++)
+		{
+		count += double(Particle_Energy[i][1])/double(sum);	
+		//cout << count*10000000 << "\n";	
+		//cout << "Number of particles [cm^-2 * s^-1]" << double(sum) << "\n";	
+		Particle_Energy[i].push_back(count);
+		//cout << ElectronEnergyMin[i][0] << " "<<ElectronEnergyMin[i][1] << " "<<ElectronEnergyMin[i][2] << " " << sum << "\n";
+		}     
+    
+    
+    
+    
+    	     
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -118,11 +163,11 @@ LXePrimaryGeneratorAction::~LXePrimaryGeneratorAction(){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
-cout << "whaat\n" ;
+//cout << "whaat\n" ;
   cout << anEvent->GetEventID()  << "\n";
   //exit(-1);
    if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
-   cout << "gun was" << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
+   cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
 
   G4double alpha = std::atan(position2[1]/position2[0]);
   
@@ -156,24 +201,33 @@ cout << "whaat\n" ;
 	// All particle fluxes are in cm-2s-1 and MeV
 //  const double gammas_energy[4] = {'0.01', '0.03', '0.05', '0.08', '0.1', '0.3','0.5', '0.8', '1', '3', '5','10'};
 // const double gammas_propability[4] = {'1', '3', '7', '9'};
+
+//cout << "start\n";
+//for(int p = 0; p<30;p++){
+//	for(int r = 0; r < 3; r++){
+//		cout << Particle_Energy[p][r] << " ";
+//		}cout << "\n";}
+
+//exit(-1);
+
 double energy = 0;
-	for (int i = 0; i < ElectronEnergyMin.size(); i++)
+	for (int i = 0; i < Particle_Energy.size(); i++)
 		{
-       // cout << "itt" << ElectronEnergyMin[i][3] << " " << number << "\n";
-	if(i == 0){
-		if(double(ElectronEnergyMin[0][3]) > number)
-			{
-			energy = ElectronEnergyMin[i][0];
-     //   cout << "ooo" << ElectronEnergyMin[i][3] << " " << number << "\n";
-			}			
-		}
-	else{
-	if(double(ElectronEnergyMin[i][3]) > number && double(ElectronEnergyMin[i-1][3]) < number)
-			{
-			energy = ElectronEnergyMin[i][0];
-        //cout << "ooo" << ElectronEnergyMin[i][3] << " " << ElectronEnergyMin[i][0] << " " << number << "\n";
-			}		
-		}
+			//cout << "itt" << Particle_Energy[i][3] << " " << number << "\n";
+		if(i == 0){
+			if(double(Particle_Energy[0][3]) > number)
+				{
+				energy = Particle_Energy[i][0];
+				//cout << "ooo" << Particle_Energy[i][3] << " " << number << "\n";
+				}			
+				}
+			else{
+			if(double(Particle_Energy[i][3]) > number && double(Particle_Energy[i-1][3]) < number)
+				{
+				energy = Particle_Energy[i][0];
+				//cout << "ooo" << Particle_Energy[i][3] << " " << Particle_Energy[i][0] << " " << number << "\n";
+				}		
+			}
 
 	
 		}
@@ -181,5 +235,6 @@ double energy = 0;
 //	cout << energy << "\n";
 
   fParticleGun->SetParticleEnergy(energy*MeV);
+  cout << "Energy was: " << energy << "\n";
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }
