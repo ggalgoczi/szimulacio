@@ -248,7 +248,7 @@ void LXeDetectorConstruction::DefineMaterials(){
 	
     density = 4048.*kg/m3;
 	AUX_mat = new G4Material(name="AUX_mat", density, ncomponents=1);
-	AUX_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=62.5*perCent);
+	AUX_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=100.0*perCent);
 	
     density = 1368.*kg/m3;
 	COM_mat = new G4Material(name="COM_mat", density, ncomponents=4);
@@ -485,9 +485,11 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
 
 
 
-	G4double density = 0.200*g/cm3;
+/*	G4double density = 0.200*g/cm3;
     G4String name;
     G4int ncomponents = 0;
+
+
 	G4Material* ADCS_mat = new G4Material(name="Aerogel", density, ncomponents=3);
 	G4Material* ANT_mat = new G4Material(name="ANT_mat", density, ncomponents=2);
 	G4Material* AUX_mat = new G4Material(name="UX_mat", density, ncomponents=1);
@@ -496,7 +498,7 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
 	G4Material* OBC_mat = new G4Material(name="OBC_mat", density, ncomponents=1);
 	G4Material* STRU_mat = new G4Material(name="STRU_mat", density, ncomponents=1);
 	G4Material* SP_mat = new G4Material(name="SP_mat", density, ncomponents=1);
-	G4Material* Payload_mat = new G4Material(name="Payload_mat", density, ncomponents=1);
+	G4Material* Payload_mat = new G4Material(name="Payload_mat", density, ncomponents=1); */
 
 	
 // CAD MESH END	
