@@ -23,7 +23,7 @@ directory = '../build/'
 angle = []
 counts = []
 for filename in os.listdir(directory):
- if filename.endswith(".txt") and not filename.endswith("gamma.txt") and not filename.endswith("CMakeCache.txt"):
+ if filename.endswith(".txt") and not filename.endswith("gamma.txt") and not filename.endswith("CMakeCache.txt") and not filename.endswith("thefileforgun.txt") and not filename.endswith("particleforgun.txt") and not filename.endswith("master.txt"):
 	print filename
 	f = open(directory+filename, 'r')
 

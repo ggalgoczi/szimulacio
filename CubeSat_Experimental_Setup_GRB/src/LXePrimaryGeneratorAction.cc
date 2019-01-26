@@ -285,6 +285,6 @@ double energy = 0;
 //	cout << energy << "\n";
 
   fParticleGun->SetParticleEnergy(energy*MeV);
-  //cout << "Energy was: " << energy << "\n"; verbosehoz
+  //cout << "Energy was: " << energy << "\n"; // verbosehoz
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }
