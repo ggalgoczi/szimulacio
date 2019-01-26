@@ -44,7 +44,8 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
-
+const int Gun_On_Sphere = 1;
+const int Parallel_Beam = 0;
 
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -112,7 +113,7 @@ while (std::getline(file2, infileline))
 // std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
  std::ifstream in(infilename.c_str());
     std::string line;
-    int i = 0;
+    int p = 0;
 
     while (std::getline(in, line))
     {
@@ -122,11 +123,11 @@ while (std::getline(file2, infileline))
         while (ss >> value)
         {
 		//	cout << value << " ";
-            Particle_Energy[i].push_back(value);
+            Particle_Energy[p].push_back(value);
         }
       //  cout << "\n";
       //  cout << i << "\n";
-        ++i;
+        ++p;
     }
     
     
@@ -166,6 +167,11 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 //cout << "whaat\n" ;
   // cout << anEvent->GetEventID()  << "\n"; verbosehoz
   //exit(-1);
+  
+  
+	if(Parallel_Beam == 1) {  
+			assert(Gun_On_Sphere == 0);	
+
    if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
    //cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n"; verbosehoz
 
@@ -189,6 +195,50 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   G4double RandZ = -1+2*G4UniformRand();
   fParticleGun->SetParticlePosition(G4ThreeVector(position2[0] + 300 * std::sin(alpha) * RandXY, position2[1] - 300 * std::cos(alpha) * RandXY, 300*RandZ)); 
   //cout << "gun was" << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
+	}
+
+	if(Gun_On_Sphere == 1){
+		
+	assert(Parallel_Beam == 0);	
+		
+ //opening angle
+  //
+  G4double alphaMin =  0;
+  G4double alphaMax = 180*deg;
+  G4double fCosAlphaMin = std::cos(alphaMin);
+  G4double fCosAlphaMax = std::cos(alphaMax);  
+  
+  
+  G4double cosTheta = 2*G4UniformRand() - 1;  //cosTheta uniform in [0, pi]
+  G4double sinTheta = std::sqrt(1. - cosTheta*cosTheta);
+  G4double phi      = 6.28318530718*G4UniformRand();  //phi uniform in [0, 2*pi]
+  G4ThreeVector ur(sinTheta*std::cos(phi),sinTheta*std::sin(phi),cosTheta);
+  //1. in world frame
+  //cosAlpha uniform in [cos(alphaMin), cos(alphaMax)]
+  G4double cosAlpha = fCosAlphaMin - G4UniformRand()*(fCosAlphaMin - fCosAlphaMax); 
+  G4double sinAlpha = std::sqrt(1. - cosAlpha*cosAlpha);
+  G4double psi      = 6.28318530718*G4UniformRand();  //psi uniform in (0,2*pi)  
+  G4ThreeVector dir(sinAlpha*std::cos(psi),-cosAlpha,sinAlpha*std::sin(psi));
+  
+  //2. rotate dir   (rotateUz transforms uz to ur)
+  //dir.rotateUz(ur);           
+  
+  
+  // Place gun on a sphere
+  
+  
+  cosTheta = 2*G4UniformRand() - 1;
+  sinTheta = std::sqrt(1. - cosTheta*cosTheta);
+  phi      = 6.28318530718*G4UniformRand();
+  ur = G4ThreeVector(sinTheta*std::cos(phi),sinTheta*std::sin(phi),cosTheta);
+  cosAlpha = fCosAlphaMin - G4UniformRand()*(fCosAlphaMin - fCosAlphaMax); 
+  sinAlpha = std::sqrt(1. - cosAlpha*cosAlpha);
+  psi      = 6.28318530718*G4UniformRand();
+  
+  fParticleGun->SetParticlePosition(G4ThreeVector(sinAlpha*std::cos(psi)*100*cm,-cosAlpha*100*cm,sinAlpha*std::sin(psi)*100*cm));
+  fParticleGun->SetParticleMomentumDirection(dir);
+  
+  }
 
 
 
