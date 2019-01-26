@@ -38,6 +38,8 @@
 #include "G4OpticalPhysics.hh"
 #include "G4OpticalProcessIndex.hh"
 
+#include "G4HadronElasticPhysics.hh"
+#include "G4EmLivermorePhysics.hh"
 #include "G4SystemOfUnits.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -56,6 +58,11 @@ LXePhysicsList::LXePhysicsList() : G4VModularPhysicsList()
 
   // Muon Physics
   RegisterPhysics( new LXeMuonPhysics("muon"));
+
+// Livermore
+  
+   RegisterPhysics( new G4HadronElasticPhysics());
+    RegisterPhysics( new G4EmLivermorePhysics());
 
   // Optical Physics
   G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();

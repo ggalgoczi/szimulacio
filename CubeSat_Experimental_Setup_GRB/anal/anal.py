@@ -25,63 +25,67 @@ bins_2 = np.arange(0, 20000, 20) # fixed bin size
 directory = './'
 angle = []
 counts = []
+NoFound = 0
 for filename in os.listdir(directory):
-if filename.endswith(".txt") and not filename.endswith("master.txt") and not filename.endswith("res.txt") and not filename.endswith("particleforgun.txt") and not filename.endswith("thefileforgun.txt")  and not filename.endswith("CMakeCache.txt"):
-	print filename
-	f = open(directory+filename, 'r')
-	w, h = 0, 11000000;
-	energies = [[0 for x in range(w)] for y in range(h)] 
-	sum_e = []
-	sum_No = []
-	bins_centers = []
-	p = 0
-	for line in f:
-		EvNum = int(line.split()[0])
-		energies[EvNum].append(float(line.split()[4]))
+	if filename == "scint.txt":
+		NoFound = 1
+		print filename
+		f = open(directory+filename, 'r')
+		w, h = 0, 11000000;
+		energies = [[0 for x in range(w)] for y in range(h)] 
+		sum_e = []
+		sum_No = []
+		bins_centers = []
+		p = 0
+		for line in f:
+			EvNum = int(line.split()[0])
+			energies[EvNum].append(float(line.split()[4]))
 
-	for W in xrange(0,h-1):
-		if(len(energies[W]) != 0):
-			sum_No.append(len(energies[W]))
+		for W in xrange(0,h-1):
+			if(len(energies[W]) != 0):
+				sum_No.append(len(energies[W]))
 
-	print "run"
-	with open('../build/res.txt', 'a') as the_file:
+		print "run"
+		with open('../build/res.txt', 'a') as the_file:
 		#for i in xrange(len(sum_No)-1):
-		if(sum_No[0]!=0): 	
-			the_file.write(str(sum_No[0])+'\n')
-		else:
-			the_file.write(str(0)+'\n')
-			
-	print "len",len(sum_No)
+			if(sum_No[0]!=0): 	
+				the_file.write(str(sum_No[0])+'\n')
+if NoFound == 0:
+	with open('../build/res.txt', 'a') as the_file:
+		the_file.write(str(0)+'\n')
+	
+exit(-1)		
+	#print "len",len(sum_No)
 
-	values, edges = np.histogram(sum_No, bins=bins_2)
-	for i in xrange(len(edges)-1):    
-		bins_centers.append((edges[i] + edges[i+1])/2)
-	bins_centers = np.array(bins_centers)
-	print filename,  np.count_nonzero(sum_No)
+#	values, edges = np.histogram(sum_No, bins=bins_2)
+	#for i in xrange(len(edges)-1):    
+	#	bins_centers.append((edges[i] + edges[i+1])/2)
+	#bins_centers = np.array(bins_centers)
+	#print filename,  np.count_nonzero(sum_No)
 	#angle.append(float(filename[:-4])*10)
 	#counts.append(np.count_nonzero(sum_No))
 	
 	
 	
-	y, bin_edges = np.histogram(sum_No, bins_2)
-	bin_centers = 0.5*(bin_edges[1:] + bin_edges[:-1])
+	#y, bin_edges = np.histogram(sum_No, bins_2)
+	#bin_centers = 0.5*(bin_edges[1:] + bin_edges[:-1])
 	
-	if filename == "00.txt" or filename == "017.txt":
-		plt.errorbar(
-		bin_centers,
-		y,
-		yerr = y**0.5,
-		marker = '.',
-		drawstyle = 'steps-mid-'
-		)
-		plt.title('')
-		plt.xlabel('Number of scint photons detected')
-		plt.ylabel('Number of events')
-		plt.xlim([10, 16000])
-		plt.ylim([0, 70])
-		plt.show()	
-		
-#	if filename == "8.txt":
+	#if filename == "00.txt" or filename == "017.txt":
+	#	plt.errorbar(
+#		bin_centers,
+#		y,
+#		yerr = y**0.5,
+#		marker = '.',
+#		drawstyle = 'steps-mid-'
+#		)
+#		plt.title('')
+#		plt.xlabel('Number of scint photons detected')
+#		plt.ylabel('Number of events')
+#		plt.xlim([10, 16000])
+#		plt.ylim([0, 70])
+#		plt.show()	
+#		
+##	if filename == "8.txt":
 #		plt.errorbar( bin_centers,	y,	yerr = y**0.5,	marker = '.',	drawstyle = 'steps-mid-'	)		
 #		plt.title('')
 #		plt.xlabel('Number of events')
