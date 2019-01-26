@@ -48,6 +48,15 @@ const int Gun_On_Sphere = 1;
 const int Parallel_Beam = 0;
 
 
+void filePutContents2(const std::string& name, const std::string& content, bool append = false) {
+    std::ofstream outfile;
+    if (append)
+		outfile.open(name.c_str(), std::ios_base::app);
+    else
+        outfile.open(name.c_str());
+    outfile << content;
+}
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
@@ -149,7 +158,10 @@ while (std::getline(file2, infileline))
 		//cout << ElectronEnergyMin[i][0] << " "<<ElectronEnergyMin[i][1] << " "<<ElectronEnergyMin[i][2] << " " << sum << "\n";
 		}     
     
-    
+       std::ostringstream oss;
+		oss << Particle_Energy[0][2] <<std::endl;
+		std::string var = oss.str();	
+		filePutContents2("./totalfluxes.txt",var,true);
     
     
     	     
