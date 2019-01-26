@@ -1,14 +1,14 @@
 #!/bin/bash
 
-if [ "$#" -ne 0 ]; then
+if [ "$#" -eq 0 ]; then
     inputfilename="masters.txt"
 fi
 
-if [ "$#" -ne 1 ]; then
+if [ "$#" -eq 2 ]; then
 	inputfilename=$1 # file listing all parts and their energy spectra sources
 fi
 
-
+inputfilename="master.txt"
 if [ ! -f $inputfilename ]; then
   echo "File not found!"
   exit 0
@@ -19,7 +19,8 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
     #echo "Text read from file: $line"
     for word in $line
 		do
-		echo $word
+		
+		echo ${word##*/}  # cutting everything off before the backslashes
 		done
 done < $inputfilename
 
