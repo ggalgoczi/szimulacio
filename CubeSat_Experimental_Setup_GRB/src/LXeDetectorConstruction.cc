@@ -305,15 +305,15 @@ const G4int lxenum = 8;
 
   fLXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
  
-  G4double glass_RIND[lxenum]={1.49,1.49,1.49};
-  G4double glass_AbsLength[lxenum]={420.*cm,420.*cm,420.*cm};
+  G4double glass_RIND[3]={1.49,1.49,1.49};
+  G4double glass_AbsLength[3]={420.*cm,420.*cm,420.*cm};
   G4MaterialPropertiesTable *glass_mt = new G4MaterialPropertiesTable();
   glass_mt->AddProperty("ABSLENGTH",lxe_Energy,glass_AbsLength,lxenum);
   glass_mt->AddProperty("RINDEX",lxe_Energy,glass_RIND,lxenum);
   fGlass->SetMaterialPropertiesTable(glass_mt);
 
-  G4double vacuum_Energy[lxenum]={2.0*eV,7.0*eV,7.14*eV};
-  G4double vacuum_RIND[lxenum]={1.,1.,1.};
+  G4double vacuum_Energy[3]={2.0*eV,7.0*eV,7.14*eV};
+  G4double vacuum_RIND[3]={1.,1.,1.};
   G4MaterialPropertiesTable *vacuum_mt = new G4MaterialPropertiesTable();
   vacuum_mt->AddProperty("RINDEX", vacuum_Energy, vacuum_RIND,lxenum);
   fVacuum->SetMaterialPropertiesTable(vacuum_mt);

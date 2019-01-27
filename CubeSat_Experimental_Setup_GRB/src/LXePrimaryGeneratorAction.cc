@@ -76,6 +76,8 @@ std::ifstream file("particleforgun.txt");
 while (std::getline(file, infileline))
     {
 	Part_Name = infileline;	
+	cout << Part_Name.size() << "\n";
+
     }
     
     
