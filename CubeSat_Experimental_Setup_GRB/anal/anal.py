@@ -48,8 +48,7 @@ for filename in os.listdir(directory):
 		print "run"
 		with open('../build/res.txt', 'a') as the_file:
 		#for i in xrange(len(sum_No)-1):
-			if(sum_No[0]!=0): 	
-				the_file.write(str(sum_No[0])+'\n')
+			the_file.write(str(len(sum_No))+'\n')
 if NoFound == 0:
 	with open('../build/res.txt', 'a') as the_file:
 		the_file.write(str(0)+'\n')
