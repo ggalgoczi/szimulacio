@@ -1035,6 +1035,8 @@ LXeSteppingMessenger.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeSteppingMessenger.hh
 LXeRecorderBase.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRecorderBase.hh
+LXeEventAction.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/LXeEventAction.hh
 G4SteppingManager.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/G4SteppingManager.hh
 G4SDManager.hh

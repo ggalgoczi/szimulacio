@@ -53,7 +53,7 @@
 LXeEventAction::LXeEventAction(LXeRecorderBase* r)
   : fRecorder(r),fSaveThreshold(0),fScintCollID(-1),fPMTCollID(-1),fVerbose(0),
    fPMTThreshold(1),fForcedrawphotons(false),fForcenophotons(false)
-{
+{	
   fEventMessenger = new LXeEventMessenger(this);
 }
  

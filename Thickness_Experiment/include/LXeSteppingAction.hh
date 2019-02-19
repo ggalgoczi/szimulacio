@@ -44,8 +44,7 @@ class LXeSteppingMessenger;
 class LXeSteppingAction : public G4UserSteppingAction
 {
   public:
-
-    LXeSteppingAction(LXeRecorderBase*);
+    LXeSteppingAction(LXeRecorderBase*, LXeEventAction*);
     virtual ~LXeSteppingAction();
     virtual void UserSteppingAction(const G4Step*);
 
@@ -53,6 +52,8 @@ class LXeSteppingAction : public G4UserSteppingAction
     G4bool GetOneStepPrimaries(){return fOneStepPrimaries;}
  
   private:
+
+    LXeEventAction*  fEventAction;
 
     LXeRecorderBase* fRecorder;
     G4bool fOneStepPrimaries;
