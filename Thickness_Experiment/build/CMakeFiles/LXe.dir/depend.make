@@ -1438,6 +1438,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeEventAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeEventMessenger.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXePMTHit.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeRecorderBase.hh
+CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeRunAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeScintHit.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeTrajectory.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeUserEventInformation.hh
@@ -1660,6 +1661,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Gea
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UIparameter.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UItokenNum.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UserEventAction.hh
+CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UserRunAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UserStackingAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UserSteppingAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: /home/galgoczi/ess/geant/include/Geant4/G4UserTrackingAction.hh

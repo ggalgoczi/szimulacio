@@ -35,6 +35,7 @@
 #include "LXeUserEventInformation.hh"
 #include "LXeTrajectory.hh"
 #include "LXeRecorderBase.hh"
+#include "LXeRunAction.hh"
 
 #include "G4EventManager.hh"
 #include "G4SDManager.hh"
@@ -50,9 +51,9 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeEventAction::LXeEventAction(LXeRecorderBase* r)
+LXeEventAction::LXeEventAction(LXeRecorderBase* r, LXeRunAction*  RunAction)
   : fRecorder(r),fSaveThreshold(0),fScintCollID(-1),fPMTCollID(-1),fVerbose(0),
-   fPMTThreshold(1),fForcedrawphotons(false),fForcenophotons(false)
+   fPMTThreshold(1),fForcedrawphotons(false),fForcenophotons(false),fRunAction(RunAction)
 {	
   fEventMessenger = new LXeEventMessenger(this);
 }
@@ -64,7 +65,7 @@ LXeEventAction::~LXeEventAction(){}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeEventAction::BeginOfEventAction(const G4Event* anEvent){
- 
+ fRunAction->Oha = fRunAction->Oha+1;
   //New event, add the user information object
   G4EventManager::
     GetEventManager()->SetUserInformation(new LXeUserEventInformation);
