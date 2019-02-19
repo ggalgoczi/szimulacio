@@ -767,6 +767,8 @@ LXeTrajectory.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeTrajectory.hh
 LXeRecorderBase.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRecorderBase.hh
+LXeRunAction.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/LXeRunAction.hh
 G4EventManager.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/G4EventManager.hh
 G4SDManager.hh

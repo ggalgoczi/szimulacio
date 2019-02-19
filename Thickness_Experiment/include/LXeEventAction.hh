@@ -39,12 +39,13 @@
 
 class G4Event;
 class LXeRecorderBase;
+class LXeRunAction;
 
 class LXeEventAction : public G4UserEventAction
 {
   public:
 	int LOL;
-    LXeEventAction(LXeRecorderBase*);
+    LXeEventAction(LXeRecorderBase*, LXeRunAction*);
     virtual ~LXeEventAction();
 
   public:
@@ -62,6 +63,8 @@ class LXeEventAction : public G4UserEventAction
     void SetForceDrawNoPhotons(G4bool b){fForcenophotons=b;}
 
   private:
+
+    LXeRunAction*  fRunAction;
 
     LXeRecorderBase* fRecorder;
     LXeEventMessenger* fEventMessenger;
