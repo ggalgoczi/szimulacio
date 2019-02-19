@@ -39,6 +39,7 @@
 #include "LXeSteppingMessenger.hh"
 #include "LXeRecorderBase.hh"
 
+#include "LXeEventAction.hh"
 #include "G4SteppingManager.hh"
 #include "G4SDManager.hh"
 #include "G4EventManager.hh"
@@ -66,12 +67,13 @@ void filePutContents(const std::string& name, const std::string& content, bool a
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeSteppingAction::LXeSteppingAction(LXeRecorderBase* r)
-  : fRecorder(r),fOneStepPrimaries(false)
+LXeSteppingAction::LXeSteppingAction(LXeRecorderBase* r,LXeEventAction*  eventAction)
+  : fRecorder(r),fOneStepPrimaries(false),fEventAction(eventAction)
 {
   fSteppingMessenger = new LXeSteppingMessenger(this);
-
   fExpectedNextStatus = Undefined;
+  
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -81,6 +83,9 @@ LXeSteppingAction::~LXeSteppingAction() {}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
+
+  fEventAction->LOL = fEventAction->LOL+1;
+	
   G4int eventNumber = G4RunManager::GetRunManager()->
                                               GetCurrentEvent()->GetEventID();
 

@@ -43,7 +43,7 @@ class LXeRecorderBase;
 class LXeEventAction : public G4UserEventAction
 {
   public:
-
+	int LOL;
     LXeEventAction(LXeRecorderBase*);
     virtual ~LXeEventAction();
 
