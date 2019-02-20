@@ -82,7 +82,10 @@ void LXeEventAction::BeginOfEventAction(const G4Event* anEvent){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
-
+	
+	
+	G4cout << "lol " << LOL << "\n";
+	exit(-1);
   LXeUserEventInformation* eventInformation
     =(LXeUserEventInformation*)anEvent->GetUserInformation();
  

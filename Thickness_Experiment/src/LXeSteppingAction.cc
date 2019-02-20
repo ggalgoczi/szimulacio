@@ -84,7 +84,7 @@ LXeSteppingAction::~LXeSteppingAction() {}
 
 void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
-  fEventAction->LOL = fEventAction->LOL+1;
+  fEventAction->LOL = 444;
 	
   G4int eventNumber = G4RunManager::GetRunManager()->
                                               GetCurrentEvent()->GetEventID();
