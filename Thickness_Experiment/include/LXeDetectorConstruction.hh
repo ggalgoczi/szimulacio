@@ -45,6 +45,7 @@ class G4Sphere;
 #include "G4RotationMatrix.hh"
 #include "G4SubtractionSolid.hh"
 #include "LXeScintSD.hh"
+#include "LXeScintillatorSD.hh"
 #include "LXePMTSD.hh"
 
 #include "G4VUserDetectorConstruction.hh"

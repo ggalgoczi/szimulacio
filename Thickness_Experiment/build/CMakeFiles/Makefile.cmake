@@ -29,7 +29,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/galgoczi/ess/geant/lib/Geant4-10.0.3/Geant4LibraryDepends-release.cmake"
   "/home/galgoczi/ess/geant/lib/Geant4-10.0.3/Geant4LibraryDepends.cmake"
   "/home/galgoczi/ess/geant/lib/Geant4-10.0.3/UseGeant4.cmake"
-  "/home/galgoczi/software/CADMesh-1.1/build/cadmesh-config.cmake"
+  "/usr/local/lib/cmake/cadmesh-1.1.0/cadmesh-config.cmake"
   "/usr/share/cmake-3.5/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.5/Modules/CMakeCInformation.cmake"
