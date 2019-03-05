@@ -577,32 +577,34 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
  	/* cad_physical_2 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_2,
                                      "cad_physical_2", fExperimentalHall_log, false, 0);	*/
  	
+  G4bool checkOverlaps = true;
 
- cad_physical = new G4PVPlacement(0, G4ThreeVector(), cad_logical,
-                                    "cad_physical", fExperimentalHall_log, false, 0);	
+
+cad_physical = new G4PVPlacement(0, G4ThreeVector(), cad_logical,
+                                    "cad_physical", fExperimentalHall_log, false, 0, checkOverlaps);	
                                     
                                      
 
 cad_physical_3 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_3,
-                                     "cad_physical_3", fExperimentalHall_log, false, 0);	
+                                     "cad_physical_3", fExperimentalHall_log, false, 0, checkOverlaps);	
 	
 cad_physical_4 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_4,
-                                     "cad_physical_4", fExperimentalHall_log, false, 0);	
+                                     "cad_physical_4", fExperimentalHall_log, false, 0, checkOverlaps);
 	
 cad_physical_5 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_5,
-                                     "cad_physical_5", fExperimentalHall_log, false, 0);
+                                     "cad_physical_5", fExperimentalHall_log, false, 0, checkOverlaps);
 
 cad_physical_6 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_6,
-                                     "cad_physical_6", fExperimentalHall_log, false, 0);	
+                                     "cad_physical_6", fExperimentalHall_log, false, 0, checkOverlaps);
 	
 cad_physical_7 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_7,
-                                     "cad_physical_7", fExperimentalHall_log, false, 0);	
+                                     "cad_physical_7", fExperimentalHall_log, false, 0, checkOverlaps);	
 	
 cad_physical_8 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_8,
-                                     "cad_physical_8", fExperimentalHall_log, false, 0);	
+                                     "cad_physical_8", fExperimentalHall_log, false, 0, checkOverlaps);
 	
 cad_physical_9 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_9,
-                                     "cad_physical_9", fExperimentalHall_log, false, 0); 
+                                     "cad_physical_9", fExperimentalHall_log, false, 0, checkOverlaps);
 	
 
 

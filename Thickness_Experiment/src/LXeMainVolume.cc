@@ -37,7 +37,7 @@
 #include "G4LogicalBorderSurface.hh"
 
 #include "G4SystemOfUnits.hh"
-
+G4bool checkOverlaps = true;
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
@@ -46,13 +46,15 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                              G4bool pMany,
                              G4int pCopyNo,
                              LXeDetectorConstruction* c)
+                             
+                          
   //Pass info to the G4PVPlacement constructor
   :G4PVPlacement(pRot,tlate,
                  //Temp logical volume must be created here
                  new G4LogicalVolume(new G4Box("temp",1,1,1),
                                      G4Material::GetMaterial("Vacuum"),
                                      "temp",0,0,0),
-                 "housing",pMotherLogical,pMany,pCopyNo),fConstructor(c)
+                 "housing",pMotherLogical,pMany,pCopyNo, checkOverlaps),fConstructor(c)
 {
   CopyValues();
 
@@ -72,7 +74,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                                      "housing_log",0,0,0);
  
   new G4PVPlacement(0,G4ThreeVector(),fScint_log,"scintillator",
-                                 fHousing_log,false,0);
+                                 fHousing_log,false,0, checkOverlaps);
  
   //*************** Miscellaneous sphere to demonstrate skin surfaces
  
@@ -111,7 +113,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
  
   new G4PVPlacement(0,G4ThreeVector(0,0,-height_pmt/2),
                                     fPhotocath_log,"photocath",
-                                    fPmt_log,false,0);
+                                    fPmt_log,false,0,checkOverlaps);
  
   //***********Arrange pmts around the outside of housing**********
 
@@ -203,7 +205,7 @@ void LXeMainVolume::PlacePMTs(G4LogicalVolume* pmt_log,
     for(G4int i=1;i<=nb;i++){
       b+=db;
       new G4PVPlacement(rot,G4ThreeVector(x,y,z),pmt_log,"pmt",
-                        fHousing_log,false,k);
+                        fHousing_log,false,k,checkOverlaps);
       fPmtPositions.push_back(G4ThreeVector(x,y,z));
       k++;
     }
