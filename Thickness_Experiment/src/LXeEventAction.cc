@@ -84,8 +84,6 @@ void LXeEventAction::BeginOfEventAction(const G4Event* anEvent){
 void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 	
 	
-	G4cout << "lol " << LOL << "\n";
-	exit(-1);
   LXeUserEventInformation* eventInformation
     =(LXeUserEventInformation*)anEvent->GetUserInformation();
  
@@ -206,6 +204,14 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     G4RunManager::GetRunManager()->rndmSaveThisEvent();
 
   if(fRecorder)fRecorder->RecordEndOfEvent(anEvent);
+  
+  
+  // Sensitive detector
+    G4VHitsCollection* hc = anEvent->GetHCofThisEvent()->GetHC(0);
+    G4cout << "    "  
+           << hc->GetSize() << " hits stored in this event" << G4endl;
+  
+  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

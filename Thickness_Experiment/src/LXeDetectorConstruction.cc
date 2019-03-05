@@ -33,6 +33,10 @@
 #include "LXeDetectorConstruction.hh"
 #include "LXePMTSD.hh"
 #include "LXeScintSD.hh"
+#include "LXeScintillatorSD.hh"
+
+
+
 #include "LXeDetectorMessenger.hh"
 #include "LXeMainVolume.hh"
 #include "LXeWLSSlab.hh"
@@ -660,6 +664,19 @@ void LXeDetectorConstruction::ConstructSDandField() {
     fScint_SD.Put(scint_SD);
   }
   SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
+  
+    // Sensitive detectors
+
+  G4String trackerChamberSDname = "LXe/LXeScintillatorSD";
+  LXeScintillatorSD* aTrackerSD = new LXeScintillatorSD(trackerChamberSDname,
+                                            "ScintillatorHitsCollection");
+  G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
+  // Setting aTrackerSD to all logical volumes with the same name 
+  // of "Chamber_LV".
+  SetSensitiveDetector("cad_logical", aTrackerSD, true);
+   
+  
+  
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

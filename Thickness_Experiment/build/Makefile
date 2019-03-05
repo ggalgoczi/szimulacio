@@ -626,6 +626,60 @@ src/LXeScintSD.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintSD.cc.s
 .PHONY : src/LXeScintSD.cc.s
 
+src/LXeScintillatorHit.o: src/LXeScintillatorHit.cc.o
+
+.PHONY : src/LXeScintillatorHit.o
+
+# target to build an object file
+src/LXeScintillatorHit.cc.o:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o
+.PHONY : src/LXeScintillatorHit.cc.o
+
+src/LXeScintillatorHit.i: src/LXeScintillatorHit.cc.i
+
+.PHONY : src/LXeScintillatorHit.i
+
+# target to preprocess a source file
+src/LXeScintillatorHit.cc.i:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.i
+.PHONY : src/LXeScintillatorHit.cc.i
+
+src/LXeScintillatorHit.s: src/LXeScintillatorHit.cc.s
+
+.PHONY : src/LXeScintillatorHit.s
+
+# target to generate assembly for a file
+src/LXeScintillatorHit.cc.s:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.s
+.PHONY : src/LXeScintillatorHit.cc.s
+
+src/LXeScintillatorSD.o: src/LXeScintillatorSD.cc.o
+
+.PHONY : src/LXeScintillatorSD.o
+
+# target to build an object file
+src/LXeScintillatorSD.cc.o:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o
+.PHONY : src/LXeScintillatorSD.cc.o
+
+src/LXeScintillatorSD.i: src/LXeScintillatorSD.cc.i
+
+.PHONY : src/LXeScintillatorSD.i
+
+# target to preprocess a source file
+src/LXeScintillatorSD.cc.i:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.i
+.PHONY : src/LXeScintillatorSD.cc.i
+
+src/LXeScintillatorSD.s: src/LXeScintillatorSD.cc.s
+
+.PHONY : src/LXeScintillatorSD.s
+
+# target to generate assembly for a file
+src/LXeScintillatorSD.cc.s:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.s
+.PHONY : src/LXeScintillatorSD.cc.s
+
 src/LXeStackingAction.o: src/LXeStackingAction.cc.o
 
 .PHONY : src/LXeStackingAction.o
@@ -960,6 +1014,12 @@ help:
 	@echo "... src/LXeScintSD.o"
 	@echo "... src/LXeScintSD.i"
 	@echo "... src/LXeScintSD.s"
+	@echo "... src/LXeScintillatorHit.o"
+	@echo "... src/LXeScintillatorHit.i"
+	@echo "... src/LXeScintillatorHit.s"
+	@echo "... src/LXeScintillatorSD.o"
+	@echo "... src/LXeScintillatorSD.i"
+	@echo "... src/LXeScintillatorSD.s"
 	@echo "... src/LXeStackingAction.o"
 	@echo "... src/LXeStackingAction.i"
 	@echo "... src/LXeStackingAction.s"
