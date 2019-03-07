@@ -210,6 +210,19 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
     G4VHitsCollection* hc = anEvent->GetHCofThisEvent()->GetHC(0);
     G4cout << "    "  
            << hc->GetSize() << " hits stored in this event" << G4endl;
+           
+           
+           //hc->PrintAllHits();
+          //if(hc->GetSize() > 0)
+          //hc->GetHit(0);
+          
+          for(int i = 0; i < hc->GetSize();i++){
+			  hc->GetHit(i)->Draw();
+			  
+			  }
+          //(*hc)[0]->Print();
+          
+          
   
   
 }

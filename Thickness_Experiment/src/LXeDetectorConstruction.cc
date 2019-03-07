@@ -34,9 +34,6 @@
 #include "LXePMTSD.hh"
 #include "LXeScintSD.hh"
 #include "LXeScintillatorSD.hh"
-
-
-
 #include "LXeDetectorMessenger.hh"
 #include "LXeMainVolume.hh"
 #include "LXeWLSSlab.hh"
