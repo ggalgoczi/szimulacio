@@ -684,13 +684,36 @@ void LXeDetectorConstruction::ConstructSDandField() {
   
     // Sensitive detectors
 
-  G4String trackerChamberSDname = "LXe/LXeScintillatorSD";
-  LXeScintillatorSD* aTrackerSD = new LXeScintillatorSD(trackerChamberSDname,
+  static G4ThreadLocal G4bool initialized = false;
+    if ( ! initialized ) {
+		
+		
+		 G4String trackerChamberSDname = "LXe/LXeScintillatorSD";
+		LXeScintillatorSD* aTrackerSD = new LXeScintillatorSD(trackerChamberSDname,
                                             "ScintillatorHitsCollection");
-  G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
+		G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
   // Setting aTrackerSD to all logical volumes with the same name 
   // of "Chamber_LV".
-  SetSensitiveDetector("cad_logical", aTrackerSD, true);
+		SetSensitiveDetector("cad_logical", aTrackerSD, true);
+		initialized = true;
+		/*
+        // Prepare sensitive detectors
+        CheckVolumeSD* fCheckSD = new CheckVolumeSD("checkSD");
+        (G4SDManager::GetSDMpointer())->AddNewDetector( fCheckSD );
+        fLogicCheck->SetSensitiveDetector(fCheckSD);
+
+        TargetSD* fTargetSD = new TargetSD("targetSD");
+        (G4SDManager::GetSDMpointer())->AddNewDetector( fTargetSD );
+        fLogicTarget->SetSensitiveDetector(fTargetSD);
+        initialized=true;
+        
+        */
+        
+        
+    }
+
+
+ 
    
   
   
