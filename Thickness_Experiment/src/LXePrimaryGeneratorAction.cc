@@ -32,6 +32,7 @@
 #include "LXePrimaryGeneratorAction.hh"
 #include "Randomize.hh"
 #include "G4EventManager.hh"
+#include "LXeRunAction.hh"
 
 
 #include "G4Event.hh"
@@ -59,53 +60,22 @@ void filePutContents2(const std::string& name, const std::string& content, bool 
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(){
+LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction) 
+: fRunAction(RunAction)
+{
   G4int n_particle = 1;
   fParticleGun = new G4ParticleGun(n_particle);
  
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
  
-// reading in type of particle
-// check if file exists and particle names are OK
-
-std::string infileline;
-std::string infilename;
-std::string Part_Name;
-
-std::ifstream file("particleforgun.txt");
-while (std::getline(file, infileline))
-    {
-	Part_Name = infileline;	
-	cout << Part_Name.size() << "\n";
-
-    }
-    
-    
-//cout << "aa " << Part_Name << "\n";
-// std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
- 
- /*
- std::ifstream in(infilename.c_str());
- std::string line; 
- 
-    while (std::getline(in, line))
-    {
-        std::stringstream ss3(line);
-        ss3 >> ;
-        ElectronEnergyMax.push_back(std::vector<float>());
-        while (ss >> value)
-        {
-//			cout << ss;
-            ElectronEnergyMax[i].push_back(value);
-
-        }
-        ++i;
-    }	      
- */
- 
+  G4String Particle_Name = fRunAction->Part_Name;
+  G4cout << Particle_Name << G4endl;
+  //G4cout << "Fura" << G4endl;
+  //exit(-1);
+  
   G4String particleName;
   fParticleGun->SetParticleDefinition(particleTable->
-                                     FindParticle(particleName=Part_Name));
+                                     FindParticle(particleName=Particle_Name));
   //Default energy,position,momentum
   fParticleGun->SetParticleEnergy(59.54*keV);
   fParticleGun->SetParticlePosition(G4ThreeVector(-300,0.0001,0));
@@ -113,35 +83,14 @@ while (std::getline(file, infileline))
  // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(10,10,0.));  
 	
 
-// reading in energy spectras for particles:
-
-std::ifstream file2("thefileforgun.txt");
-while (std::getline(file2, infileline))
-    {
-	infilename = infileline;	
-    }
-
-// std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
- std::ifstream in(infilename.c_str());
-    std::string line;
-    int p = 0;
-
-    while (std::getline(in, line))
-    {
-        float value;
-        std::stringstream ss(line);
-        Particle_Energy.push_back(std::vector<float>());
-        while (ss >> value)
-        {
-		//	cout << value << " ";
-            Particle_Energy[p].push_back(value);
-        }
-      //  cout << "\n";
-      //  cout << i << "\n";
-        ++p;
-    }
+    Particle_Energy = fRunAction->Particle_Energy_In_RunAction;
     
-    
+    for (int i = 0; i < Particle_Energy.size(); i++){
+    for (int j = 0; j < 3; j++){
+		G4cout << Particle_Energy[i][j] << G4endl;
+	}
+		}
+
     
     double sum = 0;
     double count = 0;

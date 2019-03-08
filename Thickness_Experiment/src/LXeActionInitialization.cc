@@ -63,14 +63,15 @@ void LXeActionInitialization::BuildForMaster() const
 
 void LXeActionInitialization::Build() const
 {
-  SetUserAction(new LXePrimaryGeneratorAction());
+  LXeRunAction* RunAction = new LXeRunAction(fRecorder);
+  SetUserAction(RunAction);
 
   SetUserAction(new LXeStackingAction());
+  SetUserAction(new LXePrimaryGeneratorAction(RunAction));
 
-  LXeRunAction* RunAction = new LXeRunAction(fRecorder);
 
+ 
 
-  SetUserAction(RunAction);
   
   LXeEventAction* eventAction = new LXeEventAction(fRecorder, RunAction);
   
