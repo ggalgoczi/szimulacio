@@ -682,13 +682,13 @@ void LXeDetectorConstruction::ConstructSDandField() {
   }
   SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
   
-    // Sensitive detectors
+    // Actually WORKING Sensitive detectors
 
   static G4ThreadLocal G4bool initialized = false;
     if ( ! initialized ) {
 		
 		
-		 G4String trackerChamberSDname = "LXe/LXeScintillatorSD";
+		G4String trackerChamberSDname = "LXe/LXeScintillatorSD";
 		LXeScintillatorSD* aTrackerSD = new LXeScintillatorSD(trackerChamberSDname,
                                             "ScintillatorHitsCollection");
 		G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
