@@ -44,8 +44,8 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
-const int Gun_On_Sphere = 1;
-const int Parallel_Beam = 0;
+const int Gun_On_Sphere = 0;
+const int Parallel_Beam = 1;
 
 
 void filePutContents2(const std::string& name, const std::string& content, bool append = false) {
@@ -202,7 +202,11 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 	G4ThreeVector dir(-std::cos(alpha),-std::sin(alpha),0);	
 	fParticleGun->SetParticleMomentumDirection(dir);  
 	}
-  else{printf("Gun position set is invalid!!\n");exit(-1);}
+  else{
+	  G4cout << "Gun position set is invalid!!" << G4endl;
+	  G4cout << position2[0] << G4endl;
+	  G4cout << position2[1] << G4endl;
+	  exit(-1);}
 
 
   G4double RandXY = -1 + 2*G4UniformRand();

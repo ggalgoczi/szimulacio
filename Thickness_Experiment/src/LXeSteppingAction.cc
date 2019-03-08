@@ -245,7 +245,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 		filePutContents("./scint.txt",var,true);
 
 
-		G4cout << "ohha\n";
+		//G4cout << "ohha\n";
 		track->SetTrackStatus(fStopAndKill);
         
         break;
