@@ -84,13 +84,14 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
 	
 
     Particle_Energy = fRunAction->Particle_Energy_In_RunAction;
-    
+  
+  /*  
     for (int i = 0; i < Particle_Energy.size(); i++){
     for (int j = 0; j < 3; j++){
 		G4cout << Particle_Energy[i][j] << G4endl;
 	}
 		}
-
+	*/
     
     double sum = 0;
     double count = 0;
@@ -135,7 +136,8 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 	if(Parallel_Beam == 1) {  
 			assert(Gun_On_Sphere == 0);	
 
-   if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
+   //if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
+   position2 = fParticleGun->GetParticlePosition();
    //cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n"; verbosehoz
 
   G4double alpha = std::atan(position2[1]/position2[0]);
