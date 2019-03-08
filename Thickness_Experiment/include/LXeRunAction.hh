@@ -30,7 +30,7 @@
 //
 //
 #include "G4UserRunAction.hh"
-
+#include <vector>
 #ifndef LXeRunAction_h
 #define LXeRunAction_h 1
 
@@ -46,6 +46,10 @@ class LXeRunAction : public G4UserRunAction
     virtual void BeginOfRunAction(const G4Run*);
     virtual void EndOfRunAction(const G4Run*);
 
+	std::string infileline;
+	std::string infilename;
+	std::string Part_Name;
+	std::vector<std::vector<float> > Particle_Energy_In_RunAction;
   private:
 
     LXeRecorderBase* fRecorder;

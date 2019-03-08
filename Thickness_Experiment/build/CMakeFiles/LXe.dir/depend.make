@@ -3224,6 +3224,7 @@ CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o: /home/galgoczi/Downloads/geant4.10.0
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o: ../src/LXePhysicsList.cc
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: ../include/LXePrimaryGeneratorAction.hh
+CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: ../include/LXeRunAction.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/digits/include/G4DCofThisEvent.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/digits/include/G4VDigiCollection.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/hits/include/G4HCofThisEvent.hh
@@ -3448,6 +3449,7 @@ CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.icc
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4VProcess.hh
+CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4UserRunAction.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4VUserPrimaryGeneratorAction.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4ForceCondition.hh
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4GPILSelection.hh

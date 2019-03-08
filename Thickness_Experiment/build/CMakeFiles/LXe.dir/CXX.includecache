@@ -197,6 +197,8 @@ G4ThreeVector.hh
 ../include/G4ThreeVector.hh
 vector
 -
+LXeRunAction.hh
+../include/LXeRunAction.hh
 
 ../include/LXeRecorderBase.hh
 G4Run.hh
@@ -211,6 +213,8 @@ G4Step.hh
 ../include/LXeRunAction.hh
 G4UserRunAction.hh
 ../include/G4UserRunAction.hh
+vector
+-
 
 ../include/LXeScintHit.hh
 G4VHit.hh
@@ -6267,6 +6271,8 @@ Randomize.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/Randomize.hh
 G4EventManager.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/G4EventManager.hh
+LXeRunAction.hh
+/home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeRunAction.hh
 G4Event.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/G4Event.hh
 G4ParticleGun.hh

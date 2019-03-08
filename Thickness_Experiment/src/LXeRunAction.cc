@@ -34,7 +34,61 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {}
+LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
+	
+	
+	  // Reading in data for event generation
+  
+  
+// reading in type of particle
+// check if file exists and particle names are OK
+
+G4cout << "okk" <<G4endl;
+
+	std::ifstream file("particleforgun.txt");
+	while (std::getline(file, infileline))
+    {
+	Part_Name = infileline;	
+	//G4cout << Part_Name.size() <<G4endl;
+	//G4cout << "ok" <<G4endl;
+    }
+
+
+// reading in energy spectras for particles:
+	std::string infileline;
+	std::string infilename;
+std::ifstream file2("thefileforgun.txt");
+while (std::getline(file2, infileline))
+    {
+	infilename = infileline;	
+    }
+
+// std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
+ std::ifstream in(infilename.c_str());
+    std::string line;
+    int p = 0;
+
+    while (std::getline(in, line))
+    {
+        float value;
+        std::stringstream ss(line);
+        Particle_Energy_In_RunAction.push_back(std::vector<float>());
+        while (ss >> value)
+        {
+		//	cout << value << " ";
+            Particle_Energy_In_RunAction[p].push_back(value);
+        }
+      //  cout << "\n";
+      //  cout << i << "\n";
+        ++p;
+    }
+
+
+
+
+
+	
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -44,7 +98,9 @@ LXeRunAction::~LXeRunAction() {}
 
 void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
   if(fRecorder)fRecorder->RecordBeginOfRun(aRun);
-}
+    
+ } 
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

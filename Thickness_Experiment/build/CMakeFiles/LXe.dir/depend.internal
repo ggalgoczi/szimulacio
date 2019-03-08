@@ -3225,6 +3225,7 @@ CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o
  /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXePhysicsList.cc
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
  ../include/LXePrimaryGeneratorAction.hh
+ ../include/LXeRunAction.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/digits/include/G4DCofThisEvent.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/digits/include/G4VDigiCollection.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/hits/include/G4HCofThisEvent.hh
@@ -3449,6 +3450,7 @@ CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4VProcess.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4UserRunAction.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4VUserPrimaryGeneratorAction.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4ForceCondition.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4GPILSelection.hh

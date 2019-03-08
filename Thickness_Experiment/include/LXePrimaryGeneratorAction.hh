@@ -35,6 +35,7 @@
 #include "G4VUserPrimaryGeneratorAction.hh"
 #include "G4ThreeVector.hh"
 #include <vector>
+#include "LXeRunAction.hh"
 
 
 class G4ParticleGun;
@@ -44,7 +45,7 @@ class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
 
-    LXePrimaryGeneratorAction();
+    LXePrimaryGeneratorAction(LXeRunAction*);
     virtual ~LXePrimaryGeneratorAction();
  
   public:
@@ -52,7 +53,7 @@ class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     virtual void GeneratePrimaries(G4Event* anEvent);
     std::vector<std::vector<float> > Particle_Energy;
   private:
-
+    LXeRunAction*  fRunAction;
     G4ParticleGun* fParticleGun;
 };
 
