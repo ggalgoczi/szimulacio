@@ -235,15 +235,16 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
 		G4String ParticleName = track->GetDynamicParticle()->
                                  GetParticleDefinition()->GetParticleName();
-        
-        
-        
         std::ostringstream oss;
+        
+     
+        
 		oss <<eventNumber<<" "<<copyNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preKinE/eV
 		<<" "<<Gtime/ns<<std::endl;
 		std::string var = oss.str();	
 		filePutContents("./scint.txt",var,true);
 
+		G4EventManager::GetEventManager()->AbortCurrentEvent();
 
 		//G4cout << "ohha\n";
 		track->SetTrackStatus(fStopAndKill);
