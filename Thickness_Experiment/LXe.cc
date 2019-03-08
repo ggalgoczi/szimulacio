@@ -69,6 +69,7 @@ int main(int argc, char** argv)
 
   runManager->SetUserInitialization(new LXeDetectorConstruction());
   runManager->SetUserInitialization(new LXePhysicsList());
+  runManager->SetNumberOfThreads(1);
 
   LXeRecorderBase* recorder = NULL; //No recording is done in this example
 

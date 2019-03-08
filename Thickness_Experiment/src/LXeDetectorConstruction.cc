@@ -311,17 +311,19 @@ const G4int lxenum = 8;
 
   fLXe->GetIonisation()->SetBirksConstant(0.126*mm/MeV);
  
-  G4double glass_RIND[3]={1.49,1.49,1.49};
+  G4int glassNo = 3;
+  G4double glass_RIND[glassNo]={1.49,1.49,1.49};
   G4double glass_AbsLength[3]={420.*cm,420.*cm,420.*cm};
   G4MaterialPropertiesTable *glass_mt = new G4MaterialPropertiesTable();
-  glass_mt->AddProperty("ABSLENGTH",lxe_Energy,glass_AbsLength,lxenum);
-  glass_mt->AddProperty("RINDEX",lxe_Energy,glass_RIND,lxenum);
+  glass_mt->AddProperty("ABSLENGTH",lxe_Energy,glass_AbsLength,glassNo);
+  glass_mt->AddProperty("RINDEX",lxe_Energy,glass_RIND,glassNo);
   fGlass->SetMaterialPropertiesTable(glass_mt);
 
-  G4double vacuum_Energy[3]={2.0*eV,7.0*eV,7.14*eV};
-  G4double vacuum_RIND[3]={1.,1.,1.};
+  G4int Vacuu_NO = 3;
+  G4double vacuum_Energy[Vacuu_NO]={2.0*eV,7.0*eV,7.14*eV};
+  G4double vacuum_RIND[Vacuu_NO]={1.,1.,1.};
   G4MaterialPropertiesTable *vacuum_mt = new G4MaterialPropertiesTable();
-  vacuum_mt->AddProperty("RINDEX", vacuum_Energy, vacuum_RIND,lxenum);
+  vacuum_mt->AddProperty("RINDEX", vacuum_Energy, vacuum_RIND,Vacuu_NO);
   fVacuum->SetMaterialPropertiesTable(vacuum_mt);
   fAir->SetMaterialPropertiesTable(vacuum_mt);//Give air the same rindex
 
@@ -399,7 +401,7 @@ G4VSolid * cad_solid;
 G4LogicalVolume * cad_logical;
 G4VPhysicalVolume * cad_physical;
 offset = G4ThreeVector(-0.0415*m, -0.0480*m, -0.0218*m);
-CADMesh * mesh = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/ADCS.STL", mm, offset, false);
+CADMesh * mesh = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/ADCS.STL", mm, offset, false);
 cad_solid = mesh->TessellatedMesh();
 cad_logical = new G4LogicalVolume(cad_solid, ADCS_mat, "cad_logical", 0, 0, 0);
 
@@ -422,7 +424,7 @@ G4VSolid * cad_solid_3;
 G4LogicalVolume * cad_logical_3;
 G4VPhysicalVolume * cad_physical_3;
 offset = G4ThreeVector(-0.045000002*m, -0.039999999*m, -0.16*m);
-CADMesh * mesh3 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/AUX_backplane.STL", mm, offset, false);
+CADMesh * mesh3 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/AUX_backplane.STL", mm, offset, false);
 cad_solid_3 = mesh3->TessellatedMesh();
 cad_logical_3 = new G4LogicalVolume(cad_solid_3, AUX_mat, "cad_logical", 0, 0, 0);
 
@@ -432,7 +434,7 @@ G4VSolid * cad_solid_4;
 G4LogicalVolume * cad_logical_4;
 G4VPhysicalVolume * cad_physical_4;
 offset = G4ThreeVector(-0.043400001*m, -0.0465005*m, -0.15052213*m);
-CADMesh * mesh4 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/COM.STL", mm, offset, false);
+CADMesh * mesh4 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/COM.STL", mm, offset, false);
 cad_solid_4 = mesh4->TessellatedMesh();
 cad_logical_4 = new G4LogicalVolume(cad_solid_4, COM_mat, "cad_logical", 0, 0, 0);
 
@@ -442,7 +444,7 @@ G4VSolid * cad_solid_5;
 G4LogicalVolume * cad_logical_5;
 G4VPhysicalVolume * cad_physical_5;
 offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1106397*m);
-CADMesh * mesh5 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
+CADMesh * mesh5 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
 cad_solid_5 = mesh5->TessellatedMesh();
 cad_logical_5 = new G4LogicalVolume(cad_solid_5, EPS_mat, "cad_logical", 0, 0, 0);
 
@@ -451,7 +453,7 @@ G4VSolid * cad_solid_6;
 G4LogicalVolume * cad_logical_6;
 G4VPhysicalVolume * cad_physical_6;
 offset = G4ThreeVector(-0.043400001*m, -0.046500001*m, -0.13851871*m);
-CADMesh * mesh6 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/OBC.STL", mm, offset, false);
+CADMesh * mesh6 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/OBC.STL", mm, offset, false);
 cad_solid_6 = mesh6->TessellatedMesh();
 cad_logical_6 = new G4LogicalVolume(cad_solid_6, OBC_mat, "cad_logical", 0, 0, 0);
 
@@ -460,7 +462,7 @@ G4VSolid * cad_solid_7;
 G4LogicalVolume * cad_logical_7;
 G4VPhysicalVolume * cad_physical_7;
 offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1106397*m);
-CADMesh * mesh7 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/Payload.STL", mm, offset, false);
+CADMesh * mesh7 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/Payload.STL", mm, offset, false);
 cad_solid_7 = mesh7->TessellatedMesh();
 cad_logical_7 = new G4LogicalVolume(cad_solid_7, Payload_mat, "cad_logical", 0, 0, 0);
 
@@ -469,7 +471,7 @@ G4VSolid * cad_solid_8;
 G4LogicalVolume * cad_logical_8;
 G4VPhysicalVolume * cad_physical_8;
 offset = G4ThreeVector(-0.050999999*m, -0.21115001*m, -0.16904999*m);
-CADMesh * mesh8 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/SP.STL", mm, offset, false);
+CADMesh * mesh8 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/SP.STL", mm, offset, false);
 cad_solid_8 = mesh8->TessellatedMesh();
 cad_logical_8 = new G4LogicalVolume(cad_solid_8, SP_mat, "cad_logical", 0, 0, 0);
 
@@ -484,7 +486,7 @@ offset = G4ThreeVector(-0.050000001*m, -0.050000001*m, -0.17025*m);
 //offset = G4ThreeVector(-0.17025*m, -0.050000001*m, -0.050000001*m);
 //offset = G4ThreeVector(0*m, 0*m, 0*m);
 //offset = G4ThreeVector(-0.17025*m, -0.050000001*m, -0.050000001*m);
-CADMesh * mesh9 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/STRU.STL", mm, offset, false);
+CADMesh * mesh9 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/STRU.STL", mm, offset, false);
 cad_solid_9 = mesh9->TessellatedMesh();
 cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 0);
 
@@ -620,6 +622,24 @@ cad_physical_9 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_9,
       = new LXeMainVolume(rm_y1_main,G4ThreeVector(56,0,90),fExperimentalHall_log,false,0,this);
   }
 
+
+//--------- example of User Limits -------------------------------
+
+  // below is an example of how to set tracking constraints in a given
+  // logical volume(see also in N02PhysicsList how to setup the processes
+  // G4StepLimiter or G4UserSpecialCuts).
+    
+  // Sets a max Step length in the tracker region, with G4StepLimiter
+  //
+  
+  //G4double maxStep = 0.5*fChamberWidth; 
+  //fLogicTracker->SetUserLimits(new G4UserLimits(maxStep));
+  
+  // Set additional contraints on the track, with G4UserSpecialCuts
+  //
+  // G4double maxLength = 2*fTrackerLength, maxTime = 0.1*ns, minEkin = 10*MeV;
+  // logicTracker->SetUserLimits(new G4UserLimits(maxStep,maxLength,maxTime,
+  //                                               minEkin));
 
  
   return fExperimentalHall_phys;
