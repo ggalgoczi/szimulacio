@@ -35,7 +35,8 @@
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
-	
+	std::vector<G4int> PMTHitNo1(1000,0);
+	std::vector<G4int> PMTHitNo2(1000,0);
 	
 	  // Reading in data for event generation
   
@@ -123,5 +124,11 @@ void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeRunAction::EndOfRunAction(const G4Run* aRun){
+	
+	for(auto it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
+		G4cout << *it << G4endl;
+		
+		}
+	
   if(fRecorder)fRecorder->RecordEndOfRun(aRun);
 }
