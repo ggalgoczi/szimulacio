@@ -139,7 +139,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //No help, variable specified on the command line.
-Geant4_DIR:UNINITIALIZED=/home/galgoczi/software/geant4.10.00_seq
+Geant4_DIR:UNINITIALIZED=/home/galgoczi/software/geant4.10.00_MT
 
 //Value Computed by CMake
 LXe_BINARY_DIR:STATIC=/home/galgoczi/cubesat/Thickness_Experiment/build
