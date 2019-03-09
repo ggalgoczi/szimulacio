@@ -42,8 +42,15 @@ LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
   
 // reading in type of particle
 // check if file exists and particle names are OK
+    std::ifstream f2("particleforgun.txt");
+	if(!f2.good()){
+		G4cout << "*******************************" << G4endl;
+		G4cout << "Abort!!!" << G4endl;
+		G4cout << "File: " << "particleforgun.txt" << " does not exist!" << G4endl;
+		G4cout << "*******************************" << G4endl;
 
-G4cout << "okk" <<G4endl;
+		exit(-1);
+		}
 
 	std::ifstream file("particleforgun.txt");
 	while (std::getline(file, infileline))
@@ -58,10 +65,21 @@ G4cout << "okk" <<G4endl;
 	std::string infileline;
 	std::string infilename;
 std::ifstream file2("thefileforgun.txt");
+
 while (std::getline(file2, infileline))
     {
 	infilename = infileline;	
     }
+
+    std::ifstream f(infilename.c_str());
+	if(!f.good()){
+		G4cout << "*******************************" << G4endl;
+		G4cout << "Abort!!!" << G4endl;
+		G4cout << "File: " << infilename << " does not exist!" << G4endl;
+		G4cout << "*******************************" << G4endl;
+
+		exit(-1);
+		}
 
 // std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
  std::ifstream in(infilename.c_str());
