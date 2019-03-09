@@ -401,7 +401,7 @@ G4VSolid * cad_solid;
 G4LogicalVolume * cad_logical;
 G4VPhysicalVolume * cad_physical;
 offset = G4ThreeVector(-0.0415*m, -0.0480*m, -0.0218*m);
-CADMesh * mesh = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/ADCS.STL", mm, offset, false);
+CADMesh * mesh = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/ADCS.STL", mm, offset, false);
 cad_solid = mesh->TessellatedMesh();
 cad_logical = new G4LogicalVolume(cad_solid, ADCS_mat, "cad_logical", 0, 0, 0);
 
@@ -424,7 +424,7 @@ G4VSolid * cad_solid_3;
 G4LogicalVolume * cad_logical_3;
 G4VPhysicalVolume * cad_physical_3;
 offset = G4ThreeVector(-0.045000002*m, -0.039999999*m, -0.16*m);
-CADMesh * mesh3 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/AUX_backplane.STL", mm, offset, false);
+CADMesh * mesh3 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/AUX_backplane.STL", mm, offset, false);
 cad_solid_3 = mesh3->TessellatedMesh();
 cad_logical_3 = new G4LogicalVolume(cad_solid_3, AUX_mat, "cad_logical", 0, 0, 0);
 
@@ -434,7 +434,7 @@ G4VSolid * cad_solid_4;
 G4LogicalVolume * cad_logical_4;
 G4VPhysicalVolume * cad_physical_4;
 offset = G4ThreeVector(-0.043400001*m, -0.0465005*m, -0.15052213*m);
-CADMesh * mesh4 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/COM.STL", mm, offset, false);
+CADMesh * mesh4 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/COM.STL", mm, offset, false);
 cad_solid_4 = mesh4->TessellatedMesh();
 cad_logical_4 = new G4LogicalVolume(cad_solid_4, COM_mat, "cad_logical", 0, 0, 0);
 
@@ -444,7 +444,7 @@ G4VSolid * cad_solid_5;
 G4LogicalVolume * cad_logical_5;
 G4VPhysicalVolume * cad_physical_5;
 offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1106397*m);
-CADMesh * mesh5 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
+CADMesh * mesh5 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
 cad_solid_5 = mesh5->TessellatedMesh();
 cad_logical_5 = new G4LogicalVolume(cad_solid_5, EPS_mat, "cad_logical", 0, 0, 0);
 
@@ -453,7 +453,7 @@ G4VSolid * cad_solid_6;
 G4LogicalVolume * cad_logical_6;
 G4VPhysicalVolume * cad_physical_6;
 offset = G4ThreeVector(-0.043400001*m, -0.046500001*m, -0.13851871*m);
-CADMesh * mesh6 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/OBC.STL", mm, offset, false);
+CADMesh * mesh6 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/OBC.STL", mm, offset, false);
 cad_solid_6 = mesh6->TessellatedMesh();
 cad_logical_6 = new G4LogicalVolume(cad_solid_6, OBC_mat, "cad_logical", 0, 0, 0);
 
@@ -462,7 +462,7 @@ G4VSolid * cad_solid_7;
 G4LogicalVolume * cad_logical_7;
 G4VPhysicalVolume * cad_physical_7;
 offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1106397*m);
-CADMesh * mesh7 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/Payload.STL", mm, offset, false);
+CADMesh * mesh7 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/Payload.STL", mm, offset, false);
 cad_solid_7 = mesh7->TessellatedMesh();
 cad_logical_7 = new G4LogicalVolume(cad_solid_7, Payload_mat, "cad_logical", 0, 0, 0);
 
@@ -471,7 +471,7 @@ G4VSolid * cad_solid_8;
 G4LogicalVolume * cad_logical_8;
 G4VPhysicalVolume * cad_physical_8;
 offset = G4ThreeVector(-0.050999999*m, -0.21115001*m, -0.16904999*m);
-CADMesh * mesh8 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/SP.STL", mm, offset, false);
+CADMesh * mesh8 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/SP.STL", mm, offset, false);
 cad_solid_8 = mesh8->TessellatedMesh();
 cad_logical_8 = new G4LogicalVolume(cad_solid_8, SP_mat, "cad_logical", 0, 0, 0);
 
@@ -486,7 +486,7 @@ offset = G4ThreeVector(-0.050000001*m, -0.050000001*m, -0.17025*m);
 //offset = G4ThreeVector(-0.17025*m, -0.050000001*m, -0.050000001*m);
 //offset = G4ThreeVector(0*m, 0*m, 0*m);
 //offset = G4ThreeVector(-0.17025*m, -0.050000001*m, -0.050000001*m);
-CADMesh * mesh9 = new CADMesh("/home/galgoczi/simulations/cubesat/RADCUBE_model/STRU.STL", mm, offset, false);
+CADMesh * mesh9 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/STRU.STL", mm, offset, false);
 cad_solid_9 = mesh9->TessellatedMesh();
 cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 0);
 

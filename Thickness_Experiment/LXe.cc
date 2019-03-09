@@ -63,13 +63,14 @@ int main(int argc, char** argv)
 	
 #ifdef G4MULTITHREADED
   G4MTRunManager * runManager = new G4MTRunManager;
+  runManager->SetNumberOfThreads(2);
 #else
   G4RunManager * runManager = new G4RunManager;
 #endif
 
   runManager->SetUserInitialization(new LXeDetectorConstruction());
   runManager->SetUserInitialization(new LXePhysicsList());
-  runManager->SetNumberOfThreads(2);
+  
 
   LXeRecorderBase* recorder = NULL; //No recording is done in this example
 
