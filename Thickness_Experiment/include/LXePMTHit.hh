@@ -67,7 +67,7 @@ class LXePMTHit : public G4VHit
 
     inline void IncPhotonCount(){fPhotons++;}
     inline G4int GetPhotonCount(){return fPhotons;}
-
+	
     inline void SetPMTNumber(G4int n) { fPmtNumber = n; }
     inline G4int GetPMTNumber() { return fPmtNumber; }
 

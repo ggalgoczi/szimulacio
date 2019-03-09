@@ -59,7 +59,8 @@ class LXePMTSD : public G4VSensitiveDetector
     virtual void clear();
     void DrawAll();
     void PrintAll();
- 
+	G4int Return_NO_of_Photons();
+	
     //Initialize the arrays to store pmt possitions
     inline void InitPMTs(G4int nPMTs){
       if(fPMTPositionsX)delete fPMTPositionsX;
