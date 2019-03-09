@@ -254,7 +254,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 		track->SetTrackStatus(fStopAndKill);
         
         if(pmtSD) {
-			if(pmtSD->Return_NO_of_Photons() > 1000 )
+			if(pmtSD->Return_NO_of_Photons() > 999 )
 				{
 				G4EventManager::GetEventManager()->AbortCurrentEvent();	
 				}
