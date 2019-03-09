@@ -94,4 +94,6 @@ void LXePMTHit::Draw(){
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXePMTHit::Print() {}
+void LXePMTHit::Print() {
+	G4cout << "Number of photons: " << this->GetPhotonCount() << G4endl;
+	}
