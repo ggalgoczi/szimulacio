@@ -235,6 +235,10 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
 		G4String ParticleName = track->GetDynamicParticle()->
                                  GetParticleDefinition()->GetParticleName();
+        
+        
+        
+        /*
         std::ostringstream oss;
         
      
@@ -243,12 +247,19 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 		<<" "<<Gtime/ns<<std::endl;
 		std::string var = oss.str();	
 		filePutContents("./scint.txt",var,true);
-
-		G4EventManager::GetEventManager()->AbortCurrentEvent();
+		*/
+		
 
 		//G4cout << "ohha\n";
 		track->SetTrackStatus(fStopAndKill);
         
+        if(pmtSD) {
+			if(pmtSD->Return_NO_of_Photons() > 1000 )
+				{
+				G4EventManager::GetEventManager()->AbortCurrentEvent();	
+				}
+        
+			}
         break;
         }
       case FresnelReflection:

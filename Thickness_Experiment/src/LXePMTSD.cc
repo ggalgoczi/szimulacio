@@ -132,6 +132,24 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
   return true;
 }
 
+G4int LXePMTSD::Return_NO_of_Photons(){
+	
+	G4int NoOfPhot = 0;
+  //need to know if this is an optical photon
+ 
+
+  //Return number of photons
+  G4int n=fPMTHitCollection->entries();
+  LXePMTHit* hit=NULL;
+  for(G4int i=0;i<n;i++){
+      hit=(*fPMTHitCollection)[i];
+      NoOfPhot += hit->GetPhotonCount();
+  }
+ 
+ 
+  return NoOfPhot;
+}
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXePMTSD::EndOfEvent(G4HCofThisEvent* ) {
