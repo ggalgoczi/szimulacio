@@ -96,4 +96,5 @@ void LXePMTHit::Draw(){
 
 void LXePMTHit::Print() {
 	G4cout << "Number of photons: " << this->GetPhotonCount() << G4endl;
+	G4cout << "In PMT No: " << this->GetPMTNumber() << G4endl;
 	}
