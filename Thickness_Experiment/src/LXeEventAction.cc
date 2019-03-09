@@ -36,6 +36,8 @@
 #include "LXeTrajectory.hh"
 #include "LXeRecorderBase.hh"
 #include "LXeRunAction.hh"
+#include "LXePMTSD.hh"
+
 
 #include "G4EventManager.hh"
 #include "G4SDManager.hh"
@@ -65,7 +67,8 @@ LXeEventAction::~LXeEventAction(){}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeEventAction::BeginOfEventAction(const G4Event* anEvent){
- fRunAction->Oha = fRunAction->Oha+1;
+
+
   //New event, add the user information object
   G4EventManager::
     GetEventManager()->SetUserInformation(new LXeUserEventInformation);
@@ -205,7 +208,8 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 
   if(fRecorder)fRecorder->RecordEndOfEvent(anEvent);
   
-  
+  //fRunAction->PMTHitNo1 
+
   // Sensitive detector
     G4VHitsCollection* hc = anEvent->GetHCofThisEvent()->GetHC(0);
     G4cout << "    "  
@@ -221,9 +225,15 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 			  
 			  }
           //(*hc)[0]->Print();
-          
-          
-  
+        
+        G4SDManager* SDman = G4SDManager::GetSDMpointer();
+        G4String sdName="/LXeDet/pmtSD";
+        LXePMTSD* pmtSD = (LXePMTSD*)SDman->FindSensitiveDetector(sdName);     
+
+		assert(pmtSD->Return_NO_of_Photons()<1000);
+		fRunAction->PMTHitNo2[pmtSD->Return_NO_of_Photons()]++;
+				
+			
   
 }
 

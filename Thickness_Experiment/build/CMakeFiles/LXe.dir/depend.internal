@@ -1533,6 +1533,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o
  ../include/LXeEventAction.hh
  ../include/LXeEventMessenger.hh
  ../include/LXePMTHit.hh
+ ../include/LXePMTSD.hh
  ../include/LXeRecorderBase.hh
  ../include/LXeRunAction.hh
  ../include/LXeScintHit.hh

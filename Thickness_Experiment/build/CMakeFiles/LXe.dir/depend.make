@@ -1532,6 +1532,7 @@ CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o: ../src/LXeEMPhysics.cc
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeEventAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeEventMessenger.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXePMTHit.hh
+CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXePMTSD.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeRecorderBase.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeRunAction.hh
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../include/LXeScintHit.hh

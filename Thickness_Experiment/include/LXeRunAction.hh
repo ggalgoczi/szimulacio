@@ -39,7 +39,6 @@ class LXeRecorderBase;
 class LXeRunAction : public G4UserRunAction
 {
   public:
-	int Oha;
     LXeRunAction(LXeRecorderBase*);
     virtual ~LXeRunAction();
 
