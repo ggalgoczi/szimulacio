@@ -42,6 +42,9 @@ class LXeRunAction : public G4UserRunAction
     LXeRunAction(LXeRecorderBase*);
     virtual ~LXeRunAction();
 
+	std::vector<G4int> PMTHitNo1{1001,0};
+	std::vector<G4int> PMTHitNo2{1001,0};
+
     virtual void BeginOfRunAction(const G4Run*);
     virtual void EndOfRunAction(const G4Run*);
 
