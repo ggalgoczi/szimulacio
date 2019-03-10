@@ -182,11 +182,11 @@ G4int LXePMTSD::Return_NO_of_Photons2(){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXePMTSD::EndOfEvent(G4HCofThisEvent* ) {
-	 G4int nofHits = fPMTHitCollection->entries();
+	/* G4int nofHits = fPMTHitCollection->entries();
      G4cout << G4endl
             << "-------->Hits Collection: in this event there are " << nofHits 
             << " hits in the PMTs: " << G4endl;
-     for ( G4int i=0; i<nofHits; i++ ) (*fPMTHitCollection)[i]->Print();
+     for ( G4int i=0; i<nofHits; i++ ) (*fPMTHitCollection)[i]->Print(); */
      }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

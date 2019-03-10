@@ -52,10 +52,13 @@ void LXeRun::Merge(const G4Run* aRun)
 
   for (G4int i=0; i<1001; i++) {
     PMTHitNo2[i] += localRun->PMTHitNo2[i];
-    
   }
 
- G4cout << "mergeok" << G4endl;
+  for (G4int i=0; i<1001; i++) {
+    PMTHitNo1[i] += localRun->PMTHitNo1[i];
+  }
+
+ //G4cout << "mergeok" << G4endl;
 
   G4Run::Merge(aRun);
 } 
@@ -64,6 +67,6 @@ void LXeRun::Calculations()
 {
 
 	for(std::vector<G4int>::iterator it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
-		G4cout << *it << G4endl;
+		//G4cout << "No2 osszeg " << *it << G4endl;
 		}	
 }
