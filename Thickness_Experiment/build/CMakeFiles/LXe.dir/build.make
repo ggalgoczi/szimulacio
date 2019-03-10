@@ -417,9 +417,33 @@ CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.provides: CMakeFiles/LXe.d
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
 
 
+CMakeFiles/LXe.dir/src/LXeRun.cc.o: CMakeFiles/LXe.dir/flags.make
+CMakeFiles/LXe.dir/src/LXeRun.cc.o: ../src/LXeRun.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LXe.dir/src/LXeRun.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeRun.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRun.cc
+
+CMakeFiles/LXe.dir/src/LXeRun.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeRun.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRun.cc > CMakeFiles/LXe.dir/src/LXeRun.cc.i
+
+CMakeFiles/LXe.dir/src/LXeRun.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeRun.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRun.cc -o CMakeFiles/LXe.dir/src/LXeRun.cc.s
+
+CMakeFiles/LXe.dir/src/LXeRun.cc.o.requires:
+
+.PHONY : CMakeFiles/LXe.dir/src/LXeRun.cc.o.requires
+
+CMakeFiles/LXe.dir/src/LXeRun.cc.o.provides: CMakeFiles/LXe.dir/src/LXeRun.cc.o.requires
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeRun.cc.o.provides.build
+.PHONY : CMakeFiles/LXe.dir/src/LXeRun.cc.o.provides
+
+CMakeFiles/LXe.dir/src/LXeRun.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXeRun.cc.o
+
+
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o: ../src/LXeScintillatorHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeScintillatorHit.cc
 
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.i: cmake_force
@@ -443,7 +467,7 @@ CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o.provides.build: CMakeFiles/LXe.di
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../src/LXeEventAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeEventAction.cc
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.i: cmake_force
@@ -467,7 +491,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o.provides.build: CMakeFiles/LXe.dir/sr
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: ../src/LXePMTHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXePMTHit.cc
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.i: cmake_force
@@ -491,7 +515,7 @@ CMakeFiles/LXe.dir/src/LXePMTHit.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXe
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: ../src/LXeSteppingMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeSteppingMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i: cmake_force
@@ -515,7 +539,7 @@ CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.provides.build: CMakeFiles/LXe.
 
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o: ../src/LXePhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXePhysicsList.cc
 
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.i: cmake_force
@@ -539,7 +563,7 @@ CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o.provides.build: CMakeFiles/LXe.dir/sr
 
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: ../src/LXeStackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeStackingAction.cc
 
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i: cmake_force
@@ -563,7 +587,7 @@ CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.provides.build: CMakeFiles/LXe.dir
 
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o: ../src/LXeEMPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeEMPhysics.cc
 
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.i: cmake_force
@@ -587,7 +611,7 @@ CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o.provides.build: CMakeFiles/LXe.dir/src/
 
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o: ../src/LXeUserEventInformation.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeUserEventInformation.cc
 
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.i: cmake_force
@@ -611,7 +635,7 @@ CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o: ../src/LXeMuonPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeMuonPhysics.cc
 
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.i: cmake_force
@@ -635,7 +659,7 @@ CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o.provides.build: CMakeFiles/LXe.dir/sr
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: ../src/LXeWLSSlab.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeWLSSlab.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i: cmake_force
@@ -659,7 +683,7 @@ CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.provides.build: CMakeFiles/LXe.dir/src/LX
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: ../src/LXeEventMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeEventMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i: cmake_force
@@ -683,7 +707,7 @@ CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o.provides.build: CMakeFiles/LXe.dir
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: ../src/LXeScintHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintHit.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintHit.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeScintHit.cc
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.i: cmake_force
@@ -707,7 +731,7 @@ CMakeFiles/LXe.dir/src/LXeScintHit.cc.o.provides.build: CMakeFiles/LXe.dir/src/L
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: ../src/LXeDetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeDetectorConstruction.cc
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i: cmake_force
@@ -731,7 +755,7 @@ CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: ../src/LXeRunAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -c /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRunAction.cc
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.i: cmake_force
@@ -770,6 +794,7 @@ LXe_OBJECTS = \
 "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o" \
 "CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o" \
+"CMakeFiles/LXe.dir/src/LXeRun.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeEventAction.cc.o" \
 "CMakeFiles/LXe.dir/src/LXePMTHit.cc.o" \
@@ -803,6 +828,7 @@ LXe: CMakeFiles/LXe.dir/src/LXeScintSD.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
+LXe: CMakeFiles/LXe.dir/src/LXeRun.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeEventAction.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXePMTHit.cc.o
@@ -863,131 +889,13 @@ LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4inte
 LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4global.so
 LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4clhep.so
 LXe: CMakeFiles/LXe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX executable LXe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable LXe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LXe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 CMakeFiles/LXe.dir/build: LXe
 
 .PHONY : CMakeFiles/LXe.dir/build
-
-# Object files for target LXe
-LXe_OBJECTS = \
-"CMakeFiles/LXe.dir/LXe.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o" \
-"CMakeFiles/LXe.dir/src/LXePMTSD.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeScintSD.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o" \
-"CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeEventAction.cc.o" \
-"CMakeFiles/LXe.dir/src/LXePMTHit.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o" \
-"CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeScintHit.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
-
-# External object files for target LXe
-LXe_EXTERNAL_OBJECTS =
-
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/LXe.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXePMTSD.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeScintSD.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeEventAction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXePMTHit.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeScintHit.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/build.make
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4Tree.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4GMocren.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4visHepRep.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4RayTracer.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4VRML.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4OpenGL.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4gl2ps.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4interfaces.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4persistency.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4analysis.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4error_propagation.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4readout.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4physicslists.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4parmodels.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4FR.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4vis_management.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4modeling.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libGLU.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libGL.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libSM.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libICE.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libX11.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libXext.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libXmu.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so.5.5.1
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.5.1
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.5.1
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.5.1
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.5.1
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4run.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4event.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4tracking.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4processes.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4zlib.so
-CMakeFiles/CMakeRelink.dir/LXe: /usr/lib/x86_64-linux-gnu/libexpat.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4digits_hits.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4track.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4particles.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4geometry.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4materials.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4graphics_reps.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4intercoms.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4global.so
-CMakeFiles/CMakeRelink.dir/LXe: /home/galgoczi/software/geant4.10.00_MT/outputs/library/Linux-g++/libG4clhep.so
-CMakeFiles/CMakeRelink.dir/LXe: CMakeFiles/LXe.dir/relink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX executable CMakeFiles/CMakeRelink.dir/LXe"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LXe.dir/relink.txt --verbose=$(VERBOSE)
-
-# Rule to relink during preinstall.
-CMakeFiles/LXe.dir/preinstall: CMakeFiles/CMakeRelink.dir/LXe
-
-.PHONY : CMakeFiles/LXe.dir/preinstall
 
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/LXe.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o.requires
@@ -1004,6 +912,7 @@ CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeScintSD.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.requires
+CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeRun.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeEventAction.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXePMTHit.cc.o.requires

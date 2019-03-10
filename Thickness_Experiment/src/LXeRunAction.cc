@@ -31,6 +31,8 @@
 //
 #include "LXeRunAction.hh"
 #include "LXeRecorderBase.hh"
+#include "LXeRun.hh"
+#include "G4Run.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -114,6 +116,14 @@ LXeRunAction::~LXeRunAction() {}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
+G4Run* LXeRunAction::GenerateRun()
+{ 
+  fRun = new LXeRun(); 
+  return fRun;
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
 void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
   if(fRecorder)fRecorder->RecordBeginOfRun(aRun);
     
@@ -123,11 +133,14 @@ void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeRunAction::EndOfRunAction(const G4Run* aRun){
-	
+	/*
 	for(std::vector<G4int>::iterator it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
 		G4cout << *it << G4endl;
-		
-		}
+		}*/
+	if (isMaster){	
+	fRun->Calculations();
+	
+	}
 	
   if(fRecorder)fRecorder->RecordEndOfRun(aRun);
 }

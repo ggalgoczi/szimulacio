@@ -35,6 +35,7 @@
 #define LXeRunAction_h 1
 
 class LXeRecorderBase;
+class LXeRun;
 
 class LXeRunAction : public G4UserRunAction
 {
@@ -42,18 +43,16 @@ class LXeRunAction : public G4UserRunAction
     LXeRunAction(LXeRecorderBase*);
     virtual ~LXeRunAction();
 
-	std::vector<G4int> PMTHitNo1{1001,0};
-	std::vector<G4int> PMTHitNo2{1001,0};
-
     virtual void BeginOfRunAction(const G4Run*);
     virtual void EndOfRunAction(const G4Run*);
+    virtual G4Run* GenerateRun();
 
 	std::string infileline;
 	std::string infilename;
 	std::string Part_Name;
 	std::vector<std::vector<float> > Particle_Energy_In_RunAction;
   private:
-
+    LXeRun*  fRun;
     LXeRecorderBase* fRecorder;
 };
 
