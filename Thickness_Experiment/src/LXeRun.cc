@@ -15,6 +15,18 @@
 
 #include "Randomize.hh"
 
+
+void filePutContents3(std::string& name, std::vector<G4int> & content, bool append = false) {
+    std::ofstream outfile;
+    if (append)
+		outfile.open(name.c_str(), std::ios_base::app);
+    else
+        outfile.open(name.c_str());
+        
+     for(std::vector<G4int>::iterator it = content.begin(); it != content.end();it++)   
+    outfile << *it << "\n";
+}
+
 LXeRun::LXeRun()
 {
 // fEDepScoreID = G4SDManager::GetSDManager()->GetCollectionID("myDet/myEDepScorer"); 
@@ -65,6 +77,11 @@ void LXeRun::Merge(const G4Run* aRun)
 
 void LXeRun::Calculations()
 {
+
+std::string FNAME1 = "PMT1.dat";
+std::string FNAME2 = "PMT2.dat";
+filePutContents3(FNAME1, PMTHitNo1, false);
+filePutContents3(FNAME2, PMTHitNo2, false);
 
 	for(std::vector<G4int>::iterator it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
 		//G4cout << "No2 osszeg " << *it << G4endl;
