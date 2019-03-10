@@ -1,0 +1,3 @@
+/run/initialize
+/gun/position 300.000010000000000 .00001 0
+/run/beamOn 10
