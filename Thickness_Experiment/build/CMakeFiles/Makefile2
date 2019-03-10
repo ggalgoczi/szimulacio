@@ -86,16 +86,6 @@ LXe: CMakeFiles/LXe.dir/rule
 
 .PHONY : LXe
 
-# Pre-install relink rule for target.
-CMakeFiles/LXe.dir/preinstall:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/preinstall
-.PHONY : CMakeFiles/LXe.dir/preinstall
-
-# Prepare target for install.
-preinstall: CMakeFiles/LXe.dir/preinstall
-
-.PHONY : preinstall
-
 # clean rule for target.
 CMakeFiles/LXe.dir/clean:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/clean

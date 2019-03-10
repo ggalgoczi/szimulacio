@@ -78,6 +78,17 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -89,16 +100,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target install/strip
+install/strip/fast: install/strip
 
-.PHONY : rebuild_cache/fast
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -155,11 +166,6 @@ LXe: cmake_check_build_system
 LXe/fast:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/build
 .PHONY : LXe/fast
-
-# Manual pre-install relink rule for target.
-LXe/preinstall:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/preinstall
-.PHONY : LXe/preinstall
 
 LXe.o: LXe.cc.o
 
@@ -538,6 +544,33 @@ src/LXePrimaryGeneratorAction.s: src/LXePrimaryGeneratorAction.cc.s
 src/LXePrimaryGeneratorAction.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s
 .PHONY : src/LXePrimaryGeneratorAction.cc.s
+
+src/LXeRun.o: src/LXeRun.cc.o
+
+.PHONY : src/LXeRun.o
+
+# target to build an object file
+src/LXeRun.cc.o:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeRun.cc.o
+.PHONY : src/LXeRun.cc.o
+
+src/LXeRun.i: src/LXeRun.cc.i
+
+.PHONY : src/LXeRun.i
+
+# target to preprocess a source file
+src/LXeRun.cc.i:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeRun.cc.i
+.PHONY : src/LXeRun.cc.i
+
+src/LXeRun.s: src/LXeRun.cc.s
+
+.PHONY : src/LXeRun.s
+
+# target to generate assembly for a file
+src/LXeRun.cc.s:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeRun.cc.s
+.PHONY : src/LXeRun.cc.s
 
 src/LXeRunAction.o: src/LXeRunAction.cc.o
 
@@ -952,9 +985,10 @@ help:
 	@echo "... depend"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... rebuild_cache"
 	@echo "... LXe"
 	@echo "... install/local"
-	@echo "... rebuild_cache"
+	@echo "... install/strip"
 	@echo "... edit_cache"
 	@echo "... LXe.o"
 	@echo "... LXe.i"
@@ -998,6 +1032,9 @@ help:
 	@echo "... src/LXePrimaryGeneratorAction.o"
 	@echo "... src/LXePrimaryGeneratorAction.i"
 	@echo "... src/LXePrimaryGeneratorAction.s"
+	@echo "... src/LXeRun.o"
+	@echo "... src/LXeRun.i"
+	@echo "... src/LXeRun.s"
 	@echo "... src/LXeRunAction.o"
 	@echo "... src/LXeRunAction.i"
 	@echo "... src/LXeRunAction.s"

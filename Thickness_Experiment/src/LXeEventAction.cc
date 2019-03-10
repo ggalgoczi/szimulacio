@@ -107,7 +107,8 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
       trj->DrawTrajectory();
     }
   }
- 
+			
+
   LXeScintHitsCollection* scintHC = 0;
   LXePMTHitsCollection* pmtHC = 0;
   G4HCofThisEvent* hitsCE = anEvent->GetHCofThisEvent();
@@ -225,7 +226,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 			  
 			  }
           //(*hc)[0]->Print();
-        
+        /*
         G4SDManager* SDman = G4SDManager::GetSDMpointer();
         G4String sdName="/LXeDet/pmtSD";
         LXePMTSD* pmtSD = (LXePMTSD*)SDman->FindSensitiveDetector(sdName);     
@@ -240,9 +241,8 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 		fRunAction->PMTHitNo1[0]++;
 		fRunAction->PMTHitNo2[0]++;
 			}
+			*/ 
 		//G4cout << "uhh " << pmtSD->Return_NO_of_Photons() << " " << fRunAction->PMTHitNo2[pmtSD->Return_NO_of_Photons()] << G4endl;
-				
-			
   
 }
 

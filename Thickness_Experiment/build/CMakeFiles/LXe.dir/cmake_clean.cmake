@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
   "CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o"
   "CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o"
+  "CMakeFiles/LXe.dir/src/LXeRun.cc.o"
   "CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o"
   "CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
   "CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
@@ -30,8 +31,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
   "LXe.pdb"
   "LXe"
-  "LXe.pdb"
-  "CMakeFiles/CMakeRelink.dir/LXe"
 )
 
 # Per-language clean rules from dependency scanning.
