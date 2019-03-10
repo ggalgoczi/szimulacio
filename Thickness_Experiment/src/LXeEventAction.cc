@@ -230,8 +230,17 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
         G4String sdName="/LXeDet/pmtSD";
         LXePMTSD* pmtSD = (LXePMTSD*)SDman->FindSensitiveDetector(sdName);     
 
-		assert(pmtSD->Return_NO_of_Photons()<1000);
-		fRunAction->PMTHitNo2[pmtSD->Return_NO_of_Photons()]++;
+		assert(pmtSD->Return_NO_of_Photons()<1001);
+		
+		if(pmtSD->Return_NO_of_Photons1() != -1 && pmtSD->Return_NO_of_Photons2() != -1){
+		fRunAction->PMTHitNo1[pmtSD->Return_NO_of_Photons1()]++;
+		fRunAction->PMTHitNo2[pmtSD->Return_NO_of_Photons2()]++;
+		}
+		else{
+		fRunAction->PMTHitNo1[0]++;
+		fRunAction->PMTHitNo2[0]++;
+			}
+		//G4cout << "uhh " << pmtSD->Return_NO_of_Photons() << " " << fRunAction->PMTHitNo2[pmtSD->Return_NO_of_Photons()] << G4endl;
 				
 			
   
