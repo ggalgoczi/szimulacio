@@ -213,8 +213,9 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 
   // Sensitive detector
     G4VHitsCollection* hc = anEvent->GetHCofThisEvent()->GetHC(0);
-    G4cout << "    "  
-           << hc->GetSize() << " hits stored in this event" << G4endl;
+   
+   // G4cout << "    "  
+    //       << hc->GetSize() << " hits stored in this event" << G4endl;
            
            
            //hc->PrintAllHits();
