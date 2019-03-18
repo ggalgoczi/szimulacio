@@ -84,7 +84,7 @@ while (std::getline(file2, infileline))
 		}
 
 // std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
- std::ifstream in(infilename.c_str());
+	std::ifstream in(infilename.c_str());
     std::string line;
     int p = 0;
 
