@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_rays_primary_electrons_and_positrons/cr_setting1_fluxes_e.dat
+/home/galgoczi/simulations/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_rays_primary_electrons_and_positrons/cr_setting1_fluxes_e.dat
