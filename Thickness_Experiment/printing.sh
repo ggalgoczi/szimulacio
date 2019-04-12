@@ -1,8 +1,11 @@
-for i in {0..99}
+for j in 10 30 70 150 250
 do
-	fname="$i.mac"
-	fname2="$i.sh"
-	fname3="$i.txt"
+echo $j > "energy.txt"
+for i in {0..50}
+do
+	fname="$i.$j.mac"
+	fname2="$i.$j.sh"
+	fname3="$i.$j.res"
 	alfa="$((10*$i))"
 	pi=`echo "4*a(1)" | bc -l`
 	rad=`echo "$alfa*($pi/180)" | bc -l`
@@ -15,11 +18,12 @@ do
 	echo "$x, $y"
 	echo "/run/initialize" >> $fname
 	echo "/gun/position $x $y $z" >> $fname
-	echo "/run/beamOn 1000000" >> $fname
+	echo "/run/beamOn 10000" >> $fname
 
+	echo "echo $j > energy.txt" >> $fname2
 	echo "./LXe ../macs/$fname" >> $fname2
-	echo "mv scint.txt $fname3" >> $fname2
+	echo "mv PMT1.dat $fname3" >> $fname2
 
  # your-unix-command-here
-
+done
 done
