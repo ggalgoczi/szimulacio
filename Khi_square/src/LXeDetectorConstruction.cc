@@ -633,7 +633,7 @@ p8->CheckOverlaps(10000,1,true, 1000);
 //STRU
 G4PVPlacement * p9 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_9,
                                      "cad_physical_9", fExperimentalHall_log, false, 0, false); 
-//p9->CheckOverlaps(10000,1,true, 1000);	
+p9->CheckOverlaps(5,1,true, 1000);	
  
 
 

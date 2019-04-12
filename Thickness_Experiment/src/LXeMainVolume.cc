@@ -96,7 +96,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   //the "photocathode" is a metal slab at the back of the glass that
   //is only a very rough approximation of the real thing since it only
   //absorbs or detects the photons based on the efficiency set below
-   fPhotocath = new G4Box("photocath_tube",size_pmt/2.,size_pmt/2.,fD_mtl/2.);
+   fPhotocath = new G4Box("photocath_tube",size_pmt/2.,size_pmt/2.,height_pmt/2.);
 
  
   fPmt_log = new G4LogicalVolume(fPmt,G4Material::GetMaterial("Glass"),
