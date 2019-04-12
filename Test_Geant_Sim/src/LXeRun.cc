@@ -49,7 +49,7 @@ void LXeRun::RecordEvent(const G4Event* evt)
 		PMTHitNo2[pmtSD->Return_NO_of_Photons2()]++;
 		}
 		else{
-		PMTHitNo1[0]++;
+		//PMTHitNo1[0]++;
 		PMTHitNo2[0]++;
 			}	
 					

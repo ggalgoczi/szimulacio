@@ -521,9 +521,9 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
 	
 	
   //The experimental hall walls are all 1m away from housing walls
-  G4double expHall_x = fScint_x+fD_mtl+0.3*m;
-  G4double expHall_y = fScint_y+fD_mtl+0.3*m;
-  G4double expHall_z = fScint_z+fD_mtl+0.3*m;
+  G4double expHall_x = fScint_x+fD_mtl+1*m;
+  G4double expHall_y = fScint_y+fD_mtl+1*m;
+  G4double expHall_z = fScint_z+fD_mtl+1*m;
 
   //Create experimental hall
   fExperimentalHall_box
