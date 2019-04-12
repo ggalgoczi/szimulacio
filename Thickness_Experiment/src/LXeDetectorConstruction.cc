@@ -400,7 +400,7 @@ G4ThreeVector offset;
 G4VSolid * cad_solid;
 G4LogicalVolume * cad_logical;
 G4VPhysicalVolume * cad_physical;
-offset = G4ThreeVector(-0.0415*m, -0.0480*m, -0.0218*m);
+offset = G4ThreeVector(-0.0415*m, -0.0480*m, -0.0538*m);
 CADMesh * mesh = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/ADCS.STL", mm, offset, false);
 cad_solid = mesh->TessellatedMesh();
 cad_logical = new G4LogicalVolume(cad_solid, ADCS_mat, "cad_logical", 0, 0, 0);
@@ -443,7 +443,8 @@ cad_logical_4 = new G4LogicalVolume(cad_solid_4, COM_mat, "cad_logical", 0, 0, 0
 G4VSolid * cad_solid_5;
 G4LogicalVolume * cad_logical_5;
 G4VPhysicalVolume * cad_physical_5;
-offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1106397*m);
+//offset = G4ThreeVector(0,0,0);
+offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1270397*m);
 CADMesh * mesh5 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
 cad_solid_5 = mesh5->TessellatedMesh();
 cad_logical_5 = new G4LogicalVolume(cad_solid_5, EPS_mat, "cad_logical", 0, 0, 0);
@@ -461,7 +462,8 @@ cad_logical_6 = new G4LogicalVolume(cad_solid_6, OBC_mat, "cad_logical", 0, 0, 0
 G4VSolid * cad_solid_7;
 G4LogicalVolume * cad_logical_7;
 G4VPhysicalVolume * cad_physical_7;
-offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1106397*m);
+//offset = G4ThreeVector(0,0,0);
+offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.034697*m);
 CADMesh * mesh7 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/Payload.STL", mm, offset, false);
 cad_solid_7 = mesh7->TessellatedMesh();
 cad_logical_7 = new G4LogicalVolume(cad_solid_7, Payload_mat, "cad_logical", 0, 0, 0);
@@ -583,32 +585,56 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
   G4bool checkOverlaps = true;
 
 
-cad_physical = new G4PVPlacement(0, G4ThreeVector(), cad_logical,
-                                    "cad_physical", fExperimentalHall_log, false, 0, checkOverlaps);	
-                                    
-                                     
+//G4PVPlacement G4PVPlacement(0, G4ThreeVector(), cad_logical,
+//                                    "cad_physical", fExperimentalHall_log, false, 0, checkOverlaps)::CheckOverlaps(10,1.,true, 1000);	
+//p1->CheckOverlaps(10,1.,true, 1000); 
 
-cad_physical_3 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_3,
-                                     "cad_physical_3", fExperimentalHall_log, false, 0, checkOverlaps);	
-	
-cad_physical_4 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_4,
-                                     "cad_physical_4", fExperimentalHall_log, false, 0, checkOverlaps);
-	
-cad_physical_5 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_5,
-                                     "cad_physical_5", fExperimentalHall_log, false, 0, checkOverlaps);
+//AUX
+G4PVPlacement * p3 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_3,
+                                     "cad_physical_3", fExperimentalHall_log, false, 0, false);	
+p3->CheckOverlaps(10000,1,true, 1000);	
 
-cad_physical_6 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_6,
-                                     "cad_physical_6", fExperimentalHall_log, false, 0, checkOverlaps);
-	
-cad_physical_7 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_7,
-                                     "cad_physical_7", fExperimentalHall_log, false, 0, checkOverlaps);	
-	
-cad_physical_8 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_8,
-                                     "cad_physical_8", fExperimentalHall_log, false, 0, checkOverlaps);
-	
-cad_physical_9 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_9,
-                                     "cad_physical_9", fExperimentalHall_log, false, 0, checkOverlaps);
-	
+//COM
+G4PVPlacement * p4 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_4,
+                                     "cad_physical_4", fExperimentalHall_log, false, 0, false); 
+p4->CheckOverlaps(10000,1,true, 1000);	
+
+//OBC
+G4PVPlacement * p6 =  new G4PVPlacement(0, G4ThreeVector(), cad_logical_6,
+                                     "cad_physical_6", fExperimentalHall_log, false, 0, false);
+p6->CheckOverlaps(10000,1,true, 1000);	
+
+//EPS	
+G4PVPlacement * p5 =  new G4PVPlacement(0, G4ThreeVector(), cad_logical_5,
+                                     "cad_physical_5", fExperimentalHall_log, false, 0, false);
+p5->CheckOverlaps(10000,1,true, 1000);	
+
+//ADC                
+G4PVPlacement * p1 = new G4PVPlacement(0, G4ThreeVector(), cad_logical,
+                                    "cad_physical", fExperimentalHall_log, false, 0, false);
+p1->CheckOverlaps(10000,1,true, 1000);	
+                                   // ::CheckOverlaps(10,1.,true, 1000);
+                               
+//Payload
+G4PVPlacement * p7 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_7,
+                                     "cad_physical_7", fExperimentalHall_log, false, 0, false);	
+p7->CheckOverlaps(10000,1,true, 1000);	
+ 
+
+
+ // SP
+
+G4PVPlacement * p8 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_8,
+                                     "cad_physical_8", fExperimentalHall_log, false, 0, false);
+
+p8->CheckOverlaps(10000,1,true, 1000);		
+
+
+//STRU
+G4PVPlacement * p9 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_9,
+                                     "cad_physical_9", fExperimentalHall_log, false, 0, false); 
+p9->CheckOverlaps(5,1,true, 1000);	
+ 
 
 
  //Place the main volume
