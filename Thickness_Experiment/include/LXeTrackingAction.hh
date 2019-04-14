@@ -34,8 +34,10 @@
 
 #include "G4UserTrackingAction.hh"
 #include "globals.hh"
+#include <map>
 
 class LXeRecorderBase;
+class G4ParticleDefinition;
 
 class LXeTrackingAction : public G4UserTrackingAction {
 
@@ -47,10 +49,16 @@ class LXeTrackingAction : public G4UserTrackingAction {
     virtual void PreUserTrackingAction(const G4Track*);
     virtual void PostUserTrackingAction(const G4Track*);
 
+   std::map<const G4ParticleDefinition*, int>& GetNParticlesCreatedInWorld()
+    {
+    return fNParticleInWorld;
+    }
+
   private:
 
     LXeRecorderBase* fRecorder;
-
+    std::map<const G4ParticleDefinition*, int> fNParticleInWorld;
+	
 };
 
 #endif

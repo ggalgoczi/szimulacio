@@ -1,7 +1,6 @@
 /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/install.dir
 /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/list_install_components.dir
-/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/rebuild_cache.dir
 /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/LXe.dir
 /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/install/local.dir
-/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/install/strip.dir
+/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/rebuild_cache.dir
 /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/edit_cache.dir

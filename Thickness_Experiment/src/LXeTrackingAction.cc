@@ -66,7 +66,16 @@ void LXeTrackingAction::PreUserTrackingAction(const G4Track* aTrack)
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeTrackingAction::PostUserTrackingAction(const G4Track* aTrack){
+  
+  // Created particledefinition 
+  const G4ParticleDefinition* particleDefinition = aTrack->GetParticleDefinition();
+  fNParticleInWorld[particleDefinition]++;     
+  
+  
+  
   LXeTrajectory* trajectory=(LXeTrajectory*)fpTrackingManager->GimmeTrajectory();
+  
+  
   LXeUserTrackInformation*
     trackInformation=(LXeUserTrackInformation*)aTrack->GetUserInformation();
 
