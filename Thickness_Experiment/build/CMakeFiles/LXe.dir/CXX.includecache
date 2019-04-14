@@ -301,6 +301,8 @@ G4UserTrackingAction.hh
 ../include/G4UserTrackingAction.hh
 globals.hh
 ../include/globals.hh
+map
+-
 
 ../include/LXeTrajectory.hh
 G4Trajectory.hh
@@ -6333,10 +6335,16 @@ Randomize.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/Randomize.hh
 
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRunAction.cc
+LXeTrackingAction.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/LXeTrackingAction.hh
+G4Threading.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4Threading.hh
 LXeRunAction.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRunAction.hh
 LXeRecorderBase.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRecorderBase.hh
+G4RunManager.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4RunManager.hh
 LXeRun.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRun.hh
 G4Run.hh
@@ -6344,6 +6352,8 @@ G4Run.hh
 G4AutoLock.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/G4AutoLock.hh
 string
+-
+map
 -
 
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeScintHit.cc

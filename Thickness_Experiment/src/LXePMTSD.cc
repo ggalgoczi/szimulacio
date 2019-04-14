@@ -155,6 +155,7 @@ G4int LXePMTSD::Return_NO_of_Photons1(){
 
 
 	if(fPMTHitCollection->entries() == 0) return -1;
+	if(fPMTHitCollection->entries() != 2) return -1;
 
   
 //  assert(fPMTHitCollection->entries() == 2);
@@ -169,9 +170,9 @@ G4int LXePMTSD::Return_NO_of_Photons2(){
 	G4int NoOfPhot = 0;
   //Return number of photons for PMT NO 1
 	if(fPMTHitCollection->entries() == 0) return -1;
-
+	if(fPMTHitCollection->entries() != 2) return -1;
   
-  assert(fPMTHitCollection->entries() == 2);
+  //assert(fPMTHitCollection->entries() == 2);
   LXePMTHit* hit=NULL;
   hit=(*fPMTHitCollection)[1];
   NoOfPhot += hit->GetPhotonCount();

@@ -29,15 +29,23 @@
 /// \brief Implementation of the LXeRunAction class
 //
 //
+#include "LXeTrackingAction.hh"
+#include "G4Threading.hh"
 #include "LXeRunAction.hh"
 #include "LXeRecorderBase.hh"
+#include "G4RunManager.hh"
+
 #include "LXeRun.hh"
 #include "G4Run.hh"
 #include "G4AutoLock.hh"
 #include <string>
+#include <map>
 
 namespace { G4Mutex myHEPPrimGenMutex = G4MUTEX_INITIALIZER; }
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+void PrintNParticles(std::map<const G4ParticleDefinition*, int>& container);
+void WriteOutParticles(std::map<const G4ParticleDefinition*, int>& container, std::string& name, G4int TID);
+
 
 LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
 	Checked_Already=0;
@@ -45,7 +53,6 @@ LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
 	  // Reading in data for event generation
   
   	  G4AutoLock lock(&myHEPPrimGenMutex);
-
 // reading in type of particle
 // check if file exists and particle names are OK
     std::ifstream f2("particleforgun.txt");
@@ -160,10 +167,71 @@ void LXeRunAction::EndOfRunAction(const G4Run* aRun){
 	for(std::vector<G4int>::iterator it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
 		G4cout << *it << G4endl;
 		}*/
+	
+
+	fpTrackingAction = (LXeTrackingAction*) G4RunManager::GetRunManager()->GetUserTrackingAction();
+
+	std::map<const G4ParticleDefinition*, int>&
+    particlesCreatedInWorld = fpTrackingAction->GetNParticlesCreatedInWorld();
+  
+	// if it is thread number 0 print out the particles to file
+	// G4int G4Threading::G4GetThreadId()
+	G4int ThreadID = G4Threading::G4GetThreadId();
+  
+	//G4cout << ThreadID << "\n";
+	
+	
+	
+	if(G4Threading::IsWorkerThread()){
+		G4cout << "ThreadId: " << ThreadID << G4endl;
+		G4cout << "Number and type of particles created:" << G4endl;
+		PrintNParticles(particlesCreatedInWorld);
+		G4cout << "_______________________" << G4endl;
+		std::string FName = "Particles.txt";
+		
+		
+		G4AutoLock lockPart(&myHEPPrimGenMutex);
+		WriteOutParticles(particlesCreatedInWorld, FName, ThreadID);
+		lockPart.unlock();
+		}
+		
 	if (isMaster){	
 	fRun->Calculations();
 	
 	}
 	
   if(fRecorder)fRecorder->RecordEndOfRun(aRun);
+}
+
+
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo....
+void PrintNParticles(std::map<const G4ParticleDefinition*, int>& container)
+{
+    std::map<const G4ParticleDefinition*, int>::iterator it;
+    for(it = container.begin() ;
+        it != container.end(); it ++)
+    {
+        G4cout << "N " << it->first->GetParticleName() << " : " << it->second << G4endl;
+    }
+}
+ 
+// ................................................................................................
+
+void WriteOutParticles(std::map<const G4ParticleDefinition*, int>& container, std::string& name, G4int TID)
+{
+	std::ofstream outfile;
+	outfile.open(name.c_str(),  std::ios_base::app);
+
+    std::map<const G4ParticleDefinition*, int>::iterator it;
+    
+    outfile  << G4endl;
+    outfile << "ThreadID: " << TID << G4endl;
+    for(it = container.begin() ;
+        it != container.end(); it ++)
+    {
+        outfile << it->first->GetParticleName() << " : " << it->second << G4endl;
+    }
+	outfile << "_______________________" << G4endl;
+
 }

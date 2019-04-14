@@ -36,6 +36,7 @@
 
 class LXeRecorderBase;
 class LXeRun;
+class LXeTrackingAction;
 
 class LXeRunAction : public G4UserRunAction
 {
@@ -56,6 +57,8 @@ class LXeRunAction : public G4UserRunAction
   private:
     LXeRun*  fRun;
     LXeRecorderBase* fRecorder;
+    LXeTrackingAction* fpTrackingAction;
+
 };
 
 #endif
