@@ -5959,6 +5959,8 @@ LXeActionInitialization.hh
 /home/galgoczi/cubesat/Thickness_Experiment/LXeActionInitialization.hh
 LXeRecorderBase.hh
 /home/galgoczi/cubesat/Thickness_Experiment/LXeRecorderBase.hh
+stdio.h
+-
 G4VisExecutive.hh
 /home/galgoczi/cubesat/Thickness_Experiment/G4VisExecutive.hh
 G4UIExecutive.hh
@@ -6533,6 +6535,8 @@ G4Track.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/G4Track.hh
 G4ParticleTypes.hh
 /home/galgoczi/cubesat/Thickness_Experiment/src/G4ParticleTypes.hh
+G4TrackingManager.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4TrackingManager.hh
 
 /home/galgoczi/cubesat/Thickness_Experiment/src/LXeTrajectory.cc
 LXeTrajectory.hh

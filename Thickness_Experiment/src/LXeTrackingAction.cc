@@ -38,6 +38,7 @@
 #include "G4TrackingManager.hh"
 #include "G4Track.hh"
 #include "G4ParticleTypes.hh"
+#include "G4TrackingManager.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
@@ -61,21 +62,41 @@ void LXeTrackingAction::PreUserTrackingAction(const G4Track* aTrack)
   if(creator)
     G4cout<<creator->GetProcessName()<<G4endl;
   */
+  
+    // Created particledefinition 
+  const G4ParticleDefinition* particleDefinition = aTrack->GetParticleDefinition();
+  fNParticleInWorld[particleDefinition]++;     
+  
+  
+  //const G4VProcess* creator = aTrack->GetCreatorProcess();
+  //if(creator)
+  //G4cout<<creator->GetProcessName()<<G4endl;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeTrackingAction::PostUserTrackingAction(const G4Track* aTrack){
+ 
+ // Secondaires
+ 
+  G4TrackVector* secondaries = fpTrackingManager->GimmeSecondaries();
+  if(secondaries)
+  {
+  size_t nSeco = secondaries->size();
+  if(nSeco>0)
+    {
+      for(size_t i=0;i<nSeco;i++)
+      { 
+      //(*secondaries)[i]->SetUserInformation(infoNew);
+      if((*secondaries)[i]->GetDefinition()->GetParticleName() != "opticalphoton")
+      G4cout << "name: " << (*secondaries)[i]->GetDefinition()->GetParticleName() << G4endl;
+      }
+    }
+  }
   
-  // Created particledefinition 
-  const G4ParticleDefinition* particleDefinition = aTrack->GetParticleDefinition();
-  fNParticleInWorld[particleDefinition]++;     
-  
-  
-  
+  // end
+ 
   LXeTrajectory* trajectory=(LXeTrajectory*)fpTrackingManager->GimmeTrajectory();
-  
-  
   LXeUserTrackInformation*
     trackInformation=(LXeUserTrackInformation*)aTrack->GetUserInformation();
 

@@ -156,7 +156,6 @@ G4Run* LXeRunAction::GenerateRun()
 
 void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
   if(fRecorder)fRecorder->RecordBeginOfRun(aRun);
-    
  } 
 
 
