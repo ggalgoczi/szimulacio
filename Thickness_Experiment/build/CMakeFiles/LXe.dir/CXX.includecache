@@ -301,6 +301,8 @@ G4UserTrackingAction.hh
 ../include/G4UserTrackingAction.hh
 globals.hh
 ../include/globals.hh
+map
+-
 
 ../include/LXeTrajectory.hh
 G4Trajectory.hh
@@ -5956,7 +5958,13 @@ LXeDetectorConstruction.hh
 LXeActionInitialization.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/LXeActionInitialization.hh
 LXeRecorderBase.hh
+<<<<<<< HEAD
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/LXeRecorderBase.hh
+=======
+/home/galgoczi/cubesat/Thickness_Experiment/LXeRecorderBase.hh
+stdio.h
+-
+>>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 G4VisExecutive.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/G4VisExecutive.hh
 G4UIExecutive.hh
@@ -6332,15 +6340,39 @@ iomanip
 Randomize.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/Randomize.hh
 
+<<<<<<< HEAD
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeRunAction.cc
+=======
+/home/galgoczi/cubesat/Thickness_Experiment/src/LXeRunAction.cc
+LXeTrackingAction.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/LXeTrackingAction.hh
+G4Threading.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4Threading.hh
+>>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 LXeRunAction.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeRunAction.hh
 LXeRecorderBase.hh
+<<<<<<< HEAD
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeRecorderBase.hh
+=======
+/home/galgoczi/cubesat/Thickness_Experiment/src/LXeRecorderBase.hh
+G4RunManager.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4RunManager.hh
+>>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 LXeRun.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeRun.hh
 G4Run.hh
+<<<<<<< HEAD
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/G4Run.hh
+=======
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4Run.hh
+G4AutoLock.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4AutoLock.hh
+string
+-
+map
+-
+>>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeScintHit.cc
 LXeScintHit.hh
@@ -6518,7 +6550,13 @@ G4TrackingManager.hh
 G4Track.hh
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/G4Track.hh
 G4ParticleTypes.hh
+<<<<<<< HEAD
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/G4ParticleTypes.hh
+=======
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4ParticleTypes.hh
+G4TrackingManager.hh
+/home/galgoczi/cubesat/Thickness_Experiment/src/G4TrackingManager.hh
+>>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeTrajectory.cc
 LXeTrajectory.hh

@@ -45,6 +45,7 @@
 #include "LXeActionInitialization.hh"
 
 #include "LXeRecorderBase.hh"
+#include <stdio.h>
 
 #ifdef G4VIS_USE
 #include "G4VisExecutive.hh"
@@ -58,12 +59,15 @@
 
 int main(int argc, char** argv)
 {
+	// Deleting files those are appended
+	std::remove( "Particles.txt" );
+
 	
   int NoE=1;
 	
 #ifdef G4MULTITHREADED
   G4MTRunManager * runManager = new G4MTRunManager;
-  runManager->SetNumberOfThreads(2);
+  runManager->SetNumberOfThreads(7);
 #else
   G4RunManager * runManager = new G4RunManager;
 #endif
