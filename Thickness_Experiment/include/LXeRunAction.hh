@@ -36,6 +36,7 @@
 
 class LXeRecorderBase;
 class LXeRun;
+class LXeTrackingAction;
 
 class LXeRunAction : public G4UserRunAction
 {
@@ -50,10 +51,14 @@ class LXeRunAction : public G4UserRunAction
 	std::string infileline;
 	std::string infilename;
 	std::string Part_Name;
+	int Energy;
+	int Checked_Already;
 	std::vector<std::vector<float> > Particle_Energy_In_RunAction;
   private:
     LXeRun*  fRun;
     LXeRecorderBase* fRecorder;
+    LXeTrackingAction* fpTrackingAction;
+
 };
 
 #endif
