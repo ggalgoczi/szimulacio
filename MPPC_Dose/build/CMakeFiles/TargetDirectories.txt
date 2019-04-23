@@ -1,0 +1,6 @@
+/home/galgoczi/cubesat/MPPC_Dose/build/CMakeFiles/install.dir
+/home/galgoczi/cubesat/MPPC_Dose/build/CMakeFiles/list_install_components.dir
+/home/galgoczi/cubesat/MPPC_Dose/build/CMakeFiles/LXe.dir
+/home/galgoczi/cubesat/MPPC_Dose/build/CMakeFiles/install/local.dir
+/home/galgoczi/cubesat/MPPC_Dose/build/CMakeFiles/rebuild_cache.dir
+/home/galgoczi/cubesat/MPPC_Dose/build/CMakeFiles/edit_cache.dir
