@@ -4180,6 +4180,12 @@ globals.hh
 G4MuBremsstrahlung.hh
 /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/highenergy/include/G4MuBremsstrahlung.hh
 
+/home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/highenergy/include/G4hPairProduction.hh
+globals.hh
+/home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/highenergy/include/globals.hh
+G4MuPairProduction.hh
+/home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/highenergy/include/G4MuPairProduction.hh
+
 /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/lowenergy/include/G4IonDEDXHandler.hh
 globals.hh
 /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/lowenergy/include/globals.hh
@@ -6327,6 +6333,8 @@ G4hMultipleScattering.hh
 /home/galgoczi/simulations/cubesat/MPPC_Dose/src/G4hMultipleScattering.hh
 G4hBremsstrahlung.hh
 /home/galgoczi/simulations/cubesat/MPPC_Dose/src/G4hBremsstrahlung.hh
+G4hPairProduction.hh
+/home/galgoczi/simulations/cubesat/MPPC_Dose/src/G4hPairProduction.hh
 G4ionIonisation.hh
 /home/galgoczi/simulations/cubesat/MPPC_Dose/src/G4ionIonisation.hh
 G4IonParametrisedLossModel.hh

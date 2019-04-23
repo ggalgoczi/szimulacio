@@ -1609,11 +1609,13 @@ CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/cuts/include/G4ProductionCuts.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/cuts/include/G4ProductionCutsTable.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/highenergy/include/G4hBremsstrahlung.hh
+ /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/highenergy/include/G4hPairProduction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/lowenergy/include/G4IonDEDXHandler.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/lowenergy/include/G4IonParametrisedLossModel.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/lowenergy/include/G4IonParametrisedLossModel.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/lowenergy/include/G4UAtomicDeexcitation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/muons/include/G4MuBremsstrahlung.hh
+ /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/muons/include/G4MuPairProduction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/standard/include/G4ComptonScattering.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/standard/include/G4GammaConversion.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/processes/electromagnetic/standard/include/G4PhotoElectricEffect.hh

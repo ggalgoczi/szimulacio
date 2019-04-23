@@ -82,6 +82,7 @@ LXeEMPhysics::~LXeEMPhysics() {}
 #include "G4hIonisation.hh" 
 #include "G4hMultipleScattering.hh"
 #include "G4hBremsstrahlung.hh"
+#include "G4hPairProduction.hh"
 #include "G4ionIonisation.hh"
 #include "G4IonParametrisedLossModel.hh"
 
@@ -153,6 +154,7 @@ G4ProcessManager* pManager = 0;
   pManager->AddProcess(hIonisation,               -1, 2, 2);  
   pManager->AddProcess(new G4hMultipleScattering, -1, 1, 1);
   pManager->AddProcess(new G4hBremsstrahlung,     -1,-3, 3);
+  pManager->AddProcess(new G4hPairProduction,     -1,-3, 3);
 
 // Elastic scattering
 /*
