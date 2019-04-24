@@ -88,8 +88,8 @@ void LXeTrackingAction::PostUserTrackingAction(const G4Track* aTrack){
       for(size_t i=0;i<nSeco;i++)
       { 
       //(*secondaries)[i]->SetUserInformation(infoNew);
-      if((*secondaries)[i]->GetDefinition()->GetParticleName() != "opticalphoton")
-      G4cout << "name: " << (*secondaries)[i]->GetDefinition()->GetParticleName() << G4endl;
+     // if((*secondaries)[i]->GetDefinition()->GetParticleName() != "opticalphoton")
+     // G4cout << "name: " << (*secondaries)[i]->GetDefinition()->GetParticleName() << G4endl;
       }
     }
   }
