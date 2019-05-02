@@ -59,7 +59,9 @@ LXeEMPhysics::~LXeEMPhysics() {}
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......#include "G4EmProcessOptions.hh"
 #include "G4EmProcessOptions.hh"
 #include "G4SystemOfUnits.hh"
+#include "G4HadronElasticProcess.hh"
 
+#include "G4HadronElastic.hh"
 
 #include "G4ParticleDefinition.hh"
 #include "G4ParticleTable.hh"
@@ -68,6 +70,7 @@ LXeEMPhysics::~LXeEMPhysics() {}
 
 #include "G4Electron.hh"
 #include "G4Positron.hh"
+#include "G4Proton.hh"
 
 #include "G4NeutrinoE.hh"
 #include "G4AntiNeutrinoE.hh"
@@ -75,11 +78,21 @@ LXeEMPhysics::~LXeEMPhysics() {}
 #include "G4LossTableManager.hh"
 #include "G4UAtomicDeexcitation.hh"
 
+//OTHERS:
+#include "G4hIonisation.hh" 
+#include "G4hMultipleScattering.hh"
+#include "G4hBremsstrahlung.hh"
+#include "G4hPairProduction.hh"
+#include "G4ionIonisation.hh"
+#include "G4IonParametrisedLossModel.hh"
+
 void LXeEMPhysics::ConstructParticle()
 {
   // gamma
   G4Gamma::GammaDefinition();
  
+ 
+  G4Proton::ProtonDefinition();
   // electron
   G4Electron::ElectronDefinition();
   G4Positron::PositronDefinition();
@@ -108,7 +121,11 @@ void LXeEMPhysics::ConstructProcess()
   fPositronBremsStrahlung = new G4eBremsstrahlung();
   fAnnihilation = new G4eplusAnnihilation();
 
-  G4ProcessManager* pManager = 0;
+// proton physics
+	G4hIonisation* hIonisation = new G4hIonisation();
+	hIonisation->SetStepFunction(0.2, 50*um);
+
+G4ProcessManager* pManager = 0;
 
   // Gamma Physics
   pManager = G4Gamma::Gamma()->GetProcessManager();
@@ -130,6 +147,50 @@ void LXeEMPhysics::ConstructProcess()
   pManager->AddProcess(fPositronIonisation,         -1, 2, 2);
   pManager->AddProcess(fPositronBremsStrahlung,     -1, 3, 3);  
   pManager->AddProcess(fAnnihilation,                0,-1, 4);  
+
+
+// proton physics
+  pManager = G4Proton::Proton()->GetProcessManager();
+  pManager->AddProcess(hIonisation,               -1, 2, 2);  
+  pManager->AddProcess(new G4hMultipleScattering, -1, 1, 1);
+  pManager->AddProcess(new G4hBremsstrahlung,     -1,-3, 3);
+  pManager->AddProcess(new G4hPairProduction,     -1,-3, 3);
+
+// ions physics
+/*
+  pManager = G4GenericIon::GenericIon()->GetProcessManager();
+  pManager->AddProcess(new G4hMultipleScattering, -1, 1, 1);
+  pManager->AddProcess(new G4ionIonisation,       -1, 2, 2);
+*/
+
+// Elastic scattering
+/*
+G4HadronElasticProcess* protelProc
+= new G4HadronElasticProcess();
+G4LElastic* protelMod = new G4LElastic();
+protelProc->RegisterMe(protelMod);
+pManager->AddDiscreteProcess(protelProc); */
+
+
+  
+  G4HadronElasticProcess* theElasticProcess = new G4HadronElasticProcess;
+  G4HadronElastic* theElasticModel = new G4HadronElastic;
+  theElasticProcess->RegisterMe(theElasticModel);
+  pManager->AddDiscreteProcess(theElasticProcess);
+
+/*
+G4ProtonInelasticProcess* protinelProc = new G4ProtonInelasticProcess();
+G4LEProtonInelastic* proLEMod = new G4LEProtonInelastic();
+protLEMod->SetMaxEnergy(20.0*GeV);
+protinelProc->RegisterMe(protLEMod);
+pManager->AddDiscreteProcess(protinelProc); */
+
+/*
+G4HEProtonInelastic* protHEMod = new G4HEProtonInelastic();
+protHEMod->SetMinEnergy(20.0*GeV);
+protinelProc->RegisterMe(protHEMod);
+pManager->AddDiscreteProcess(protinelProc);
+*/
 
  // Em options
   //

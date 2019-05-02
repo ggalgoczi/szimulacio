@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm "scint.txt"
-rm "res.txt"
+rm "PMT1.txt"
+rm "PMT2.txt"
 rm "totalfluxes.txt"
 
 inputfilename="master.txt"
@@ -22,7 +22,8 @@ fi
 
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
-	rm "scint.txt"
+	rm "PMT1.txt"
+	rm "PMT2.txt"
     #echo "Text read from file: $line"
     #for word in $line
 		#do
@@ -49,10 +50,11 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	#done
 
 		
-	time ./LXe run.mac
-	python anal.py
-	outputfilename="rate_${particle}${file}"
-	#mv res.txt outputfilename
+	time ./LXe run.mac > "output_${particle}${file}"
+	outputfilename="rate_${particle}${file}1_pmt.txt"
+	outputfilename2="rate_${particle}${file}2_pmt.txt"
+	mv PMT1.txt outputfilename
+	mv PMT2.txt outputfilename2
 	#mv
 done < $inputfilename
 
