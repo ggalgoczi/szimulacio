@@ -48,7 +48,7 @@ LXePhysicsList::LXePhysicsList() : G4VModularPhysicsList()
 {
   // default cut value  (1.0mm)
  // defaultCutValue = 1.0*mm;
-  defaultCutValue = 0.001*mm;
+  defaultCutValue = 0.00001*mm;
 
   // General Physics
   RegisterPhysics( new LXeGeneralPhysics("general") );
@@ -64,6 +64,7 @@ LXePhysicsList::LXePhysicsList() : G4VModularPhysicsList()
    RegisterPhysics( new G4HadronElasticPhysics());
   // RegisterPhysics( new G4EmLivermorePhysics());
 
+
   // Optical Physics
   G4OpticalPhysics* opticalPhysics = new G4OpticalPhysics();
   RegisterPhysics( opticalPhysics );
@@ -78,7 +79,6 @@ LXePhysicsList::LXePhysicsList() : G4VModularPhysicsList()
 
   opticalPhysics->SetTrackSecondariesFirst(kCerenkov,true);
   opticalPhysics->SetTrackSecondariesFirst(kScintillation,true);
-
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
