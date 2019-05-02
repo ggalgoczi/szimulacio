@@ -84,7 +84,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
  // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(10,10,0.));  
 	
 
-    Particle_Energy = fRunAction->Particle_Energy_In_RunAction;
+//    Particle_Energy = fRunAction->Particle_Energy_In_RunAction;
   
   /*  
     for (int i = 0; i < Particle_Energy.size(); i++){
@@ -94,6 +94,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
 		}
 	*/
     
+    /*
     double sum = 0;
     double count = 0;
 	for (int i = 0; i < Particle_Energy.size(); i++)
@@ -115,7 +116,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
 		oss << Particle_Energy[0][2] <<std::endl;
 		std::string var = oss.str();	
 		filePutContents2("./totalfluxes.txt",var,true);
-    
+    */
 
     	     
 }

@@ -1,4 +1,4 @@
-The system is: Linux - 4.15.0-46-generic - x86_64
+The system is: Linux - 4.15.0-47-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -28,29 +28,28 @@ The CXX compiler identification is GNU, found in "/home/galgoczi/simulations/cub
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_7118f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_7118f.dir/build.make CMakeFiles/cmTC_7118f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_63707/fast"
+/usr/bin/make -f CMakeFiles/cmTC_63707.dir/build.make CMakeFiles/cmTC_63707.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7118f.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_7118f.dir/testCCompiler.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_7118f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7118f.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_7118f.dir/testCCompiler.c.o  -o cmTC_7118f 
+Building C object CMakeFiles/cmTC_63707.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_63707.dir/testCCompiler.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_63707
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63707.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_63707.dir/testCCompiler.c.o  -o cmTC_63707 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_dfd78/fast"
-/usr/bin/make -f CMakeFiles/cmTC_dfd78.dir/build.make CMakeFiles/cmTC_dfd78.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ce48c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ce48c.dir/build.make CMakeFiles/cmTC_ce48c.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_dfd78
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfd78.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o  -o cmTC_dfd78 
+Building C object CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_ce48c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce48c.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o  -o cmTC_ce48c 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -62,9 +61,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dfd78' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPinQbI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_dfd78 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dfd78' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ce48c' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4ihZDo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce48c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ce48c' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -72,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_dfd78/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_dfd78.dir/build.make CMakeFiles/cmTC_dfd78.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ce48c/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ce48c.dir/build.make CMakeFiles/cmTC_ce48c.dir/build]
   ignore line: [make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_dfd78]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfd78.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o  -o cmTC_dfd78 ]
+  ignore line: [Building C object CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_ce48c]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce48c.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o  -o cmTC_ce48c ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -91,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_dfd78' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPinQbI.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_dfd78 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ce48c' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4ihZDo.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce48c /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccPinQbI.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc4ihZDo.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -117,7 +116,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_dfd78] ==> ignore
+    arg [cmTC_ce48c] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -129,7 +128,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_dfd78.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_ce48c.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -161,14 +160,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_92427/fast"
-/usr/bin/make -f CMakeFiles/cmTC_92427.dir/build.make CMakeFiles/cmTC_92427.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b804a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b804a.dir/build.make CMakeFiles/cmTC_b804a.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_92427.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_92427.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_92427
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_92427.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_92427.dir/feature_tests.c.o  -o cmTC_92427 
+Building C object CMakeFiles/cmTC_b804a.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_b804a.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b804a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b804a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b804a.dir/feature_tests.c.o  -o cmTC_b804a 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -181,14 +180,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_57a42/fast"
-/usr/bin/make -f CMakeFiles/cmTC_57a42.dir/build.make CMakeFiles/cmTC_57a42.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3e78c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e78c.dir/build.make CMakeFiles/cmTC_3e78c.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_57a42.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_57a42.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_57a42
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_57a42.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_57a42.dir/feature_tests.c.o  -o cmTC_57a42 
+Building C object CMakeFiles/cmTC_3e78c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_3e78c.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_3e78c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e78c.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3e78c.dir/feature_tests.c.o  -o cmTC_3e78c 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -201,14 +200,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_12852/fast"
-/usr/bin/make -f CMakeFiles/cmTC_12852.dir/build.make CMakeFiles/cmTC_12852.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_0a6a3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a6a3.dir/build.make CMakeFiles/cmTC_0a6a3.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_12852.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_12852.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_12852
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12852.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_12852.dir/feature_tests.c.o  -o cmTC_12852 
+Building C object CMakeFiles/cmTC_0a6a3.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_0a6a3.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0a6a3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a6a3.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0a6a3.dir/feature_tests.c.o  -o cmTC_0a6a3 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -219,28 +218,28 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3bbbc/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3bbbc.dir/build.make CMakeFiles/cmTC_3bbbc.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9916c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9916c.dir/build.make CMakeFiles/cmTC_9916c.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_3bbbc.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_3bbbc.dir/testCXXCompiler.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_3bbbc
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3bbbc.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_3bbbc.dir/testCXXCompiler.cxx.o  -o cmTC_3bbbc 
+Building CXX object CMakeFiles/cmTC_9916c.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_9916c.dir/testCXXCompiler.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_9916c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9916c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_9916c.dir/testCXXCompiler.cxx.o  -o cmTC_9916c 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4cede/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4cede.dir/build.make CMakeFiles/cmTC_4cede.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ce469/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ce469.dir/build.make CMakeFiles/cmTC_ce469.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_4cede
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cede.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_4cede 
+Building CXX object CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_ce469
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce469.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ce469 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -252,9 +251,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4cede' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0GO4H5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_4cede /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4cede' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ce469' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDcO9WN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce469 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ce469' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -262,14 +261,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_4cede/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_4cede.dir/build.make CMakeFiles/cmTC_4cede.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_ce469/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_ce469.dir/build.make CMakeFiles/cmTC_ce469.dir/build]
   ignore line: [make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_4cede]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4cede.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_4cede ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_ce469]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ce469.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_ce469 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -281,13 +280,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_4cede' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0GO4H5.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_4cede /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_ce469' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccDcO9WN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_ce469 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc0GO4H5.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccDcO9WN.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -307,7 +306,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_4cede] ==> ignore
+    arg [cmTC_ce469] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -319,7 +318,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_4cede.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_ce469.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -347,14 +346,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5d963/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5d963.dir/build.make CMakeFiles/cmTC_5d963.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_fa9e7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa9e7.dir/build.make CMakeFiles/cmTC_fa9e7.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5d963.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_5d963.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5d963
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d963.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5d963.dir/feature_tests.cxx.o  -o cmTC_5d963 
+Building CXX object CMakeFiles/cmTC_fa9e7.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_fa9e7.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_fa9e7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa9e7.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_fa9e7.dir/feature_tests.cxx.o  -o cmTC_fa9e7 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -420,14 +419,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b8d41/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b8d41.dir/build.make CMakeFiles/cmTC_b8d41.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5aa54/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5aa54.dir/build.make CMakeFiles/cmTC_5aa54.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b8d41.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_b8d41.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_b8d41
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b8d41.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b8d41.dir/feature_tests.cxx.o  -o cmTC_b8d41 
+Building CXX object CMakeFiles/cmTC_5aa54.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_5aa54.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5aa54
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5aa54.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5aa54.dir/feature_tests.cxx.o  -o cmTC_5aa54 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -493,14 +492,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c559a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c559a.dir/build.make CMakeFiles/cmTC_c559a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f74a3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f74a3.dir/build.make CMakeFiles/cmTC_f74a3.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c559a.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c559a.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c559a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c559a.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c559a.dir/feature_tests.cxx.o  -o cmTC_c559a 
+Building CXX object CMakeFiles/cmTC_f74a3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_f74a3.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f74a3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f74a3.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_f74a3.dir/feature_tests.cxx.o  -o cmTC_f74a3 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -566,14 +565,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_cb7e3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_cb7e3.dir/build.make CMakeFiles/cmTC_cb7e3.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_737c9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_737c9.dir/build.make CMakeFiles/cmTC_737c9.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_cb7e3.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_cb7e3.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_cb7e3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb7e3.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_cb7e3.dir/feature_tests.cxx.o  -o cmTC_cb7e3 
+Building CXX object CMakeFiles/cmTC_737c9.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_737c9.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_737c9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_737c9.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_737c9.dir/feature_tests.cxx.o  -o cmTC_737c9 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -634,7 +633,7 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
-The system is: Linux - 4.15.0-46-generic - x86_64
+The system is: Linux - 4.15.0-47-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -664,28 +663,28 @@ The CXX compiler identification is GNU, found in "/home/galgoczi/simulations/cub
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e6af5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e6af5.dir/build.make CMakeFiles/cmTC_e6af5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e8125/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e8125.dir/build.make CMakeFiles/cmTC_e8125.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e6af5.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_e6af5.dir/testCCompiler.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_e6af5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e6af5.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e6af5.dir/testCCompiler.c.o  -o cmTC_e6af5 
+Building C object CMakeFiles/cmTC_e8125.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e8125.dir/testCCompiler.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_e8125
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e8125.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e8125.dir/testCCompiler.c.o  -o cmTC_e8125 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fe7b5/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fe7b5.dir/build.make CMakeFiles/cmTC_fe7b5.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a06ce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a06ce.dir/build.make CMakeFiles/cmTC_a06ce.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_fe7b5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe7b5.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o  -o cmTC_fe7b5 
+Building C object CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_a06ce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a06ce.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o  -o cmTC_a06ce 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -697,9 +696,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fe7b5' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8iDmiZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fe7b5 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fe7b5' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a06ce' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4aJVcY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a06ce /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a06ce' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -707,14 +706,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fe7b5/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fe7b5.dir/build.make CMakeFiles/cmTC_fe7b5.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a06ce/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a06ce.dir/build.make CMakeFiles/cmTC_a06ce.dir/build]
   ignore line: [make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_fe7b5]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe7b5.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o  -o cmTC_fe7b5 ]
+  ignore line: [Building C object CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_a06ce]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a06ce.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o  -o cmTC_a06ce ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -726,13 +725,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fe7b5' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc8iDmiZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fe7b5 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_a06ce' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc4aJVcY.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_a06ce /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc8iDmiZ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cc4aJVcY.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -752,7 +751,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fe7b5] ==> ignore
+    arg [cmTC_a06ce] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -764,7 +763,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_fe7b5.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_a06ce.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -796,14 +795,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_c8edd/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c8edd.dir/build.make CMakeFiles/cmTC_c8edd.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_a2eb1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2eb1.dir/build.make CMakeFiles/cmTC_a2eb1.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_c8edd.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_c8edd.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_c8edd
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c8edd.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c8edd.dir/feature_tests.c.o  -o cmTC_c8edd 
+Building C object CMakeFiles/cmTC_a2eb1.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_a2eb1.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a2eb1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2eb1.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a2eb1.dir/feature_tests.c.o  -o cmTC_a2eb1 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -816,14 +815,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_3c1ed/fast"
-/usr/bin/make -f CMakeFiles/cmTC_3c1ed.dir/build.make CMakeFiles/cmTC_3c1ed.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_bb5fb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb5fb.dir/build.make CMakeFiles/cmTC_bb5fb.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3c1ed.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_3c1ed.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_3c1ed
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3c1ed.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_3c1ed.dir/feature_tests.c.o  -o cmTC_3c1ed 
+Building C object CMakeFiles/cmTC_bb5fb.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_bb5fb.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_bb5fb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb5fb.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_bb5fb.dir/feature_tests.c.o  -o cmTC_bb5fb 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -836,14 +835,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_883b4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_883b4.dir/build.make CMakeFiles/cmTC_883b4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_e5e0d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e5e0d.dir/build.make CMakeFiles/cmTC_e5e0d.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_883b4.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_883b4.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_883b4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_883b4.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_883b4.dir/feature_tests.c.o  -o cmTC_883b4 
+Building C object CMakeFiles/cmTC_e5e0d.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_e5e0d.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_e5e0d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5e0d.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e5e0d.dir/feature_tests.c.o  -o cmTC_e5e0d 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -854,28 +853,28 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_97679/fast"
-/usr/bin/make -f CMakeFiles/cmTC_97679.dir/build.make CMakeFiles/cmTC_97679.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9118e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9118e.dir/build.make CMakeFiles/cmTC_9118e.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_97679.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_97679.dir/testCXXCompiler.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_97679
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97679.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_97679.dir/testCXXCompiler.cxx.o  -o cmTC_97679 
+Building CXX object CMakeFiles/cmTC_9118e.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_9118e.dir/testCXXCompiler.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_9118e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9118e.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_9118e.dir/testCXXCompiler.cxx.o  -o cmTC_9118e 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fcb86/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fcb86.dir/build.make CMakeFiles/cmTC_fcb86.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_84773/fast"
+/usr/bin/make -f CMakeFiles/cmTC_84773.dir/build.make CMakeFiles/cmTC_84773.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_fcb86
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcb86.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fcb86 
+Building CXX object CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_84773
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84773.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_84773 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -887,9 +886,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fcb86' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZtHWam.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fcb86 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fcb86' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_84773' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrwvyhm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_84773 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_84773' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -897,14 +896,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fcb86/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fcb86.dir/build.make CMakeFiles/cmTC_fcb86.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_84773/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_84773.dir/build.make CMakeFiles/cmTC_84773.dir/build]
   ignore line: [make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_fcb86]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fcb86.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_fcb86 ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_84773]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84773.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_84773 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -916,13 +915,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fcb86' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccZtHWam.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fcb86 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_84773' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrwvyhm.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_84773 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccZtHWam.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccrwvyhm.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -942,7 +941,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_fcb86] ==> ignore
+    arg [cmTC_84773] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -954,7 +953,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_fcb86.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_84773.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -982,14 +981,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_4659d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_4659d.dir/build.make CMakeFiles/cmTC_4659d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_20b13/fast"
+/usr/bin/make -f CMakeFiles/cmTC_20b13.dir/build.make CMakeFiles/cmTC_20b13.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_4659d.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_4659d.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_4659d
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4659d.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_4659d.dir/feature_tests.cxx.o  -o cmTC_4659d 
+Building CXX object CMakeFiles/cmTC_20b13.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_20b13.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_20b13
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_20b13.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_20b13.dir/feature_tests.cxx.o  -o cmTC_20b13 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -1055,14 +1054,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_24618/fast"
-/usr/bin/make -f CMakeFiles/cmTC_24618.dir/build.make CMakeFiles/cmTC_24618.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5a9e8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5a9e8.dir/build.make CMakeFiles/cmTC_5a9e8.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_24618.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_24618.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_24618
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24618.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_24618.dir/feature_tests.cxx.o  -o cmTC_24618 
+Building CXX object CMakeFiles/cmTC_5a9e8.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_5a9e8.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_5a9e8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a9e8.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5a9e8.dir/feature_tests.cxx.o  -o cmTC_5a9e8 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -1128,14 +1127,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_73c9b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_73c9b.dir/build.make CMakeFiles/cmTC_73c9b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_14904/fast"
+/usr/bin/make -f CMakeFiles/cmTC_14904.dir/build.make CMakeFiles/cmTC_14904.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_73c9b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_73c9b.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_73c9b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_73c9b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_73c9b.dir/feature_tests.cxx.o  -o cmTC_73c9b 
+Building CXX object CMakeFiles/cmTC_14904.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_14904.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_14904
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14904.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_14904.dir/feature_tests.cxx.o  -o cmTC_14904 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -1201,14 +1200,14 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_5b49a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_5b49a.dir/build.make CMakeFiles/cmTC_5b49a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c0994/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c0994.dir/build.make CMakeFiles/cmTC_c0994.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5b49a.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_5b49a.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_5b49a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b49a.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5b49a.dir/feature_tests.cxx.o  -o cmTC_5b49a 
+Building CXX object CMakeFiles/cmTC_c0994.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_c0994.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_c0994
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0994.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c0994.dir/feature_tests.cxx.o  -o cmTC_c0994 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -1269,7 +1268,7 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
     Feature record: CXX_FEATURE:0cxx_variable_templates
     Feature record: CXX_FEATURE:0cxx_variadic_macros
     Feature record: CXX_FEATURE:0cxx_variadic_templates
-The system is: Linux - 4.15.0-46-generic - x86_64
+The system is: Linux - 4.15.0-47-generic - x86_64
 Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
 Compiler: /usr/bin/cc 
 Build flags: 
@@ -1299,52 +1298,28 @@ The CXX compiler identification is GNU, found in "/home/galgoczi/simulations/cub
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e4ccb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e4ccb.dir/build.make CMakeFiles/cmTC_e4ccb.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_44cbd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44cbd.dir/build.make CMakeFiles/cmTC_44cbd.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e4ccb.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_e4ccb.dir/testCCompiler.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_e4ccb
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4ccb.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_e4ccb.dir/testCCompiler.c.o  -o cmTC_e4ccb 
+Building C object CMakeFiles/cmTC_44cbd.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_44cbd.dir/testCCompiler.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_44cbd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44cbd.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_44cbd.dir/testCCompiler.c.o  -o cmTC_44cbd 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_fed6a/fast"
-/usr/bin/make -f CMakeFiles/cmTC_fed6a.dir/build.make CMakeFiles/cmTC_fed6a.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_70567/fast"
+/usr/bin/make -f CMakeFiles/cmTC_70567.dir/build.make CMakeFiles/cmTC_70567.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_fed6a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fed6a.dir/link.txt --verbose=1
-/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o  -o cmTC_fed6a 
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_8254c/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_8254c.dir/build.make CMakeFiles/cmTC_8254c.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_8254c.dir/testCCompiler.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_8254c.dir/testCCompiler.c.o   -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_8254c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8254c.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_8254c.dir/testCCompiler.c.o  -o cmTC_8254c -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-
-
-Detecting C compiler ABI info compiled with the following output:
-Change Dir: /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/gmake" "cmTC_2a5b9/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_2a5b9.dir/build.make CMakeFiles/cmTC_2a5b9.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_2a5b9
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a5b9.dir/link.txt --verbose=1
-/usr/bin/cc      -v CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o  -o cmTC_2a5b9 -rdynamic  
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+Building C object CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_70567
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70567.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o  -o cmTC_70567 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -1353,47 +1328,27 @@ OFFLOAD_TARGET_DEFAULT=1
 Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-<<<<<<< HEAD
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fed6a' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrxUABq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fed6a /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fed6a' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_70567' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHhKau5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_70567 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_70567' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2a5b9' '-rdynamic' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cckBW3OX.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2a5b9 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp]
   ignore line: []
-<<<<<<< HEAD
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_fed6a/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_fed6a.dir/build.make CMakeFiles/cmTC_fed6a.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_70567/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_70567.dir/build.make CMakeFiles/cmTC_70567.dir/build]
   ignore line: [make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_fed6a]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fed6a.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o  -o cmTC_fed6a ]
-=======
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_2a5b9/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_2a5b9.dir/build.make CMakeFiles/cmTC_2a5b9.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.5/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_2a5b9]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2a5b9.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o  -o cmTC_2a5b9 -rdynamic  ]
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+  ignore line: [Building C object CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_70567]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_70567.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o  -o cmTC_70567 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -1402,29 +1357,16 @@ Parsed C implicit link information from above output:
   ignore line: [Target: x86_64-linux-gnu]
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-<<<<<<< HEAD
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_fed6a' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrxUABq.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_fed6a /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_70567' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccHhKau5.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_70567 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccrxUABq.res] ==> ignore
-=======
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_2a5b9' '-rdynamic' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/cckBW3OX.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_2a5b9 /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cckBW3OX.res] ==> ignore
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+    arg [-plugin-opt=-fresolution=/tmp/ccHhKau5.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1444,34 +1386,19 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-<<<<<<< HEAD
-    arg [cmTC_fed6a] ==> ignore
+    arg [cmTC_70567] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib]
-=======
-    arg [cmTC_2a5b9] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-<<<<<<< HEAD
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_fed6a.dir/CMakeCCompilerABI.c.o] ==> ignore
-=======
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_2a5b9.dir/CMakeCCompilerABI.c.o] ==> ignore
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+    arg [CMakeFiles/cmTC_70567.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -1503,27 +1430,15 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_acb08/fast"
-/usr/bin/make -f CMakeFiles/cmTC_acb08.dir/build.make CMakeFiles/cmTC_acb08.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_c83ea/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c83ea.dir/build.make CMakeFiles/cmTC_c83ea.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_acb08.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_acb08.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_acb08
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_acb08.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_acb08.dir/feature_tests.c.o  -o cmTC_acb08 
+Building C object CMakeFiles/cmTC_c83ea.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_c83ea.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c83ea
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c83ea.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_c83ea.dir/feature_tests.c.o  -o cmTC_c83ea 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_7a5f5/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_7a5f5.dir/build.make CMakeFiles/cmTC_7a5f5.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_7a5f5.dir/feature_tests.c.o
-/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_7a5f5.dir/feature_tests.c.o   -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_7a5f5
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a5f5.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_7a5f5.dir/feature_tests.c.o  -o cmTC_7a5f5 -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -1535,27 +1450,15 @@ gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/C
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_1f076/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1f076.dir/build.make CMakeFiles/cmTC_1f076.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_6171b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6171b.dir/build.make CMakeFiles/cmTC_6171b.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_1f076.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_1f076.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_1f076
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1f076.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_1f076.dir/feature_tests.c.o  -o cmTC_1f076 
+Building C object CMakeFiles/cmTC_6171b.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_6171b.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_6171b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6171b.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_6171b.dir/feature_tests.c.o  -o cmTC_6171b 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_46da1/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_46da1.dir/build.make CMakeFiles/cmTC_46da1.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_46da1.dir/feature_tests.c.o
-/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_46da1.dir/feature_tests.c.o   -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_46da1
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46da1.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_46da1.dir/feature_tests.c.o  -o cmTC_46da1 -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -1567,27 +1470,15 @@ gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/C
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_a0276/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a0276.dir/build.make CMakeFiles/cmTC_a0276.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b1569/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b1569.dir/build.make CMakeFiles/cmTC_b1569.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a0276.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_a0276.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_a0276
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a0276.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a0276.dir/feature_tests.c.o  -o cmTC_a0276 
+Building C object CMakeFiles/cmTC_b1569.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_b1569.dir/feature_tests.c.o   -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_b1569
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1569.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_b1569.dir/feature_tests.c.o  -o cmTC_b1569 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_6ee01/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_6ee01.dir/build.make CMakeFiles/cmTC_6ee01.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_6ee01.dir/feature_tests.c.o
-/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_6ee01.dir/feature_tests.c.o   -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.c
-Linking C executable cmTC_6ee01
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ee01.dir/link.txt --verbose=1
-/usr/bin/cc       CMakeFiles/cmTC_6ee01.dir/feature_tests.c.o  -o cmTC_6ee01 -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -1597,53 +1488,28 @@ gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/C
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_95f9f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_95f9f.dir/build.make CMakeFiles/cmTC_95f9f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_5a916/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5a916.dir/build.make CMakeFiles/cmTC_5a916.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_95f9f.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_95f9f.dir/testCXXCompiler.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_95f9f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95f9f.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_95f9f.dir/testCXXCompiler.cxx.o  -o cmTC_95f9f 
+Building CXX object CMakeFiles/cmTC_5a916.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_5a916.dir/testCXXCompiler.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_5a916
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5a916.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_5a916.dir/testCXXCompiler.cxx.o  -o cmTC_5a916 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_980f2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_980f2.dir/build.make CMakeFiles/cmTC_980f2.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1bd52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1bd52.dir/build.make CMakeFiles/cmTC_1bd52.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_980f2
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_980f2.dir/link.txt --verbose=1
-/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_980f2 
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_e326c/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_e326c.dir/build.make CMakeFiles/cmTC_e326c.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e326c.dir/testCXXCompiler.cxx.o
-/usr/bin/c++      -o CMakeFiles/cmTC_e326c.dir/testCXXCompiler.cxx.o -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_e326c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e326c.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_e326c.dir/testCXXCompiler.cxx.o  -o cmTC_e326c -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-
-
-Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/gmake" "cmTC_5088c/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_5088c.dir/build.make CMakeFiles/cmTC_5088c.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++      -o CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_5088c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5088c.dir/link.txt --verbose=1
-/usr/bin/c++       -v CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5088c -rdynamic  
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+Building CXX object CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_1bd52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bd52.dir/link.txt --verbose=1
+/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1bd52 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -1652,47 +1518,27 @@ OFFLOAD_TARGET_DEFAULT=1
 Target: x86_64-linux-gnu
 Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
 Thread model: posix
-<<<<<<< HEAD
 gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_980f2' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0QYqQK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_980f2 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_980f2' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1bd52' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFOvy4p.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1bd52 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1bd52' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) 
-COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/
-LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5088c' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpaGbjk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_5088c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
 Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp]
   ignore line: []
-<<<<<<< HEAD
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_980f2/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_980f2.dir/build.make CMakeFiles/cmTC_980f2.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_1bd52/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_1bd52.dir/build.make CMakeFiles/cmTC_1bd52.dir/build]
   ignore line: [make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_980f2]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_980f2.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_980f2 ]
-=======
-  ignore line: [Run Build Command:"/usr/bin/gmake" "cmTC_5088c/fast"]
-  ignore line: [/usr/bin/gmake -f CMakeFiles/cmTC_5088c.dir/build.make CMakeFiles/cmTC_5088c.dir/build]
-  ignore line: [gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++      -o CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.5/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_5088c]
-  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5088c.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++       -v CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_5088c -rdynamic  ]
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+  ignore line: [Building CXX object CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake-3.10/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_1bd52]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bd52.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v -rdynamic CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_1bd52 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -1701,29 +1547,16 @@ Parsed CXX implicit link information from above output:
   ignore line: [Target: x86_64-linux-gnu]
   ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
   ignore line: [Thread model: posix]
-<<<<<<< HEAD
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_980f2' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0QYqQK.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_980f2 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_1bd52' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFOvy4p.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_1bd52 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/cc0QYqQK.res] ==> ignore
-=======
-  ignore line: [gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.10) ]
-  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/]
-  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/5/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/5/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_5088c' '-rdynamic' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/5/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper -plugin-opt=-fresolution=/tmp/ccpaGbjk.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -z relro -o cmTC_5088c /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o -L/usr/lib/gcc/x86_64-linux-gnu/5 -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/5/../../.. CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/5/crtend.o /usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crtn.o]
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/collect2] ==> ignore
-    arg [-plugin] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/liblto_plugin.so] ==> ignore
-    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/5/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccpaGbjk.res] ==> ignore
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+    arg [-plugin-opt=-fresolution=/tmp/ccFOvy4p.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -1743,34 +1576,19 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-<<<<<<< HEAD
-    arg [cmTC_980f2] ==> ignore
+    arg [cmTC_1bd52] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib]
-=======
-    arg [cmTC_5088c] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crti.o] ==> ignore
-    arg [/usr/lib/gcc/x86_64-linux-gnu/5/crtbegin.o] ==> ignore
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu]
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../../../lib]
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
     arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
-<<<<<<< HEAD
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_980f2.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-=======
-    arg [-L/usr/lib/gcc/x86_64-linux-gnu/5/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/5/../../..]
-    arg [CMakeFiles/cmTC_5088c.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
+    arg [CMakeFiles/cmTC_1bd52.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -1798,14 +1616,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_68649/fast"
-/usr/bin/make -f CMakeFiles/cmTC_68649.dir/build.make CMakeFiles/cmTC_68649.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_4e91d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4e91d.dir/build.make CMakeFiles/cmTC_4e91d.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_68649.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_68649.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_68649
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_68649.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_68649.dir/feature_tests.cxx.o  -o cmTC_68649 
+Building CXX object CMakeFiles/cmTC_4e91d.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_4e91d.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_4e91d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4e91d.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_4e91d.dir/feature_tests.cxx.o  -o cmTC_4e91d 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
 
 
@@ -1871,27 +1689,15 @@ make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experim
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_ad3ec/fast"
-/usr/bin/make -f CMakeFiles/cmTC_ad3ec.dir/build.make CMakeFiles/cmTC_ad3ec.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2ce26/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2ce26.dir/build.make CMakeFiles/cmTC_2ce26.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_ad3ec.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_ad3ec.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_ad3ec
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ad3ec.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_ad3ec.dir/feature_tests.cxx.o  -o cmTC_ad3ec 
+Building CXX object CMakeFiles/cmTC_2ce26.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_2ce26.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_2ce26
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2ce26.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_2ce26.dir/feature_tests.cxx.o  -o cmTC_2ce26 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_8e491/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_8e491.dir/build.make CMakeFiles/cmTC_8e491.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_8e491.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++14 -o CMakeFiles/cmTC_8e491.dir/feature_tests.cxx.o -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_8e491
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8e491.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_8e491.dir/feature_tests.cxx.o  -o cmTC_8e491 -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
     Feature record: CXX_FEATURE:1cxx_aggregate_default_initializers
@@ -1956,27 +1762,15 @@ gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/C
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_c0050/fast"
-/usr/bin/make -f CMakeFiles/cmTC_c0050.dir/build.make CMakeFiles/cmTC_c0050.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_b468c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b468c.dir/build.make CMakeFiles/cmTC_b468c.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_c0050.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_c0050.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_c0050
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c0050.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_c0050.dir/feature_tests.cxx.o  -o cmTC_c0050 
+Building CXX object CMakeFiles/cmTC_b468c.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_b468c.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_b468c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b468c.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_b468c.dir/feature_tests.cxx.o  -o cmTC_b468c 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-Run Build Command:"/usr/bin/gmake" "cmTC_6fd2e/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_6fd2e.dir/build.make CMakeFiles/cmTC_6fd2e.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_6fd2e.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++11 -o CMakeFiles/cmTC_6fd2e.dir/feature_tests.cxx.o -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_6fd2e
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fd2e.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_6fd2e.dir/feature_tests.cxx.o  -o cmTC_6fd2e -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers
@@ -2039,31 +1833,17 @@ gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/C
 
 
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
-<<<<<<< HEAD
 Change Dir: /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_1c46b/fast"
-/usr/bin/make -f CMakeFiles/cmTC_1c46b.dir/build.make CMakeFiles/cmTC_1c46b.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3dcce/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3dcce.dir/build.make CMakeFiles/cmTC_3dcce.dir/build
 make[1]: Entering directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_1c46b.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_1c46b.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_1c46b
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c46b.dir/link.txt --verbose=1
-/usr/bin/c++       -rdynamic CMakeFiles/cmTC_1c46b.dir/feature_tests.cxx.o  -o cmTC_1c46b 
+Building CXX object CMakeFiles/cmTC_3dcce.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_3dcce.dir/feature_tests.cxx.o -c /home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_3dcce
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3dcce.dir/link.txt --verbose=1
+/usr/bin/c++       -rdynamic CMakeFiles/cmTC_3dcce.dir/feature_tests.cxx.o  -o cmTC_3dcce 
 make[1]: Leaving directory '/home/galgoczi/simulations/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-=======
-Change Dir: /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp
-
-Run Build Command:"/usr/bin/gmake" "cmTC_f499f/fast"
-/usr/bin/gmake -f CMakeFiles/cmTC_f499f.dir/build.make CMakeFiles/cmTC_f499f.dir/build
-gmake[1]: Entering directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_f499f.dir/feature_tests.cxx.o
-/usr/bin/c++     -std=c++98 -o CMakeFiles/cmTC_f499f.dir/feature_tests.cxx.o -c /home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_f499f
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f499f.dir/link.txt --verbose=1
-/usr/bin/c++        CMakeFiles/cmTC_f499f.dir/feature_tests.cxx.o  -o cmTC_f499f -rdynamic 
-gmake[1]: Leaving directory '/home/galgoczi/cubesat/Thickness_Experiment/build/CMakeFiles/CMakeTmp'
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 
 
     Feature record: CXX_FEATURE:0cxx_aggregate_default_initializers

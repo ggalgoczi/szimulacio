@@ -1,7 +1,7 @@
 for j in 10 30 70 150 250
 do
 echo $j > "energy.txt"
-for i in 3 4 5 6 7 8 9 35 36 37 38 39 40 41 42 43 44 45 46 47 48
+for i in {1..50}
 do
 	fname="$i.$j.mac"
 	fname2="$i.$j.sh"

@@ -31,8 +31,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
   "LXe.pdb"
   "LXe"
-  "LXe.pdb"
-  "CMakeFiles/CMakeRelink.dir/LXe"
 )
 
 # Per-language clean rules from dependency scanning.
