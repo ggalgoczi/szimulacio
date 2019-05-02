@@ -93,6 +93,8 @@ LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
 
 
 // reading in energy spectras for particles:
+/*
+
 	std::string infileline;
 	std::string infilename;
 std::ifstream file2("thefileforgun.txt");
@@ -132,7 +134,7 @@ while (std::getline(file2, infileline))
         ++p;
     }
 
-
+*/
 	  lock.unlock();
 
 

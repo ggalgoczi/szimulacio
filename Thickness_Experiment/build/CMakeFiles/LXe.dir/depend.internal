@@ -3762,18 +3762,73 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  ../include/LXeRecorderBase.hh
  ../include/LXeRun.hh
  ../include/LXeRunAction.hh
-<<<<<<< HEAD
+ ../include/LXeTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/digits/include/G4DCofThisEvent.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/digits/include/G4VDigiCollection.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/hits/include/G4HCofThisEvent.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/hits/include/G4VHitsCollection.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4ClassificationOfNewTrack.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4Event.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4EventManager.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4PrimaryTransformer.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4SmartTrackStack.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4StackManager.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4StackedTrack.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4TrackStack.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4TrajectoryContainer.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4UserStackingAction.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/G4VUserEventInformation.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/evmandefs.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/evtdefs.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/event/include/trajectoryControl.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/DualRand.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/JamesRandom.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/MTwistEngine.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBinomial.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBinomial.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBit.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBit.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBreitWigner.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBreitWigner.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandChiSquare.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandChiSquare.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandExpZiggurat.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandExponential.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandExponential.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandFlat.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandFlat.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGamma.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGamma.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGauss.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGauss.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGaussQ.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGaussQ.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGaussZiggurat.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGeneral.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGeneral.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandLandau.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandLandau.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoisson.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoisson.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoissonQ.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoissonQ.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandStudentT.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandStudentT.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Random.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Random.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandomEngine.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandomEngine.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Randomize.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RanecuEngine.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Ranlux64Engine.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RanluxEngine.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RanshiEngine.h
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Units/PhysicalConstants.h
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Units/SystemOfUnits.h
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/defs.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/memory.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/noncopyable.h
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/type_traits.h
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/AxisAngle.h
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/AxisAngle.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/LorentzVector.h
@@ -3790,30 +3845,93 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationZ.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/ThreeVector.h
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/ThreeVector.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4AffineTransform.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4AffineTransform.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4BlockingList.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4BlockingList.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4GeomSplitter.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4LogicalVolume.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4LogicalVolume.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4Region.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4Region.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelHeader.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelHeader.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelNode.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelNode.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelProxy.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelProxy.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4TouchableHandle.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VPVParameterisation.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VPhysicalVolume.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VPhysicalVolume.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VSolid.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VSolid.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VTouchable.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VTouchable.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/G4VVolumeMaterialScanner.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/management/include/geomwdefs.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4AuxiliaryNavServices.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4AuxiliaryNavServices.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4NavigationLogger.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4Navigator.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4Navigator.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4NormalNavigation.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4NormalNavigation.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4ParameterisedNavigation.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4ParameterisedNavigation.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4RegularNavigation.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4ReplicaNavigation.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4ReplicaNavigation.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4VoxelNavigation.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/navigation/include/G4VoxelNavigation.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4EnhancedVecAllocator.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4GRSSolid.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4GRSSolid.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4GRSVolume.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4GRSVolume.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationHistory.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationHistory.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevel.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevel.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevelRep.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevelRep.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4TouchableHistory.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4TouchableHistory.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/geometry/volumes/include/G4TouchableHistoryHandle.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPGeometry/include/G4LorentzVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPGeometry/include/geomdefs.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTHepRandom.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTHepRandom.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandBit.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandBit.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandExponential.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandExponential.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandFlat.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandFlat.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGamma.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGamma.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGauss.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGauss.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGaussQ.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGaussQ.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGeneral.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGeneral.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/HEPRandom/include/Randomize.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4Allocator.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4AllocatorPool.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4ApplicationState.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4AutoLock.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4DataVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4DataVector.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4ExceptionSeverity.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4FastVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4Log.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4OrderedTable.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsModelCatalog.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsOrderedFreeVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsOrderedFreeVector.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsTable.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsTable.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsVector.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/G4PhysicsVectorType.hh
@@ -3829,6 +3947,11 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/templates.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/tls.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/global/management/include/windefs.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/intercoms/include/G4UIcommand.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/intercoms/include/G4UIdirectory.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/intercoms/include/G4UImessenger.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/intercoms/include/G4UIparameter.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/intercoms/include/G4UItokenNum.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/materials/include/G4Element.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/materials/include/G4ElementTable.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/materials/include/G4ElementVector.hh
@@ -3849,11 +3972,26 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4ParticleDefinition.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4ParticleDefinition.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4ParticleMomentum.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4ParticleTable.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4ParticleTable.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4ParticleTableIterator.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4PrimaryParticle.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/G4PrimaryVertex.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/particles/management/include/pwdefs.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessManager.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessManager.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessType.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/processes/management/include/G4VProcess.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4Run.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4RunManager.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4RunManagerKernel.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/run/include/G4UserRunAction.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4ForceCondition.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4GPILSelection.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4ParticleChange.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4ParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4Step.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4Step.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4StepPoint.hh
@@ -3862,267 +4000,21 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4SteppingControl.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4Track.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4Track.icc
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4TrackFastVector.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4TrackStatus.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4TrackVector.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4VParticleChange.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/track/include/trkdefs.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4SteppingManager.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4TrackingManager.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4TrackingMessenger.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4UserSteppingAction.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4UserTrackingAction.hh
+ /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/tracking/include/G4VTrajectory.hh
  /home/galgoczi/simulations/cubesat/Thickness_Experiment/src/LXeRunAction.cc
-=======
- ../include/LXeTrackingAction.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/digits_hits/digits/include/G4DCofThisEvent.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/digits_hits/digits/include/G4VDigiCollection.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/digits_hits/hits/include/G4HCofThisEvent.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/digits_hits/hits/include/G4VHitsCollection.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4ClassificationOfNewTrack.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4Event.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4EventManager.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4PrimaryTransformer.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4SmartTrackStack.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4StackManager.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4StackedTrack.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4TrackStack.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4TrajectoryContainer.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4UserStackingAction.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/G4VUserEventInformation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/evmandefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/evtdefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/event/include/trajectoryControl.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/DualRand.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/JamesRandom.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/MTwistEngine.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBinomial.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBinomial.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBit.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBit.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBreitWigner.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandBreitWigner.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandChiSquare.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandChiSquare.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandExpZiggurat.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandExponential.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandExponential.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandFlat.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandFlat.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGamma.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGamma.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGauss.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGauss.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGaussQ.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGaussQ.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGaussZiggurat.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGeneral.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandGeneral.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandLandau.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandLandau.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoisson.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoisson.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoissonQ.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandPoissonQ.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandStudentT.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandStudentT.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Random.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Random.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandomEngine.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RandomEngine.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Randomize.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RanecuEngine.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/Ranlux64Engine.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RanluxEngine.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Random/RanshiEngine.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Units/PhysicalConstants.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Units/SystemOfUnits.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/defs.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/memory.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/noncopyable.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Utility/type_traits.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/AxisAngle.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/AxisAngle.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/LorentzVector.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/LorentzVector.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/Rotation.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/Rotation.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationInterfaces.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationInterfaces.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationX.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationX.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationY.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationY.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationZ.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/RotationZ.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/ThreeVector.h
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/externals/clhep/include/CLHEP/Vector/ThreeVector.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4AffineTransform.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4AffineTransform.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4BlockingList.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4BlockingList.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4GeomSplitter.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4LogicalVolume.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4LogicalVolume.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4Region.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4Region.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelHeader.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelHeader.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelNode.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelNode.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelProxy.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4SmartVoxelProxy.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4TouchableHandle.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VPVParameterisation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VPhysicalVolume.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VPhysicalVolume.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VSolid.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VSolid.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VTouchable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VTouchable.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/G4VVolumeMaterialScanner.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/management/include/geomwdefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4AuxiliaryNavServices.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4AuxiliaryNavServices.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4NavigationLogger.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4Navigator.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4Navigator.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4NormalNavigation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4NormalNavigation.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4ParameterisedNavigation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4ParameterisedNavigation.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4RegularNavigation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4ReplicaNavigation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4ReplicaNavigation.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4VoxelNavigation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/navigation/include/G4VoxelNavigation.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4EnhancedVecAllocator.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4GRSSolid.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4GRSSolid.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4GRSVolume.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4GRSVolume.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationHistory.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationHistory.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevel.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevel.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevelRep.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4NavigationLevelRep.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4TouchableHistory.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4TouchableHistory.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/geometry/volumes/include/G4TouchableHistoryHandle.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPGeometry/include/G4LorentzVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPGeometry/include/geomdefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTHepRandom.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTHepRandom.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandBit.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandBit.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandExponential.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandExponential.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandFlat.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandFlat.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGamma.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGamma.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGauss.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGauss.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGaussQ.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGaussQ.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGeneral.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/G4MTRandGeneral.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/HEPRandom/include/Randomize.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4Allocator.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4AllocatorPool.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4ApplicationState.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4AutoLock.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4DataVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4DataVector.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4ExceptionSeverity.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4FastVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4Log.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4OrderedTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsModelCatalog.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsOrderedFreeVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsOrderedFreeVector.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsTable.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsVector.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4PhysicsVectorType.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4ReferenceCountedHandle.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4RotationMatrix.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4String.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4String.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4Threading.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4ThreeVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4Types.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/G4ios.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/globals.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/templates.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/tls.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/global/management/include/windefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/intercoms/include/G4UIcommand.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/intercoms/include/G4UIdirectory.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/intercoms/include/G4UImessenger.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/intercoms/include/G4UIparameter.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/intercoms/include/G4UItokenNum.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4Element.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4ElementTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4ElementVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4IonisParamElm.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4IonisParamMat.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4Isotope.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4IsotopeVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4Material.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4MaterialPropertiesTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4MaterialPropertiesTable.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4MaterialPropertyVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4MaterialTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/materials/include/G4SandiaTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4DynamicParticle.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4DynamicParticle.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ElectronOccupancy.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4PDefSplitter.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ParticleDefinition.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ParticleDefinition.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ParticleMomentum.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ParticleTable.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ParticleTable.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4ParticleTableIterator.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4PrimaryParticle.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/G4PrimaryVertex.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/particles/management/include/pwdefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/processes/management/include/G4ProcessManager.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/processes/management/include/G4ProcessManager.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/processes/management/include/G4ProcessType.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/processes/management/include/G4ProcessVector.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/processes/management/include/G4VProcess.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/run/include/G4Run.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/run/include/G4RunManager.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/run/include/G4RunManagerKernel.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/run/include/G4UserRunAction.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4ForceCondition.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4GPILSelection.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4ParticleChange.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4ParticleChange.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4Step.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4Step.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4StepPoint.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4StepPoint.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4StepStatus.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4SteppingControl.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4Track.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4Track.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4TrackFastVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4TrackStatus.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4TrackVector.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4VParticleChange.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4VParticleChange.icc
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/G4VUserTrackInformation.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/track/include/trkdefs.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4SteppingManager.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4TrackingManager.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4TrackingMessenger.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4UserSteppingAction.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4UserTrackingAction.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4VSteppingVerbose.hh
- /home/galgoczi/Letöltések/geant4.10.00.p04/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/cubesat/Thickness_Experiment/src/LXeRunAction.cc
->>>>>>> 9c9f3db87127b10bffbb0b5b04ccbb3097d782a6
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o
  ../include/LXeScintHit.hh
  /home/galgoczi/Downloads/geant4.10.00.p04/geant4.10.00.p04/source/digits_hits/hits/include/G4THitsCollection.hh
