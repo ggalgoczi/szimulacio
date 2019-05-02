@@ -1,1 +1,1 @@
-../spectra/p_3_years_av.txt
+../spectra/e_3_years_av.txt
