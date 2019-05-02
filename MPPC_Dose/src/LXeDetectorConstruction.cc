@@ -185,9 +185,9 @@ void LXeDetectorConstruction::DefineMaterials(){
   fAir->AddElement(fO, 30*perCent);
 
   // MPPC mat
-  fMPPC = new G4Material("MPPC", density= 3*g/cm3, 2);
-  fMPPC->AddElement(fSi, 70*perCent);
-  fMPPC->AddElement(fO, 30*perCent);
+  fMPPC = new G4Material("MPPC", density= 2.39*g/cm3, 2);
+  fMPPC->AddElement(fSi, 99.9*perCent);
+  fMPPC->AddElement(fO, 0.1*perCent);
   //Glass
   fGlass = new G4Material("Glass", density=1.032*g/cm3,2);
   fGlass->AddElement(fC,91.533*perCent);
@@ -496,9 +496,9 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
   
   // MPPC
 
-  G4double MPPC_x = 4*mm;
-  G4double MPPC_y = 4*mm;
-  G4double MPPC_z = 2*mm;
+  G4double MPPC_x = 4.85*mm;
+  G4double MPPC_y = 3.85*mm;
+  G4double MPPC_z = 1.45*mm;
   MPPC_box = new G4Box("Pb_box",MPPC_x/2., MPPC_y/2., MPPC_z/2.);
   MPPC_log = new G4LogicalVolume(MPPC_box,  fMPPC,"MPPC_log",0,0,0);
   MPPC_phys = new G4PVPlacement(0,G4ThreeVector(0,0,-CutOut_z/2.+CsI_z1+MPPC_z/2.),
