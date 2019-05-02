@@ -383,7 +383,7 @@ CMakeFiles/LXe.dir/LXe.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/visualization/modeling/include/G4VModel.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/visualization/modeling/include/G4VModelFactory.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/visualization/modeling/include/G4VTrajectoryModel.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/LXe.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/LXe.cc
 CMakeFiles/LXe.dir/src/FileReader.cc.o
  ../include/FileReader.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/G4ExceptionSeverity.hh
@@ -394,7 +394,7 @@ CMakeFiles/LXe.dir/src/FileReader.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/globals.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/templates.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/tls.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/FileReader.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/FileReader.cc
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o
  ../include/LXeActionInitialization.hh
  ../include/LXeEventAction.hh
@@ -671,7 +671,7 @@ CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeActionInitialization.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeActionInitialization.cc
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o
  ../include/CADMesh.hh
  ../include/LXeDetectorConstruction.hh
@@ -1052,7 +1052,7 @@ CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeDetectorConstruction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeDetectorConstruction.cc
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o
  ../include/LXeDetectorConstruction.hh
  ../include/LXeDetectorMessenger.hh
@@ -1284,7 +1284,7 @@ CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeDetectorMessenger.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeDetectorMessenger.cc
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o
  ../include/LXeEMPhysics.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h
@@ -1704,7 +1704,7 @@ CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeEMPhysics.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeEMPhysics.cc
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o
  ../include/LXeEventAction.hh
  ../include/LXeEventMessenger.hh
@@ -1996,7 +1996,7 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectoryPoint.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/trkgdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeEventAction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeEventAction.cc
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o
  ../include/LXeEventAction.hh
  ../include/LXeEventMessenger.hh
@@ -2021,7 +2021,7 @@ CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/intercoms/include/G4UImessenger.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/intercoms/include/G4UIparameter.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/intercoms/include/G4UItokenNum.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeEventMessenger.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeEventMessenger.cc
 CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o
  ../include/LXeGeneralPhysics.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/externals/clhep/include/CLHEP/Random/DualRand.h
@@ -2211,7 +2211,7 @@ CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeGeneralPhysics.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeGeneralPhysics.cc
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o
  ../include/LXeDetectorConstruction.hh
  ../include/LXeDetectorMessenger.hh
@@ -2396,7 +2396,7 @@ CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4TrackVector.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeMainVolume.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeMainVolume.cc
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o
  ../include/LXeMuonPhysics.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h
@@ -2787,7 +2787,7 @@ CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeMuonPhysics.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeMuonPhysics.cc
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o
  ../include/LXePMTHit.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/digits_hits/hits/include/G4THitsCollection.hh
@@ -2848,7 +2848,7 @@ CMakeFiles/LXe.dir/src/LXePMTHit.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VVisManager.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VisAttributes.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VisAttributes.icc
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXePMTHit.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXePMTHit.cc
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o
  ../include/LXeDetectorConstruction.hh
  ../include/LXeDetectorMessenger.hh
@@ -3097,7 +3097,7 @@ CMakeFiles/LXe.dir/src/LXePMTSD.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4TrackVector.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXePMTSD.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXePMTSD.cc
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o
  ../include/LXeEMPhysics.hh
  ../include/LXeGeneralPhysics.hh
@@ -3522,7 +3522,7 @@ CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXePhysicsList.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXePhysicsList.cc
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
  ../include/FileReader.hh
  ../include/LXePrimaryGeneratorAction.hh
@@ -3788,7 +3788,7 @@ CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXePrimaryGeneratorAction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXePrimaryGeneratorAction.cc
 CMakeFiles/LXe.dir/src/LXeRun.cc.o
  ../include/LXePMTHit.hh
  ../include/LXePMTSD.hh
@@ -4070,7 +4070,7 @@ CMakeFiles/LXe.dir/src/LXeRun.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeRun.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeRun.cc
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  ../include/FileReader.hh
  ../include/LXeRecorderBase.hh
@@ -4338,7 +4338,7 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeRunAction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeRunAction.cc
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o
  ../include/LXeScintHit.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/digits_hits/hits/include/G4THitsCollection.hh
@@ -4399,7 +4399,7 @@ CMakeFiles/LXe.dir/src/LXeScintHit.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VVisManager.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VisAttributes.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VisAttributes.icc
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeScintHit.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeScintHit.cc
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o
  ../include/LXeScintHit.hh
  ../include/LXeScintSD.hh
@@ -4596,7 +4596,7 @@ CMakeFiles/LXe.dir/src/LXeScintSD.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VParticleChange.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeScintSD.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeScintSD.cc
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o
  ../include/LXeScintillatorHit.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/digits_hits/hits/include/G4THitsCollection.hh
@@ -4653,7 +4653,7 @@ CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4VisAttributes.icc
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4Visible.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/graphics_reps/include/G4Visible.icc
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeScintillatorHit.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeScintillatorHit.cc
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o
  ../include/LXeScintillatorHit.hh
  ../include/LXeScintillatorSD.hh
@@ -4779,7 +4779,7 @@ CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4TrackVector.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeScintillatorSD.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeScintillatorSD.cc
 CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o
  ../include/LXeStackingAction.hh
  ../include/LXeSteppingAction.hh
@@ -5161,7 +5161,7 @@ CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserTrackingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeStackingAction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeStackingAction.cc
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o
  ../include/LXeEventAction.hh
  ../include/LXeEventMessenger.hh
@@ -5568,7 +5568,7 @@ CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectoryPoint.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/trkgdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeSteppingAction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeSteppingAction.cc
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o
  ../include/LXeSteppingAction.hh
  ../include/LXeSteppingMessenger.hh
@@ -5816,7 +5816,7 @@ CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserSteppingAction.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeSteppingMessenger.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeSteppingMessenger.cc
 CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o
  ../include/LXeSteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h
@@ -6044,7 +6044,7 @@ CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4SteppingVerbose.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4UserSteppingAction.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VSteppingVerbose.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeSteppingVerbose.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeSteppingVerbose.cc
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o
  ../include/LXeDetectorConstruction.hh
  ../include/LXeDetectorMessenger.hh
@@ -6423,7 +6423,7 @@ CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectoryPoint.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/trkgdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeTrackingAction.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeTrackingAction.cc
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o
  ../include/LXeTrajectory.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h
@@ -6648,7 +6648,7 @@ CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectory.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/G4VTrajectoryPoint.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/tracking/include/trkgdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeTrajectory.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeTrajectory.cc
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o
  ../include/LXeUserEventInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/event/include/G4VUserEventInformation.hh
@@ -6664,7 +6664,7 @@ CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/globals.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/templates.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/tls.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeUserEventInformation.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeUserEventInformation.cc
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o
  ../include/LXeUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/G4ExceptionSeverity.hh
@@ -6676,7 +6676,7 @@ CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/templates.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/tls.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeUserTrackInformation.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeUserTrackInformation.cc
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o
  ../include/LXeDetectorConstruction.hh
  ../include/LXeDetectorMessenger.hh
@@ -6861,7 +6861,7 @@ CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4TrackVector.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeWLSFiber.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeWLSFiber.cc
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o
  ../include/LXeDetectorConstruction.hh
  ../include/LXeDetectorMessenger.hh
@@ -7047,7 +7047,7 @@ CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4TrackVector.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/G4VUserTrackInformation.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/track/include/trkdefs.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/LXeWLSSlab.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/LXeWLSSlab.cc
 CMakeFiles/LXe.dir/src/Spectrum.cc.o
  ../include/Spectrum.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/externals/clhep/include/CLHEP/Random/DualRand.h
@@ -7120,4 +7120,4 @@ CMakeFiles/LXe.dir/src/Spectrum.cc.o
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/globals.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/templates.hh
  /home/galgoczi/Downloads/geant4.10.04.p03/source/global/management/include/tls.hh
- /home/galgoczi/simulations/cubesat/MPPC_Dose/src/Spectrum.cc
+ /home/galgoczi/simulations/cubesat/szimulacio/MPPC_Dose/src/Spectrum.cc

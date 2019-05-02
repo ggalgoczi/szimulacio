@@ -1,0 +1,7 @@
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/edit_cache.dir
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/install/strip.dir
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/LXe.dir
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/rebuild_cache.dir
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/list_install_components.dir
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/install/local.dir
+/home/galgoczi/simulations/cubesat/szimulacio/Bckgrd/build/CMakeFiles/install.dir
