@@ -45,8 +45,8 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
-const int Gun_On_Sphere = 1;
-const int Parallel_Beam = 0;
+const int Gun_On_Sphere = 0;
+const int Parallel_Beam = 1;
 
 
 void filePutContents2(const std::string& name, const std::string& content, bool append = false) {
