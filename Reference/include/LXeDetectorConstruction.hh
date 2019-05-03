@@ -123,6 +123,17 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
 	G4Tubs* Cylinder1;
 	G4SubtractionSolid* Pb1_box_With_Hole;
 
+
+
+
+    G4Box* Detector_box;
+    G4LogicalVolume* Detector_log;
+    G4VPhysicalVolume* Detector_phys;
+
+    G4Box* Subtract_Box;
+    G4LogicalVolume* logic_Subtract_Box;
+    G4VPhysicalVolume* Box_For_Satellite;
+
     //Materials & Elements
     G4Material* fLXe;
     G4Material* fAl;

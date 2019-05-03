@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/galgoczi/cubesat/Bck
+CMAKE_SOURCE_DIR = /home/galgoczi/cubesat/Reference
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/galgoczi/cubesat/Bck/build
+CMAKE_BINARY_DIR = /home/galgoczi/cubesat/Reference/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/Bck/build/CMakeFiles /home/galgoczi/cubesat/Bck/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/Reference/build/CMakeFiles /home/galgoczi/cubesat/Reference/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/Bck/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/Reference/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -195,6 +195,33 @@ LXe.s: LXe.cc.s
 LXe.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/LXe.cc.s
 .PHONY : LXe.cc.s
+
+src/FileReader.o: src/FileReader.cc.o
+
+.PHONY : src/FileReader.o
+
+# target to build an object file
+src/FileReader.cc.o:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/FileReader.cc.o
+.PHONY : src/FileReader.cc.o
+
+src/FileReader.i: src/FileReader.cc.i
+
+.PHONY : src/FileReader.i
+
+# target to preprocess a source file
+src/FileReader.cc.i:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/FileReader.cc.i
+.PHONY : src/FileReader.cc.i
+
+src/FileReader.s: src/FileReader.cc.s
+
+.PHONY : src/FileReader.s
+
+# target to generate assembly for a file
+src/FileReader.cc.s:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/FileReader.cc.s
+.PHONY : src/FileReader.cc.s
 
 src/LXeActionInitialization.o: src/LXeActionInitialization.cc.o
 
@@ -979,6 +1006,33 @@ src/LXeWLSSlab.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s
 .PHONY : src/LXeWLSSlab.cc.s
 
+src/Spectrum.o: src/Spectrum.cc.o
+
+.PHONY : src/Spectrum.o
+
+# target to build an object file
+src/Spectrum.cc.o:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/Spectrum.cc.o
+.PHONY : src/Spectrum.cc.o
+
+src/Spectrum.i: src/Spectrum.cc.i
+
+.PHONY : src/Spectrum.i
+
+# target to preprocess a source file
+src/Spectrum.cc.i:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/Spectrum.cc.i
+.PHONY : src/Spectrum.cc.i
+
+src/Spectrum.s: src/Spectrum.cc.s
+
+.PHONY : src/Spectrum.s
+
+# target to generate assembly for a file
+src/Spectrum.cc.s:
+	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/Spectrum.cc.s
+.PHONY : src/Spectrum.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -995,6 +1049,9 @@ help:
 	@echo "... LXe.o"
 	@echo "... LXe.i"
 	@echo "... LXe.s"
+	@echo "... src/FileReader.o"
+	@echo "... src/FileReader.i"
+	@echo "... src/FileReader.s"
 	@echo "... src/LXeActionInitialization.o"
 	@echo "... src/LXeActionInitialization.i"
 	@echo "... src/LXeActionInitialization.s"
@@ -1082,6 +1139,9 @@ help:
 	@echo "... src/LXeWLSSlab.o"
 	@echo "... src/LXeWLSSlab.i"
 	@echo "... src/LXeWLSSlab.s"
+	@echo "... src/Spectrum.o"
+	@echo "... src/Spectrum.i"
+	@echo "... src/Spectrum.s"
 .PHONY : help
 
 
