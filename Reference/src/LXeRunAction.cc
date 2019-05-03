@@ -155,6 +155,8 @@ G4Run* LXeRunAction::GenerateRun()
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
+		    	G4cout << "agh7                   !!!!!!!!!!" << G4endl;
+
   if(fRecorder)fRecorder->RecordBeginOfRun(aRun);
  } 
 
@@ -162,6 +164,9 @@ void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeRunAction::EndOfRunAction(const G4Run* aRun){
+	    	G4cout << "agh7                   !!!!!!!!!!" << G4endl;
+
+	
 	/*
 	for(std::vector<G4int>::iterator it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
 		G4cout << *it << G4endl;

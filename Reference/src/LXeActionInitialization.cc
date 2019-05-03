@@ -63,6 +63,7 @@ void LXeActionInitialization::BuildForMaster() const
 
 void LXeActionInitialization::Build() const
 {
+	
   LXeRunAction* RunAction = new LXeRunAction(fRecorder);
   SetUserAction(RunAction);
 
