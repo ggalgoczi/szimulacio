@@ -1,0 +1,56 @@
+
+ThreadID: 0
+gamma : 102
+e- : 1109
+e+ : 1015
+opticalphoton : 13715
+_______________________
+
+ThreadID: 1
+gamma : 115
+e- : 1116
+e+ : 1110
+opticalphoton : 13868
+_______________________
+
+ThreadID: 2
+gamma : 64
+e- : 704
+e+ : 805
+opticalphoton : 14090
+_______________________
+
+ThreadID: 7
+gamma : 213
+e- : 2028
+e+ : 2100
+opticalphoton : 13703
+_______________________
+
+ThreadID: 6
+gamma : 180
+e- : 1734
+e+ : 2065
+opticalphoton : 13998
+_______________________
+
+ThreadID: 5
+gamma : 100
+e- : 987
+e+ : 1050
+opticalphoton : 15498
+_______________________
+
+ThreadID: 4
+gamma : 55
+e- : 471
+e+ : 560
+opticalphoton : 20817
+_______________________
+
+ThreadID: 3
+gamma : 137
+e- : 1522
+e+ : 1295
+opticalphoton : 19693
+_______________________
