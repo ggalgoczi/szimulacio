@@ -84,12 +84,42 @@ LXeSteppingAction::~LXeSteppingAction() {}
 
 void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
+G4Track* theTrack = theStep->GetTrack();
+
+  G4StepPoint* thePrePoint = theStep->GetPreStepPoint();
+  G4VPhysicalVolume* thePrePV = thePrePoint->GetPhysicalVolume();
+
+  G4StepPoint* thePostPoint = theStep->GetPostStepPoint();
+  G4VPhysicalVolume* thePostPV = thePostPoint->GetPhysicalVolume();
+ G4int eventNumber = G4RunManager::GetRunManager()->
+                                              GetCurrentEvent()->GetEventID();
+  G4ParticleDefinition* particleType = theTrack->GetDefinition();
+	if(theStep->GetPostStepPoint()->GetStepStatus()!=0 && theTrack->GetParentID()==0){
+		if((thePrePV->GetLogicalVolume()->GetName()=="expHall_log" && thePostPV->GetLogicalVolume()->GetName()=="Shielding_log"))
+		{
+	//	G4RunManager::GetRunManager()->SetRandomNumberStore(true);
+	//	G4RunManager::GetRunManager()->rndmSaveThisEvent(); 
+		
+		G4double preX = theStep->GetPreStepPoint()->GetPosition().x();
+		G4double preY = theStep->GetPreStepPoint()->GetPosition().y();
+		G4double preZ  = theStep->GetPreStepPoint()->GetPosition().z();
+		G4double preKinE  = theStep->GetPreStepPoint()->GetKineticEnergy();	
+		
+	//	G4cout << theStep->GetPostStepPoint()->GetStepStatus() << G4endl; //printf("%G4string \n",thePrePV->GetName());}
+	//	G4cout << "*** Warning *** : msc loop for " << theTrack->GetDefinition()->GetParticleName() << " in " << thePostPV->GetLogicalVolume()->GetName() << G4endl; 
+	//	G4cout << "*** Warning *** : msc loop for " << theTrack->GetDefinition()->GetParticleName() << " in " << thePostPV->GetLogicalVolume()->GetName() << G4endl; 
+		
+		std::ostringstream oss;
+		oss <<eventNumber<<" "<<preX/mm<<" "<<preY/mm<<" "<<preZ/mm<<" "<<preKinE/eV << " " << "In" << " "
+		<< std::endl;		
+		std::string var = oss.str();	
+		filePutContents("./gamma.txt",var,true);
+		}//printf("%G4string \n",thePrePV->GetName());}
+	}
   fEventAction->LOL = 444;
 	
-  G4int eventNumber = G4RunManager::GetRunManager()->
-                                              GetCurrentEvent()->GetEventID();
+ 
 
-  G4Track* theTrack = theStep->GetTrack();
 
   if ( theTrack->GetCurrentStepNumber() == 1 ) fExpectedNextStatus = Undefined;
  
@@ -99,11 +129,6 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
     =(LXeUserEventInformation*)G4EventManager::GetEventManager()
     ->GetConstCurrentEvent()->GetUserInformation();
 
-  G4StepPoint* thePrePoint = theStep->GetPreStepPoint();
-  G4VPhysicalVolume* thePrePV = thePrePoint->GetPhysicalVolume();
-
-  G4StepPoint* thePostPoint = theStep->GetPostStepPoint();
-  G4VPhysicalVolume* thePostPV = thePostPoint->GetPhysicalVolume();
 
   G4OpBoundaryProcessStatus boundaryStatus=Undefined;
   static G4ThreadLocal G4OpBoundaryProcess* boundary=NULL;
@@ -165,7 +190,6 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
     return;
   }
 
-  G4ParticleDefinition* particleType = theTrack->GetDefinition();
   if(particleType==G4OpticalPhoton::OpticalPhotonDefinition()){
     //Optical photon only
 
