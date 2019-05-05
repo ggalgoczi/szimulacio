@@ -29,6 +29,11 @@ void filePutContents3(std::string& name, std::vector<G4int> & content, bool appe
 
 LXeRun::LXeRun()
 {
+for (G4int i=0; i<1000; i++) {
+   PMTHitNo2.push_back(0);
+   PMTHitNo1.push_back(0);
+  }
+
 // fEDepScoreID = G4SDManager::GetSDManager()->GetCollectionID("myDet/myEDepScorer"); 
 }
 
