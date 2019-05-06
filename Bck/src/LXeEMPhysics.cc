@@ -71,6 +71,7 @@ LXeEMPhysics::~LXeEMPhysics() {}
 #include "G4Electron.hh"
 #include "G4Positron.hh"
 #include "G4Proton.hh"
+//#include "G4Neutron.hh"
 
 #include "G4NeutrinoE.hh"
 #include "G4AntiNeutrinoE.hh"
@@ -149,19 +150,26 @@ G4ProcessManager* pManager = 0;
   pManager->AddProcess(fAnnihilation,                0,-1, 4);  
 
 
+// elastic scatt
+
+ G4HadronElasticProcess* theElasticProcess = new G4HadronElasticProcess;
+ G4HadronElastic* theElasticModel = new G4HadronElastic;
+ theElasticProcess->RegisterMe(theElasticModel);
+  
+
 // proton physics
   pManager = G4Proton::Proton()->GetProcessManager();
   pManager->AddProcess(hIonisation,               -1, 2, 2);  
   pManager->AddProcess(new G4hMultipleScattering, -1, 1, 1);
   pManager->AddProcess(new G4hBremsstrahlung,     -1,-3, 3);
   pManager->AddProcess(new G4hPairProduction,     -1,-3, 3);
-
+  pManager->AddDiscreteProcess(theElasticProcess);
 // ions physics
-/*
+
   pManager = G4GenericIon::GenericIon()->GetProcessManager();
-  pManager->AddProcess(new G4hMultipleScattering, -1, 1, 1);
-  pManager->AddProcess(new G4ionIonisation,       -1, 2, 2);
-*/
+  pManager->AddProcess(new G4hMultipleScattering, -1, 2, 2);
+  pManager->AddProcess(new G4ionIonisation,       -1, 1, 1);
+//pManager->AddDiscreteProcess(theElasticProcess);
 
 // Elastic scattering
 /*
@@ -173,10 +181,7 @@ pManager->AddDiscreteProcess(protelProc); */
 
 
   
-  G4HadronElasticProcess* theElasticProcess = new G4HadronElasticProcess;
-  G4HadronElastic* theElasticModel = new G4HadronElastic;
-  theElasticProcess->RegisterMe(theElasticModel);
-  pManager->AddDiscreteProcess(theElasticProcess);
+ 
 
 /*
 G4ProtonInelasticProcess* protinelProc = new G4ProtonInelasticProcess();

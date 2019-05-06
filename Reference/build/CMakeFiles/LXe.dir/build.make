@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/galgoczi/cubesat/Reference
+CMAKE_SOURCE_DIR = /home/galgoczi/cubesat/szimulacio/Reference
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/galgoczi/cubesat/Reference/build
+CMAKE_BINARY_DIR = /home/galgoczi/cubesat/szimulacio/Reference/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LXe.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/LXe.dir/flags.make
 
 CMakeFiles/LXe.dir/LXe.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/LXe.cc.o: ../LXe.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LXe.dir/LXe.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/LXe.cc.o -c /home/galgoczi/cubesat/Reference/LXe.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/LXe.dir/LXe.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/LXe.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/LXe.cc
 
 CMakeFiles/LXe.dir/LXe.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/LXe.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/LXe.cc > CMakeFiles/LXe.dir/LXe.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/LXe.cc > CMakeFiles/LXe.dir/LXe.cc.i
 
 CMakeFiles/LXe.dir/LXe.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/LXe.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/LXe.cc -o CMakeFiles/LXe.dir/LXe.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/LXe.cc -o CMakeFiles/LXe.dir/LXe.cc.s
 
 CMakeFiles/LXe.dir/LXe.cc.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/LXe.dir/LXe.cc.o.provides.build: CMakeFiles/LXe.dir/LXe.cc.o
 
 CMakeFiles/LXe.dir/src/FileReader.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/FileReader.cc.o: ../src/FileReader.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LXe.dir/src/FileReader.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/FileReader.cc.o -c /home/galgoczi/cubesat/Reference/src/FileReader.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/LXe.dir/src/FileReader.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/FileReader.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/FileReader.cc
 
 CMakeFiles/LXe.dir/src/FileReader.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/FileReader.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/FileReader.cc > CMakeFiles/LXe.dir/src/FileReader.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/FileReader.cc > CMakeFiles/LXe.dir/src/FileReader.cc.i
 
 CMakeFiles/LXe.dir/src/FileReader.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/FileReader.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/FileReader.cc -o CMakeFiles/LXe.dir/src/FileReader.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/FileReader.cc -o CMakeFiles/LXe.dir/src/FileReader.cc.s
 
 CMakeFiles/LXe.dir/src/FileReader.cc.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/LXe.dir/src/FileReader.cc.o.provides.build: CMakeFiles/LXe.dir/src/Fi
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o: ../src/LXeActionInitialization.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeActionInitialization.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeActionInitialization.cc
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeActionInitialization.cc > CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeActionInitialization.cc > CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.i
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeActionInitialization.cc -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeActionInitialization.cc -o CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.s
 
 CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/LXe.dir/src/LXeActionInitialization.cc.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o: ../src/LXeDetectorConstruction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeDetectorConstruction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeDetectorConstruction.cc
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeDetectorConstruction.cc > CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeDetectorConstruction.cc > CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeDetectorConstruction.cc -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeDetectorConstruction.cc -o CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/LXe.dir/src/LXeDetectorConstruction.cc.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o: ../src/LXeDetectorMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeDetectorMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeDetectorMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeDetectorMessenger.cc > CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeDetectorMessenger.cc > CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.i
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeDetectorMessenger.cc -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeDetectorMessenger.cc -o CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s
 
 CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.o.provides.build: CMakeFiles/LXe.
 
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o: ../src/LXeEMPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeEMPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEMPhysics.cc
 
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeEMPhysics.cc > CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEMPhysics.cc > CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.i
 
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeEMPhysics.cc -o CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEMPhysics.cc -o CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.s
 
 CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o.provides.build: CMakeFiles/LXe.dir/src/
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o: ../src/LXeEventAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeEventAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEventAction.cc
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeEventAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeEventAction.cc > CMakeFiles/LXe.dir/src/LXeEventAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEventAction.cc > CMakeFiles/LXe.dir/src/LXeEventAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeEventAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeEventAction.cc -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEventAction.cc -o CMakeFiles/LXe.dir/src/LXeEventAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeEventAction.cc.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/LXe.dir/src/LXeEventAction.cc.o.provides.build: CMakeFiles/LXe.dir/sr
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o: ../src/LXeEventMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeEventMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEventMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeEventMessenger.cc > CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEventMessenger.cc > CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.i
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeEventMessenger.cc -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeEventMessenger.cc -o CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s
 
 CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.o.provides.build: CMakeFiles/LXe.dir
 
 CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o: ../src/LXeGeneralPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeGeneralPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeGeneralPhysics.cc
 
 CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeGeneralPhysics.cc > CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeGeneralPhysics.cc > CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.i
 
 CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeGeneralPhysics.cc -o CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeGeneralPhysics.cc -o CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.s
 
 CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o.provides.build: CMakeFiles/LXe.dir
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o: ../src/LXeMainVolume.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeMainVolume.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeMainVolume.cc
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeMainVolume.cc > CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeMainVolume.cc > CMakeFiles/LXe.dir/src/LXeMainVolume.cc.i
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeMainVolume.cc -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeMainVolume.cc -o CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s
 
 CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/LXe.dir/src/LXeMainVolume.cc.o.provides.build: CMakeFiles/LXe.dir/src
 
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o: ../src/LXeMuonPhysics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeMuonPhysics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeMuonPhysics.cc
 
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeMuonPhysics.cc > CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeMuonPhysics.cc > CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.i
 
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeMuonPhysics.cc -o CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeMuonPhysics.cc -o CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.s
 
 CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o.provides.build: CMakeFiles/LXe.dir/sr
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o: ../src/LXePMTHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -c /home/galgoczi/cubesat/Reference/src/LXePMTHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTHit.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXePMTHit.cc
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePMTHit.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXePMTHit.cc > CMakeFiles/LXe.dir/src/LXePMTHit.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXePMTHit.cc > CMakeFiles/LXe.dir/src/LXePMTHit.cc.i
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePMTHit.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXePMTHit.cc -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXePMTHit.cc -o CMakeFiles/LXe.dir/src/LXePMTHit.cc.s
 
 CMakeFiles/LXe.dir/src/LXePMTHit.cc.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/LXe.dir/src/LXePMTHit.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXe
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o: ../src/LXePMTSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTSD.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.o -c /home/galgoczi/cubesat/Reference/src/LXePMTSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LXe.dir/src/LXePMTSD.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXePMTSD.cc
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePMTSD.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXePMTSD.cc > CMakeFiles/LXe.dir/src/LXePMTSD.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXePMTSD.cc > CMakeFiles/LXe.dir/src/LXePMTSD.cc.i
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePMTSD.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXePMTSD.cc -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXePMTSD.cc -o CMakeFiles/LXe.dir/src/LXePMTSD.cc.s
 
 CMakeFiles/LXe.dir/src/LXePMTSD.cc.o.requires:
 
@@ -371,16 +371,16 @@ CMakeFiles/LXe.dir/src/LXePMTSD.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXeP
 
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o: ../src/LXePhysicsList.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o -c /home/galgoczi/cubesat/Reference/src/LXePhysicsList.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXePhysicsList.cc
 
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePhysicsList.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXePhysicsList.cc > CMakeFiles/LXe.dir/src/LXePhysicsList.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXePhysicsList.cc > CMakeFiles/LXe.dir/src/LXePhysicsList.cc.i
 
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePhysicsList.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXePhysicsList.cc -o CMakeFiles/LXe.dir/src/LXePhysicsList.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXePhysicsList.cc -o CMakeFiles/LXe.dir/src/LXePhysicsList.cc.s
 
 CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o.requires:
 
@@ -395,16 +395,16 @@ CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o.provides.build: CMakeFiles/LXe.dir/sr
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o: ../src/LXePrimaryGeneratorAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXePrimaryGeneratorAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXePrimaryGeneratorAction.cc
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXePrimaryGeneratorAction.cc > CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXePrimaryGeneratorAction.cc > CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXePrimaryGeneratorAction.cc -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXePrimaryGeneratorAction.cc -o CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.requires:
 
@@ -419,16 +419,16 @@ CMakeFiles/LXe.dir/src/LXePrimaryGeneratorAction.cc.o.provides.build: CMakeFiles
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeRun.cc.o: ../src/LXeRun.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LXe.dir/src/LXeRun.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeRun.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeRun.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LXe.dir/src/LXeRun.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeRun.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeRun.cc
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeRun.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeRun.cc > CMakeFiles/LXe.dir/src/LXeRun.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeRun.cc > CMakeFiles/LXe.dir/src/LXeRun.cc.i
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeRun.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeRun.cc -o CMakeFiles/LXe.dir/src/LXeRun.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeRun.cc -o CMakeFiles/LXe.dir/src/LXeRun.cc.s
 
 CMakeFiles/LXe.dir/src/LXeRun.cc.o.requires:
 
@@ -443,16 +443,16 @@ CMakeFiles/LXe.dir/src/LXeRun.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXeRun
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o: ../src/LXeRunAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeRunAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LXe.dir/src/LXeRunAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeRunAction.cc
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeRunAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeRunAction.cc > CMakeFiles/LXe.dir/src/LXeRunAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeRunAction.cc > CMakeFiles/LXe.dir/src/LXeRunAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeRunAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeRunAction.cc -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeRunAction.cc -o CMakeFiles/LXe.dir/src/LXeRunAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeRunAction.cc.o.requires:
 
@@ -467,16 +467,16 @@ CMakeFiles/LXe.dir/src/LXeRunAction.cc.o.provides.build: CMakeFiles/LXe.dir/src/
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o: ../src/LXeScintHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintHit.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeScintHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintHit.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintHit.cc
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeScintHit.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeScintHit.cc > CMakeFiles/LXe.dir/src/LXeScintHit.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintHit.cc > CMakeFiles/LXe.dir/src/LXeScintHit.cc.i
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeScintHit.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeScintHit.cc -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintHit.cc -o CMakeFiles/LXe.dir/src/LXeScintHit.cc.s
 
 CMakeFiles/LXe.dir/src/LXeScintHit.cc.o.requires:
 
@@ -491,16 +491,16 @@ CMakeFiles/LXe.dir/src/LXeScintHit.cc.o.provides.build: CMakeFiles/LXe.dir/src/L
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o: ../src/LXeScintSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintSD.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeScintSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintSD.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintSD.cc
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeScintSD.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeScintSD.cc > CMakeFiles/LXe.dir/src/LXeScintSD.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintSD.cc > CMakeFiles/LXe.dir/src/LXeScintSD.cc.i
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeScintSD.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeScintSD.cc -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintSD.cc -o CMakeFiles/LXe.dir/src/LXeScintSD.cc.s
 
 CMakeFiles/LXe.dir/src/LXeScintSD.cc.o.requires:
 
@@ -515,16 +515,16 @@ CMakeFiles/LXe.dir/src/LXeScintSD.cc.o.provides.build: CMakeFiles/LXe.dir/src/LX
 
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o: ../src/LXeScintillatorHit.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeScintillatorHit.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintillatorHit.cc
 
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeScintillatorHit.cc > CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintillatorHit.cc > CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.i
 
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeScintillatorHit.cc -o CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintillatorHit.cc -o CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.s
 
 CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o.requires:
 
@@ -539,16 +539,16 @@ CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o.provides.build: CMakeFiles/LXe.di
 
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o: ../src/LXeScintillatorSD.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeScintillatorSD.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintillatorSD.cc
 
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeScintillatorSD.cc > CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintillatorSD.cc > CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.i
 
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeScintillatorSD.cc -o CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeScintillatorSD.cc -o CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.s
 
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o.requires:
 
@@ -561,42 +561,18 @@ CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o.provides: CMakeFiles/LXe.dir/src/L
 CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o
 
 
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: CMakeFiles/LXe.dir/flags.make
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o: ../src/LXeStackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeStackingAction.cc
-
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeStackingAction.cc > CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i
-
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeStackingAction.cc -o CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s
-
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.requires:
-
-.PHONY : CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.requires
-
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.provides: CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.requires
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.provides.build
-.PHONY : CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.provides
-
-CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.provides.build: CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o
-
-
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o: ../src/LXeSteppingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeSteppingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingAction.cc
 
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeSteppingAction.cc > CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingAction.cc > CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeSteppingAction.cc -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingAction.cc -o CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o.requires:
 
@@ -611,16 +587,16 @@ CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o.provides.build: CMakeFiles/LXe.dir
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o: ../src/LXeSteppingMessenger.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeSteppingMessenger.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingMessenger.cc
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeSteppingMessenger.cc > CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingMessenger.cc > CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.i
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeSteppingMessenger.cc -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingMessenger.cc -o CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.s
 
 CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.requires:
 
@@ -635,16 +611,16 @@ CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.provides.build: CMakeFiles/LXe.
 
 CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o: ../src/LXeSteppingVerbose.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeSteppingVerbose.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingVerbose.cc
 
 CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeSteppingVerbose.cc > CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingVerbose.cc > CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.i
 
 CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeSteppingVerbose.cc -o CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeSteppingVerbose.cc -o CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.s
 
 CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o.requires:
 
@@ -659,16 +635,16 @@ CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o.provides.build: CMakeFiles/LXe.di
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o: ../src/LXeTrackingAction.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeTrackingAction.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeTrackingAction.cc
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeTrackingAction.cc > CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeTrackingAction.cc > CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.i
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeTrackingAction.cc -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeTrackingAction.cc -o CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.s
 
 CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o.requires:
 
@@ -683,16 +659,16 @@ CMakeFiles/LXe.dir/src/LXeTrackingAction.cc.o.provides.build: CMakeFiles/LXe.dir
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o: ../src/LXeTrajectory.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeTrajectory.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeTrajectory.cc
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeTrajectory.cc > CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeTrajectory.cc > CMakeFiles/LXe.dir/src/LXeTrajectory.cc.i
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeTrajectory.cc -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeTrajectory.cc -o CMakeFiles/LXe.dir/src/LXeTrajectory.cc.s
 
 CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o.requires:
 
@@ -707,16 +683,16 @@ CMakeFiles/LXe.dir/src/LXeTrajectory.cc.o.provides.build: CMakeFiles/LXe.dir/src
 
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o: ../src/LXeUserEventInformation.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeUserEventInformation.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeUserEventInformation.cc
 
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeUserEventInformation.cc > CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeUserEventInformation.cc > CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.i
 
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeUserEventInformation.cc -o CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeUserEventInformation.cc -o CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.s
 
 CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o.requires:
 
@@ -731,16 +707,16 @@ CMakeFiles/LXe.dir/src/LXeUserEventInformation.cc.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o: ../src/LXeUserTrackInformation.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeUserTrackInformation.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeUserTrackInformation.cc
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeUserTrackInformation.cc > CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeUserTrackInformation.cc > CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.i
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeUserTrackInformation.cc -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeUserTrackInformation.cc -o CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.s
 
 CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.requires:
 
@@ -755,16 +731,16 @@ CMakeFiles/LXe.dir/src/LXeUserTrackInformation.cc.o.provides.build: CMakeFiles/L
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o: ../src/LXeWLSFiber.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeWLSFiber.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeWLSFiber.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeWLSFiber.cc > CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeWLSFiber.cc > CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.i
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeWLSFiber.cc -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeWLSFiber.cc -o CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.s
 
 CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.requires:
 
@@ -779,16 +755,16 @@ CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o.provides.build: CMakeFiles/LXe.dir/src/L
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o: ../src/LXeWLSSlab.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -c /home/galgoczi/cubesat/Reference/src/LXeWLSSlab.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/LXeWLSSlab.cc
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/LXeWLSSlab.cc > CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/LXeWLSSlab.cc > CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.i
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/LXeWLSSlab.cc -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/LXeWLSSlab.cc -o CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.s
 
 CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.requires:
 
@@ -803,16 +779,16 @@ CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o.provides.build: CMakeFiles/LXe.dir/src/LX
 
 CMakeFiles/LXe.dir/src/Spectrum.cc.o: CMakeFiles/LXe.dir/flags.make
 CMakeFiles/LXe.dir/src/Spectrum.cc.o: ../src/Spectrum.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/LXe.dir/src/Spectrum.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/Spectrum.cc.o -c /home/galgoczi/cubesat/Reference/src/Spectrum.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/LXe.dir/src/Spectrum.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LXe.dir/src/Spectrum.cc.o -c /home/galgoczi/cubesat/szimulacio/Reference/src/Spectrum.cc
 
 CMakeFiles/LXe.dir/src/Spectrum.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LXe.dir/src/Spectrum.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/Reference/src/Spectrum.cc > CMakeFiles/LXe.dir/src/Spectrum.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/galgoczi/cubesat/szimulacio/Reference/src/Spectrum.cc > CMakeFiles/LXe.dir/src/Spectrum.cc.i
 
 CMakeFiles/LXe.dir/src/Spectrum.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LXe.dir/src/Spectrum.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/Reference/src/Spectrum.cc -o CMakeFiles/LXe.dir/src/Spectrum.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/galgoczi/cubesat/szimulacio/Reference/src/Spectrum.cc -o CMakeFiles/LXe.dir/src/Spectrum.cc.s
 
 CMakeFiles/LXe.dir/src/Spectrum.cc.o.requires:
 
@@ -848,7 +824,6 @@ LXe_OBJECTS = \
 "CMakeFiles/LXe.dir/src/LXeScintSD.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o" \
-"CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o" \
 "CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o" \
@@ -884,7 +859,6 @@ LXe: CMakeFiles/LXe.dir/src/LXeScintHit.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeScintSD.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o
-LXe: CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o
 LXe: CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o
@@ -920,9 +894,11 @@ LXe: /usr/lib/x86_64-linux-gnu/libICE.so
 LXe: /usr/lib/x86_64-linux-gnu/libX11.so
 LXe: /usr/lib/x86_64-linux-gnu/libXext.so
 LXe: /usr/lib/x86_64-linux-gnu/libXmu.so
-LXe: /usr/lib/x86_64-linux-gnu/libQtOpenGL.so
-LXe: /usr/lib/x86_64-linux-gnu/libQtGui.so
-LXe: /usr/lib/x86_64-linux-gnu/libQtCore.so
+LXe: /usr/lib/x86_64-linux-gnu/libQt5OpenGL.so.5.9.5
+LXe: /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.9.5
+LXe: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
+LXe: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
+LXe: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 LXe: /home/galgoczi/software/geant4.10.0_seq/outputs/library/Linux-g++/libG4run.so
 LXe: /home/galgoczi/software/geant4.10.0_seq/outputs/library/Linux-g++/libG4event.so
 LXe: /home/galgoczi/software/geant4.10.0_seq/outputs/library/Linux-g++/libG4tracking.so
@@ -939,7 +915,7 @@ LXe: /home/galgoczi/software/geant4.10.0_seq/outputs/library/Linux-g++/libG4inte
 LXe: /home/galgoczi/software/geant4.10.0_seq/outputs/library/Linux-g++/libG4global.so
 LXe: /home/galgoczi/software/geant4.10.0_seq/outputs/library/Linux-g++/libG4clhep.so
 LXe: CMakeFiles/LXe.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/galgoczi/cubesat/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CXX executable LXe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CXX executable LXe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LXe.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -968,7 +944,6 @@ CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeScintHit.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeScintSD.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o.requires
-CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o.requires
 CMakeFiles/LXe.dir/requires: CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o.requires
@@ -987,6 +962,6 @@ CMakeFiles/LXe.dir/clean:
 .PHONY : CMakeFiles/LXe.dir/clean
 
 CMakeFiles/LXe.dir/depend:
-	cd /home/galgoczi/cubesat/Reference/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/galgoczi/cubesat/Reference /home/galgoczi/cubesat/Reference /home/galgoczi/cubesat/Reference/build /home/galgoczi/cubesat/Reference/build /home/galgoczi/cubesat/Reference/build/CMakeFiles/LXe.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/galgoczi/cubesat/szimulacio/Reference/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/galgoczi/cubesat/szimulacio/Reference /home/galgoczi/cubesat/szimulacio/Reference /home/galgoczi/cubesat/szimulacio/Reference/build /home/galgoczi/cubesat/szimulacio/Reference/build /home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles/LXe.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/LXe.dir/depend
 

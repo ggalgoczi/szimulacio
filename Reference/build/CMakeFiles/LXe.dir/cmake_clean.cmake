@@ -20,7 +20,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/LXe.dir/src/LXeScintSD.cc.o"
   "CMakeFiles/LXe.dir/src/LXeScintillatorHit.cc.o"
   "CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.o"
-  "CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o"
   "CMakeFiles/LXe.dir/src/LXeSteppingAction.cc.o"
   "CMakeFiles/LXe.dir/src/LXeSteppingMessenger.cc.o"
   "CMakeFiles/LXe.dir/src/LXeSteppingVerbose.cc.o"

@@ -48,18 +48,18 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/galgoczi/cubesat/Reference
+CMAKE_SOURCE_DIR = /home/galgoczi/cubesat/szimulacio/Reference
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/galgoczi/cubesat/Reference/build
+CMAKE_BINARY_DIR = /home/galgoczi/cubesat/szimulacio/Reference/build
 
 #=============================================================================
 # Targets provided globally by CMake.
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -126,9 +126,9 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/Reference/build/CMakeFiles /home/galgoczi/cubesat/Reference/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles /home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/Reference/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/galgoczi/cubesat/szimulacio/Reference/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -736,33 +736,6 @@ src/LXeScintillatorSD.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeScintillatorSD.cc.s
 .PHONY : src/LXeScintillatorSD.cc.s
 
-src/LXeStackingAction.o: src/LXeStackingAction.cc.o
-
-.PHONY : src/LXeStackingAction.o
-
-# target to build an object file
-src/LXeStackingAction.cc.o:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeStackingAction.cc.o
-.PHONY : src/LXeStackingAction.cc.o
-
-src/LXeStackingAction.i: src/LXeStackingAction.cc.i
-
-.PHONY : src/LXeStackingAction.i
-
-# target to preprocess a source file
-src/LXeStackingAction.cc.i:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeStackingAction.cc.i
-.PHONY : src/LXeStackingAction.cc.i
-
-src/LXeStackingAction.s: src/LXeStackingAction.cc.s
-
-.PHONY : src/LXeStackingAction.s
-
-# target to generate assembly for a file
-src/LXeStackingAction.cc.s:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeStackingAction.cc.s
-.PHONY : src/LXeStackingAction.cc.s
-
 src/LXeSteppingAction.o: src/LXeSteppingAction.cc.o
 
 .PHONY : src/LXeSteppingAction.o
@@ -1109,9 +1082,6 @@ help:
 	@echo "... src/LXeScintillatorSD.o"
 	@echo "... src/LXeScintillatorSD.i"
 	@echo "... src/LXeScintillatorSD.s"
-	@echo "... src/LXeStackingAction.o"
-	@echo "... src/LXeStackingAction.i"
-	@echo "... src/LXeStackingAction.s"
 	@echo "... src/LXeSteppingAction.o"
 	@echo "... src/LXeSteppingAction.i"
 	@echo "... src/LXeSteppingAction.s"
