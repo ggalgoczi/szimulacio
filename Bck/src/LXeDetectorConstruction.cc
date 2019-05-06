@@ -645,7 +645,7 @@ p9->CheckOverlaps(1000,1,true, 1000);
  
   if(fMainVolumeOn){
     fMainVolume
-      = new LXeMainVolume(rm_y1_main,G4ThreeVector(56,0,-90),fExperimentalHall_log,false,0,this);
+      = new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,-90),fExperimentalHall_log,false,0,this);
   }
 
 
