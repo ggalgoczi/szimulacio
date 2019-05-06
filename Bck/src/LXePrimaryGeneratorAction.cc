@@ -45,8 +45,8 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
-const int Gun_On_Sphere = 0;
-const int Parallel_Beam = 1;
+const int Gun_On_Sphere = 1;
+const int Parallel_Beam = 0;
 
 
 void filePutContents2(const std::string& name, const std::string& content, bool append = false) {
@@ -206,7 +206,6 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
 
   fParticleGun->SetParticleEnergy(Ener*MeV);
-	cout << "now" << " " << Ener << " " << Ener << "\n";
 //	cout << energy << "\n";
   //fParticleGun->SetParticleEnergy(energy*MeV);
   //cout << "Energy was: " << energy << "\n"; // verbosehoz
