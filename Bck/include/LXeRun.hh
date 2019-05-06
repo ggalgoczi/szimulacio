@@ -16,8 +16,8 @@ class LXeRun : public G4Run
 {
  public:
 	LXeRun();
-	std::vector<G4int> PMTHitNo1{1001,0};
-	std::vector<G4int> PMTHitNo2{1001,0};
+	std::vector<G4int> PMTHitNo1;
+	std::vector<G4int> PMTHitNo2;
   virtual ~LXeRun();
   virtual void RecordEvent(const G4Event*);
   virtual void Merge(const G4Run*);
