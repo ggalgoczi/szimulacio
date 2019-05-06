@@ -77,46 +77,11 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
   fParticleGun->SetParticleDefinition(particleTable->
                                      FindParticle(particleName=Particle_Name));
   //Default energy,position,momentum
-  fParticleGun->SetParticleEnergy(fRunAction->Energy*keV);
+ // fParticleGun->SetParticleEnergy(fRunAction->Energy*keV);
   //G4cout << "Energy " << fRunAction->Energy << G4endl;
   fParticleGun->SetParticlePosition(G4ThreeVector(-300,0.0001,0));
   
  // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(10,10,0.));  
-	
-
-    Particle_Energy = fRunAction->Particle_Energy_In_RunAction;
-  
-  /*  
-    for (int i = 0; i < Particle_Energy.size(); i++){
-    for (int j = 0; j < 3; j++){
-		G4cout << Particle_Energy[i][j] << G4endl;
-	}
-		}
-	*/
-    
-    double sum = 0;
-    double count = 0;
-	for (int i = 0; i < Particle_Energy.size(); i++)
-		{
-		sum += Particle_Energy[i][1];
-		}    
-	//cout << "ElectronEnergyMin sum was" << " " << sum << "\n";		
-		
-	for (int i = 0; i < Particle_Energy.size(); i++)
-		{
-		count += double(Particle_Energy[i][1])/double(sum);	
-		//cout << count*10000000 << "\n";	
-		//cout << "Number of particles [cm^-2 * s^-1]" << double(sum) << "\n";	
-		Particle_Energy[i].push_back(count);
-		//cout << ElectronEnergyMin[i][0] << " "<<ElectronEnergyMin[i][1] << " "<<ElectronEnergyMin[i][2] << " " << sum << "\n";
-		}     
-    
-       std::ostringstream oss;
-		oss << Particle_Energy[0][2] <<std::endl;
-		std::string var = oss.str();	
-		filePutContents2("./totalfluxes.txt",var,true);
-    
-
     	     
 }
 
@@ -237,28 +202,11 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 
 //exit(-1);
 
-double energy = 0;
-	for (int i = 0; i < Particle_Energy.size(); i++)
-		{
-			//cout << "itt" << Particle_Energy[i][3] << " " << number << "\n";
-		if(i == 0){
-			if(double(Particle_Energy[0][3]) > number)
-				{
-				energy = Particle_Energy[i][0];
-				//cout << "ooo" << Particle_Energy[i][3] << " " << number << "\n";
-				}			
-				}
-			else{
-			if(double(Particle_Energy[i][3]) > number && double(Particle_Energy[i-1][3]) < number)
-				{
-				energy = Particle_Energy[i][0];
-				//cout << "ooo" << Particle_Energy[i][3] << " " << Particle_Energy[i][0] << " " << number << "\n";
-				}		
-			}
+  double Ener = fRunAction->EnSpectrum->DrawEnergy();
+  //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
 
-	
-		}
-	//	cout << "now" << " " << energy << " " << number << "\n";
+  fParticleGun->SetParticleEnergy(Ener*MeV);
+	cout << "now" << " " << Ener << " " << Ener << "\n";
 //	cout << energy << "\n";
   //fParticleGun->SetParticleEnergy(energy*MeV);
   //cout << "Energy was: " << energy << "\n"; // verbosehoz
