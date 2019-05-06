@@ -1,2 +1,6 @@
 /run/initialize
+<<<<<<< HEAD
 /run/beamOn 1000000
+=======
+/run/beamOn 100000
+>>>>>>> f47467923903b0b0be131818204b742ac3310797
