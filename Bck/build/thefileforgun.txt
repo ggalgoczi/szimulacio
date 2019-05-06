@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_He.dat
