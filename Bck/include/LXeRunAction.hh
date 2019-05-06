@@ -31,6 +31,8 @@
 //
 #include "G4UserRunAction.hh"
 #include <vector>
+#include "Spectrum.hh"
+
 #ifndef LXeRunAction_h
 #define LXeRunAction_h 1
 
@@ -47,13 +49,14 @@ class LXeRunAction : public G4UserRunAction
     virtual void BeginOfRunAction(const G4Run*);
     virtual void EndOfRunAction(const G4Run*);
     virtual G4Run* GenerateRun();
+	Spectrum* EnSpectrum;
 
 	std::string infileline;
 	std::string infilename;
 	std::string Part_Name;
 	int Energy;
 	int Checked_Already;
-	std::vector<std::vector<float> > Particle_Energy_In_RunAction;
+	std::vector<std::vector<double> > Particle_Energy_In_RunAction;
   private:
     LXeRun*  fRun;
     LXeRecorderBase* fRecorder;

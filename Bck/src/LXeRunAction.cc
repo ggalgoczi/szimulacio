@@ -36,6 +36,8 @@
 #include "G4RunManager.hh"
 #include "FileReader.hh"
 #include "LXeRun.hh"
+#include "Spectrum.hh"
+
 #include "G4Run.hh"
 #include "G4AutoLock.hh"
 #include <string>
@@ -137,6 +139,9 @@ while (std::getline(file2, infileline))
 	// Read in energy spectra for particle gun
 	  MTFileReader* ReadIn = new MTFileReader(infilename.c_str());
 	  Particle_Energy_In_RunAction = ReadIn->LoadSpectra();
+		
+		EnSpectrum = new Spectrum();
+		EnSpectrum->SaveSpectrum(Particle_Energy_In_RunAction);
 
 	  lock.unlock();
 
@@ -147,7 +152,7 @@ while (std::getline(file2, infileline))
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeRunAction::~LXeRunAction() {}
+LXeRunAction::~LXeRunAction() {	delete EnSpectrum;}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
