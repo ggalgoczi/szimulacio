@@ -34,7 +34,7 @@
 #include "LXeRunAction.hh"
 #include "LXeRecorderBase.hh"
 #include "G4RunManager.hh"
-
+#include "FileReader.hh"
 #include "LXeRun.hh"
 #include "G4Run.hh"
 #include "G4AutoLock.hh"
@@ -113,6 +113,7 @@ while (std::getline(file2, infileline))
 		}
 
 // std::fstream in("/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt");
+	/*
 	std::ifstream in(infilename.c_str());
     std::string line;
     int p = 0;
@@ -131,7 +132,11 @@ while (std::getline(file2, infileline))
       //  cout << i << "\n";
         ++p;
     }
+	*/
 
+	// Read in energy spectra for particle gun
+	  MTFileReader* ReadIn = new MTFileReader(infilename.c_str());
+	  Particle_Energy_In_RunAction = ReadIn->LoadSpectra();
 
 	  lock.unlock();
 
