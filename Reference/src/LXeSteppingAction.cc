@@ -118,6 +118,5 @@ G4Track* theTrack = theStep->GetTrack();
 
 
 }
-  	G4cout << "agh2                   !!!!!!!!!!" << G4endl;
 
 }

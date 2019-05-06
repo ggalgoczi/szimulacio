@@ -36,7 +36,6 @@
 #include "LXeEventAction.hh"
 #include "LXeTrackingAction.hh"
 #include "LXeSteppingAction.hh"
-#include "LXeStackingAction.hh"
 #include "LXeSteppingVerbose.hh"
 
 #include "LXeRecorderBase.hh"
@@ -67,7 +66,6 @@ void LXeActionInitialization::Build() const
   LXeRunAction* RunAction = new LXeRunAction(fRecorder);
   SetUserAction(RunAction);
 
-  SetUserAction(new LXeStackingAction());
   SetUserAction(new LXePrimaryGeneratorAction(RunAction));
 
 

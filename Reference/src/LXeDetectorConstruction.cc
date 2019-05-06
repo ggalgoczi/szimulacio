@@ -460,72 +460,6 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
 
 void LXeDetectorConstruction::ConstructSDandField() {
 
-  if (!fMainVolume) return;
-
-  // PMT SD
-
-  if (!fPmt_SD.Get()) {
-    //Created here so it exists as pmts are being placed
-    G4cout << "Construction /LXeDet/pmtSD" << G4endl;
-    LXePMTSD* pmt_SD = new LXePMTSD("/LXeDet/pmtSD");
-    fPmt_SD.Put(pmt_SD);
-
-    pmt_SD->InitPMTs((fNx*fNy+fNx*fNz+fNy*fNz)*2); //let pmtSD know # of pmts
-    pmt_SD->SetPmtPositions(fMainVolume->GetPmtPositions());
-  }
-
-  //sensitive detector is not actually on the photocathode.
-  //processHits gets done manually by the stepping action.
-  //It is used to detect when photons hit and get absorbed&detected at the
-  //boundary to the photocathode (which doesnt get done by attaching it to a
-  //logical volume.
-  //It does however need to be attached to something or else it doesnt get
-  //reset at the begining of events
-
-  SetSensitiveDetector(fMainVolume->GetLogPhotoCath(), fPmt_SD.Get());
-
-  // Scint SD
-
-  if (!fScint_SD.Get()) {
-    G4cout << "Construction /LXeDet/scintSD" << G4endl;
-    LXeScintSD* scint_SD = new LXeScintSD("/LXeDet/scintSD");
-    fScint_SD.Put(scint_SD);
-  }
-  SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
-  
-    // Actually WORKING Sensitive detectors
-
-  static G4ThreadLocal G4bool initialized = false;
-    if ( ! initialized ) {
-		
-		
-		G4String trackerChamberSDname = "LXe/LXeScintillatorSD";
-		LXeScintillatorSD* aTrackerSD = new LXeScintillatorSD(trackerChamberSDname,
-                                            "ScintillatorHitsCollection");
-		G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
-  // Setting aTrackerSD to all logical volumes with the same name 
-  // of "Chamber_LV".
-		SetSensitiveDetector("cad_logical", aTrackerSD, true);
-		initialized = true;
-		/*
-        // Prepare sensitive detectors
-        CheckVolumeSD* fCheckSD = new CheckVolumeSD("checkSD");
-        (G4SDManager::GetSDMpointer())->AddNewDetector( fCheckSD );
-        fLogicCheck->SetSensitiveDetector(fCheckSD);
-
-        TargetSD* fTargetSD = new TargetSD("targetSD");
-        (G4SDManager::GetSDMpointer())->AddNewDetector( fTargetSD );
-        fLogicTarget->SetSensitiveDetector(fTargetSD);
-        initialized=true;
-        
-        */
-        
-        
-    }
-
-
- 
-   
   
   
 }
@@ -578,51 +512,7 @@ void LXeDetectorConstruction::SetPMTRadius(G4double outerRadius_pmt) {
 
 void LXeDetectorConstruction::SetDefaults() {
 
-  //Resets to default values
- // fD_mtl=0.0635*cm;
 
-  
-std::string infileline;
-std::string Part_Name;
-std::ifstream file("housingthickness.txt");
-
-while (std::getline(file, infileline))
-    {
-	assert(infileline.size() != 0);
-	
-	
-	double d;
-	sscanf(infileline.c_str(), "%lf", &d);
-	fD_mtl = d*mm;
-	//fD_mtl = std::stoi(infileline);
-    }
-  
-
-  fScint_x = 15.*cm;
-  fScint_y = 0.5*cm;
-  fScint_z = 7.5*cm;
-
-  fNx = 1;
-  fNy = 1;
-  fNz = 2;
-
-  fOuterRadius_pmt = 0.1*cm;
-
-  fRefl=1.0;
-
-  fNfibers=15;
-  fWLSslab=false;
-  fMainVolumeOn=true;
-  fMainVolume=NULL;
-  fSlab_z=2.5*mm;
-
-  G4UImanager::GetUIpointer()
-    ->ApplyCommand("/LXe/detector/scintYieldFactor 1.");
-
-  if(fLXe_mt)fLXe_mt->AddConstProperty("SCINTILLATIONYIELD",0.001/keV);
-  if(fMPTPStyrene)fMPTPStyrene->AddConstProperty("SCINTILLATIONYIELD",10./MeV);
-
-  G4RunManager::GetRunManager()->ReinitializeGeometry();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

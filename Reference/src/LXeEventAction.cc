@@ -72,7 +72,6 @@ void LXeEventAction::BeginOfEventAction(const G4Event* anEvent){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
-    	G4cout << "agh5                   !!!!!!!!!!" << G4endl;
 
 }
 

@@ -60,8 +60,18 @@ LXePhysicsList::LXePhysicsList() : G4VModularPhysicsList()
   RegisterPhysics( new LXeMuonPhysics("muon"));
 
 // Livermore
-  
-   RegisterPhysics( new G4HadronElasticPhysics());
+  RegisterPhysics( new G4HadronElasticPhysics());
+
+// Neutrons tbd
+
+/*
+   G4NeutronInelasticProcess  theNeutronInelastic; 
+   G4HadronFissionProcess theNeutronFission;
+   G4LFission* theNeutronFissionModel;
+   G4HadronCaptureProcess*  theNeutronCapture;
+ */ 
+
+
   // RegisterPhysics( new G4EmLivermorePhysics());
 
 

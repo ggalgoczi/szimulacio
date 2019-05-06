@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_rays_primary_electrons_and_positrons/cr_setting2_fluxes_pos.dat
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat

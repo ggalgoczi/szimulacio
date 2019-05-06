@@ -45,8 +45,8 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
-const int Gun_On_Sphere = 0;
-const int Parallel_Beam = 1;
+const int Gun_On_Sphere = 1;
+const int Parallel_Beam = 0;
 
 
 void filePutContents2(const std::string& name, const std::string& content, bool append = false) {
@@ -72,6 +72,10 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
   //G4cout << Particle_Name << G4endl;
   //G4cout << "Fura" << G4endl;
   //exit(-1);
+  
+  G4ParticleTable::GetParticleTable()->DumpTable();
+
+
   
   G4String particleName;
   fParticleGun->SetParticleDefinition(particleTable->

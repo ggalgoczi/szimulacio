@@ -144,18 +144,17 @@ while (std::getline(file2, infileline))
 
 LXeRunAction::~LXeRunAction() {}
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
 G4Run* LXeRunAction::GenerateRun()
 { 
   fRun = new LXeRun(); 
   return fRun;
 }
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
-		    	G4cout << "agh7                   !!!!!!!!!!" << G4endl;
 
   if(fRecorder)fRecorder->RecordBeginOfRun(aRun);
  } 
@@ -164,7 +163,6 @@ void LXeRunAction::BeginOfRunAction(const G4Run* aRun){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeRunAction::EndOfRunAction(const G4Run* aRun){
-	    	G4cout << "agh7                   !!!!!!!!!!" << G4endl;
 
 	
 	/*
@@ -200,7 +198,6 @@ void LXeRunAction::EndOfRunAction(const G4Run* aRun){
 		}
 		
 	if (isMaster){	
-	fRun->Calculations();
 	
 	}
 	
