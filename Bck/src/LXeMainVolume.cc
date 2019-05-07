@@ -270,5 +270,5 @@ void LXeMainVolume::SurfaceProperties(){
   new G4LogicalSkinSurface("photocath_surf",fHousing_log,
                            OpScintHousingSurface);
  // new G4LogicalSkinSurface("sphere_surface",fSphere_log,OpSphereSurface);
-  new G4LogicalSkinSurface("photocath_surf",fPhotocath_log,photocath_opsurf);
+  new G4LogicalSkinSurface("photocath_surf",fPmt_log,photocath_opsurf);
 }
