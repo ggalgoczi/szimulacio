@@ -54,15 +54,18 @@ class LXeMainVolume : public G4PVPlacement
 
     G4LogicalVolume* GetLogPhotoCath() {return fPhotocath_log;}
     G4LogicalVolume* GetLogScint()     {return fScint_log;}
+    G4LogicalVolume* GetLogPMT()     {return fPmt_log;}
+    G4VPhysicalVolume* GetPhysScint()     {return fScint_phys;}
 
     std::vector<G4ThreeVector> GetPmtPositions() {return fPmtPositions;}
+	std::vector<G4VPhysicalVolume*> PMT_Phys_Vector; 
 
   private:
 
     void VisAttributes();
     void SurfaceProperties();
 
-    void PlacePMTs(G4LogicalVolume* pmt_Log,
+    std::vector<G4VPhysicalVolume*> PlacePMTs(G4LogicalVolume* pmt_Log,
                    G4RotationMatrix* rot,
                    G4double &a, G4double &b, G4double da,
                    G4double db, G4double amin, G4double bmin,
@@ -99,7 +102,9 @@ class LXeMainVolume : public G4PVPlacement
     G4LogicalVolume* fPmt_log;
     G4LogicalVolume* fPhotocath_log;
     G4LogicalVolume* fSphere_log;
-
+	G4VPhysicalVolume* fScint_phys;
+	G4VPhysicalVolume* fHousing_phys;
+	G4VPhysicalVolume* fPhotocath_phys;
     // Sensitive Detectors positions
     std::vector<G4ThreeVector> fPmtPositions;
 

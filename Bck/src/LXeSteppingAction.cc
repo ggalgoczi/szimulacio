@@ -90,6 +90,9 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
                                               GetCurrentEvent()->GetEventID();
 
   G4Track* theTrack = theStep->GetTrack();
+   //G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;
+        
+        
 
   if ( theTrack->GetCurrentStepNumber() == 1 ) fExpectedNextStatus = Undefined;
  
@@ -210,6 +213,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
                       //is the photocathode because it is the only one with
                       //non-zero efficiency
         {
+			
         //Triger sensitive detector manually since photon is
         //absorbed but status was Detection
         G4SDManager* SDman = G4SDManager::GetSDMpointer();
@@ -218,6 +222,7 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
         if(pmtSD)pmtSD->ProcessHits_constStep(theStep,NULL);
         trackInformation->AddTrackStatusFlag(hitPMT);
         
+		//G4cout << pmtSD->Return_NO_of_Photons() << G4endl;	
         
 		G4Track* track = theStep->GetTrack();
 

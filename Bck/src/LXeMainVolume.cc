@@ -73,7 +73,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                                      G4Material::GetMaterial("Al"),
                                      "housing_log",0,0,0);
  
-  new G4PVPlacement(0,G4ThreeVector(),fScint_log,"scintillator",
+  fScint_phys = new G4PVPlacement(0,G4ThreeVector(),fScint_log,"scintillator",
                                  fHousing_log,false,0, checkOverlaps);
  
   //*************** Miscellaneous sphere to demonstrate skin surfaces
@@ -138,7 +138,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   G4RotationMatrix* rm_y1 = new G4RotationMatrix();
   rm_y1->rotateY(-90*deg);
   x = -fScint_x/2. - height_pmt;      //left
-  PlacePMTs(fPmt_log,rm_y1,y,z,dy,dz,ymin,zmin,fNy,fNz,x,y,z,k);
+  PMT_Phys_Vector = PlacePMTs(fPmt_log,rm_y1,y,z,dy,dz,ymin,zmin,fNy,fNz,x,y,z,k);
 
  /* G4RotationMatrix* rm_y2 = new G4RotationMatrix();
   rm_y2->rotateY(90*deg);
@@ -178,7 +178,7 @@ void LXeMainVolume::CopyValues(){
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXeMainVolume::PlacePMTs(G4LogicalVolume* pmt_log,
+std::vector<G4VPhysicalVolume*> LXeMainVolume::PlacePMTs(G4LogicalVolume* pmt_log,
                               G4RotationMatrix *rot,
                               G4double &a, G4double &b, G4double da,
                               G4double db, G4double amin,
@@ -198,18 +198,22 @@ void LXeMainVolume::PlacePMTs(G4LogicalVolume* pmt_log,
   k = copy number to start with
   sd = sensitive detector for pmts
 */
+
+std::vector<G4VPhysicalVolume*> PMT_Phys_Vec;
   a=amin;
   for(G4int j=1;j<=na;j++){
     a+=da;
     b=bmin;
     for(G4int i=1;i<=nb;i++){
       b+=db;
-      new G4PVPlacement(rot,G4ThreeVector(x,y,z),pmt_log,"pmt",
-                        fHousing_log,false,k,checkOverlaps);
+      PMT_Phys_Vec.push_back(new G4PVPlacement(rot,G4ThreeVector(x,y,z),pmt_log,"pmt",
+                        fHousing_log,false,k,checkOverlaps));
       fPmtPositions.push_back(G4ThreeVector(x,y,z));
       k++;
     }
   }
+
+return PMT_Phys_Vec;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -226,6 +230,11 @@ void LXeMainVolume::VisAttributes(){
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXeMainVolume::SurfaceProperties(){
+
+
+
+ /*
+
   const G4int num = 2;
   G4double ephoton[num] = {7.0*eV, 7.14*eV};
 
@@ -238,6 +247,8 @@ void LXeMainVolume::SurfaceProperties(){
   G4OpticalSurface* OpScintHousingSurface =
     new G4OpticalSurface("HousingSurface",unified,polished,dielectric_metal);
   OpScintHousingSurface->SetMaterialPropertiesTable(scintHsngPT);
+ 
+ */
  
   //**Sphere surface properties
   /*
@@ -254,6 +265,7 @@ void LXeMainVolume::SurfaceProperties(){
  
  // Surface properties of glass inside the PMT
  
+ /*
   G4double glass_EFF[num]={0.,0.}; //Enables 'detection' of photons
   G4double glass_ReR[num]={1.5,1.5};
  // G4double photocath_ImR[num]={1.69,1.69};
@@ -288,4 +300,44 @@ void LXeMainVolume::SurfaceProperties(){
                            
  // new G4LogicalSkinSurface("sphere_surface",fSphere_log,OpSphereSurface);
   new G4LogicalSkinSurface("photocath_surf",fPhotocath_log,photocath_opsurf);
+  
+  
+  */
+  
+  
+  
+    // Surface properties for the photocath vs scint
+    G4OpticalSurface* PhotoCathScint = new G4OpticalSurface("PhotoCath");
+
+for(int i=0;i < PMT_Phys_Vector.size();i++) {
+    new G4LogicalBorderSurface("PhotoCathSurface", fScint_phys,
+                               PMT_Phys_Vector[i],
+                               PhotoCathScint);}
+
+
+ 
+    PhotoCathScint->SetType(dielectric_metal);
+    PhotoCathScint->SetFinish(polished);
+    PhotoCathScint->SetModel(glisur);
+    const G4int num = 2;
+
+    G4double pp2[num] = {2.0*eV, 3.5*eV};
+    G4double reflectivity2[num] = {0., 0.};
+    G4double efficiency2[num] = {1., 1.};
+   
+    G4double photocath_ReR[num]={1.92,1.92};
+	G4double photocath_ImR[num]={1.69,1.69};
+	
+    
+    G4MaterialPropertiesTable* PhotoCathScintProperty 
+      = new G4MaterialPropertiesTable();
+
+	//PhotoCathScintProperty->AddProperty("REALRINDEX",pp2,photocath_ReR,num);
+	//PhotoCathScintProperty->AddProperty("IMAGINARYRINDEX",pp2,photocath_ImR,num);
+    PhotoCathScintProperty->AddProperty("REFLECTIVITY",pp2,reflectivity2,num);
+    PhotoCathScintProperty->AddProperty("EFFICIENCY",pp2,efficiency2,num);
+    PhotoCathScint->SetMaterialPropertiesTable(PhotoCathScintProperty);  
+  
+  
+  
 }

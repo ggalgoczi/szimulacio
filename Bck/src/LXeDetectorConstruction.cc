@@ -647,7 +647,31 @@ p9->CheckOverlaps(1000,1,true, 1000);
     fMainVolume
       = new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,-90),fExperimentalHall_log,false,0,this);
   }
+  
+  
+ // Surface properties for the scint vs ESR
+    G4OpticalSurface* scintESR = new G4OpticalSurface("Housing");
+ 
+    new G4LogicalBorderSurface("HousingSurface", fMainVolume->GetPhysScint(),
+                               fMainVolume,
+                               scintESR);
+ 
+    scintESR->SetType(dielectric_metal);
+    scintESR->SetFinish(polished);
+    scintESR->SetModel(glisur);
 
+    const G4int num = 2;
+
+    G4double pp[num] = {2.0*eV, 7.5*eV};
+    G4double reflectivity[num] = {0.9, 0.9};
+    G4double efficiency[num] = {0.0, 0.0};
+    
+    G4MaterialPropertiesTable* scintESRProperty 
+      = new G4MaterialPropertiesTable();
+
+    scintESRProperty->AddProperty("REFLECTIVITY",pp,reflectivity,num);
+    scintESRProperty->AddProperty("EFFICIENCY",pp,efficiency,num);
+    scintESR->SetMaterialPropertiesTable(scintESRProperty);
 
 //--------- example of User Limits -------------------------------
 
@@ -697,7 +721,7 @@ void LXeDetectorConstruction::ConstructSDandField() {
   //It does however need to be attached to something or else it doesnt get
   //reset at the begining of events
 
-  SetSensitiveDetector(fMainVolume->GetLogPhotoCath(), fPmt_SD.Get());
+  SetSensitiveDetector(fMainVolume->GetLogPMT(), fPmt_SD.Get());
 
   // Scint SD
 
