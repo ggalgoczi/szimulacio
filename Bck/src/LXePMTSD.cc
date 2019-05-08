@@ -101,8 +101,9 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
      != G4OpticalPhoton::OpticalPhotonDefinition()) return false;
  
   //User replica number 1 since photocathode is a daughter volume
-  //to the pmt which was replicated
+  //to the pmt which was replicated -> Not true anymore as pmt became the volume
   G4int pmtNumber=
+  aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber();
  //   aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1);
     
     //G4cout << pmtNumber << G4endl;
