@@ -203,87 +203,6 @@ void LXeDetectorConstruction::DefineMaterials(){
  
   // Materials for the satellite
 
-  CarbonFiber = new G4Material("CarbonFiber", density=1.5*kg/m3,1);
-  CarbonFiber->AddElement(fC,fractionmass=1.);
-  
-  Aluminum6061_T6 = new G4Material("Aluminum6061_T6", density=1*kg/m3,2);
-  Aluminum6061_T6->AddElement(Al_El,fractionmass=0.97);
-  Aluminum6061_T6->AddElement(fMg,fractionmass=0.03);
-  
-  Aluminum7075_T73 = new G4Material("Aluminum7075_T73", density=1*kg/m3,2);
-  Aluminum7075_T73->AddElement(Al_El,fractionmass=0.94);
-  Aluminum7075_T73->AddElement(fZn,fractionmass=0.06);
-  
-  StainlessSteelA2_70AISI304  = new G4Material("StainlessSteelA2_70AISI304", density=1*kg/m3,2);
-  StainlessSteelA2_70AISI304->AddElement(fFe,fractionmass=0.80);
-  StainlessSteelA2_70AISI304->AddElement(fCr,fractionmass=0.20);
-  
-  CopperElectricEN2_0060 = new G4Material("CopperElectricEN2_0060", density=1*kg/m3,1);
-  CopperElectricEN2_0060->AddElement(fCu,fractionmass=1.);
-  
-  GlassBorosilicateN_BK7 = new G4Material("GlassBorosilicateN", density=1*kg/m3,2);
-  GlassBorosilicateN_BK7->AddElement(fSi,fractionmass=0.42);
-  GlassBorosilicateN_BK7->AddElement(fO,fractionmass=0.58);
-  
-  FR4Glass_Epoxysheet = new G4Material("FR4Glass", density=1*kg/m3,2);
-  FR4Glass_Epoxysheet->AddElement(fSi,fractionmass=0.40);
-  FR4Glass_Epoxysheet->AddElement(fO,fractionmass=0.60);
-  
-  BrassGeneric = new G4Material("BrassGeneric", density=1*kg/m3,2);
-  BrassGeneric->AddElement(fO,fractionmass=0.15);
-  BrassGeneric->AddElement(fO,fractionmass=0.85);
- 
-  SolarPanel = new G4Material("SolarPanel", density=1*kg/m3,2);
-  SolarPanel->AddElement(fGe,fractionmass=0.60);
-  SolarPanel->AddElement(fSi,fractionmass=0.40);
-  
-  // Mixture materials for the modules
-  
-    density = 1.392*g/cm3;
-    G4String name;
-    G4int ncomponents = 0;
-	ADCS_mat = new G4Material(name="ADCS_mat", density, ncomponents=3);
-	ADCS_mat->AddMaterial(Aluminum6061_T6, fractionmass=50.0*perCent);
-	ADCS_mat->AddMaterial(CopperElectricEN2_0060, fractionmass=25.*perCent);
-	ADCS_mat->AddMaterial(GlassBorosilicateN_BK7, fractionmass=25.*perCent);
-
-    density = 5500*kg/m3;	
-	ANT_mat = new G4Material(name="ANT_mat", density, ncomponents=2);
-	ANT_mat->AddMaterial(StainlessSteelA2_70AISI304, fractionmass=50.0*perCent);
-	ANT_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=50.0*perCent);
-	
-    density = 4048.*kg/m3;
-	AUX_mat = new G4Material(name="AUX_mat", density, ncomponents=1);
-	AUX_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=100.0*perCent);
-	
-    density = 1368.*kg/m3;
-	COM_mat = new G4Material(name="COM_mat", density, ncomponents=4);
-	COM_mat->AddMaterial(StainlessSteelA2_70AISI304, fractionmass=2*perCent);
-	COM_mat->AddMaterial(BrassGeneric, fractionmass=25*perCent);
-	COM_mat->AddMaterial(Aluminum7075_T73, fractionmass=40*perCent);
-	COM_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=33*perCent);
-	
-    density = 801.5*kg/m3;
-	EPS_mat = new G4Material(name="EPS_mat", density, ncomponents=2);
-	EPS_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=25*perCent);
-	EPS_mat->AddMaterial(Aluminum6061_T6, fractionmass=75*perCent);
-	
-    density = 2590*kg/m3;
-	OBC_mat = new G4Material(name="OBC_mat", density, ncomponents=1);
-	OBC_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=100*perCent);
-	
-    density = 2532.3*kg/m3;
-	STRU_mat = new G4Material(name="STRU_mat", density, ncomponents=1);
-	STRU_mat->AddMaterial(Aluminum6061_T6, fractionmass=100*perCent);
-	
-    density = 2794*kg/m3;
-	SP_mat = new G4Material(name="SP_mat", density, ncomponents=1);
-	SP_mat->AddMaterial(SolarPanel, fractionmass=100*perCent);
-	
-    density = 53*kg/m3;	
-	Payload_mat = new G4Material(name="Payload_mat", density, ncomponents=1);
-	Payload_mat->AddMaterial(Aluminum6061_T6, fractionmass=100*perCent);
-
   
   
   //***Material properties tables
@@ -393,107 +312,6 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
 	
 // CAD MESH
 
-G4ThreeVector offset;
-
-
-
-G4VSolid * cad_solid;
-G4LogicalVolume * cad_logical;
-G4VPhysicalVolume * cad_physical;
-offset = G4ThreeVector(-0.0415*m, -0.0480*m, -0.0538*m);
-CADMesh * mesh = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/ADCS.STL", mm, offset, false);
-cad_solid = mesh->TessellatedMesh();
-cad_logical = new G4LogicalVolume(cad_solid, ADCS_mat, "cad_logical", 0, 0, 0);
-
-
-
-G4VSolid * cad_solid_2;
-G4LogicalVolume * cad_logical_2;
-G4VPhysicalVolume * cad_physical_2;
-offset = G4ThreeVector(0.16421755*m, 0.11557045*m, -0.29047465*m);
-//offset = G4ThreeVector(0.16421755*m, -0.29047465*m, 0.11557045*m);
-//offset = G4ThreeVector( 0.11557045*m, -0.29047465*m, 0.16421755*m);
-//offset = G4ThreeVector(0.11557045*m, 0.16421755*m,  -0.29047465*m);
-//offset = G4ThreeVector(-0.29047465*m, 0.16421755*m, 0.11557045*m);
-//offset = G4ThreeVector(0*m, 0*m, 0*m);
-//offset = G4ThreeVector(-0.29047465*m, 0.11557045*m, 0.16421755*m );
-
-
-
-G4VSolid * cad_solid_3;
-G4LogicalVolume * cad_logical_3;
-G4VPhysicalVolume * cad_physical_3;
-offset = G4ThreeVector(-0.045000002*m, -0.039999999*m, -0.16*m);
-CADMesh * mesh3 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/AUX_backplane.STL", mm, offset, false);
-cad_solid_3 = mesh3->TessellatedMesh();
-cad_logical_3 = new G4LogicalVolume(cad_solid_3, AUX_mat, "cad_logical", 0, 0, 0);
-
-
-
-G4VSolid * cad_solid_4;
-G4LogicalVolume * cad_logical_4;
-G4VPhysicalVolume * cad_physical_4;
-offset = G4ThreeVector(-0.043400001*m, -0.0465005*m, -0.15052213*m);
-CADMesh * mesh4 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/COM.STL", mm, offset, false);
-cad_solid_4 = mesh4->TessellatedMesh();
-cad_logical_4 = new G4LogicalVolume(cad_solid_4, COM_mat, "cad_logical", 0, 0, 0);
-
-
-
-G4VSolid * cad_solid_5;
-G4LogicalVolume * cad_logical_5;
-G4VPhysicalVolume * cad_physical_5;
-//offset = G4ThreeVector(0,0,0);
-offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1270397*m);
-CADMesh * mesh5 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
-cad_solid_5 = mesh5->TessellatedMesh();
-cad_logical_5 = new G4LogicalVolume(cad_solid_5, EPS_mat, "cad_logical", 0, 0, 0);
-
-
-G4VSolid * cad_solid_6;
-G4LogicalVolume * cad_logical_6;
-G4VPhysicalVolume * cad_physical_6;
-offset = G4ThreeVector(-0.043400001*m, -0.046500001*m, -0.13851871*m);
-CADMesh * mesh6 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/OBC.STL", mm, offset, false);
-cad_solid_6 = mesh6->TessellatedMesh();
-cad_logical_6 = new G4LogicalVolume(cad_solid_6, OBC_mat, "cad_logical", 0, 0, 0);
-
-
-G4VSolid * cad_solid_7;
-G4LogicalVolume * cad_logical_7;
-G4VPhysicalVolume * cad_physical_7;
-//offset = G4ThreeVector(0,0,0);
-offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.034697*m);
-CADMesh * mesh7 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/Payload.STL", mm, offset, false);
-cad_solid_7 = mesh7->TessellatedMesh();
-cad_logical_7 = new G4LogicalVolume(cad_solid_7, Payload_mat, "cad_logical", 0, 0, 0);
-
-
-G4VSolid * cad_solid_8;
-G4LogicalVolume * cad_logical_8;
-G4VPhysicalVolume * cad_physical_8;
-offset = G4ThreeVector(-0.050999999*m, -0.21115001*m, -0.16904999*m);
-CADMesh * mesh8 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/SP.STL", mm, offset, false);
-cad_solid_8 = mesh8->TessellatedMesh();
-cad_logical_8 = new G4LogicalVolume(cad_solid_8, SP_mat, "cad_logical", 0, 0, 0);
-
-
-G4VSolid * cad_solid_9;
-G4LogicalVolume * cad_logical_9;
-G4VPhysicalVolume * cad_physical_9;
-offset = G4ThreeVector(-0.050000001*m, -0.050000001*m, -0.17025*m);
-//offset = G4ThreeVector(-0.050000001*m, -0.17025*m, -0.050000001*m);
-//offset = G4ThreeVector(-0.050000001*m, -0.17025*m, -0.050000001*m);
-//offset = G4ThreeVector(-0.050000001*m, -0.050000001*m, -0.17025*m);
-//offset = G4ThreeVector(-0.17025*m, -0.050000001*m, -0.050000001*m);
-//offset = G4ThreeVector(0*m, 0*m, 0*m);
-//offset = G4ThreeVector(-0.17025*m, -0.050000001*m, -0.050000001*m);
-CADMesh * mesh9 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/STRU.STL", mm, offset, false);
-cad_solid_9 = mesh9->TessellatedMesh();
-cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 0);
-
-
-
 
 /*	G4double density = 0.200*g/cm3;
     G4String name;
@@ -537,8 +355,7 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
 
 
   fExperimentalHall_log->SetVisAttributes(G4VisAttributes::Invisible);
-
-  //Hole in Pb sheets
+//Hole in Pb sheets
   G4double Pb_y = 1.*mm;
   Cylinder1 = NULL;
   Pb1_box_With_Hole = NULL;
@@ -552,100 +369,56 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
   G4double Offset_Pb2 = fScint_y/2+fD_mtl+1*mm+Pb_y/2;
   G4double Offset_Al = fScint_y/2+fD_mtl+1*mm+Pb_y+9.5*mm+Al_y/2;
 
+
 	//printf("%lf",fScint_y/2+fD_mtl+1*mm+Pb_y+9.5*mm+Al_y/2);
 	//exit(-1);
 
   Pb1_box = new G4Box("Pb1_box",fScint_x/2, fScint_z/2, Pb_y/2);
-  Pb1_box_With_Hole = new G4SubtractionSolid("Box-Cylinder", Pb1_box, Cylinder1);
+ // printf("%lf, %lf\n",fScint_x,fScint_z);  
+  Pb1_box_With_Hole = new G4SubtractionSolid("Box-Cylinder", Pb1_box, Cylinder1, 0, G4ThreeVector(0,0,0));
+  //
+ 
+	G4double OffsetX = 0*mm;
+	G4double OffsetY = 0*mm;
+  for(int h = 0; h < 3; h++)
+	{
+	for(int j = 0; j < 3; j++)
+		{
+		OffsetY = h*27.5*mm - 27.5*mm;
+		OffsetX = j*65*mm - 65*mm;
+		//printf("%d, %d\n",j,h);
+//		if(h != 0 || j != 0) 
+//			{
+			Pb1_box_With_Hole = new G4SubtractionSolid("Box-Cylinder", Pb1_box_With_Hole, Cylinder1, 0, G4ThreeVector(OffsetX,OffsetY,0));
+//			}
+		}
+	}
  
   G4RotationMatrix* rm_x = new G4RotationMatrix();
   rm_x->rotateX(-90*deg); 
   
   Pb1_log = new G4LogicalVolume(Pb1_box_With_Hole, Mat_Pb, "Pb1_log",0,0,0);
- // Pb1_phys = new G4PVPlacement(rm_x,G4ThreeVector(0,Offset_Pb1,0),
- //                             Pb1_log,"Pb1",fExperimentalHall_log,false,0);
+  Pb1_phys = new G4PVPlacement(rm_x,G4ThreeVector(0,Offset_Pb1,0),
+                              Pb1_log,"Pb1",fExperimentalHall_log,false,0);
 
   Pb2_box = new G4Box("Pb2_box",fScint_x/2, Pb_y/2, fScint_z/2);
 //  G4SubtractionSolid Pb2_box_With_Hole("Box-Cylinder", &Pb2_box, &Cylinder1);
  
   Pb2_log = new G4LogicalVolume(Pb1_box_With_Hole, Mat_Pb, "Pb1_log",0,0,0);
- // Pb2_phys = new G4PVPlacement(rm_x,G4ThreeVector(0,Offset_Pb2,0),
-  //                            Pb2_log,"Pb2",fExperimentalHall_log,false,0);
+  Pb2_phys = new G4PVPlacement(rm_x,G4ThreeVector(0,Offset_Pb2,0),
+                              Pb2_log,"Pb2",fExperimentalHall_log,false,0);
                                                             
   Al_box = new G4Box("Al_box",fScint_x/2, Al_y/2, fScint_z/2);
   Al_log = new G4LogicalVolume(Al_box, fAl, "Al_log",0,0,0);
- // Al_phys = new G4PVPlacement(0,G4ThreeVector(0,Offset_Al,0),
-  //                            Al_log,"Al1",fExperimentalHall_log,false,0);
-
-// Placing cad volumes into the world
- 	
- 	/* cad_physical_2 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_2,
-                                     "cad_physical_2", fExperimentalHall_log, false, 0);	*/
- 	
-  G4bool checkOverlaps = true;
+  Al_phys = new G4PVPlacement(0,G4ThreeVector(0,Offset_Al,0),
+                              Al_log,"Al1",fExperimentalHall_log,false,0);
 
 
-//G4PVPlacement G4PVPlacement(0, G4ThreeVector(), cad_logical,
-//                                    "cad_physical", fExperimentalHall_log, false, 0, checkOverlaps)::CheckOverlaps(10,1.,true, 1000);	
-//p1->CheckOverlaps(10,1.,true, 1000); 
-
-//AUX
-G4PVPlacement * p3 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_3,
-                                     "cad_physical_3", fExperimentalHall_log, false, 0, false);	
-p3->CheckOverlaps(10000,1,true, 1000);	
-
-//COM
-G4PVPlacement * p4 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_4,
-                                     "cad_physical_4", fExperimentalHall_log, false, 0, false); 
-p4->CheckOverlaps(10000,1,true, 1000);	
-
-//OBC
-G4PVPlacement * p6 =  new G4PVPlacement(0, G4ThreeVector(), cad_logical_6,
-                                     "cad_physical_6", fExperimentalHall_log, false, 0, false);
-p6->CheckOverlaps(10000,1,true, 1000);	
-
-//EPS	
-G4PVPlacement * p5 =  new G4PVPlacement(0, G4ThreeVector(), cad_logical_5,
-                                     "cad_physical_5", fExperimentalHall_log, false, 0, false);
-p5->CheckOverlaps(10000,1,true, 1000);	
-
-//ADC                
-G4PVPlacement * p1 = new G4PVPlacement(0, G4ThreeVector(), cad_logical,
-                                    "cad_physical", fExperimentalHall_log, false, 0, false);
-p1->CheckOverlaps(10000,1,true, 1000);	
-                                   // ::CheckOverlaps(10,1.,true, 1000);
-                               
-//Payload
-G4PVPlacement * p7 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_7,
-                                     "cad_physical_7", fExperimentalHall_log, false, 0, false);	
-p7->CheckOverlaps(10000,1,true, 1000);	
- 
-
-
- // SP
-
-G4PVPlacement * p8 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_8,
-                                     "cad_physical_8", fExperimentalHall_log, false, 0, false);
-
-p8->CheckOverlaps(10000,1,true, 1000);		
-
-
-//STRU
-G4PVPlacement * p9 = new G4PVPlacement(0, G4ThreeVector(), cad_logical_9,
-                                     "cad_physical_9", fExperimentalHall_log, false, 0, false); 
-p9->CheckOverlaps(1000,1,true, 1000);	
- 
-
-
- //Place the main volume
- G4RotationMatrix* rm_y1_main = new G4RotationMatrix();
- rm_y1_main->rotateY(-90*deg);
- rm_y1_main->rotateX(-90*deg);
  
  
   if(fMainVolumeOn){
     fMainVolume
-      = new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,-90),fExperimentalHall_log,false,0,this);
+      = new LXeMainVolume(0,G4ThreeVector(),fExperimentalHall_log,false,0,this);
   }
   
   
@@ -744,7 +517,7 @@ void LXeDetectorConstruction::ConstructSDandField() {
 		G4SDManager::GetSDMpointer()->AddNewDetector(aTrackerSD);
   // Setting aTrackerSD to all logical volumes with the same name 
   // of "Chamber_LV".
-		SetSensitiveDetector("cad_logical", aTrackerSD, true);
+	//	SetSensitiveDetector("cad_logical", aTrackerSD, true);
 		initialized = true;
 		/*
         // Prepare sensitive detectors

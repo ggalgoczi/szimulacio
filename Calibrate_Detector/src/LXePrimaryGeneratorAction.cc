@@ -63,30 +63,18 @@ void filePutContents2(const std::string& name, const std::string& content, bool 
 LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction) 
 : fRunAction(RunAction)
 {
+
   G4int n_particle = 1;
   fParticleGun = new G4ParticleGun(n_particle);
  
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
  
-  G4String Particle_Name = fRunAction->Part_Name;
-  //G4cout << Particle_Name << G4endl;
-  //G4cout << "Fura" << G4endl;
-  //exit(-1);
-  
-  G4ParticleTable::GetParticleTable()->DumpTable();
-
-
-  
   G4String particleName;
   fParticleGun->SetParticleDefinition(particleTable->
-                                     FindParticle(particleName=Particle_Name));
-  //Default energy,position,momentum
- // fParticleGun->SetParticleEnergy(fRunAction->Energy*keV);
-  //G4cout << "Energy " << fRunAction->Energy << G4endl;
-  fParticleGun->SetParticlePosition(G4ThreeVector(-300,0.0001,0));
+                                     FindParticle(particleName="gamma"));
   
- // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(10,10,0.));  
-    	     
+  fParticleGun->SetParticlePosition(G4ThreeVector(0.0 , 17.135000*mm, 0.0));
+  fParticleGun->SetParticleMomentumDirection(G4ThreeVector(0.,-1.,0.));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -104,53 +92,10 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
    // G4String Particle_Name = fRunAction->Part_Name;
 
   
-	if(Parallel_Beam == 1) {  
-			assert(Gun_On_Sphere == 0);	
-
-   //if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
-	if(fRunAction->Checked_Already==0){
-		
-		position2 = fParticleGun->GetParticlePosition();
-		fRunAction->Checked_Already=1;
-		}
-
-   //position2 = fParticleGun->GetParticlePosition();
-  // cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n"; 
-
-  G4double alpha = std::atan(position2[1]/position2[0]);
-  
-  
-  if( (position2[1] > 0 && position2[0] < 0) || (position2[1] < 0 && position2[0] < 0))
-	{
-	G4ThreeVector dir(std::cos(alpha),std::sin(alpha),0);
-	fParticleGun->SetParticleMomentumDirection(dir);  
-	}
-  else if((position2[1] < 0 && position2[0] > 0) || (position2[1] > 0 && position2[0] > 0))
-	{
-	G4ThreeVector dir(-std::cos(alpha),-std::sin(alpha),0);	
-	fParticleGun->SetParticleMomentumDirection(dir);  
-	}
-  else{
-	  G4cout << "Gun position set is invalid!!" << G4endl;
-	  G4cout << position2[0] << G4endl;
-	  G4cout << position2[1] << G4endl;
-	  exit(-1);}
-
-
-  G4double RandXY = -1 + 2*G4UniformRand();
-  G4double RandZ = -1+2*G4UniformRand();
-  fParticleGun->SetParticlePosition(G4ThreeVector(position2[0] + 300 * std::sin(alpha) * RandXY, position2[1] - 300 * std::cos(alpha) * RandXY, 300*RandZ)); 
-  //cout << "gun was" << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
-	}
-
-	if(Gun_On_Sphere == 1){
-		
-	assert(Parallel_Beam == 0);	
-		
  //opening angle
   //
   G4double alphaMin =  0;
-  G4double alphaMax = 180*deg;
+  G4double alphaMax = 55.6463391*deg;
   G4double fCosAlphaMin = std::cos(alphaMin);
   G4double fCosAlphaMax = std::cos(alphaMax);  
   
@@ -169,49 +114,15 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   //2. rotate dir   (rotateUz transforms uz to ur)
   //dir.rotateUz(ur);           
   
-  
-  // Place gun on a sphere
-  
-  
-  cosTheta = 2*G4UniformRand() - 1;
-  sinTheta = std::sqrt(1. - cosTheta*cosTheta);
-  phi      = 6.28318530718*G4UniformRand();
-  ur = G4ThreeVector(sinTheta*std::cos(phi),sinTheta*std::sin(phi),cosTheta);
-  cosAlpha = fCosAlphaMin - G4UniformRand()*(fCosAlphaMin - fCosAlphaMax); 
-  sinAlpha = std::sqrt(1. - cosAlpha*cosAlpha);
-  psi      = 6.28318530718*G4UniformRand();
-  
-  fParticleGun->SetParticlePosition(G4ThreeVector(sinAlpha*std::cos(psi)*33*cm,-cosAlpha*33*cm,sinAlpha*std::sin(psi)*33*cm));
-  fParticleGun->SetParticleMomentumDirection(dir);
-  
-  }
-
-
-
- double number = G4UniformRand();
+  //Default energy,position,momentum
+  //printf("%G4double\n",G4UniformRand());
+  double number = G4UniformRand();
  /* if (number < 0.53) {fParticleGun->SetParticleEnergy(59.54*keV); }// 35.9%
   else if(0.53 < number && number < 0.8) {fParticleGun->SetParticleEnergy(18*keV); }// 2,4%
   else {fParticleGun->SetParticleEnergy(14*keV);}// 2,4% */
+  fParticleGun->SetParticleEnergy(150*keV);
   
-
-	// All particle fluxes are in cm-2s-1 and MeV
-//  const double gammas_energy[4] = {'0.01', '0.03', '0.05', '0.08', '0.1', '0.3','0.5', '0.8', '1', '3', '5','10'};
-// const double gammas_propability[4] = {'1', '3', '7', '9'};
-
-//cout << "start\n";
-//for(int p = 0; p<30;p++){
-//	for(int r = 0; r < 3; r++){
-//		cout << Particle_Energy[p][r] << " ";
-//		}cout << "\n";}
-
-//exit(-1);
-
-  double Ener = fRunAction->EnSpectrum->DrawEnergy();
-  //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
-
-  fParticleGun->SetParticleEnergy(Ener*MeV);
-//	cout << energy << "\n";
-  //fParticleGun->SetParticleEnergy(energy*MeV);
-  //cout << "Energy was: " << energy << "\n"; // verbosehoz
+  fParticleGun->SetParticleMomentumDirection(dir);
   fParticleGun->GeneratePrimaryVertex(anEvent);
-}
+  
+  }
