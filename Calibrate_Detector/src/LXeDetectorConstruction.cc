@@ -63,7 +63,6 @@
 #include "G4UImanager.hh"
 #include "G4PhysicalConstants.hh"
 #include "G4SystemOfUnits.hh"
-#include "CADMesh.hh"
 #include <string>
 
 
@@ -213,7 +212,7 @@ const G4int lxenum = 8;
   G4double lxe_SCINT[lxenum] = { 0.02, 0.1, 0.3, 0.6, 0.9, 1.0, 0.7, 0.4 };
   G4double lxe_RIND[lxenum]  = { 1.59 , 1.57, 1.54, 1.54, 1.54, 1.54, 1.54, 1.54 };
  // G4double lxe_RIND[lxenum]  = { 2.1 , 2.04 , 1.96 ,1.9 ,1.83 ,1.79 ,1.7 ,1.68};
-  G4double lxe_ABSL[lxenum]  = { 40.*cm, 40.*cm, 40.*cm, 40.*cm, 40.*cm, 40.*cm, 40.*cm, 40.*cm};
+  G4double lxe_ABSL[lxenum]  = { 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm};
   fLXe_mt = new G4MaterialPropertiesTable();
   fLXe_mt->AddProperty("FASTCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
   fLXe_mt->AddProperty("SLOWCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
@@ -436,7 +435,7 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
     const G4int num = 2;
 
     G4double pp[num] = {2.0*eV, 7.5*eV};
-    G4double reflectivity[num] = {0.99, 0.99};
+    G4double reflectivity[num] = {0.994, 0.994};
     G4double efficiency[num] = {0.0, 0.0};
     
     G4MaterialPropertiesTable* scintESRProperty 
