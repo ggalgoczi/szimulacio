@@ -1,0 +1,276 @@
+ALBEDO NEUTRONS
+
+Here are spectra of albedo neutrons produced in interactions of cosmic 
+rays with Earth's atmosphere. These fluxes for altitude 500 km are 
+scaled fluxes for 100 km as described in ESA document ECSS-E-ST-10-04C, 
+Sec. I-5. There are fluxes for two cases, both for solar minimum, when 
+the cosmic ray flux reaching the atmosphere is higher:
+
+Setting 1: is for high cut-off rigidity 16.6 GV. This high cut-off 
+rigidity is basically near geomagnetic equator at south-east Asia at 100 km.
+
+Setting 2: is for cut-off rigidity 5 GV, which is at 100 km at 
+geographic latitudes around ~30-50 deg depending on longitude.
+
+The albedo neutrons are coming to the satellite from the atmosphere, so 
+from the solid angle of 3.931 sr for 500 km altitude.
+
+-------------------------------
+
+COsmic primary electorns and positrons
+
+Here are spectra of primary electrons and positrons in Cosmic Rays as 
+modelled by Mizuno et al. 2004, ApJ, 614, 1113. Again as for the cosmic 
+ray H and He I considered two settings:
+
+setting 1 - solar minimum, geomagnetic latitude = 0 deg
+setting 2 - solar minimum, geomagnetic latitude = orbit inclination (20 
+deg) + tilt of geomagnetic dipole axis to geographical axis (9.6 deg) = 
+29.6 deg
+
+The flux depends a lot on geomagnetic latitude. Gábor could you please 
+run your simulations for both settings for electrons as well as for 
+positrons? So we have better knowledge about the background rate.
+
+Same as for GCR the flux is not coming from 4 pi srad because of the 
+occultation by the Earth, but at altitude 500 km it is coming from 8.635 
+srad.
+
+Btw, I am thinking that we might also need to run the simulations for 
+spectra obtained for higher latitudes, just below the polar radiation 
+belts. Next I will look at secondary pacticles due to GCR.
+
+----------------------------------------
+
+Secondary electrons and positrons
+
+Here are spectra of secondary electrons and positrons which are created 
+when cosmic rays hit the atmosphere. Similarly to the secondary protons, 
+it is based on the AMS data at altitude 380 km (Mizuno et al. 2004). I 
+am not sure if this flux can be used also for altitude 500 km. Campana 
+et al. 2013 used this flux for their background estimations for LOFT at 
+altitude 550-600 km. There are two cases:
+
+setting 1 - near geomagnetic equator with geomagnetic latitude from 0.0 
+to 0.3 rad.
+setting 2 - geomagnetic latitude from 0.3 to 0.6 rad. This case covers 
+inclination up to 25 deg (34.4 deg (0.6 sr) - 9.6 deg (tilt of 
+geomagnetic dipole axis) = 25 deg).
+
+Gábor could you please run your simulations for both settings for 
+electrons as well as for positrons?
+
+The upward and downward flux is the same, therefore we can consider that 
+the flux is coming from 4 pi srad.
+
+------------------------------------------------------
+
+Secondary proton background
+
+Here are spectra of secondary protons which are created when cosmic rays 
+hit the atmosphere. It is based on the AMS data at altitude 380 km 
+(Mizuno et al. 2004). I am not sure if this flux can be used also for 
+altitude 500 km. Campana et al. 2013 used this flux for their background 
+estimations for LOFT at altitude 550-600 km. The flux is basically for 
+geomagnetic equator. It is for geomagnetic latitude < 0.2 rad. That 
+means orbital inclination < 21 deg. The upward and downward flux is the 
+same, therefore we can consider that the flux is coming from 4 pi srad.
+
+
+-------------------------------------------------------
+
+Cosmic ray spectra
+
+Here are spectra of H and He in Galactic Cosmic Rays (GCRs) obtained 
+from SPENVIS. It is for the same 3 orbits, 500 km, inclination 20 deg, 
+outside SAA, as I used in SPENVIS to obtain geomagnetically trapped 
+electrons. The setting of the model and magnetosphere is the same as 
+used by RADCUBE guys in their IAC paper. I obtained spectra for two 
+cases quiet and stormy magnetosphere. There is not a big difference. The 
+integral flux for low energies is about 5% higher for the stormy case 
+compared to the quite case. I guess we can do Geant4 simulations with 
+just the stormy magnetosphere flux. SPENVIS gives spectra also for 
+heavier elements up to Ni, but they are at least 1 or 2 orders of 
+magnitude lower than for He. For He the integral flux is about 10 times 
+lower than for H, so I think it is enough to consider only H and He. We 
+can simulate background count rate due to heavier elements in GCRs 
+later, if we find that it is necessary, after we do it for H and He.
+
+Note that the energies are in MeV per nucleon (MeV/n). The flux is not 
+coming from 4 pi srad because of occultation by the Earth. So similarly 
+to cosmic X-ray background the flux is coming to a satellite at altitude 
+500 km from 8.635 srad.
+
+
+More information on GCR. Attached are figures of the spectra of GCR H 
+and He particles compared to model by Tsunefumi Mizuno et al. 2004, ApJ, 
+614, 1113.  Mizuno et al. 2004 in their paper compare their model with 
+the measurements from BESS, AMS-01 and Fermi LAT balloon experiment. If 
+prof. Mizuno-san is in Hiroshima uni. when we are there we can discuss 
+GCR with him. Fukazawa-san is also a co-author, so we can also discuss 
+with him, too.
+
+Figures show cases for two different parameter setting of the model 
+Mizuno et al. 2004:
+setting 1 - solar minimum, geomagnetic latitude = 0 deg
+setting 2 - solar minimum, geomagnetic latitude = orbit inclination (20 
+deg) + tilt of geomagnetic dipole axis to geographical axis (9.6 deg) = 
+29.6 deg
+
+For H and He particles I assumed 1H (only protons) and 4He, because they 
+are dominant. According to Adriani et al. 2015 (arXiv1512.06535) the 
+flux ratio 2H/1H is 0.02-0.03 and 3He/4He is 0.1-0.2.
+
+I am now going to look at primary cosmic ray electrons and positrons.
+
+----------------------------------------------------------------
+
+Albedo gamma-rays
+
+Here are spectra of albedo gamma-rays which are produced in interaction 
+of cosmic rays (CRs) with Earth's atmosphere. The flux depends on the 
+altitude and the geomagnetic inclination, because the flux of CRs 
+hitting the atmosphere also depends on the geomagnetic latitude. The 
+measurement is from Swift/BAT in range from ~20keV to ~200keV and 
+described by Ajello et al. 2008, ApJ 689, 666, Fig. 16 and Sec. 6.1. 
+Swift has orbit 550 km and inclination 20.6 deg, so it is a good 
+reference for us for orbit outside the polar regions. The albedo 
+gamma-rays come from the atmosphere, so from the solid angle of 3.93 sr 
+for 500 km altitude. Gábor, could you please simulate the background 
+count rate for CAMELOT also for this albedo gamma-ray flux?
+
+----------------------------------------------------------------
+
+trapped electron spectra outside SAA and polar regions and cosmic X-ray background
+
+1)
+Attached are figures with trapped electrons outside polar regions and 
+SAA based on the same data which I sent you on Dec 26th. I just put 
+fluxes for 5th, 95th percentiles and mean value together in one figure 
+for better comparison.
+
+2)
+Attached are figures and data for Cosmic X-ray Background (CXB). They 
+are direct X-ray / Gamma-ray cosmic background and not including the 
+Earth's atmospheric albedo X-rays. I will look at albedo X-rays 
+tomorrow. The figures contain three empirical functions to describe CXB 
+reported in papers:
+
+Kasturirangan and Rao, ApSS 15, 161 (1972)
+Gehrels, NIMPA, 313, 513  (1992)
+Gruber et al., ApJ 520, 124 (1999)
+
+The integral fluxes are calculated by integration of the differential 
+fluxes from energy E up to 1 MeV for Kasturirangan and Rao 1972 and up 
+to 10 MeV for Gehrels 1992 and Gruber et al. 1999. For Kasturirangan and 
+Rao 1972 I integrated only up to 1 MeV because the fit they provide is 
+based on measurements and in the range only up to 1 MeV. The most up to 
+date publication is Gruber et al. 1999 and it is also referred by 
+Richardo Campana so we can use that one as input to Geant4. A data file 
+with the differential and integral spectrum for CXB spectrum described 
+by Gruber et al. 1999 is attached for the range from 1keV to 10 MeV.
+
+It is important to keep in mind that about 31% of the sky is occulted by 
+the Earth at 500 km altitude. Exactly it is 8.635 sr is unocculted by 
+the Earth. Therefore, when doing the simulations with Geant4 the 
+detector can be, for simplicity, illuminated isotropically by the CXB 
+spectrum scaled down by a factor of 8.635/4pi = 0.687 or it can be 
+illuminated from a solid angle of 8.635 sr, but not from 4pi sr. This 
+applies only for CXB and not for the geomagnetically trapped particles. 
+Gábor, I did not check, how exactly you feed the spectra into Geant4. 
+Maybe you multiply the differential spectra by 4pi sr and then input 
+them into Geant4. If that is the case then for CXB the spectrum should 
+be multiplied by 8.635 sr. Please keep it in mind and use these data 
+CXB_Gruber_et_al_1999.dat for input to Geant4. Could you please do 
+simulations with the CXB flux from this CXB_Gruber_et_al_1999.dat file? 
+You already did it with spectrum described by one power-law 
+(Kasturirangan and Rao 1972). However, spectrum by Gruber et al. 1999 is 
+more up to date and it can be more accurate.
+
+I am not sure which energy range we should use at the moment. Perhaps 
+Gábor can do simulation in the range of CXB from 1 keV to 1 MeV. Above 
+about 1-3 MeV the CXB flux is very low. We can try no shielding and then 
+several mm of Al of CFRP. But that probbaly after we understand all the 
+components of the background.
+
+I am going to check other components such as albedo X-rays, CR, 
+secondary particles due to CR, etc. and write you again.
+
+Cheers,
+Jakub
+
+If you haven't run Geant4 simulation with CXB by Gruber et al. 1999, 
+then please use fit by Ajello et al., ApJ, 689, 666 (2008), which I 
+attach here. This fit is based on more and newer data including Swift/BAT.
+
+
+-----------------------------------------------------------------------------------
+
+Protons at polar regions
+
+ checked if there are trapped protons in polar regions in the AP9 model 
+at 500 km. The result is that there are some trapped protons in the 
+south polar region, but the flux is very small compared to the trapped 
+electrons. See the attached compressed files and figures about the part 
+of one orbit at polar regions and the spectra of trapped electrons and 
+protons generated by SPENVIS. No protons at north polar region for the 
+part of the simulated orbit. The south polar region show relatively low 
+energy protons (E<1-2MeV) with the average integral flux (number of 
+particles with energy > E) obtained for 95th percentile that is 8 orders 
+of magnitude lower than flux of trapped electrons.
+
+----------------------------------------------------------------------
+
+
+trapped electron spectra outside SAA and polar regions
+
+
+I checked the AP9 and AE9 models of trapped protons and electrons, 
+respectively. The models only describe trapped particles, and not 
+primary cosmic rays, secondary particles etc., so I will send you the 
+spectra of other components of background, which we need to consider in 
+the simulations, in next emails. Trapped electrons largely contribute to 
+the total background so they should be included in the simulations.
+
+AP8 and AE8 models were static. Not varying with time and averaged over 
+long periods of time. AP9 and AE9 gives levels of fluxes at any 
+percentile from a distribution which contains statistical fluctuations 
+and variation due to varying space weather. Therefore fluxes in any 
+confidence interval can be obtained. That is advantage compared to AP8 
+and AE8. Also AP9 and AE9 are newer models based on more up to date 
+measurements and fluxes < 1 particle/(cm^2 s MeV) is provided.
+
+In AP9 and AE9 models there are several parameters which can be set. Now 
+I understand all of them:
+Model version - version of the model as it has been developed, 1.5 is 
+latest so I use that
+Model run mode - montecarlo contains both the variation due to 
+statistical fluctuations and space weather so I use that
+Aggregate - allows to select any percentile from the distrubution of the 
+simulated fluxes by Monte Carlo
+Percentile [%] - select the percentile of the distribution of simulated 
+fluxes
+Energies - setting of energy bins, I use default SPENVIS energy binning 
+(if need I can set finer energy binning)
+
+Attached are trapped electron fluxes for altitude 500 km, inclination 20 
+deg, spectra are averaged over three orbits outside SAA and polar 
+regions, so they are in the regions with low background and the 
+satellites will be observing GRBs. In the folder "orbits" there is 
+description and figures showing the orbits. Then there are three folders 
+with electron spectra for 5th percentile, mean value and 95th percentile.
+
+I recommend to do three simulations with G4 using these three electron 
+spectra, so we will have also the low boundary, mean value, and high 
+boundary for the simulated detector count rate.
+
+Proton spectra are zero for these orbits with low inclination as you can 
+see in the files.
+
+I suggest to do G4 simulations first without any shielding of the 
+scintillator at the beginning. After we include all components of the 
+background (X-ray, cosmic rays, trapped particles, etc.) then we can do 
+G4 simulations for different thickness of Al or CFRP to optimize the 
+shielding.
+
+I will write you more in emails over next several days.
