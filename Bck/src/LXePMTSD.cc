@@ -103,13 +103,14 @@ G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
   //User replica number 1 since photocathode is a daughter volume
   //to the pmt which was replicated
   G4int pmtNumber=
-    aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber();
+ //   aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1);
     
     //G4cout << pmtNumber << G4endl;
 
     
   G4VPhysicalVolume* physVol=
     aStep->GetPostStepPoint()->GetTouchable()->GetVolume();
+  //  aStep->GetPostStepPoint()->GetTouchable()->GetVolume(1);
 
   //Find the correct hit collection
   G4int n=fPMTHitCollection->entries();
