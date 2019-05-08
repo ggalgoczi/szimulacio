@@ -252,6 +252,20 @@ void LXeMainVolume::SurfaceProperties(){
   OpSphereSurface->SetMaterialPropertiesTable(spherePT);
  */
  
+ // Surface properties of glass inside the PMT
+ 
+  G4double glass_EFF[num]={0.,0.}; //Enables 'detection' of photons
+  G4double glass_ReR[num]={1.5,1.5};
+ // G4double photocath_ImR[num]={1.69,1.69};
+  G4MaterialPropertiesTable* glass_mt = new G4MaterialPropertiesTable();
+  glass_mt->AddProperty("EFFICIENCY",ephoton,glass_EFF,num);
+  glass_mt->AddProperty("REALRINDEX",ephoton,glass_ReR,num);
+ // glass_mt->AddProperty("IMAGINARYRINDEX",ephoton,photocath_ImR,num);
+  G4OpticalSurface* glass_opsurf=
+    new G4OpticalSurface("photocath_opsurf",glisur,polished,
+                         dielectric_metal);
+  glass_opsurf->SetMaterialPropertiesTable(glass_mt);
+ 
  
   //**Photocathode surface properties
   G4double photocath_EFF[num]={1.,1.}; //Enables 'detection' of photons
@@ -269,6 +283,9 @@ void LXeMainVolume::SurfaceProperties(){
   //**Create logical skin surfaces
   new G4LogicalSkinSurface("photocath_surf",fHousing_log,
                            OpScintHousingSurface);
+  //PMT optsurface
+ // new G4LogicalSkinSurface("glass_surf",fPmt_log, photocath_opsurf);                         
+                           
  // new G4LogicalSkinSurface("sphere_surface",fSphere_log,OpSphereSurface);
-  new G4LogicalSkinSurface("photocath_surf",fPmt_log,photocath_opsurf);
+  new G4LogicalSkinSurface("photocath_surf",fPhotocath_log,photocath_opsurf);
 }
