@@ -120,7 +120,7 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
  /* if (number < 0.53) {fParticleGun->SetParticleEnergy(59.54*keV); }// 35.9%
   else if(0.53 < number && number < 0.8) {fParticleGun->SetParticleEnergy(18*keV); }// 2,4%
   else {fParticleGun->SetParticleEnergy(14*keV);}// 2,4% */
-  fParticleGun->SetParticleEnergy(150*keV);
+  fParticleGun->SetParticleEnergy(60*keV);
   
   fParticleGun->SetParticleMomentumDirection(dir);
   fParticleGun->GeneratePrimaryVertex(anEvent);
