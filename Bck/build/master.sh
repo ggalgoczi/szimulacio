@@ -49,16 +49,9 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	#	python ./anal.py
 	#done
 
-		
-<<<<<<< HEAD
 	time ./LXe run.mac > "output_${particle}_${file}"
-	outputfilename="rate_${particle}_${file}_1_pmt.txt"
-	outputfilename2="rate_${particle}_${file}_2_pmt.txt"
-=======
-	time ./LXe run.mac > "output_${particle}_${thickness}_${file}"
-	outputfilename="rate_${particle}${file}_${thickness}_1_pmt.txt"
-	outputfilename2="rate_${particle}${file}_${thickness}_2_pmt.txt"
->>>>>>> 0b88becf0b1f3f5434a69ca760cbc550ccb12da6
+	outputfilename="rate_${particle}_${file}_${thickness}_1_pmt.txt"
+	outputfilename2="rate_${particle}_${file}_${thickness}_2_pmt.txt"
 	mv PMT1.dat $outputfilename
 	mv PMT2.dat $outputfilename2
 	#mv
