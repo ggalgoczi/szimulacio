@@ -51,8 +51,8 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 
 		
 	time ./LXe run.mac > "output_${particle}_${file}"
-	outputfilename="rate_${particle}${file}_1_pmt.txt"
-	outputfilename2="rate_${particle}${file}_2_pmt.txt"
+	outputfilename="rate_${particle}_${file}_1_pmt.txt"
+	outputfilename2="rate_${particle}_${file}_2_pmt.txt"
 	mv PMT1.dat $outputfilename
 	mv PMT2.dat $outputfilename2
 	#mv
