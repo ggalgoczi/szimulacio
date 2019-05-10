@@ -181,7 +181,7 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   sinAlpha = std::sqrt(1. - cosAlpha*cosAlpha);
   psi      = 6.28318530718*G4UniformRand();
   
-  fParticleGun->SetParticlePosition(G4ThreeVector(sinAlpha*std::cos(psi)*33*cm,-cosAlpha*33*cm,sinAlpha*std::sin(psi)*33*cm));
+  fParticleGun->SetParticlePosition(G4ThreeVector(sinAlpha*std::cos(psi)*330*cm,-cosAlpha*330*cm,sinAlpha*std::sin(psi)*330*cm));
   fParticleGun->SetParticleMomentumDirection(dir);
   
   }
