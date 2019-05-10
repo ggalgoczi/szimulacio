@@ -1,1 +1,0 @@
-/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt
