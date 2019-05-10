@@ -1,5 +1,5 @@
-1.5 100000000 e- /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/trapped_particles_outside_SAA_and_polar_regions_i20_alt500km_3_orbits/AE9_AP9_Monte_Carlo/100_runs_mean_default_SPENVIS_energies/spenvis_tri_electrons.txt
 1.5 10000000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Albedo_gamma_ray_Ajello_et_al_2008.dat
+1.5 100000000 e- /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/trapped_particles_outside_SAA_and_polar_regions_i20_alt500km_3_orbits/AE9_AP9_Monte_Carlo/100_runs_mean_default_SPENVIS_energies/spenvis_tri_electrons.txt
 1.5 1000000 proton /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cr_fluxes_sec_p.dat
 1.5 10000000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat
 1.5 10000000 proton /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_H.dat
