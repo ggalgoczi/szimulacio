@@ -83,7 +83,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
   //Default energy,position,momentum
  // fParticleGun->SetParticleEnergy(fRunAction->Energy*keV);
   //G4cout << "Energy " << fRunAction->Energy << G4endl;
-  fParticleGun->SetParticlePosition(G4ThreeVector(-300,0.0001,0));
+  fParticleGun->SetParticlePosition(G4ThreeVector(300,0.0001,0));
   
  // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(10,10,0.));  
     	     

@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/trapped_particles_outside_SAA_and_polar_regions_i20_alt500km_3_orbits/AE9_AP9_Monte_Carlo/100_runs_mean_default_SPENVIS_energies/spenvis_tri_electrons.txt
+/home/galgoczi/cubesat/cosmic_spectras/GRB_short_typical.dat
