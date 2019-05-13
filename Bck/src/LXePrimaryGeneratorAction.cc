@@ -208,8 +208,9 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 
   double Ener = fRunAction->EnSpectrum->DrawEnergy();
   //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
-
   fParticleGun->SetParticleEnergy(Ener*MeV);
+  
+  
 //	cout << energy << "\n";
   //fParticleGun->SetParticleEnergy(energy*MeV);
   //cout << "Energy was: " << energy << "\n"; // verbosehoz
