@@ -86,7 +86,6 @@ void LXeEventAction::BeginOfEventAction(const G4Event* anEvent){
 
 void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
 	
-	
   LXeUserEventInformation* eventInformation
     =(LXeUserEventInformation*)anEvent->GetUserInformation();
  
@@ -94,6 +93,9 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
  
   G4int n_trajectories = 0;
   if (trajectoryContainer) n_trajectories = trajectoryContainer->entries();
+
+if (trajectoryContainer)
+  G4cout << "traj cont " << n_trajectories << G4endl;
 
   // extract the trajectories and draw them
   if (G4VVisManager::GetConcreteInstance()){

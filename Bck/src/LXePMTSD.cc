@@ -96,6 +96,14 @@ G4bool LXePMTSD::ProcessHits(G4Step* ,G4TouchableHistory* ){
 G4bool LXePMTSD::ProcessHits_constStep(const G4Step* aStep,
                                        G4TouchableHistory* ){
 
+/*
+G4cout << aStep->GetTrack()->GetParentID() << G4endl;
+  if(aStep->GetTrack()->GetParentID()==-1)
+  {
+   G4cout << aStep->GetTrack()->GetVertexKineticEnergy() << G4endl;
+   }
+*/
+
   //need to know if this is an optical photon
   if(aStep->GetTrack()->GetDefinition()
      != G4OpticalPhoton::OpticalPhotonDefinition()) return false;
