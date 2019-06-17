@@ -1,0 +1,14 @@
+==> rate_e-cr_setting1_fluxes_e.dat_1_pmt.txt <==
+6 10000000 0.000100389
+==> rate_e-cr_setting1_fluxes_sec_e.dat_1_pmt.txt <==
+6 10000000 0.00938208
+==> rate_e+cr_setting2_fluxes_pos.dat_1_pmt.txt <==
+18 10000 2.68560e-05
+==> rate_e-cr_setting2_fluxes_sec_e.dat_1_pmt.txt <==
+6 10000000 0.00867185
+==> rate_e+cr_setting2_fluxes_sec_pos.dat_1_pmt.txt <==
+18 10000 0.0143953 
+==> rate_gammaAjello_et_al_2008.dat_1_pmt.txt <==
+3352 10000000 18.9799
+==> rate_neutroncr_qarm_setting2_fluxes_albedo_n.dat_1_pmt.txt <==
+5923 100000000 0.155107

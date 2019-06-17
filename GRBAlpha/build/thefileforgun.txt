@@ -1,0 +1,1 @@
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Albedo_gamma_ray_Ajello_et_al_2008.dat
