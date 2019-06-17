@@ -46,6 +46,8 @@
 LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
  : fLXeDetector(detector)
 {
+	
+	/*
   //Setup a command directory for detector controls with guidance
   fDetectorDir = new G4UIdirectory("/LXe/detector/");
   fDetectorDir->SetGuidance("Detector geometry control");
@@ -62,6 +64,8 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
   fDimensionsCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   fDimensionsCmd->SetToBeBroadcasted(false);
 
+*/
+
   /*fTranslationsCmd =
     new G4UIcmdWith3VectorAndUnit("/LXe/detector/translation",this);
   fTranslationsCmd->SetGuidance("Set the translation vector of the .");
@@ -70,7 +74,7 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
   fTranslationsCmd->AvailableForStates(G4State_PreInit,G4State_Idle);
   fTranslationsCmd->SetToBeBroadcasted(false); */
 
-
+/*
   fHousingThicknessCmd = new G4UIcmdWithADoubleAndUnit
     ("/LXe/detector/housingThickness",this);
   fHousingThicknessCmd->SetGuidance("Set the thickness of the housing.");
@@ -141,6 +145,7 @@ LXeDetectorMessenger::LXeDetectorMessenger(LXeDetectorConstruction* detector)
   fWLSScintYield->SetGuidance("Specified in photons/MeV");
   fWLSScintYield->AvailableForStates(G4State_PreInit,G4State_Idle);
   fWLSScintYield->SetToBeBroadcasted(false);
+*/
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -168,6 +173,7 @@ LXeDetectorMessenger::~LXeDetectorMessenger()
 
 void LXeDetectorMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
 {
+	/*
   if( command == fDimensionsCmd ){
     fLXeDetector->SetDimensions(fDimensionsCmd->GetNew3VectorValue(newValue));
   }
@@ -210,4 +216,6 @@ void LXeDetectorMessenger::SetNewValue(G4UIcommand* command, G4String newValue)
   else if (command == fWLSScintYield){
     fLXeDetector->SetWLSScintYield(fWLSScintYield->GetNewDoubleValue(newValue));
   }
+  
+  */
 }

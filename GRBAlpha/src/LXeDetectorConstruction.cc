@@ -58,23 +58,23 @@
 #include "G4Colour.hh"
 #include "G4VisAttributes.hh"
 
-#include "G4GDMLParser.hh"
+//#include "G4GDMLParser.hh"
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SimGRBCubeDetectorConstruction::SimGRBCubeDetectorConstruction()
+LXeDetectorConstruction::LXeDetectorConstruction()
 : G4VUserDetectorConstruction(),
   fScoringVolume(0)
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SimGRBCubeDetectorConstruction::~SimGRBCubeDetectorConstruction()
+LXeDetectorConstruction::~LXeDetectorConstruction()
 { }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-G4VPhysicalVolume* SimGRBCubeDetectorConstruction::Construct()
+G4VPhysicalVolume* LXeDetectorConstruction::Construct()
 {
 	// Define materials //
 
