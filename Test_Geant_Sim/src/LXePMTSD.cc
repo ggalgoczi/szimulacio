@@ -71,6 +71,8 @@ void LXePMTSD::SetPmtPositions(const std::vector<G4ThreeVector>& positions)
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 void LXePMTSD::Initialize(G4HCofThisEvent* hitsCE){
+	
+	G4cout << "ooo boii" << G4endl;
   fPMTHitCollection = new LXePMTHitsCollection
                       (SensitiveDetectorName,collectionName[0]);
   //Store collection with event and keep ID

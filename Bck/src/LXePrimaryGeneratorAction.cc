@@ -93,6 +93,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
 
 LXePrimaryGeneratorAction::~LXePrimaryGeneratorAction(){
     delete fParticleGun;
+    //delete EnSpectrum;
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

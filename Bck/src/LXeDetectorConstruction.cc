@@ -641,13 +641,24 @@ p9->CheckOverlaps(1000,1,true, 1000);
  G4RotationMatrix* rm_y1_main = new G4RotationMatrix();
  rm_y1_main->rotateY(-90*deg);
  rm_y1_main->rotateX(-90*deg);
- 
+
+ G4RotationMatrix* rm_y2_main = new G4RotationMatrix();
+ rm_y2_main->rotateY(-90*deg);
+ //rm_y2_main->rotateX(-90*deg); 
  
   if(fMainVolumeOn){
     fMainVolume
       = new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,-90),fExperimentalHall_log,false,0,this);
+
+    //fMainVolume2 = 
+      new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,90),fExperimentalHall_log,false,0,this);
+
+      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,-90),fExperimentalHall_log,false,0,this);
+
+      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,90),fExperimentalHall_log,false,0,this);
+
+
   }
-  
   
  // Surface properties for the scint vs ESR
     G4OpticalSurface* scintESR = new G4OpticalSurface("Housing");

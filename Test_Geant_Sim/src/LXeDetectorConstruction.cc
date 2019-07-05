@@ -366,15 +366,19 @@ void LXeDetectorConstruction::ConstructSDandField() {
 
   // PMT SD
 
+
   if (!fPmt_SD.Get()) {
     //Created here so it exists as pmts are being placed
     G4cout << "Construction /LXeDet/pmtSD" << G4endl;
+
     LXePMTSD* pmt_SD = new LXePMTSD("/LXeDet/pmtSD");
+
     fPmt_SD.Put(pmt_SD);
 
     pmt_SD->InitPMTs((fNx*fNy+fNx*fNz+fNy*fNz)*2); //let pmtSD know # of pmts
     pmt_SD->SetPmtPositions(fMainVolume->GetPmtPositions());
   }
+   
 
   //sensitive detector is not actually on the photocathode.
   //processHits gets done manually by the stepping action.
