@@ -96,8 +96,13 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   //the "photocathode" is a metal slab at the back of the glass that
   //is only a very rough approximation of the real thing since it only
   //absorbs or detects the photons based on the efficiency set below
-   fPhotocath = new G4Box("photocath_tube",size_pmt/2.,size_pmt/2.,height_pmt/2.);
 
+
+// this includes the lead  
+	G4double lead_thickness = 2 * mm;
+   
+   fPhotocath = new G4Box("photocath_tube",size_pmt/2. + lead_thickness,size_pmt/2. + lead_thickness, height_pmt/2. + lead_thickness); 
+ 
  
   fPmt_log = new G4LogicalVolume(fPmt,G4Material::GetMaterial("Glass"),
                                  "pmt_log");
@@ -114,6 +119,12 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   new G4PVPlacement(0,G4ThreeVector(0,0,-height_pmt/2),
                                     fPhotocath_log,"photocath",
                                     fPmt_log,false,0,checkOverlaps);
+ 
+ // add the lead that shields the mppc
+ 
+    fLeadShielding = new G4Box("lead",size_pmt/2. + lead_thickness,size_pmt/2. + lead_thickness, height_pmt/2. + lead_thickness); 
+ 
+ 
  
   //***********Arrange pmts around the outside of housing**********
 
