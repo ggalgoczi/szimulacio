@@ -11,6 +11,8 @@
 
 #/run/verbose 1
 
+/run/initialize
+
 # Set General Particle Source options
 /gps/pos/type Surface
 /gps/pos/shape Sphere
