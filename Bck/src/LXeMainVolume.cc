@@ -200,7 +200,8 @@ G4UnionSolid* fHousing_box4 = new G4UnionSolid("housingbox3",
 
   G4double dx = fScint_x/fNx;
   G4double dy = fScint_y/fNy;
-  G4double dz = 37.5;
+  //G4double dz = 37.5;
+  G4double dz = 18.75;
  
   G4double x,y,z;
   G4double xmin = -fScint_x/2. - dx/2.;
@@ -287,6 +288,7 @@ std::vector<G4VPhysicalVolume*> PMT_Phys_Vec;
     b=bmin;
     for(G4int i=1;i<=nb;i++){
       b+=db;
+      G4cout << "a b " << a << " " << b << G4endl;
       PMT_Phys_Vec.push_back(new G4PVPlacement(rot,G4ThreeVector(x,y,z),pmt_log,"pmt",
                         fHousing_log,false,k,checkOverlaps));
       fPmtPositions.push_back(G4ThreeVector(x,y,z));
