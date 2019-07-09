@@ -97,8 +97,10 @@ class LXeMainVolume : public G4PVPlacement
 
     G4Box* lead_extension1;
     G4Box* lead_extension2;
+    G4Box* lead_extension3;
     G4Box* fLeadShielding1;
     G4Box* fLeadShielding2;
+    G4Box* fLeadShielding3;
     G4Box* fHousing_box_buffer;
     // Logical volumes
     //
@@ -106,6 +108,7 @@ class LXeMainVolume : public G4PVPlacement
     G4LogicalVolume* fHousing_log;
     G4LogicalVolume* fLeadShielding_log1;
     G4LogicalVolume* fLeadShielding_log2;
+    G4LogicalVolume* fLeadShielding_log3;
 
     G4LogicalVolume* fPmt_log;
     G4LogicalVolume* fPhotocath_log;
