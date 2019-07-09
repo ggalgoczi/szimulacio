@@ -36,6 +36,7 @@
 #include "G4ThreeVector.hh"
 #include <vector>
 #include "LXeRunAction.hh"
+class G4GeneralParticleSource;
 
 
 class G4ParticleGun;
@@ -55,6 +56,9 @@ class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   private:
     LXeRunAction*  fRunAction;
     G4ParticleGun* fParticleGun;
+    
+   G4GeneralParticleSource*    particleGun;
+
 };
 
 #endif
