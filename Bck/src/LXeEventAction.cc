@@ -95,7 +95,7 @@ void LXeEventAction::EndOfEventAction(const G4Event* anEvent){
   if (trajectoryContainer) n_trajectories = trajectoryContainer->entries();
 
 if (trajectoryContainer)
-  G4cout << "traj cont " << n_trajectories << G4endl;
+  //G4cout << "traj cont " << n_trajectories << G4endl;
 
   // extract the trajectories and draw them
   if (G4VVisManager::GetConcreteInstance()){
