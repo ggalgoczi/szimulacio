@@ -76,12 +76,15 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
  
    lead_extension1 = new G4Box("scint_box", lead_thickness/2 ,fScint_y/2. + fD_mtl, fScint_z/2. + fD_mtl); // on the back of the housing 
    lead_extension2 = new G4Box("scint_box", lead_thickness, lead_thickness / 2., fScint_z/2. + fD_mtl ); // parallel to the housing
+   lead_extension3 = new G4Box("scint_box", lead_thickness, fScint_y/2. + fD_mtl + lead_thickness, lead_thickness/2 ); // parallel to the housing
    
  // adding an extension for the lead shielding
  
    G4ThreeVector OffsetLead1 = G4ThreeVector(-fScint_x/2. - fD_mtl -  lead_thickness/2,0, 0 );
    G4ThreeVector OffsetLead2 = G4ThreeVector(-fScint_x/2. - fD_mtl, fScint_y/2. + fD_mtl +  lead_thickness/2 , 0);
    G4ThreeVector OffsetLead3 = G4ThreeVector(-fScint_x/2. - fD_mtl, -fScint_y/2. - fD_mtl -  lead_thickness/2, 0);
+   G4ThreeVector OffsetLead4 = G4ThreeVector(- fScint_x/2. - fD_mtl, 0, fScint_z/2. + fD_mtl + lead_thickness/2);
+   G4ThreeVector OffsetLead5 = G4ThreeVector(- fScint_x/2. - fD_mtl, 0, - fScint_z/2. - fD_mtl - lead_thickness/2);
  
    G4UnionSolid* fHousing_box1 = new G4UnionSolid("housingbox2",
                                               fHousing_box_buffer,
@@ -94,12 +97,26 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                                               lead_extension2,
                                               0,
                                               OffsetLead2);
-
-  G4UnionSolid* fHousing_box = new G4UnionSolid("housingbox3",
+                                              
+  G4UnionSolid* fHousing_box3 = new G4UnionSolid("housingbox3",
                                               fHousing_box2,
                                               lead_extension2,
                                               0,
                                               OffsetLead3
+                                              );
+
+G4UnionSolid* fHousing_box4 = new G4UnionSolid("housingbox3",
+                                              fHousing_box3,
+                                              lead_extension3,
+                                              0,
+                                              OffsetLead4
+                                              );	
+                                                                                         
+  G4UnionSolid* fHousing_box = new G4UnionSolid("housingbox3",
+                                              fHousing_box4,
+                                              lead_extension3,
+                                              0,
+                                              OffsetLead5
                                               );																					
   																				
  
@@ -167,10 +184,17 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                                        
   fLeadShielding_log2 = new G4LogicalVolume(lead_extension2,
                                        G4Material::GetMaterial("Pb"),
-                                       "lead_log2");                                     
+                                       "lead_log2");       
+                                       
+   fLeadShielding_log3 = new G4LogicalVolume(lead_extension3,
+                                       G4Material::GetMaterial("Pb"),
+                                       "lead_log2");       
+                                                                                                          
   new G4PVPlacement(0,OffsetLead1, fLeadShielding_log1,"pbshielding1", fHousing_log,false,0,checkOverlaps);
   new G4PVPlacement(0,OffsetLead2, fLeadShielding_log2,"pbshielding2", fHousing_log,false,0,checkOverlaps);
   new G4PVPlacement(0,OffsetLead3, fLeadShielding_log2,"pbshielding3", fHousing_log,false,0,checkOverlaps);
+  new G4PVPlacement(0,OffsetLead4, fLeadShielding_log3,"pbshielding4", fHousing_log,false,0,checkOverlaps);
+  new G4PVPlacement(0,OffsetLead5, fLeadShielding_log3,"pbshielding5", fHousing_log,false,0,checkOverlaps);
 
   //***********Arrange pmts around the outside of housing**********
 
