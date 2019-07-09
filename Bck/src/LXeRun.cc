@@ -53,11 +53,15 @@ void LXeRun::RecordEvent(const G4Event* evt)
       G4SDManager* SDman = G4SDManager::GetSDMpointer();
         G4String sdName="/LXeDet/pmtSD";
         LXePMTSD* pmtSD = (LXePMTSD*)SDman->FindSensitiveDetector(sdName);     
+      
+      //G4cout << "Ahh " << G4endl;
 
-		assert(pmtSD->Return_NO_of_Photons()<1001);
+		//assert(pmtSD->Return_NO_of_Photons()<1001);
 		
 		if(pmtSD->Return_NO_of_Photons1() != -1 && pmtSD->Return_NO_of_Photons2() != -1){
 		PMTHitNo1[pmtSD->Return_NO_of_Photons1()]++;
+		G4cout << "Ahh " << G4endl;
+
 		PMTHitNo2[pmtSD->Return_NO_of_Photons2()]++;
 		if(int(evt->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy() + 0.5) < 10){
 			PrimaryEnergies[int(evt->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy()*1000 + 0.5)]++;

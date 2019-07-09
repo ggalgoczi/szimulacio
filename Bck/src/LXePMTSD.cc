@@ -174,8 +174,14 @@ G4int LXePMTSD::Return_NO_of_Photons1(){
   
 //  assert(fPMTHitCollection->entries() == 2);
   LXePMTHit* hit=NULL;
+  
+
+G4cout << "Ahh " << G4endl;
+G4cout << fPMTHitCollection->entries() << G4endl;
+  
   hit=(*fPMTHitCollection)[0];
   NoOfPhot += hit->GetPhotonCount();  
+  
   return NoOfPhot;
 }
 
