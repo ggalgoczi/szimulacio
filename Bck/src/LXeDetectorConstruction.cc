@@ -650,12 +650,14 @@ p9->CheckOverlaps(1000,1,true, 1000);
     fMainVolume
       = new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,-90),fExperimentalHall_log,false,0,this);
 
-    //fMainVolume2 = 
-      new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,90),fExperimentalHall_log,false,0,this);
+    fMainVolume2 = 
+      new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,90),fExperimentalHall_log,false,1,this);
 
-      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,-90),fExperimentalHall_log,false,0,this);
+    fMainVolume3 = 
+      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,-90),fExperimentalHall_log,false,2,this);
 
-      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,90),fExperimentalHall_log,false,0,this);
+    fMainVolume4 = 
+      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,90),fExperimentalHall_log,false,3,this);
 
 
   }
@@ -666,6 +668,18 @@ p9->CheckOverlaps(1000,1,true, 1000);
     new G4LogicalBorderSurface("HousingSurface", fMainVolume->GetPhysScint(),
                                fMainVolume,
                                scintESR);
+
+    new G4LogicalBorderSurface("HousingSurface2", fMainVolume2->GetPhysScint(),
+                               fMainVolume2,
+                               scintESR);
+
+    new G4LogicalBorderSurface("HousingSurface3", fMainVolume3->GetPhysScint(),
+                               fMainVolume3,
+                               scintESR);
+    
+    new G4LogicalBorderSurface("HousingSurface4", fMainVolume4->GetPhysScint(),
+                               fMainVolume4,
+                               scintESR);                           
  
     scintESR->SetType(dielectric_metal);
     scintESR->SetFinish(polished);

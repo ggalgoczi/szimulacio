@@ -184,6 +184,9 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
     G4double fSlab_z;
 
     LXeMainVolume* fMainVolume;
+    LXeMainVolume* fMainVolume2;
+    LXeMainVolume* fMainVolume3;
+    LXeMainVolume* fMainVolume4;
 
     G4MaterialPropertiesTable* fLXe_mt;
     G4MaterialPropertiesTable* fMPTPStyrene;

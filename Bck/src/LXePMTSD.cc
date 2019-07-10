@@ -112,6 +112,8 @@ G4cout << aStep->GetTrack()->GetParentID() << G4endl;
   //to the pmt which was replicated -> Not true anymore as pmt became the volume
   G4int pmtNumber=
   aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber();
+  G4int scintNumber=
+  aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1); 
  //   aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1);
     
     //G4cout << pmtNumber << G4endl;
@@ -125,7 +127,12 @@ G4cout << aStep->GetTrack()->GetParentID() << G4endl;
   G4int n=fPMTHitCollection->entries();
   LXePMTHit* hit=NULL;
   for(G4int i=0;i<n;i++){
-    if((*fPMTHitCollection)[i]->GetPMTNumber()==pmtNumber){
+    if(
+		(*fPMTHitCollection)[i]->GetPMTNumber()==pmtNumber 
+		&& 
+		(*fPMTHitCollection)[i]->GetScintCpyNo()==scintNumber
+		)
+		{
       hit=(*fPMTHitCollection)[i];
       break;
     }
@@ -134,6 +141,7 @@ G4cout << aStep->GetTrack()->GetParentID() << G4endl;
   if(hit==NULL){//this pmt wasnt previously hit in this event
     hit = new LXePMTHit(); //so create new hit
     hit->SetPMTNumber(pmtNumber);
+    hit->SetScintCpyNo(scintNumber);
     hit->SetPMTPhysVol(physVol);
     fPMTHitCollection->insert(hit);
     hit->SetPMTPos((*fPMTPositionsX)[pmtNumber],(*fPMTPositionsY)[pmtNumber],
