@@ -158,15 +158,35 @@ G4int LXePMTSD::Return_NO_of_Photons(){
 	
 	G4int NoOfPhot = 0;
   //need to know if this is an optical photon
- 
+ //G4cout << fPMTHitCollection->entries() << G4endl;
 
+if(
+fPMTHitCollection->entries() !=0 
+){
+	
+	
+//G4cout <<	fPMTHitCollection->entries()<< G4endl;
+
+//  LXePMTHit* hit2 = NULL;
+//hit2 = (*fPMTHitCollection)[0];
+//G4cout << "Start" << G4endl;
+//G4cout << (*fPMTHitCollection)[0]->GetPMTNumber() << " " << (*fPMTHitCollection)[0]->GetScintCpyNo()  << G4endl;
+}
   //Return number of photons
   G4int n=fPMTHitCollection->entries();
   LXePMTHit* hit=NULL;
   for(G4int i=0;i<n;i++){
+	  
       hit=(*fPMTHitCollection)[i];
+     // G4cout << (*fPMTHitCollection)[i]->GetPMTNumber() << " " << (*fPMTHitCollection)[i]->GetScintCpyNo() << " " << hit->GetPhotonCount()  << G4endl;
+
+      
       NoOfPhot += hit->GetPhotonCount();
   }
+  
+//  if(NoOfPhot != 0) G4cout << NoOfPhot << G4endl;
+  
+  
   return NoOfPhot;
 }
 
@@ -177,15 +197,11 @@ G4int LXePMTSD::Return_NO_of_Photons1(){
 
 
 	if(fPMTHitCollection->entries() == 0) return -1;
-	if(fPMTHitCollection->entries() != 2) return -1;
+	//if(fPMTHitCollection->entries() != 2) return -1;
 
   
 //  assert(fPMTHitCollection->entries() == 2);
   LXePMTHit* hit=NULL;
-  
-
-G4cout << "Ahh " << G4endl;
-G4cout << fPMTHitCollection->entries() << G4endl;
   
   hit=(*fPMTHitCollection)[0];
   NoOfPhot += hit->GetPhotonCount();  
@@ -198,7 +214,7 @@ G4int LXePMTSD::Return_NO_of_Photons2(){
 	G4int NoOfPhot = 0;
   //Return number of photons for PMT NO 1
 	if(fPMTHitCollection->entries() == 0) return -1;
-	if(fPMTHitCollection->entries() != 2) return -1;
+//	if(fPMTHitCollection->entries() != 2) return -1;
   
   //assert(fPMTHitCollection->entries() == 2);
   LXePMTHit* hit=NULL;
