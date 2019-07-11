@@ -868,7 +868,7 @@ while (std::getline(file, infileline))
 
   fNx = 1;
   fNy = 1;
-  fNz = 4;
+  fNz = 8;
 
   fOuterRadius_pmt = 0.1*cm;
 
