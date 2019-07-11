@@ -29,9 +29,8 @@ void filePutContents3(std::string& name, std::vector<G4int> & content, bool appe
 
 LXeRun::LXeRun()
 {
-for (G4int i=0; i<1000; i++) {
-   PMTHitNo2.push_back(0);
-   PMTHitNo1.push_back(0);
+for (G4int i=0; i<1001; i++) {
+   PMTHitNo.push_back(0);
   }
   
 for (G4int i=0; i<10000; i++) {
@@ -54,22 +53,22 @@ void LXeRun::RecordEvent(const G4Event* evt)
         G4String sdName="/LXeDet/pmtSD";
         LXePMTSD* pmtSD = (LXePMTSD*)SDman->FindSensitiveDetector(sdName);     
       
-      //G4cout << "Ahh " << G4endl;
+     // if(pmtSD->Return_NO_of_Photons() !=0)
+     // G4cout << pmtSD->Return_NO_of_Photons() << G4endl;
 
 		//assert(pmtSD->Return_NO_of_Photons()<1001);
 		
-		if(pmtSD->Return_NO_of_Photons1() != -1 && pmtSD->Return_NO_of_Photons2() != -1){
-		PMTHitNo1[pmtSD->Return_NO_of_Photons1()]++;
-		G4cout << "Ahh " << G4endl;
+		if(pmtSD->Return_NO_of_Photons() != -1){
+		PMTHitNo[pmtSD->Return_NO_of_Photons()]++;
+		//G4cout << "Ahh " << G4endl;
 
-		PMTHitNo2[pmtSD->Return_NO_of_Photons2()]++;
 		if(int(evt->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy() + 0.5) < 10){
 			PrimaryEnergies[int(evt->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy()*1000 + 0.5)]++;
 			}
 		}
 		else{
-		PMTHitNo1[0]++;
-		PMTHitNo2[0]++;
+		PMTHitNo[0]++;
+	//	PMTHitNo2[0]++;
 			}	
 					
 }
@@ -78,15 +77,11 @@ void LXeRun::Merge(const G4Run* aRun)
 {
   const LXeRun* localRun = static_cast<const LXeRun*>(aRun);
  // fEDep += localRun->fEDep;
- 
 
 
   for (G4int i=0; i<1001; i++) {
-    PMTHitNo2[i] += localRun->PMTHitNo2[i];
-  }
-
-  for (G4int i=0; i<1001; i++) {
-    PMTHitNo1[i] += localRun->PMTHitNo1[i];
+	  G4cout << localRun->PMTHitNo[i] << G4endl;
+    PMTHitNo[i] += localRun->PMTHitNo[i];
   }
 
  for (G4int i=0; i<10000; i++) {
@@ -101,19 +96,20 @@ void LXeRun::Merge(const G4Run* aRun)
 void LXeRun::Calculations()
 {
   G4int NbOfEvents = GetNumberOfEvent();
-  G4cout << "No of Ev: " << NbOfEvents << G4endl;
+ // G4cout << "No of Ev: " << NbOfEvents << G4endl;
 
 
 // Printing out Photon Hit numbers
 
-std::string FNAME1 = "PMT1.dat";
-std::string FNAME2 = "PMT2.dat";
+std::string FNAME1 = "PMT.dat";
+//std::string FNAME2 = "PMT2.dat";
 std::string FNAME3 = "PrimaryEnergiesCreatedSignal.dat";
-filePutContents3(FNAME1, PMTHitNo1, false);
-filePutContents3(FNAME2, PMTHitNo2, false);
-filePutContents3(FNAME3, PrimaryEnergies, false);
+filePutContents3(FNAME1, PMTHitNo, false);
+//filePutContents3(FNAME2, PMTHitNo2, false);
+//filePutContents3(FNAME3, PrimaryEnergies, false);
 
-	for(std::vector<G4int>::iterator it = PMTHitNo2.begin(); it != PMTHitNo2.end() ; it++){
-		//G4cout << "No2 osszeg " << *it << G4endl;
+	for(std::vector<G4int>::iterator it = PMTHitNo.begin(); it != PMTHitNo.end() ; it++){
+	//	G4cout << it-PMTHitNo.begin() << G4endl;
+	//	G4cout << "No2 osszeg " << *it << G4endl;
 		}	
 }
