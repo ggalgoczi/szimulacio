@@ -22,32 +22,21 @@
 /gps/ang/maxtheta    0.5729 deg
 
 # Input spectrum
-/gps/particle proton 
+/gps/particle e- 
 /gps/ene/type Arb
 /gps/hist/type arb
 
-/gps/hist/point 4000.00 7.76430e-08
-/gps/hist/point 4500.00 2.42750e-07
-/gps/hist/point 5000.00 4.24920e-07
-/gps/hist/point 5500.00 6.14550e-07
-/gps/hist/point 6300.00 8.30920e-07
-/gps/hist/point 7100.00 9.73590e-07
-/gps/hist/point 8000.00 1.07460e-06
-/gps/hist/point 9000.00 1.04720e-06
-/gps/hist/point 10000.0 9.57420e-07
-/gps/hist/point 11000.0 8.52850e-07
-/gps/hist/point 12000.0 7.45340e-07
-/gps/hist/point 14000.0 5.67520e-07
-/gps/hist/point 16000.0 4.33990e-07
-/gps/hist/point 18000.0 3.35040e-07
-/gps/hist/point 20000.0 2.63010e-07
-/gps/hist/point 30000.0 9.68000e-08
-/gps/hist/point 40000.0 4.60610e-08
-/gps/hist/point 50000.0 2.56070e-08
-/gps/hist/point 60000.0 1.57800e-08
-/gps/hist/point 70000.0 1.04590e-08
-/gps/hist/point 80000.0 7.31510e-09
-/gps/hist/point 90000.0 5.33200e-09
-/gps/hist/point 100000. 4.01580e-09
+/gps/hist/point 4.0000E-02 1.2941E+01
+/gps/hist/point 1.0000E-01 9.7690E+00
+/gps/hist/point 2.0000E-01 5.0661E+00
+/gps/hist/point 3.0000E-01 2.3301E+00
+/gps/hist/point 4.0000E-01 1.2082E+00
+/gps/hist/point 5.0000E-01 5.1025E-01
+/gps/hist/point 6.0000E-01 1.9908E-01
+/gps/hist/point 7.0000E-01 8.8117E-02
+/gps/hist/point 8.0000E-01 2.7311E-02
+/gps/hist/point 1.0000E+00 5.9373E-03
+/gps/hist/point 1.2500E+00 7.2321E-04
+/gps/hist/point 1.5000E+00 1.8080E-04
 /gps/hist/inter Log
-/run/beamOn 10000
+/run/beamOn 100000000
