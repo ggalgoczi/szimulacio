@@ -42,19 +42,24 @@
 #include "G4EmLivermorePhysics.hh"
 #include "G4SystemOfUnits.hh"
 
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 LXePhysicsList::LXePhysicsList() : G4VModularPhysicsList()
 {
   // default cut value  (1.0mm)
- // defaultCutValue = 1.0*mm;
+  //defaultCutValue = 10000.0*mm;
   defaultCutValue = 0.00001*mm;
 
   // General Physics
   RegisterPhysics( new LXeGeneralPhysics("general") );
 
   // EM Physics
-  RegisterPhysics( new LXeEMPhysics("standard EM"));
+  RegisterPhysics( new LXeEMPhysics("standard EM")); 
+ //     RegisterPhysics(new G4EmLivermorePhysics());
+
+  
+  
 
   // Muon Physics
   RegisterPhysics( new LXeMuonPhysics("muon"));
@@ -101,6 +106,10 @@ void LXePhysicsList::SetCuts(){
   //  " G4VUserPhysicsList::SetCutsWithDefault" method sets
   //   the default cut value for all particle types
   SetCutsWithDefault();
+    SetCutValue(0.0001*mm, "gamma");
+DumpCutValuesTable();
+
+//exit(-1);
   
   
 }

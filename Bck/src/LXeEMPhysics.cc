@@ -122,13 +122,9 @@ void LXeEMPhysics::ConstructProcess()
   fPositronBremsStrahlung = new G4eBremsstrahlung();
   fAnnihilation = new G4eplusAnnihilation();
 
-// proton physics
-	G4hIonisation* hIonisation = new G4hIonisation();
-	hIonisation->SetStepFunction(0.2, 50*um);
-
-G4ProcessManager* pManager = 0;
-
   // Gamma Physics
+  G4ProcessManager* pManager = 0;
+
   pManager = G4Gamma::Gamma()->GetProcessManager();
   pManager->AddDiscreteProcess(fPhotoEffect);
   pManager->AddDiscreteProcess(fComptonEffect);
@@ -157,7 +153,13 @@ G4ProcessManager* pManager = 0;
  theElasticProcess->RegisterMe(theElasticModel);
   
 
+
+
 // proton physics
+pManager = 0;
+
+  G4hIonisation* hIonisation = new G4hIonisation();
+  hIonisation->SetStepFunction(0.2, 50*um);
   pManager = G4Proton::Proton()->GetProcessManager();
   pManager->AddProcess(hIonisation,               -1, 2, 2);  
   pManager->AddProcess(new G4hMultipleScattering, -1, 1, 1);
@@ -209,9 +211,10 @@ pManager->AddDiscreteProcess(protinelProc);
   //
   emOptions.SetMinEnergy(10*eV);        //default 100 eV   
   emOptions.SetMaxEnergy(10*TeV);        //default 100 TeV 
-  emOptions.SetDEDXBinning(12*10);        //default=12*7
-  emOptions.SetLambdaBinning(12*10);        //default=12*7
-  
+  emOptions.SetDEDXBinning(500);        //default=12*7
+  emOptions.SetLambdaBinning(500);        //default=12*7
+   emOptions.SetBuildCSDARange(true);
+  emOptions.SetDEDXBinningForCSDARange(10*10);
   //multiple coulomb scattering
   //
   emOptions.SetMscStepLimitation(fUseSafety);  //default
