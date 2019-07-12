@@ -2,11 +2,11 @@
 
 rm "PMT.dat"
 
-inputfilename="test.txt"
+inputfilename="master.txt"
 
 
 if [ "$#" -eq 0 ]; then
-    inputfilename="test.txt"
+    inputfilename="master.txt"
 fi
 
 if [ "$#" -eq 1 ]; then
@@ -68,7 +68,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 /gps/ang/maxtheta    0.5729 deg
 
 # Input spectrum
-/gps/particle proton
+/gps/particle '$particle' 
 /gps/ene/type Arb
 /gps/hist/type arb
 ' >> "run.mac"
@@ -85,7 +85,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	#	python ./anal.py
 	#done
 
-	time ./LXe run.mac > "output_${particle}_${file}"
+	time ./LXe run.mac # > "output_${particle}_${file}"
 	outputfilename="rate_${particle}_${file}_${thickness}_pmt.txt"
 	mv PMT.dat $outputfilename
 	#mv
