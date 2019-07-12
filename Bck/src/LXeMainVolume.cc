@@ -59,7 +59,8 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 {
   CopyValues();
 
-	G4double lead_thickness = 0.00001 * mm;
+	G4double lead_thickness = 2.5 * mm;
+//	G4double lead_overlap = 2.5 * mm;
 
 
   G4double housing_x=fScint_x+2.*fD_mtl;
@@ -291,7 +292,7 @@ std::vector<G4VPhysicalVolume*> PMT_Phys_Vec;
     for(G4int i=1;i<=nb;i++){
 		if(i == 5) b+=db;
       b+=db;
-      G4cout << "a b " << a << " " << b << G4endl;
+     // G4cout << "a b " << a << " " << b << G4endl;
       PMT_Phys_Vec.push_back(new G4PVPlacement(rot,G4ThreeVector(x,y,z),pmt_log,"pmt",
                         fHousing_log,false,k,checkOverlaps));
       fPmtPositions.push_back(G4ThreeVector(x,y,z));
