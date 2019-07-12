@@ -59,7 +59,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 {
   CopyValues();
 
-	G4double lead_thickness = 2. * mm;
+	G4double lead_thickness = 0.00001 * mm;
 
 
   G4double housing_x=fScint_x+2.*fD_mtl;
