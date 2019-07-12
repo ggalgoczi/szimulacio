@@ -204,12 +204,12 @@ G4UnionSolid* fHousing_box4 = new G4UnionSolid("housingbox3",
   //G4double dz = 37.5;
   //G4double dz = 9.375;
  
- G4double dz = 8;
+ G4double dz = 5.9;
  
   G4double x,y,z;
   G4double xmin = -fScint_x/2. - dx/2.;
   G4double ymin = -fScint_y/2. - dy/2.;
-  G4double zmin =  -fScint_z/2. - (dz-2)/2;
+  G4double zmin = -dz*5; // needs to be 5 not 4 because in place pmts the index starts with 1
   G4int k=0;
  
 /*  z = -fScint_z/2. - height_pmt;      //front
