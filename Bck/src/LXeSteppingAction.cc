@@ -90,6 +90,30 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
                                               GetCurrentEvent()->GetEventID();
 
   G4Track* theTrack = theStep->GetTrack();
+  
+  
+  if(theTrack->GetParentID()!=0){
+	if( theTrack->GetCreatorProcess()->GetProcessName() != "Scintillation"    && theTrack->GetCreatorProcess()->GetProcessName() != "Cerenkov"
+	&& theTrack->GetCreatorProcess()->GetProcessName() != "hIoni" 
+	&& theTrack->GetCreatorProcess()->GetProcessName() != "eIoni"
+	&& theTrack->GetCreatorProcess()->GetProcessName() != "eBrem"
+	&& theTrack->GetCreatorProcess()->GetProcessName() != "phot"
+	&& theTrack->GetCreatorProcess()->GetProcessName() != "hPairProd"
+	//&&  theTrack->GetCreatorProcess()->GetProcessName() != "hadElastic"
+	&&  theTrack->GetCreatorProcess()->GetProcessName() != "compt"
+	
+	
+	
+	
+	)
+	  
+{	 
+	
+	if(theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() != "e-") {
+  G4cout << theTrack->GetCreatorProcess()->GetProcessName() << G4endl;
+  G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;}
+  
+  }}
    //G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;
         
         
