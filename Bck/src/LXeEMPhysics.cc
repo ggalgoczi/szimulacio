@@ -220,8 +220,8 @@ pManager->AddDiscreteProcess(protinelProc);
   //
   G4VAtomDeexcitation* de = new G4UAtomicDeexcitation();
   de->SetFluo(true);
-  de->SetAuger(false);   
-  de->SetPIXE(false);  
+  de->SetAuger(true);   
+  de->SetPIXE(true);  
   G4LossTableManager::Instance()->SetAtomDeexcitation(de);
 
 }
