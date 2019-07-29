@@ -938,4 +938,4 @@
 
 
 /gps/hist/inter Log
-/run/beamOn 1000000
+/run/beamOn 10000
