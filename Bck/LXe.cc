@@ -67,7 +67,7 @@ int main(int argc, char** argv)
 	
 #ifdef G4MULTITHREADED
   G4MTRunManager * runManager = new G4MTRunManager;
-  runManager->SetNumberOfThreads(1);
+  runManager->SetNumberOfThreads(2);
 #else
   G4RunManager * runManager = new G4RunManager;
 #endif
@@ -77,7 +77,7 @@ int main(int argc, char** argv)
   G4int seed = time( NULL ); 
   G4cout << seed << G4endl;
   G4cout << seed << G4endl;
-exit(-1);  
+//exit(-1);  
   G4Random::setTheSeed( seed );
 
 
