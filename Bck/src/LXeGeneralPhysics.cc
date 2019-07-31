@@ -72,6 +72,8 @@ void LXeGeneralPhysics::ConstructProcess()
   fDecayProcess = new G4Decay();
 
   // Add Decay Process
+    auto aParticleIterator=GetParticleIterator();
+
   aParticleIterator->reset();
   while( (*aParticleIterator)() ){
     G4ParticleDefinition* particle = aParticleIterator->value();
