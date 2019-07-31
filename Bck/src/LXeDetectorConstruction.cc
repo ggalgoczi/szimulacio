@@ -736,6 +736,8 @@ void LXeDetectorConstruction::ConstructSDandField() {
 
     pmt_SD->InitPMTs((fNx*fNy+fNx*fNz+fNy*fNz)*2); //let pmtSD know # of pmts
     pmt_SD->SetPmtPositions(fMainVolume->GetPmtPositions());
+        G4SDManager::GetSDMpointer()->AddNewDetector(pmt_SD);
+
   }
 
   //sensitive detector is not actually on the photocathode.
@@ -754,6 +756,8 @@ void LXeDetectorConstruction::ConstructSDandField() {
     G4cout << "Construction /LXeDet/scintSD" << G4endl;
     LXeScintSD* scint_SD = new LXeScintSD("/LXeDet/scintSD");
     fScint_SD.Put(scint_SD);
+    G4SDManager::GetSDMpointer()->AddNewDetector(scint_SD);
+
   }
   SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
   
