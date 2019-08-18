@@ -122,6 +122,9 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
 
 	G4Tubs* Cylinder1;
 	G4SubtractionSolid* Pb1_box_With_Hole;
+	
+	G4Box* Batt_Phys;
+    G4LogicalVolume* Batt_Log;
 
     //Materials & Elements
     G4Material* fLXe;
@@ -140,10 +143,13 @@ class LXeDetectorConstruction : public G4VUserDetectorConstruction
     G4Element* fSi;
     G4Element* fGe;
     G4Element* fFe;
+    G4Element* fLi;
+    G4Element* fP;
     G4Element* fH;
     G4Material* fGlass;
     G4Element* Al_El;
     G4Material* Mat_Pb;
+    G4Material* Mat_Bat;
     G4Material* fPstyrene;
     G4Material* fPMMA;
     G4Material* fPethylene1;
