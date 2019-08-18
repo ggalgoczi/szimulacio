@@ -1,0 +1,43 @@
+\begin{thebibliography}{1}
+
+\bibitem{Lamport94}
+L.~Lamport, {\em LaTeX: A Document Preparation System}, Addison-Wesley,
+  Reading, Mass.  (1994).
+
+\bibitem{Goossens97}
+M.~Goossens, F.~Mittelbach, J.~Braams, {\em et~al.}, {\em The LaTeX Companion,
+  2nd ed.}, Addison-Wesley, Reading, Mass.  (2004).
+
+\bibitem{Alred03}
+G.~J. Alred, C.~T. Brusaw, and W.~E. Oliu, {\em Handbook of Technical Writing,
+  7th ed.}, St. Martin's, New York  (2003).
+
+\bibitem{Perelman97}
+L.~C. Perelman, J.~Paradis, and E.~Barrett, {\em Mayfield Handbook of Technical
+  and Scientific Writing}, Mountain View, Mayfield  (1997).
+\newblock \linkable{http://mit.imoat.net/handbook/}.
+
+\bibitem{Metropolis53}
+N.~Metropolis, A.~W. Rosenbluth, M.~N. Rosenbluth, {\em et~al.}, ``Equations of
+  state calculations by fast computing machine,'' {\em J. Chem. Phys.} {\bf
+  21}, 1087--1091  (1953).
+
+\bibitem{Harris06}
+A.~Harris, J.~J. {Sluss, Jr.}, H.~H. Refai, {\em et~al.}, ``Free-space optical
+  wavelength diversity scheme for fog migration in a
+  ground-to-unmanned-aerial-vehicle communications link,'' {\em Opt. Eng.} {\bf
+  45}, 086001  (2006).
+\newblock [doi:10.1117/1.2338565].
+
+\bibitem{Gull89a}
+S.~F. Gull, ``Developments in maximum-entropy data analysis,'' in {\em Maximum
+  Entropy and Bayesian Methods},  J.~Skilling, Ed., 53--71, Kluwer Academic,
+  Dordrecht  (1989).
+
+\bibitem{Hanson93c}
+K.~M. Hanson, ``Introduction to {B}ayesian image analysis,'' in {\em Medical
+  Imaging:\ Image Processing},  M.~H. Loew, Ed., {\em Proc. SPIE} {\bf 1898},
+  716--731  (1993).
+\newblock [doi:10.1117/12.154577].
+
+\end{thebibliography}
