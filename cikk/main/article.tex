@@ -5,7 +5,7 @@
 \usepackage{setspace}
 \usepackage{tocloft}
 
-\title{SPIE journal papers: sample manuscript showing style and formatting specifications}
+\title{A Geant4 based framework for the simulation of background of high-energy satellites caused by activation, cosmic, trapped and albedo particles}
 
 \author[a,*]{G\'abor Galg\'oczi}
 \author[a]{Second Author}
@@ -34,6 +34,41 @@ Abstract
 
 \section{Introduction}
 \label{sect:intro}  % \label{} allows reference to this section
+
+Particle background for satellites, mostly the ones aiming to investigate the high-energy Universe is considerable constraint. It is especially important for satellites without an anti-coincidence shield, e.g. for the more and more CubeSats which have recently been applied for scientific missions. 
+
+A Geant4 based simulation framework is presented in this paper, which aims to aid future missions by providing a flexible, easy to use tool to quantify particle background. The simulation consists of two modules. The first determines the proton induced activation of the satellite. The second module quantifies the background signal which is induced by particles being present on the given orbit (e.g. cosmic, trapped and albedo particles). 
+
+In order to keep the implementation of the simulation of a new satellite straightforward, the CAD model of the satellite is automatically read in by CADMesh []. The background of the HERMES and the CAMELOT CubeSat missions were determined. The input particle spectra (cosmic, trapped and albedo particles) for the background simulation of these missions were computed [JAKUB NE] by SPENVIS and several other models [mizuno].
+
+The validation of the simulation framework was carried out by a set of dedicated experiments and simulations [Kento, the measurement of activation].
+
+\section{The implementation of the framework} 
+ 
+For the CAMELOT mission light propagataion was also included in the simulation in order to include the repsonse the scintillator as realisticly as possible. 
+ 
+\subsection{Activation} 
+
+\subsection{Proton-induced activation} 
+
+
+
+[odaka paper], semi-analytic. This paper analytic. It was proven to work comparision with data taken from..
+ 
+ 
+\newpage 
+ 
+The differential flux is normed. Afterwards the normed integral flux is calculated for each bin. From 0 energy to the given energy.
+
+$$ \int{1}{2} $$
+ 
+A random number between zero and one is drawn. The bin that has
+
+Check particle energy distirbution
+
+cxb high energy
+
+mizuno raised concern about cxb and gamma albedo??
  
 \section{Methodology} 
  
