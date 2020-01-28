@@ -119,7 +119,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 
   G4double dx = fScint_x/fNx;
   G4double dy = fScint_y/fNy;
-  G4double dz = 37.5;
+  G4double dz = 75;
  
   G4double x,y,z;
   G4double xmin = -fScint_x/2. - dx/2.;
@@ -139,6 +139,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   rm_y1->rotateY(-90*deg);
   x = -fScint_x/2. - height_pmt;      //left
   PMT_Phys_Vector = PlacePMTs(fPmt_log,rm_y1,y,z,dy,dz,ymin,zmin,fNy,fNz,x,y,z,k);
+
 
  /* G4RotationMatrix* rm_y2 = new G4RotationMatrix();
   rm_y2->rotateY(90*deg);
