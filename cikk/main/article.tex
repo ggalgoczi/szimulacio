@@ -44,17 +44,54 @@ In order to keep the implementation of the simulation of a new satellite straigh
 The validation of the simulation framework was carried out by a set of dedicated experiments and simulations [Kento, the measurement of activation].
 
 \section{The implementation of the framework} 
- 
-For the CAMELOT mission light propagataion was also included in the simulation in order to include the repsonse the scintillator as realisticly as possible. 
- 
-\subsection{Activation} 
-
-\subsection{Proton-induced activation} 
 
 
+For scientific satellites measuring in the high energy regime, irradiation background in space is a huge concern as it limits the capabilities of such missions. The first module of our framework determines the background induced by any type of irradiation in question. This aids missions as it makes it possible to investigate different material and geometrical options. E.g. in the case of the CAMELOT mission a thicker shielding case was chosen over the original one as the simulations showed that it would yield in a higher signal-to-noise. The main part of the framework is implemented in C++, including the Geant4 simulation which performs the calculations. 
 
-[odaka paper], semi-analytic. This paper analytic. It was proven to work comparision with data taken from..
- 
+In order to utilize this module, the framework requires the user to input the CAD model of the satellite by including each volume as an individual file with STP format. The other input of the simulation is the spectrum of each irradiation spectra.
+
+\subsection{Background}
+
+\subsubsection{Validation of the light propagation in the scintillators of the CAMELOT satellite}
+
+
+For the CAMELOT mission light propagataion was also included in the simulation in order to include the response the scintillator as realisticly as possible. 
+
+\subsubsection{Validation of the deposited dose in the SDD of the HERMES satellite}
+
+The framework was utilized to quantify the background of the HERMES () [] and the CAMELOT () [] missions in order to aid the design of the satellites to reach the higherst signal-to-noise ratio and to prove that they will meet the mission requirements. Also in the case of CAMELOT the expected signal-to-noise ratio of a typical short gamma-ray-burst was calculated by with respect to activation and the irradiation background.
+
+
+for camelot and hermes the background albedo seocndary...
+
+
+
+cosmic, trapped and albedo particles
+
+
+\subsection{Proton induced activation} 
+
+
+Satellites in Low Earth Orbit REFERENCE HERE ABOUt fermi background increasing by 100\% in a single year...
+
+challenge for cubesats which have a very low material budget in which shielding to decrease the deposited irradiation of the satellite is not possible unlike in large satellites.
+
+[odaka paper]. This paper analytic. It was proven to work in comparision with data taken from.. in this work we utilizied an analytical aproach instead of a semi-analytical one.
+
+Boost library..
+
+\subsubsection{Validation of proton induced activation} 
+
+The simulation of activation was validated by 
+
+
+\section{The application of the framework to the CAMELOT and HERMES satellites}
+
+\subsection{Background from cosmic, trapped and albedo particles for the CAMELOT satellites} 
+
+
+
+\subsection{Background from proton induced activation for the HERMES and CAMELOT satellites}  
  
 \newpage 
  
