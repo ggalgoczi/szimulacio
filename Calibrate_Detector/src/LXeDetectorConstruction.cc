@@ -471,6 +471,9 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
 
 void LXeDetectorConstruction::ConstructSDandField() {
 
+    auto sdman = G4SDManager::GetSDMpointer(); // Mandatory since Geant v. 4.10.03
+
+
   if (!fMainVolume) return;
 
   // PMT SD
@@ -493,6 +496,7 @@ void LXeDetectorConstruction::ConstructSDandField() {
   //It does however need to be attached to something or else it doesnt get
   //reset at the begining of events
 
+  sdman->AddNewDetector(fPmt_SD.Get()); // Mandatory since Geant v. 4.10.03
   SetSensitiveDetector(fMainVolume->GetLogPMT(), fPmt_SD.Get());
 
   // Scint SD
@@ -502,6 +506,8 @@ void LXeDetectorConstruction::ConstructSDandField() {
     LXeScintSD* scint_SD = new LXeScintSD("/LXeDet/scintSD");
     fScint_SD.Put(scint_SD);
   }
+  
+  sdman->AddNewDetector( fScint_SD.Get()); // Mandatory since Geant v. 4.10.03
   SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
   
     // Actually WORKING Sensitive detectors
