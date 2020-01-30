@@ -16,7 +16,7 @@ for filename in os.listdir("./"):
         simulated_spectrum = np.loadtxt(filename)
         simulated_spectrum=np.delete(simulated_spectrum, 0) # to remove the first element containing zeros
 
-        filterdData = gaussian_filter1d( simulated_spectrum, 5 )
+        filterdData = gaussian_filter1d( simulated_spectrum, 15 )
 
         #myFilteredData = np.convolve( myData, myGaussian, mode='same' )
         fig = plt.figure(1)
