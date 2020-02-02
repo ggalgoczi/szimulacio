@@ -91,7 +91,7 @@ LXeDetectorConstruction::LXeDetectorConstruction()
   CarbonFiber = Aluminum6061_T6 = Aluminum7075_T73 = StainlessSteelA2_70AISI304 = CopperElectricEN2_0060 = GlassBorosilicateN_BK7 = FR4Glass_Epoxysheet = BrassGeneric = SolarPanel = NULL;
   ADCS_mat = ANT_mat = COM_mat = EPS_mat = OBC_mat = STRU_mat = SP_mat = Payload_mat = NULL;
 
-  fN = Al_El = fPb = fO = fC = fH = fMg = fCu = fZn = fCr = fSi = fGe = fFe = NULL;
+  fN = Al_El = fPb = fLi = fP = fO = fC = fH = fMg = fCu = fZn = fCr = fSi = fGe = fFe = NULL;
 
   SetDefaults();
 
@@ -153,6 +153,11 @@ void LXeDetectorConstruction::DefineMaterials(){
  //Pb
  // fPb = new G4Element("Pb",z=82.,a=207.2*g/mole,density=11.35*g/cm3);
   fPb = new G4Element("Pb","Pb",z=82.,a=207.2*g/mole);
+
+  fP = new G4Element("P","P",z=15.,a=30.9*g/mole);
+  fLi = new G4Element("Li","Li",z=3.,a=7.*g/mole);
+
+
  //Aluminum
  // fAl = new G4Element("Al",z=13.,a=26.98*g/mole,density=2.7*g/cm3);
   Al_El = new G4Element("Al_el","Al_el",z=13.,a=26.98*g/mole);
@@ -246,7 +251,7 @@ void LXeDetectorConstruction::DefineMaterials(){
 	ADCS_mat->AddMaterial(Aluminum6061_T6, fractionmass=50.0*perCent);
 	ADCS_mat->AddMaterial(CopperElectricEN2_0060, fractionmass=25.*perCent);
 	ADCS_mat->AddMaterial(GlassBorosilicateN_BK7, fractionmass=25.*perCent);
-
+	
     density = 5500*kg/m3;	
 	ANT_mat = new G4Material(name="ANT_mat", density, ncomponents=2);
 	ANT_mat->AddMaterial(StainlessSteelA2_70AISI304, fractionmass=50.0*perCent);
@@ -263,7 +268,7 @@ void LXeDetectorConstruction::DefineMaterials(){
 	COM_mat->AddMaterial(Aluminum7075_T73, fractionmass=40*perCent);
 	COM_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=33*perCent);
 	
-    density = 801.5*kg/m3;
+    density = 970.5*kg/m3; // increased as the batteries were not taken into account
 	EPS_mat = new G4Material(name="EPS_mat", density, ncomponents=2);
 	EPS_mat->AddMaterial(FR4Glass_Epoxysheet, fractionmass=25*perCent);
 	EPS_mat->AddMaterial(Aluminum6061_T6, fractionmass=75*perCent);
@@ -284,6 +289,16 @@ void LXeDetectorConstruction::DefineMaterials(){
 	Payload_mat = new G4Material(name="Payload_mat", density, ncomponents=1);
 	Payload_mat->AddMaterial(Aluminum6061_T6, fractionmass=100*perCent);
 
+  // Battery
+    density = 3.629*g/cm3; // 60 g / 0.9 cm 6.5 cm
+	Mat_Bat = new G4Material(name="Battery_mat", density, ncomponents=4); // lifepo4
+	Mat_Bat->AddElement(fFe, fractionmass=35.4*perCent);   // 55.8
+	Mat_Bat->AddElement(fLi, fractionmass=4.5*perCent); // 7
+	Mat_Bat->AddElement(fP, fractionmass=19.6*perCent); // 30.9
+	Mat_Bat->AddElement(fO, fractionmass=40.5*perCent); // 16*4
+	
+	// 157.7
+
   
   
   //***Material properties tables
@@ -294,7 +309,7 @@ const G4int lxenum = 8;
   G4double lxe_SCINT[lxenum] = { 0.02, 0.1, 0.3, 0.6, 0.9, 1.0, 0.7, 0.4 };
   G4double lxe_RIND[lxenum]  = { 1.59 , 1.57, 1.54, 1.54, 1.54, 1.54, 1.54, 1.54 };
  // G4double lxe_RIND[lxenum]  = { 2.1 , 2.04 , 1.96 ,1.9 ,1.83 ,1.79 ,1.7 ,1.68};
-  G4double lxe_ABSL[lxenum]  = { 46.*cm, 46.*cm, 46.*cm, 46.*cm, 46.*cm, 46.*cm, 46.*cm, 46.*cm};
+  G4double lxe_ABSL[lxenum]  = { 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm};
   fLXe_mt = new G4MaterialPropertiesTable();
   fLXe_mt->AddProperty("FASTCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
   fLXe_mt->AddProperty("SLOWCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
@@ -447,7 +462,7 @@ G4VPhysicalVolume * cad_physical_5;
 offset = G4ThreeVector(-0.041633382*m, -0.048000012*m, -0.1270397*m);
 CADMesh * mesh5 = new CADMesh("/home/galgoczi/cubesat/RADCUBE_model/EPS.STL", mm, offset, false);
 cad_solid_5 = mesh5->TessellatedMesh();
-cad_logical_5 = new G4LogicalVolume(cad_solid_5, EPS_mat, "cad_logical", 0, 0, 0);
+cad_logical_5 = new G4LogicalVolume(cad_solid_5, EPS_mat, "cad_logical_5", 0, 0, 0);
 
 
 G4VSolid * cad_solid_6;
@@ -585,6 +600,31 @@ cad_logical_9 = new G4LogicalVolume(cad_solid_9, STRU_mat, "cad_logical", 0, 0, 
   G4bool checkOverlaps = true;
 
 
+// 6 db 
+
+// Termék mérete (L x Sz x Ma): 1,80 x 1,80 x 6,50 cm / 0,71 x 0,71 x 2,56 hüvelyk 
+// 60 g
+// mennyi benne az lifepo4
+// LiFePo4 akkumulátor 18650 
+
+
+  Batt_Phys = new G4Box("Al_box",2.254/2.*sqrt(5./3.)*cm, 2.254/2.*sqrt(5./3.)*cm, 6.5/2.*3./5.*cm);
+
+//  Batt_Phys = new G4Tubs ("Batt_Phys",0,18.*mm,6.5/2.*cm,0,twopi);  // r:     0 mm -> 50 mm
+ // Batt_Phys = new G4Tubs ("Batt_Phys",0,0.001*mm,0.0001*cm,0,twopi);  // r:     0 mm -> 50 mm
+  Batt_Log = new G4LogicalVolume(Batt_Phys, Mat_Bat, "Bat_log",0,0,0);
+                                                         // z:   -50 mm -> 50 mm
+  
+  G4double Batt_Offset = 2.254*sqrt(5./3.)*cm;
+  
+  for(int q = 0; q<=1; q++){
+	for(int t = 0; t<=2; t++){
+//exit(-1);  
+  //new G4PVPlacement(0, G4ThreeVector(Batt_Offset*t - 1.8*cm, q*1.8*cm-1.8*cm,0.), Batt_Log,
+	new G4PVPlacement(0, G4ThreeVector(Batt_Offset*q-Batt_Offset/2, t*Batt_Offset-Batt_Offset, -10*cm), Batt_Log,
+                                     "batt", cad_logical_5, false, 0, false);	   
+		}
+	}
 //G4PVPlacement G4PVPlacement(0, G4ThreeVector(), cad_logical,
 //                                    "cad_physical", fExperimentalHall_log, false, 0, checkOverlaps)::CheckOverlaps(10,1.,true, 1000);	
 //p1->CheckOverlaps(10,1.,true, 1000); 
@@ -641,13 +681,27 @@ p9->CheckOverlaps(1000,1,true, 1000);
  G4RotationMatrix* rm_y1_main = new G4RotationMatrix();
  rm_y1_main->rotateY(-90*deg);
  rm_y1_main->rotateX(-90*deg);
- 
+
+ G4RotationMatrix* rm_y2_main = new G4RotationMatrix();
+ rm_y2_main->rotateY(-90*deg);
+ //rm_y2_main->rotateX(-90*deg); 
  
   if(fMainVolumeOn){
     fMainVolume
       = new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,-90),fExperimentalHall_log,false,0,this);
+
+
+    fMainVolume2 = 
+      new LXeMainVolume(rm_y1_main,G4ThreeVector(56+fD_mtl,0,90),fExperimentalHall_log,false,1,this);
+
+    fMainVolume3 = 
+      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,-90),fExperimentalHall_log,false,2,this);
+
+    fMainVolume4 = 
+      new LXeMainVolume(rm_y2_main,G4ThreeVector(0,56+fD_mtl,90),fExperimentalHall_log,false,3,this);
+
+
   }
-  
   
  // Surface properties for the scint vs ESR
     G4OpticalSurface* scintESR = new G4OpticalSurface("Housing");
@@ -655,6 +709,18 @@ p9->CheckOverlaps(1000,1,true, 1000);
     new G4LogicalBorderSurface("HousingSurface", fMainVolume->GetPhysScint(),
                                fMainVolume,
                                scintESR);
+
+    new G4LogicalBorderSurface("HousingSurface2", fMainVolume2->GetPhysScint(),
+                               fMainVolume2,
+                               scintESR);
+
+    new G4LogicalBorderSurface("HousingSurface3", fMainVolume3->GetPhysScint(),
+                               fMainVolume3,
+                               scintESR);
+    
+    new G4LogicalBorderSurface("HousingSurface4", fMainVolume4->GetPhysScint(),
+                               fMainVolume4,
+                               scintESR);                           
  
     scintESR->SetType(dielectric_metal);
     scintESR->SetFinish(polished);
@@ -663,7 +729,7 @@ p9->CheckOverlaps(1000,1,true, 1000);
     const G4int num = 2;
 
     G4double pp[num] = {2.0*eV, 7.5*eV};
-    G4double reflectivity[num] = {0.994, 0.994};
+    G4double reflectivity[num] = {0.9999, 0.9999};
     G4double efficiency[num] = {0.0, 0.0};
     
     G4MaterialPropertiesTable* scintESRProperty 
@@ -711,6 +777,8 @@ void LXeDetectorConstruction::ConstructSDandField() {
 
     pmt_SD->InitPMTs((fNx*fNy+fNx*fNz+fNy*fNz)*2); //let pmtSD know # of pmts
     pmt_SD->SetPmtPositions(fMainVolume->GetPmtPositions());
+        G4SDManager::GetSDMpointer()->AddNewDetector(pmt_SD);
+
   }
 
   //sensitive detector is not actually on the photocathode.
@@ -729,6 +797,8 @@ void LXeDetectorConstruction::ConstructSDandField() {
     G4cout << "Construction /LXeDet/scintSD" << G4endl;
     LXeScintSD* scint_SD = new LXeScintSD("/LXeDet/scintSD");
     fScint_SD.Put(scint_SD);
+    G4SDManager::GetSDMpointer()->AddNewDetector(scint_SD);
+
   }
   SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
   
@@ -843,7 +913,7 @@ while (std::getline(file, infileline))
 
   fNx = 1;
   fNy = 1;
-  fNz = 2;
+  fNz = 8;
 
   fOuterRadius_pmt = 0.1*cm;
 

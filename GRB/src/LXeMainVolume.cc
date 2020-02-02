@@ -35,6 +35,7 @@
 
 #include "G4LogicalSkinSurface.hh"
 #include "G4LogicalBorderSurface.hh"
+#include "G4UnionSolid.hh"
 
 #include "G4SystemOfUnits.hh"
 G4bool checkOverlaps = true;
@@ -58,23 +59,79 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 {
   CopyValues();
 
+	G4double lead_thickness = 2.5 * mm;
+//	G4double lead_overlap = 2.5 * mm;
+
+
   G4double housing_x=fScint_x+2.*fD_mtl;
   G4double housing_y=fScint_y+2.*fD_mtl;
   G4double housing_z=fScint_z+2.*fD_mtl;
  
   //*************************** housing and scintillator
   fScint_box = new G4Box("scint_box",fScint_x/2.,fScint_y/2.,fScint_z/2.);
-  fHousing_box = new G4Box("housing_box",housing_x/2.,housing_y/2.,
+  fHousing_box_buffer = new G4Box("housing_box",housing_x/2.,housing_y/2.,
                            housing_z/2.);
+ 
+   //G4cout << "x y z" << fScint_x << " " << fScint_y << " " << fScint_z << G4endl;
+   //exit(-1);
+ 
+   lead_extension1 = new G4Box("scint_box", lead_thickness/2 ,fScint_y/2. + fD_mtl, fScint_z/2. + fD_mtl); // on the back of the housing 
+   lead_extension2 = new G4Box("scint_box", lead_thickness, lead_thickness / 2., fScint_z/2. + fD_mtl ); // parallel to the housing
+   lead_extension3 = new G4Box("scint_box", lead_thickness, fScint_y/2. + fD_mtl + lead_thickness, lead_thickness/2 ); // parallel to the housing
+   
+ // adding an extension for the lead shielding
+ 
+   G4ThreeVector OffsetLead1 = G4ThreeVector(-fScint_x/2. - fD_mtl -  lead_thickness/2,0, 0 );
+   G4ThreeVector OffsetLead2 = G4ThreeVector(-fScint_x/2. - fD_mtl, fScint_y/2. + fD_mtl +  lead_thickness/2 , 0);
+   G4ThreeVector OffsetLead3 = G4ThreeVector(-fScint_x/2. - fD_mtl, -fScint_y/2. - fD_mtl -  lead_thickness/2, 0);
+   G4ThreeVector OffsetLead4 = G4ThreeVector(- fScint_x/2. - fD_mtl, 0, fScint_z/2. + fD_mtl + lead_thickness/2);
+   G4ThreeVector OffsetLead5 = G4ThreeVector(- fScint_x/2. - fD_mtl, 0, - fScint_z/2. - fD_mtl - lead_thickness/2);
+ 
+   G4UnionSolid* fHousing_box1 = new G4UnionSolid("housingbox2",
+                                              fHousing_box_buffer,
+                                              lead_extension1,
+                                              0,
+                                              OffsetLead1);
+
+  G4UnionSolid* fHousing_box2 = new G4UnionSolid("housingbox3",
+                                              fHousing_box1,
+                                              lead_extension2,
+                                              0,
+                                              OffsetLead2);
+                                              
+  G4UnionSolid* fHousing_box3 = new G4UnionSolid("housingbox3",
+                                              fHousing_box2,
+                                              lead_extension2,
+                                              0,
+                                              OffsetLead3
+                                              );
+
+G4UnionSolid* fHousing_box4 = new G4UnionSolid("housingbox3",
+                                              fHousing_box3,
+                                              lead_extension3,
+                                              0,
+                                              OffsetLead4
+                                              );	
+                                                                                         
+  G4UnionSolid* fHousing_box = new G4UnionSolid("housingbox3",
+                                              fHousing_box4,
+                                              lead_extension3,
+                                              0,
+                                              OffsetLead5
+                                              );																					
+  																				
  
   fScint_log = new G4LogicalVolume(fScint_box,G4Material::GetMaterial("LXe"),
                                    "scint_log",0,0,0);
-  fHousing_log = new G4LogicalVolume(fHousing_box,
+  fHousing_log = new G4LogicalVolume(fHousing_box, // TBD
                                      G4Material::GetMaterial("Al"),
                                      "housing_log",0,0,0);
  
   fScint_phys = new G4PVPlacement(0,G4ThreeVector(),fScint_log,"scintillator",
                                  fHousing_log,false,0, checkOverlaps);
+ 
+//  G4VisAttributes* housing_va = new G4VisAttributes(G4Colour(0.8,0.8,0.8));
+//  fHousing_log->SetVisAttributes(housing_va);
  
   //*************** Miscellaneous sphere to demonstrate skin surfaces
  
@@ -88,7 +145,7 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
 */ 
   //****************** Build PMTs
   G4double height_pmt = fD_mtl/2.;
-  G4double size_pmt = 6.*mm;
+  G4double size_pmt = 3.*mm;
 
  
    fPmt = new G4Box("scint_box",size_pmt/2.,size_pmt/2.,fD_mtl/2.);
@@ -96,8 +153,12 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
   //the "photocathode" is a metal slab at the back of the glass that
   //is only a very rough approximation of the real thing since it only
   //absorbs or detects the photons based on the efficiency set below
-   fPhotocath = new G4Box("photocath_tube",size_pmt/2.,size_pmt/2.,height_pmt/2.);
 
+
+// this includes the lead  
+   
+   fPhotocath = new G4Box("photocath_tube",size_pmt/2,size_pmt/2. , height_pmt/2.); 
+ 
  
   fPmt_log = new G4LogicalVolume(fPmt,G4Material::GetMaterial("Glass"),
                                  "pmt_log");
@@ -115,16 +176,40 @@ LXeMainVolume::LXeMainVolume(G4RotationMatrix *pRot,
                                     fPhotocath_log,"photocath",
                                     fPmt_log,false,0,checkOverlaps);
  
+ // add the lead that shields the mppc
+ 
+ 
+  fLeadShielding_log1 = new G4LogicalVolume(lead_extension1,
+                                       G4Material::GetMaterial("Pb"),
+                                       "lead_log1"); 
+                                       
+  fLeadShielding_log2 = new G4LogicalVolume(lead_extension2,
+                                       G4Material::GetMaterial("Pb"),
+                                       "lead_log2");       
+                                       
+   fLeadShielding_log3 = new G4LogicalVolume(lead_extension3,
+                                       G4Material::GetMaterial("Pb"),
+                                       "lead_log2");       
+                                                                                                          
+  new G4PVPlacement(0,OffsetLead1, fLeadShielding_log1,"pbshielding1", fHousing_log,false,0,checkOverlaps);
+  new G4PVPlacement(0,OffsetLead2, fLeadShielding_log2,"pbshielding2", fHousing_log,false,0,checkOverlaps);
+  new G4PVPlacement(0,OffsetLead3, fLeadShielding_log2,"pbshielding3", fHousing_log,false,0,checkOverlaps);
+  new G4PVPlacement(0,OffsetLead4, fLeadShielding_log3,"pbshielding4", fHousing_log,false,0,checkOverlaps);
+  new G4PVPlacement(0,OffsetLead5, fLeadShielding_log3,"pbshielding5", fHousing_log,false,0,checkOverlaps);
+
   //***********Arrange pmts around the outside of housing**********
 
   G4double dx = fScint_x/fNx;
   G4double dy = fScint_y/fNy;
-  G4double dz = 37.5;
+  //G4double dz = 37.5;
+  //G4double dz = 9.375;
+ 
+ G4double dz = 5.9;
  
   G4double x,y,z;
   G4double xmin = -fScint_x/2. - dx/2.;
   G4double ymin = -fScint_y/2. - dy/2.;
-  G4double zmin =  -fScint_z/2. - dz/2;
+  G4double zmin = -dz*5; // needs to be 5 not 4 because in place pmts the index starts with 1
   G4int k=0;
  
 /*  z = -fScint_z/2. - height_pmt;      //front
@@ -205,7 +290,9 @@ std::vector<G4VPhysicalVolume*> PMT_Phys_Vec;
     a+=da;
     b=bmin;
     for(G4int i=1;i<=nb;i++){
+		if(i == 5) b+=db;
       b+=db;
+     // G4cout << "a b " << a << " " << b << G4endl;
       PMT_Phys_Vec.push_back(new G4PVPlacement(rot,G4ThreeVector(x,y,z),pmt_log,"pmt",
                         fHousing_log,false,k,checkOverlaps));
       fPmtPositions.push_back(G4ThreeVector(x,y,z));
