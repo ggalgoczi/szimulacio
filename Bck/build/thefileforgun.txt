@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cr_fluxes_sec_p.dat
