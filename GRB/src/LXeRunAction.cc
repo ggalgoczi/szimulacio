@@ -50,7 +50,7 @@ void WriteOutParticles(std::map<const G4ParticleDefinition*, int>& container, st
 
 
 LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
-	Checked_Already=0;
+	Checked_Already = 0;
 	
 	  // Reading in data for event generation
   

@@ -73,7 +73,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
   //G4cout << "Fura" << G4endl;
   //exit(-1);
   
-  G4ParticleTable::GetParticleTable()->DumpTable();
+//  G4ParticleTable::GetParticleTable()->DumpTable();
 
 
   

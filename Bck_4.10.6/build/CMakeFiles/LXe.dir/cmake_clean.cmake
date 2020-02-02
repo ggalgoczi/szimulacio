@@ -32,8 +32,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/LXe.dir/src/LXeWLSFiber.cc.o"
   "CMakeFiles/LXe.dir/src/LXeWLSSlab.cc.o"
   "CMakeFiles/LXe.dir/src/Spectrum.cc.o"
-  "LXe.pdb"
   "LXe"
+  "LXe.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

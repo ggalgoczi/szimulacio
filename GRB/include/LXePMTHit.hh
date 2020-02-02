@@ -71,6 +71,11 @@ class LXePMTHit : public G4VHit
     inline void SetPMTNumber(G4int n) { fPmtNumber = n; }
     inline G4int GetPMTNumber() { return fPmtNumber; }
 
+	inline void SetScintCpyNo(G4int n) { fScintCpyNo = n; }
+	inline G4int GetScintCpyNo() { return fScintCpyNo; }
+
+
+
     inline void SetPMTPhysVol(G4VPhysicalVolume* physVol){this->fPhysVol=physVol;}
     inline G4VPhysicalVolume* GetPMTPhysVol(){return fPhysVol;}
 
@@ -83,6 +88,7 @@ class LXePMTHit : public G4VHit
   private:
 
     G4int fPmtNumber;
+    G4int fScintCpyNo;
     G4int fPhotons;
     G4ThreeVector fPos;
     G4VPhysicalVolume* fPhysVol;
