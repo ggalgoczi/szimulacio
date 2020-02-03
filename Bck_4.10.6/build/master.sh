@@ -2,12 +2,7 @@
 
 rm "PMT.dat"
 
-inputfilename="test.txt"
-
-
-if [ "$#" -eq 0 ]; then
-    inputfilename="test.txt"
-fi
+inputfilename="master.txt"
 
 if [ "$#" -eq 1 ]; then
 	inputfilename=$1 # file listing all parts and their energy spectra sources

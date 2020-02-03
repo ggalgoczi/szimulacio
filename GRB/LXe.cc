@@ -49,6 +49,9 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 
+#include <chrono> 
+using namespace std::chrono; 
+
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 int main(int argc, char** argv)
@@ -58,7 +61,9 @@ int main(int argc, char** argv)
 	// Deleting files those are appended
 	std::remove( "Particles.txt" );
 
-	   long seed = ((long) time(NULL));
+	  std::chrono::high_resolution_clock m_clock;
+    long long seed = std::chrono::duration_cast<std::chrono::nanoseconds>(m_clock.now().time_since_epoch()).count();
+
 
   G4Random::setTheEngine(new CLHEP::MixMaxRng());
   G4Random::setTheSeed(seed);
