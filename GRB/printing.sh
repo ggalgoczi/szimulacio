@@ -22,7 +22,7 @@ do
 
 	echo "echo $j > energy.txt" >> $fname2
 	echo "./LXe ../macs/$fname" >> $fname2
-	echo "mv PMT1.dat $fname3" >> $fname2
+	echo "mv PMT.dat $fname3" >> $fname2
 
  # your-unix-command-here
 done
