@@ -29,7 +29,7 @@ void filePutContents3(std::string& name, std::vector<G4int> & content, bool appe
 
 LXeRun::LXeRun()
 {
-for (G4int i=0; i<1001; i++) {
+for (G4int i=0; i<10001; i++) {
    PMTHitNo.push_back(0);
   }
   
@@ -79,7 +79,7 @@ void LXeRun::Merge(const G4Run* aRun)
  // fEDep += localRun->fEDep;
 
 
-  for (G4int i=0; i<1001; i++) {
+  for (G4int i=0; i<10001; i++) {
 	  G4cout << localRun->PMTHitNo[i] << G4endl;
     PMTHitNo[i] += localRun->PMTHitNo[i];
   }
