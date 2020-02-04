@@ -73,7 +73,11 @@ Checking overlaps for volume cad_physical_9 (G4TessellatedSolid) ...
 Overlap with volume already placed !
           Overlap is detected for volume cad_physical_9:0 (G4TessellatedSolid)
           with cad_physical_6:0 (G4TessellatedSolid) volume's
+<<<<<<< HEAD
           local point (0.0853556,-44.7172,-133.544), overlapping by at least: 1.40553 mm 
+=======
+          local point (-27.1493,44.1091,-133.544), overlapping by at least: 1.40553 mm 
+>>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14
 *** This is just a warning message. ***
 -------- WWWW -------- G4Exception-END --------- WWWW -------
 
@@ -84,7 +88,11 @@ Overlap with volume already placed !
 Overlap with volume already placed !
           Overlap is detected for volume cad_physical_9:0 (G4TessellatedSolid)
           with cad_physical_5:0 (G4TessellatedSolid) volume's
+<<<<<<< HEAD
           local point (39.8517,-41.1568,-120.606), overlapping by at least: 3.05125 mm 
+=======
+          local point (39.0277,44.277,-124.893), overlapping by at least: 1.03572 mm 
+>>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14
 *** This is just a warning message. ***
 -------- WWWW -------- G4Exception-END --------- WWWW -------
 
@@ -95,7 +103,11 @@ Overlap with volume already placed !
 Overlap with volume already placed !
           Overlap is detected for volume cad_physical_9:0 (G4TessellatedSolid)
           with cad_physical:0 (G4TessellatedSolid) volume's
+<<<<<<< HEAD
           local point (48.605,-34.9745,-0.0638458), overlapping by at least: 1.72905 mm 
+=======
+          local point (49.0189,-26.0762,-7.99369), overlapping by at least: 1.3151 mm 
+>>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14
 *** This is just a warning message. ***
 -------- WWWW -------- G4Exception-END --------- WWWW -------
 
@@ -106,7 +118,11 @@ Overlap with volume already placed !
 Overlap with volume already placed !
           Overlap is detected for volume cad_physical_9:0 (G4TessellatedSolid)
           with cad_physical_7:0 (G4TessellatedSolid) volume's
+<<<<<<< HEAD
           local point (42.016,42.7923,51.0942), overlapping by at least: 1.68466 mm 
+=======
+          local point (42.1009,-42.0811,111.158), overlapping by at least: 1.59975 mm 
+>>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14
 *** This is just a warning message. ***
 -------- WWWW -------- G4Exception-END --------- WWWW -------
 
@@ -191,6 +207,7 @@ Construction /LXeDet/scintSD
 ### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
           DefaultRegionForTheWorld  1  0  0
 ### ===  Ignore cuts flag:   0
+<<<<<<< HEAD
 
 phot:  for gamma SubType=12 BuildTable=0
       LambdaPrime table from 200 keV to 100 TeV in 174 bins 
@@ -1680,3 +1697,5 @@ G4WT5 > annihil
 G4WT5 > gamma
 G4WT5 > annihil
 G4WT5 > gamma
+=======
+>>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14

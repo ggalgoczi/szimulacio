@@ -22,7 +22,11 @@ do
 
 	echo "echo $j > energy.txt" >> $fname2
 	echo "./LXe ../macs/$fname" >> $fname2
+<<<<<<< HEAD
 	echo "mv PMT.dat $fname3" >> $fname2
+=======
+	echo "mv PMT1.dat $fname3" >> $fname2
+>>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14
 
  # your-unix-command-here
 done
