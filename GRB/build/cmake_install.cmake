@@ -49,11 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LXe")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LXe"
-<<<<<<< HEAD
          OLD_RPATH "/home/galgoczi/software/geant4.10.6_MT/BuildProducts/lib:"
-=======
-         OLD_RPATH "/home/galgoczi/software/geant4.10.06_MT/BuildProducts/lib:"
->>>>>>> a4d98c3a3bd35c4d9268504105ef544c8b30bb14
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LXe")
