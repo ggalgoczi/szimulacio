@@ -18,7 +18,7 @@ do
 	echo "$x, $y"
 	echo "/run/initialize" >> $fname
 	echo "/gun/position $x $y $z" >> $fname
-	echo "/run/beamOn 10000" >> $fname
+	echo "/run/beamOn 1000" >> $fname
 
 	echo "echo $j > energy.txt" >> $fname2
 	echo "./LXe ../macs/$fname" >> $fname2

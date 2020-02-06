@@ -29,7 +29,13 @@
 /// \brief Main program of the optical/LXe example
 //
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+
+//#ifdef G4MULTITHREADED
 #include "G4MTRunManager.hh"
+//#else
+//#include "G4RunManager.hh"
+//#endif
 
 
 #include "G4UImanager.hh"
@@ -71,7 +77,7 @@ int main(int argc, char** argv)
 	
 #ifdef G4MULTITHREADED
   G4MTRunManager * runManager = new G4MTRunManager;
-  runManager->SetNumberOfThreads(7);
+  runManager->SetNumberOfThreads(1);
 #else
   G4RunManager * runManager = new G4RunManager;
 #endif

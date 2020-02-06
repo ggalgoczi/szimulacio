@@ -64,6 +64,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
 : fRunAction(RunAction)
 {
   G4int n_particle = 1;
+  fRunAction->Checked_Already=0;
   fParticleGun = new G4ParticleGun(n_particle);
  
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
@@ -103,6 +104,7 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   //exit(-1);
    // G4String Particle_Name = fRunAction->Part_Name;
 
+G4cout << fRunAction->Checked_Already << G4endl;
   
 	if(Parallel_Beam == 1) {  
 			assert(Gun_On_Sphere == 0);	
@@ -114,11 +116,11 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
 		fRunAction->Checked_Already=1;
 		}
 
-   //position2 = fParticleGun->GetParticlePosition();
-  // cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n"; 
+//  position2 = fParticleGun->GetParticlePosition();
+   G4cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << G4endl; 
 
   G4double alpha = std::atan(position2[1]/position2[0]);
-  
+  G4cout << "alpha is " << alpha/deg << G4endl;
   
   if( (position2[1] > 0 && position2[0] < 0) || (position2[1] < 0 && position2[0] < 0))
 	{
