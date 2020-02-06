@@ -29,24 +29,21 @@
 /// \brief Implementation of the LXePrimaryGeneratorAction class
 //
 //
-
-
 #include "LXePrimaryGeneratorAction.hh"
+#include "Randomize.hh"
+#include "G4EventManager.hh"
+#include "LXeRunAction.hh"
 
-#include "G4SystemOfUnits.hh"
+
 #include "G4Event.hh"
+#include "G4ParticleGun.hh"
 #include "G4ParticleTable.hh"
 #include "G4ParticleDefinition.hh"
+#include "G4SystemOfUnits.hh"
 #include "globals.hh"
-#include "Randomize.hh"
-#include "LXeRunAction.hh"
 #include <time.h>
 #include <stdlib.h>
 #include <iostream>
-#include "G4GeneralParticleSource.hh"
-#include "G4GeneralParticleSourceMessenger.hh"
-#include "G4SingleParticleSource.hh"
-
 using namespace std;
 const int Gun_On_Sphere = 0;
 const int Parallel_Beam = 1;
@@ -61,15 +58,14 @@ void filePutContents2(const std::string& name, const std::string& content, bool 
     outfile << content;
 }
 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-
-
-// Constructor
-LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
-:fRunAction(RunAction){
-    fparticleGun = new G4GeneralParticleSource();
-
-  fRunAction->Checked_Already=0; 
+LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction) 
+: fRunAction(RunAction)
+{
+  G4int n_particle = 1;
+  fParticleGun = new G4ParticleGun(n_particle);
+ 
   G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
  
   G4String Particle_Name = fRunAction->Part_Name;
@@ -82,29 +78,31 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
 
   
   G4String particleName;
-  fparticleGun->SetParticleDefinition(particleTable->
+  fParticleGun->SetParticleDefinition(particleTable->
                                      FindParticle(particleName=Particle_Name));
   //Default energy,position,momentum
  // fParticleGun->SetParticleEnergy(fRunAction->Energy*keV);
   //G4cout << "Energy " << fRunAction->Energy << G4endl;
-  fparticleGun->SetParticlePosition(G4ThreeVector(300,0.0001,0));
-
+  fParticleGun->SetParticlePosition(G4ThreeVector(300,0.0001,0));
+  
+ // fParticleGun->SetParticleMomentumDirection(G4ThreeVector(10,10,0.));  
+    	     
 }
 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-// Destructor
-LXePrimaryGeneratorAction::~LXePrimaryGeneratorAction()
-{
-    delete fparticleGun;
+LXePrimaryGeneratorAction::~LXePrimaryGeneratorAction(){
+    delete fParticleGun;
 }
 
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
-{
-	//particleGun->Set
+void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
+//cout << "whaat\n" ;
+  // cout << anEvent->GetEventID()  << "\n"; verbosehoz
+  //exit(-1);
+   // G4String Particle_Name = fRunAction->Part_Name;
 
-
-G4cout << fRunAction->Checked_Already << G4endl;
   
 	if(Parallel_Beam == 1) {  
 			assert(Gun_On_Sphere == 0);	
@@ -112,28 +110,25 @@ G4cout << fRunAction->Checked_Already << G4endl;
    //if(anEvent->GetEventID() == 0) position2 = fParticleGun->GetParticlePosition();
 	if(fRunAction->Checked_Already==0){
 		
-		position2 = fparticleGun->GetParticlePosition();
+		position2 = fParticleGun->GetParticlePosition();
 		fRunAction->Checked_Already=1;
 		}
 
-//  position2 = fParticleGun->GetParticlePosition();
-   G4cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << G4endl; 
+   //position2 = fParticleGun->GetParticlePosition();
+  // cout << "gun was at: " << position2[0] << " " << position2[1] << " " << position2[2] << "\n"; 
 
   G4double alpha = std::atan(position2[1]/position2[0]);
-  G4cout << "alpha is " << alpha/deg << G4endl;
+  
   
   if( (position2[1] > 0 && position2[0] < 0) || (position2[1] < 0 && position2[0] < 0))
 	{
 	G4ThreeVector dir(std::cos(alpha),std::sin(alpha),0);
-
-
-fparticleGun->GetAngDist()->SetParticleMomentumDirection(dir); 
-
+	fParticleGun->SetParticleMomentumDirection(dir);  
 	}
   else if((position2[1] < 0 && position2[0] > 0) || (position2[1] > 0 && position2[0] > 0))
 	{
 	G4ThreeVector dir(-std::cos(alpha),-std::sin(alpha),0);	
-fparticleGun->GetAngDist()->SetParticleMomentumDirection(dir); 
+	fParticleGun->SetParticleMomentumDirection(dir);  
 	}
   else{
 	  G4cout << "Gun position set is invalid!!" << G4endl;
@@ -144,7 +139,7 @@ fparticleGun->GetAngDist()->SetParticleMomentumDirection(dir);
 
   G4double RandXY = -1 + 2*G4UniformRand();
   G4double RandZ = -1+2*G4UniformRand();
-  fparticleGun->SetParticlePosition(G4ThreeVector(position2[0] + 300 * std::sin(alpha) * RandXY, position2[1] - 300 * std::cos(alpha) * RandXY, 300*RandZ)); 
+  fParticleGun->SetParticlePosition(G4ThreeVector(position2[0] + 300 * std::sin(alpha) * RandXY, position2[1] - 300 * std::cos(alpha) * RandXY, 300*RandZ)); 
   //cout << "gun was" << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
 	}
 
@@ -186,8 +181,8 @@ fparticleGun->GetAngDist()->SetParticleMomentumDirection(dir);
   sinAlpha = std::sqrt(1. - cosAlpha*cosAlpha);
   psi      = 6.28318530718*G4UniformRand();
   
-  fparticleGun->SetParticlePosition(G4ThreeVector(sinAlpha*std::cos(psi)*330*cm,-cosAlpha*330*cm,sinAlpha*std::sin(psi)*330*cm));
-fparticleGun->GetAngDist()->SetParticleMomentumDirection(dir); 
+  fParticleGun->SetParticlePosition(G4ThreeVector(sinAlpha*std::cos(psi)*330*cm,-cosAlpha*330*cm,sinAlpha*std::sin(psi)*330*cm));
+  fParticleGun->SetParticleMomentumDirection(dir);
   
   }
 
@@ -214,11 +209,9 @@ fparticleGun->GetAngDist()->SetParticleMomentumDirection(dir);
   double Ener = fRunAction->EnSpectrum->DrawEnergy();
   //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
 
-  fparticleGun->SetParticleEnergy(Ener*MeV);
-//	cout << energy << "\n";
+  fParticleGun->SetParticleEnergy(Ener*MeV);
+	//G4cout << Ener << " was" << G4endl;
   //fParticleGun->SetParticleEnergy(energy*MeV);
   //cout << "Energy was: " << energy << "\n"; // verbosehoz
-  fparticleGun->GeneratePrimaryVertex(anEvent);
-
+  fParticleGun->GeneratePrimaryVertex(anEvent);
 }
-
