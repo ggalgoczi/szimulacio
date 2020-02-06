@@ -37,8 +37,7 @@
 #include <vector>
 #include "LXeRunAction.hh"
 
-
-class G4ParticleGun;
+class G4GeneralParticleSource;
 class G4Event;
 
 class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
@@ -54,7 +53,7 @@ class LXePrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
     std::vector<std::vector<float> > Particle_Energy;
   private:
     LXeRunAction*  fRunAction;
-    G4ParticleGun* fParticleGun;
+    G4GeneralParticleSource* fparticleGun;
 };
 
 #endif
