@@ -1,9 +1,6 @@
-1 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
-
-
-1.5 10000 proton /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_H.dat
-
-1 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
+1 10 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
+1.5 1000 proton /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_H.dat
+1 10000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
 1.5 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
 2 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
 1 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat

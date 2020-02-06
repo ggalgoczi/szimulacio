@@ -1,0 +1,165 @@
+\documentclass[12pt]{spieman}  % 12pt font required by SPIE;
+%\documentclass[a4paper,12pt]{spieman}  % use this instead for A4 paper
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{tocloft}
+
+\title{A Geant4 based framework for the simulation of background of high-energy satellites caused by activation, cosmic, trapped and albedo particles}
+
+\author[a,*]{G\'abor Galg\'oczi}
+\author[a]{Second Author}
+\author[b]{Third Author}
+\author[a,b]{Fourth Author}
+\affil[a]{University Name, Faculty Group, Department, Street Address, City, Country, Postal Code}
+\affil[b]{Company Name, Street Address, City, Country, Postal Code}
+
+\renewcommand{\cftdotsep}{\cftnodots}
+\cftpagenumbersoff{figure}
+\cftpagenumbersoff{table} 
+\begin{document} 
+\maketitle
+
+\begin{abstract}
+Abstract
+\end{abstract}
+
+% Include a list of up to six keywords after the abstract
+\keywords{Geant4, GRB, gamma-rays, satellite, cosmic background}
+
+% Include email contact information for corresponding author
+{\noindent \footnotesize\textbf{*}G\'abor Galg\'oczi,  \linkable{galgoczi.gabor@wigner.mta.hu} }
+
+\begin{spacing}{2}   % use double spacing for rest of manuscript
+
+\section{Introduction}
+\label{sect:intro}  % \label{} allows reference to this section
+
+Particle background for satellites, mostly the ones aiming to investigate the high-energy Universe is considerable constraint. It is especially important for satellites without an anti-coincidence shield, e.g. for the more and more CubeSats which have recently been applied for scientific missions. 
+
+A Geant4 based simulation framework is presented in this paper, which aims to aid future missions by providing a flexible, easy to use tool to quantify particle background. The simulation consists of two modules. The first determines the proton induced activation of the satellite. The second module quantifies the background signal which is induced by particles being present on the given orbit (e.g. cosmic, trapped and albedo particles). 
+
+In order to keep the implementation of the simulation of a new satellite straightforward, the CAD model of the satellite is automatically read in by CADMesh []. The background of the HERMES and the CAMELOT CubeSat missions were determined. The input particle spectra (cosmic, trapped and albedo particles) for the background simulation of these missions were computed [JAKUB NE] by SPENVIS and several other models [mizuno].
+
+The validation of the simulation framework was carried out by a set of dedicated experiments and simulations [Kento, the measurement of activation].
+
+\section{The implementation of the framework} 
+
+
+For scientific satellites measuring in the high energy regime, irradiation background in space is a huge concern as it limits the capabilities of such missions. The first module of our framework determines the background induced by any type of irradiation in question. This aids missions as it makes it possible to investigate different material and geometrical options. E.g. in the case of the CAMELOT mission a thicker shielding case was chosen over the original one as the simulations showed that it would yield in a higher signal-to-noise. The main part of the framework is implemented in C++, including the Geant4 simulation which performs the calculations. 
+
+In order to utilize this module, the framework requires the user to input the CAD model of the satellite by including each volume as an individual file with STP format. The other input of the simulation is the spectrum of each irradiation spectra.
+
+\subsection{Background}
+
+\subsubsection{Validation of the light propagation in the scintillators of the CAMELOT satellite}
+
+
+For the CAMELOT mission light propagataion was also included in the simulation in order to include the response the scintillator as realisticly as possible. 
+
+\subsubsection{Validation of the deposited dose in the SDD of the HERMES satellite}
+
+The framework was utilized to quantify the background of the HERMES () [] and the CAMELOT () [] missions in order to aid the design of the satellites to reach the higherst signal-to-noise ratio and to prove that they will meet the mission requirements. Also in the case of CAMELOT the expected signal-to-noise ratio of a typical short gamma-ray-burst was calculated by with respect to activation and the irradiation background.
+
+
+for camelot and hermes the background albedo seocndary...
+
+
+
+cosmic, trapped and albedo particles
+
+
+\subsection{Proton induced activation} 
+
+
+Satellites in Low Earth Orbit REFERENCE HERE ABOUt fermi background increasing by 100\% in a single year...
+
+challenge for cubesats which have a very low material budget in which shielding to decrease the deposited irradiation of the satellite is not possible unlike in large satellites.
+
+[odaka paper]. This paper analytic. It was proven to work in comparision with data taken from.. in this work we utilizied an analytical aproach instead of a semi-analytical one.
+
+Boost library..
+
+\subsubsection{Validation of proton induced activation} 
+
+The simulation of activation was validated by 
+
+
+\section{The application of the framework to the CAMELOT and HERMES satellites}
+
+\subsection{Background from cosmic, trapped and albedo particles for the CAMELOT satellites} 
+
+
+
+\subsection{Background from proton induced activation for the HERMES and CAMELOT satellites}  
+ 
+\newpage 
+ 
+The differential flux is normed. Afterwards the normed integral flux is calculated for each bin. From 0 energy to the given energy.
+
+$$ \int{1}{2} $$
+ 
+A random number between zero and one is drawn. The bin that has
+
+Check particle energy distirbution
+
+cxb high energy
+
+mizuno raised concern about cxb and gamma albedo??
+ 
+\section{Methodology} 
+ 
+The differential flux is normed. Afterwards the normed integral flux is calculated for each bin. From 0 energy to the given energy.
+
+$$ \int{1}{2} $$
+ 
+A random number between zero and one is drawn. The bin that has
+
+Check particle energy distirbution
+
+cxb high energy
+
+mizuno raised concern about cxb and gamma albedo??
+ 
+\section{Simulation of GRB induced signal in the detector} 
+
+tbd: what is the background after polar orbits?
+casing thickness needs to be optimized for:
+more GRB signal
+less CXB signal
+less electrons...
+
+\section{Results}
+
+
+
+\appendix    % this command starts appendixes
+
+\section{Miscellaneous Formatting Details}
+\label{sect:misc}
+
+
+% \disclosures 
+\subsection*{Disclosures}
+
+
+\acknowledgments 
+
+
+%%%%% References %%%%%
+
+\bibliography{report}   % bibliography data in report.bib
+\bibliographystyle{spiejour}   % makes bibtex use spiejour.bst
+
+%%%%% Biographies of authors %%%%%
+
+\vspace{2ex}\noindent\textbf{First Author} is an assistant professor at the University of Optical Engineering. He received his BS and MS degrees in physics from the University of Optics in 1985 and 1987, respectively, and his PhD degree in optics from the Institute of Technology in 1991.  He is the author of more than 50 journal papers and has written three book chapters. His current research interests include optical interconnects, holography, and optoelectronic systems. He is a member of SPIE.
+
+\vspace{1ex}
+\noindent Biographies and photographs of the other authors are not available.
+
+\listoffigures
+\listoftables
+
+\end{spacing}
+\end{document}

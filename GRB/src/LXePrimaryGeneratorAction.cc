@@ -73,7 +73,7 @@ LXePrimaryGeneratorAction::LXePrimaryGeneratorAction(LXeRunAction*  RunAction)
   //G4cout << "Fura" << G4endl;
   //exit(-1);
   
-  G4ParticleTable::GetParticleTable()->DumpTable();
+//  G4ParticleTable::GetParticleTable()->DumpTable();
 
 
   
@@ -210,7 +210,7 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
 
   fParticleGun->SetParticleEnergy(Ener*MeV);
-//	cout << energy << "\n";
+	//G4cout << Ener << " was" << G4endl;
   //fParticleGun->SetParticleEnergy(energy*MeV);
   //cout << "Energy was: " << energy << "\n"; // verbosehoz
   fParticleGun->GeneratePrimaryVertex(anEvent);

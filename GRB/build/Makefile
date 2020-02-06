@@ -331,33 +331,6 @@ src/LXeDetectorMessenger.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeDetectorMessenger.cc.s
 .PHONY : src/LXeDetectorMessenger.cc.s
 
-src/LXeEMPhysics.o: src/LXeEMPhysics.cc.o
-
-.PHONY : src/LXeEMPhysics.o
-
-# target to build an object file
-src/LXeEMPhysics.cc.o:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.o
-.PHONY : src/LXeEMPhysics.cc.o
-
-src/LXeEMPhysics.i: src/LXeEMPhysics.cc.i
-
-.PHONY : src/LXeEMPhysics.i
-
-# target to preprocess a source file
-src/LXeEMPhysics.cc.i:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.i
-.PHONY : src/LXeEMPhysics.cc.i
-
-src/LXeEMPhysics.s: src/LXeEMPhysics.cc.s
-
-.PHONY : src/LXeEMPhysics.s
-
-# target to generate assembly for a file
-src/LXeEMPhysics.cc.s:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeEMPhysics.cc.s
-.PHONY : src/LXeEMPhysics.cc.s
-
 src/LXeEventAction.o: src/LXeEventAction.cc.o
 
 .PHONY : src/LXeEventAction.o
@@ -412,33 +385,6 @@ src/LXeEventMessenger.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeEventMessenger.cc.s
 .PHONY : src/LXeEventMessenger.cc.s
 
-src/LXeGeneralPhysics.o: src/LXeGeneralPhysics.cc.o
-
-.PHONY : src/LXeGeneralPhysics.o
-
-# target to build an object file
-src/LXeGeneralPhysics.cc.o:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.o
-.PHONY : src/LXeGeneralPhysics.cc.o
-
-src/LXeGeneralPhysics.i: src/LXeGeneralPhysics.cc.i
-
-.PHONY : src/LXeGeneralPhysics.i
-
-# target to preprocess a source file
-src/LXeGeneralPhysics.cc.i:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.i
-.PHONY : src/LXeGeneralPhysics.cc.i
-
-src/LXeGeneralPhysics.s: src/LXeGeneralPhysics.cc.s
-
-.PHONY : src/LXeGeneralPhysics.s
-
-# target to generate assembly for a file
-src/LXeGeneralPhysics.cc.s:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeGeneralPhysics.cc.s
-.PHONY : src/LXeGeneralPhysics.cc.s
-
 src/LXeMainVolume.o: src/LXeMainVolume.cc.o
 
 .PHONY : src/LXeMainVolume.o
@@ -465,33 +411,6 @@ src/LXeMainVolume.s: src/LXeMainVolume.cc.s
 src/LXeMainVolume.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeMainVolume.cc.s
 .PHONY : src/LXeMainVolume.cc.s
-
-src/LXeMuonPhysics.o: src/LXeMuonPhysics.cc.o
-
-.PHONY : src/LXeMuonPhysics.o
-
-# target to build an object file
-src/LXeMuonPhysics.cc.o:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.o
-.PHONY : src/LXeMuonPhysics.cc.o
-
-src/LXeMuonPhysics.i: src/LXeMuonPhysics.cc.i
-
-.PHONY : src/LXeMuonPhysics.i
-
-# target to preprocess a source file
-src/LXeMuonPhysics.cc.i:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.i
-.PHONY : src/LXeMuonPhysics.cc.i
-
-src/LXeMuonPhysics.s: src/LXeMuonPhysics.cc.s
-
-.PHONY : src/LXeMuonPhysics.s
-
-# target to generate assembly for a file
-src/LXeMuonPhysics.cc.s:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXeMuonPhysics.cc.s
-.PHONY : src/LXeMuonPhysics.cc.s
 
 src/LXePMTHit.o: src/LXePMTHit.cc.o
 
@@ -546,33 +465,6 @@ src/LXePMTSD.s: src/LXePMTSD.cc.s
 src/LXePMTSD.cc.s:
 	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXePMTSD.cc.s
 .PHONY : src/LXePMTSD.cc.s
-
-src/LXePhysicsList.o: src/LXePhysicsList.cc.o
-
-.PHONY : src/LXePhysicsList.o
-
-# target to build an object file
-src/LXePhysicsList.cc.o:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXePhysicsList.cc.o
-.PHONY : src/LXePhysicsList.cc.o
-
-src/LXePhysicsList.i: src/LXePhysicsList.cc.i
-
-.PHONY : src/LXePhysicsList.i
-
-# target to preprocess a source file
-src/LXePhysicsList.cc.i:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXePhysicsList.cc.i
-.PHONY : src/LXePhysicsList.cc.i
-
-src/LXePhysicsList.s: src/LXePhysicsList.cc.s
-
-.PHONY : src/LXePhysicsList.s
-
-# target to generate assembly for a file
-src/LXePhysicsList.cc.s:
-	$(MAKE) -f CMakeFiles/LXe.dir/build.make CMakeFiles/LXe.dir/src/LXePhysicsList.cc.s
-.PHONY : src/LXePhysicsList.cc.s
 
 src/LXePrimaryGeneratorAction.o: src/LXePrimaryGeneratorAction.cc.o
 
@@ -1091,33 +983,21 @@ help:
 	@echo "... src/LXeDetectorMessenger.o"
 	@echo "... src/LXeDetectorMessenger.i"
 	@echo "... src/LXeDetectorMessenger.s"
-	@echo "... src/LXeEMPhysics.o"
-	@echo "... src/LXeEMPhysics.i"
-	@echo "... src/LXeEMPhysics.s"
 	@echo "... src/LXeEventAction.o"
 	@echo "... src/LXeEventAction.i"
 	@echo "... src/LXeEventAction.s"
 	@echo "... src/LXeEventMessenger.o"
 	@echo "... src/LXeEventMessenger.i"
 	@echo "... src/LXeEventMessenger.s"
-	@echo "... src/LXeGeneralPhysics.o"
-	@echo "... src/LXeGeneralPhysics.i"
-	@echo "... src/LXeGeneralPhysics.s"
 	@echo "... src/LXeMainVolume.o"
 	@echo "... src/LXeMainVolume.i"
 	@echo "... src/LXeMainVolume.s"
-	@echo "... src/LXeMuonPhysics.o"
-	@echo "... src/LXeMuonPhysics.i"
-	@echo "... src/LXeMuonPhysics.s"
 	@echo "... src/LXePMTHit.o"
 	@echo "... src/LXePMTHit.i"
 	@echo "... src/LXePMTHit.s"
 	@echo "... src/LXePMTSD.o"
 	@echo "... src/LXePMTSD.i"
 	@echo "... src/LXePMTSD.s"
-	@echo "... src/LXePhysicsList.o"
-	@echo "... src/LXePhysicsList.i"
-	@echo "... src/LXePhysicsList.s"
 	@echo "... src/LXePrimaryGeneratorAction.o"
 	@echo "... src/LXePrimaryGeneratorAction.i"
 	@echo "... src/LXePrimaryGeneratorAction.s"

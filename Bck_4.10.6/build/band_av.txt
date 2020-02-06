@@ -1,0 +1,1 @@
+gamma 10000000 /home/galgoczi/cubesat/cosmic_spectras/band_avarage.txt

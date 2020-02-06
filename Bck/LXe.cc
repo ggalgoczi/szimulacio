@@ -62,7 +62,11 @@ int main(int argc, char** argv)
 	// Deleting files those are appended
 	std::remove( "Particles.txt" );
 
-	
+	   long seed = ((long) time(NULL));
+
+  G4Random::setTheEngine(new CLHEP::MixMaxRng());
+  G4Random::setTheSeed(seed);
+  
   int NoE=1;
 	
 #ifdef G4MULTITHREADED
@@ -72,13 +76,16 @@ int main(int argc, char** argv)
   G4RunManager * runManager = new G4RunManager;
 #endif
 
+
   runManager->SetUserInitialization(new LXeDetectorConstruction());
   runManager->SetUserInitialization(new LXePhysicsList());
   
 
   LXeRecorderBase* recorder = NULL; //No recording is done in this example
-
   runManager->SetUserInitialization(new LXeActionInitialization(recorder));
+
+
+
 
 #ifdef G4VIS_USE
   G4VisManager* visManager = new G4VisExecutive;

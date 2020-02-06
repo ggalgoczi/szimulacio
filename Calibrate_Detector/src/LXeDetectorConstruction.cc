@@ -212,7 +212,7 @@ const G4int lxenum = 8;
   G4double lxe_SCINT[lxenum] = { 0.02, 0.1, 0.3, 0.6, 0.9, 1.0, 0.7, 0.4 };
   G4double lxe_RIND[lxenum]  = { 1.59 , 1.57, 1.54, 1.54, 1.54, 1.54, 1.54, 1.54 };
  // G4double lxe_RIND[lxenum]  = { 2.1 , 2.04 , 1.96 ,1.9 ,1.83 ,1.79 ,1.7 ,1.68};
-  G4double lxe_ABSL[lxenum]  = { 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm, 45.*cm};
+  G4double lxe_ABSL[lxenum]  = { 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm, 60.*cm};
   fLXe_mt = new G4MaterialPropertiesTable();
   fLXe_mt->AddProperty("FASTCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
   fLXe_mt->AddProperty("SLOWCOMPONENT", lxe_Energy, lxe_SCINT, lxenum);
@@ -435,7 +435,7 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
     const G4int num = 2;
 
     G4double pp[num] = {2.0*eV, 7.5*eV};
-    G4double reflectivity[num] = {0.994, 0.994};
+    G4double reflectivity[num] = {0.9999, 0.9999};
     G4double efficiency[num] = {0.0, 0.0};
     
     G4MaterialPropertiesTable* scintESRProperty 
@@ -471,6 +471,9 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
 
 void LXeDetectorConstruction::ConstructSDandField() {
 
+    auto sdman = G4SDManager::GetSDMpointer(); // Mandatory since Geant v. 4.10.03
+
+
   if (!fMainVolume) return;
 
   // PMT SD
@@ -481,7 +484,7 @@ void LXeDetectorConstruction::ConstructSDandField() {
     LXePMTSD* pmt_SD = new LXePMTSD("/LXeDet/pmtSD");
     fPmt_SD.Put(pmt_SD);
 
-    pmt_SD->InitPMTs((fNx*fNy+fNx*fNz+fNy*fNz)*2); //let pmtSD know # of pmts
+    pmt_SD->InitPMTs((fNx*fNy+fNx*fNz+fNy*fNz)); //let pmtSD know # of pmts
     pmt_SD->SetPmtPositions(fMainVolume->GetPmtPositions());
   }
 
@@ -493,6 +496,7 @@ void LXeDetectorConstruction::ConstructSDandField() {
   //It does however need to be attached to something or else it doesnt get
   //reset at the begining of events
 
+  sdman->AddNewDetector(fPmt_SD.Get()); // Mandatory since Geant v. 4.10.03
   SetSensitiveDetector(fMainVolume->GetLogPMT(), fPmt_SD.Get());
 
   // Scint SD
@@ -502,6 +506,8 @@ void LXeDetectorConstruction::ConstructSDandField() {
     LXeScintSD* scint_SD = new LXeScintSD("/LXeDet/scintSD");
     fScint_SD.Put(scint_SD);
   }
+  
+  sdman->AddNewDetector( fScint_SD.Get()); // Mandatory since Geant v. 4.10.03
   SetSensitiveDetector(fMainVolume->GetLogScint(), fScint_SD.Get());
   
     // Actually WORKING Sensitive detectors
@@ -615,7 +621,7 @@ while (std::getline(file, infileline))
 
   fNx = 1;
   fNy = 1;
-  fNz = 2;
+  fNz = 1;
 
   fOuterRadius_pmt = 0.1*cm;
 

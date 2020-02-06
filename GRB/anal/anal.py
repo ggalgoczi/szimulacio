@@ -22,12 +22,12 @@ def poisson_probability(actual, mean):
 
 
 bins_2 = np.arange(0, 20000, 20) # fixed bin size
-directory = './'
+directory = '../build/'
 angle = []
 counts = []
 NoFound = 0
 for filename in os.listdir(directory):
-	if filename == "scint.txt":
+	if filename == ".res":
 		NoFound = 1
 		print filename
 		f = open(directory+filename, 'r')

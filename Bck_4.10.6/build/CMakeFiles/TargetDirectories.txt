@@ -1,0 +1,7 @@
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/install/strip.dir
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/install/local.dir
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/LXe.dir
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/rebuild_cache.dir
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/edit_cache.dir
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/install.dir
+/home/galgoczi/cubesat/Bck_4.10.6/build/CMakeFiles/list_install_components.dir
