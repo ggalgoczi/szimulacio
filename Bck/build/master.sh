@@ -21,6 +21,7 @@ fi
 
 while IFS='' read -r line || [[ -n "$line" ]]; do
 	rm "PMT.dat"
+	rm "buffbuff"
     #echo "Text read from file: $line"
     #for word in $line
 		#do
@@ -73,8 +74,23 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 /gps/hist/type arb
 ' >> "run.mac"
 
+# Check how long is the spectrum. If too long, then keep only about 500 lines
 
+len=$(wc -l $res | awk '{print $1}')
+lennum=$(($len))
+fiveh=500
+if [ $lennum -gt $fiveh ]
+	then
+	tobedividedwith=$(($len / 100))
+	tobedividedwithpone=$(($tobedividedwith+1))
+	awk '{if($2 != 0) {print $1,$2}}' $res  >> "buffbuff"
+	echo $tobedividedwithpone
+	awk 'NR == 1 || NR % $tobedividedwithpone == 0 {print NR,"/gps/hist/point",$0}' "buffbuff" >> "run.mac"
+else
 	awk '{if($2 != 0) {print "/gps/hist/point",$1,$2}}' $res  >> "run.mac"
+fi
+
+	
 	echo '/gps/hist/inter Log'  >> "run.mac"
 	echo '/run/beamOn' $sim_no  >> "run.mac"
 	
