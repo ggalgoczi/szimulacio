@@ -16,7 +16,7 @@ do
 	echo "$x, $y"
 	echo "/run/initialize" >> $fname
 	echo "/gun/position $x $y $z" >> $fname
-	echo "/run/beamOn 1000" >> $fname
+	echo "/run/beamOn 100000" >> $fname
 
 	echo "./LXe ../macs/$fname" >> $fname2
 	echo "mv PMT.dat $fname3" >> $fname2
