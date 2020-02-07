@@ -20,38 +20,26 @@ def poisson_probability(actual, mean):
 #bins = np.arange(0, 4000, 5) # fixed bin size
 
 
-
-bins_2 = np.arange(0, 20000, 20) # fixed bin size
 directory = '../build/'
-angle = []
-counts = []
 NoFound = 0
 for filename in os.listdir(directory):
-	if filename == ".res":
-		NoFound = 1
-		print filename
+	if ".res" in filename:
+	#	print filename
 		f = open(directory+filename, 'r')
-		w, h = 0, 11000000;
-		energies = [[0 for x in range(w)] for y in range(h)] 
-		sum_e = []
-		sum_No = []
-		bins_centers = []
-		p = 0
+		Histogram = []
 		for line in f:
-			EvNum = int(line.split()[0])
-			energies[EvNum].append(float(line.split()[4]))
+			HistogramEntry = int(line.split()[0])
+			Histogram.append(HistogramEntry)
+		print filename.split(".")[0],sum(Histogram[100:])
 
-		for W in xrange(0,h-1):
-			if(len(energies[W]) != 0):
-				sum_No.append(len(energies[W]))
-
-		print "run"
-		with open('../build/res.txt', 'a') as the_file:
+		
+	#	print "run"
+#		with open('../build/res.txt', 'a') as the_file:
 		#for i in xrange(len(sum_No)-1):
-			the_file.write(str(len(sum_No))+'\n')
-if NoFound == 0:
-	with open('../build/res.txt', 'a') as the_file:
-		the_file.write(str(0)+'\n')
+#			the_file.write(str(len(sum_No))+'\n')
+#if NoFound == 0:
+#	with open('../build/res.txt', 'a') as the_file:
+#		the_file.write(str(0)+'\n')
 	
 exit(-1)		
 	#print "len",len(sum_No)
