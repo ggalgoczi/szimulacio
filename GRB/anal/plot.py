@@ -27,7 +27,9 @@ plt.errorbar(
             [x * 10 for x in degree],
             [x * Norm for x in value],
             yerr=[math.sqrt(x)*Norm for x in value],
+           marker=".",
             linestyle="None",
+ 
             label='Count rate with treshold'
             )
 
@@ -45,6 +47,7 @@ plt.errorbar(
             [x * 10 for x in degree],
             [x * Norm for x in value],
             yerr=[math.sqrt(x)*Norm for x in value],
+            marker=".",
             linestyle="None",
             label='Count rate without treshold'
             )
