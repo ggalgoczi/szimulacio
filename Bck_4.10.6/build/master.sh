@@ -2,11 +2,11 @@
 
 rm "PMT.dat"
 
-inputfilename="test.txt"
+inputfilename="master.txt"
 
 
 if [ "$#" -eq 0 ]; then
-    inputfilename="test.txt"
+    inputfilename="master.txt"
 fi
 
 if [ "$#" -eq 1 ]; then
