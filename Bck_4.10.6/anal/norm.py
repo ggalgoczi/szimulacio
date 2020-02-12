@@ -28,8 +28,6 @@ def Rebin(value):
             buff=0
     return value_rebinned
 
-value=value_rebinned
-
 def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries):
     print "../build/"+filename
     f_In = open("../build/"+filename, 'r')
@@ -37,9 +35,16 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries):
     Values=[]
     for line_in in f_In:
         writeout=float(line_in)/float(NumberOfPrimaries)*float(IntegrapSpect)*float(NormFactor)
+#        print "start"
+#        print "line in:",line_in
+#        print NumberOfPrimaries, IntegrapSpect, NormFactor
+#        print "line out",writeout
+#        print "end"
+
         Values.append(writeout)
        # print writeout
         f_Out.write(str(writeout)+"\n")
+    print "For file: ",filename, " integral is:"
     print sum(Values[Treshold:])
    # exit()
 
@@ -54,7 +59,7 @@ for filename in os.listdir("../build/"):
         f = open("../build/master.txt", 'r') # look for the original input spectrum file
         for line in f:
            # print line.split()[3]
-            if DataFileName in line.split()[3]:
+            if DataFileName in line.split()[3] and thickness == line.split()[0]:
                 TheRealNameofInputSpectrum=line.split()[3]
                 NumberOfPrimaries=line.split()[1]
                 try:
