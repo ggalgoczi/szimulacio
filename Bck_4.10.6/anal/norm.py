@@ -33,6 +33,8 @@ def SaveHisto(Values,filename):
     RebinnedValues=Rebin(Values)
     fig = plt.figure()
     ax = fig.add_subplot(111)
+    ax.set_yscale('log')
+
     ax.set_xlabel('Number of detected photons')
     ax.set_ylabel('Count rate [cps]')
     plt.errorbar(
@@ -46,7 +48,7 @@ def SaveHisto(Values,filename):
     
     plt.legend()
     fig.savefig("./plots/"+filename+".png")
-    plt.close()
+    plt.close(fig)
    # plt.show()
 
 def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries):
@@ -65,7 +67,7 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries):
         Values.append(writeout)
        # print writeout
         f_Out.write(str(writeout)+"\n")
-       # SaveHisto(Values,filename)
+    SaveHisto(Values,filename)
   #  print "For file: ",filename, " integral is:"
   #  print sum(Values[Treshold:])
     return filename,sum(Values[Treshold:])

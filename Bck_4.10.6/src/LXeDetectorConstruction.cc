@@ -134,12 +134,12 @@ void LXeDetectorConstruction::DefineMaterials(){
 	G4Element* elI  = new G4Element("Iodine","I" , z= 53., a);
 
 	a = 132.90543*g/mole;
-	G4Element* elCs  = new G4Element("Oxygen"  ,"O" , z= 55., a);
-    fLXe = new G4Material("LXe", density = 4.51*g/cm3, 2);
-        
-    fLXe->AddElement(elCs, 50.0*perCent);
-    fLXe->AddElement(elI, 50.0*perCent);
-  
+	G4Element* elCs  = new G4Element("Caesium"  ,"Cs" , z= 55., a);
+  fLXe = new G4Material("LXe", density = 4.51*g/cm3, 2);
+        G4int natoms;
+    fLXe->AddElement(elCs, natoms=1);
+    fLXe->AddElement(elI, natoms=1);
+
   fAl = new G4Material("Al",z=13.,a=26.98*g/mole,density=2.7*g/cm3);
   Mat_Pb = new G4Material("Pb",z=82.,a=207.2*g/mole,density=11.35*g/cm3);
  
