@@ -23,14 +23,19 @@
 // * acceptance of all terms of the Geant4 Software license.          *
 // ********************************************************************
 //
-// $Id: LXe.cc 77782 2013-11-28 08:12:12Z gcosmo $
 //
 /// \file optical/LXe/LXe.cc
 /// \brief Main program of the optical/LXe example
 //
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-#include "G4MTRunManager.hh"
 
+#include "G4Types.hh"
+
+#ifdef G4MULTITHREADED
+#include "G4MTRunManager.hh"
+#else
+#include "G4RunManager.hh"
+#endif
 
 #include "G4UImanager.hh"
 #include "G4String.hh"
@@ -38,13 +43,9 @@
 #include "FTFP_BERT.hh"
 #include "G4OpticalPhysics.hh"
 #include "G4EmStandardPhysics_option4.hh"
-#include "LXePhysicsList.hh"
+
 #include "LXeDetectorConstruction.hh"
-
 #include "LXeActionInitialization.hh"
-
-#include "LXeRecorderBase.hh"
-#include <stdio.h>
 
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
@@ -53,29 +54,27 @@
 
 int main(int argc, char** argv)
 {
-   G4UIExecutive* ui = nullptr;
-  if (argc == 1) { ui = new G4UIExecutive(argc,argv); }
-	// Deleting files those are appended
-	std::remove( "Particles.txt" );
 
-	   long seed = ((long) time(NULL));
+
+	long seed = ((long) time(NULL));
 
   G4Random::setTheEngine(new CLHEP::MixMaxRng());
   G4Random::setTheSeed(seed);
-  
-  int NoE=1;
-	
+  //detect interactive mode (if no arguments) and define UI session
+  G4UIExecutive* ui = nullptr;
+  if (argc == 1) { ui = new G4UIExecutive(argc,argv); }
+
 #ifdef G4MULTITHREADED
   G4MTRunManager * runManager = new G4MTRunManager;
-  runManager->SetNumberOfThreads(7);
+  G4int nThreads = 11;
+  runManager->SetNumberOfThreads(nThreads);
+  G4cout << "===== LXe is started with "
+         <<  runManager->GetNumberOfThreads() << " threads =====" << G4endl;
 #else
   G4RunManager * runManager = new G4RunManager;
 #endif
-
-
-  runManager->SetUserInitialization(new LXeDetectorConstruction());
-
-
+  LXeDetectorConstruction* det = new LXeDetectorConstruction();
+  runManager->SetUserInitialization(det);
 
   G4VModularPhysicsList* physicsList = new FTFP_BERT;
   physicsList->ReplacePhysics(new G4EmStandardPhysics_option4());
@@ -94,13 +93,8 @@ int main(int argc, char** argv)
   physicsList->RegisterPhysics(opticalPhysics);
   runManager->SetUserInitialization(physicsList);
 
+  runManager->SetUserInitialization(new LXeActionInitialization());
 
-  LXeRecorderBase* recorder = NULL; //No recording is done in this example
-  runManager->SetUserInitialization(new LXeActionInitialization(recorder));
-
-
-  // runManager->Initialize();
- 
   //initialize visualization
   G4VisManager* visManager = new G4VisExecutive;
   visManager->Initialize();

@@ -54,6 +54,7 @@ LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
 	
 	  // Reading in data for event generation
   
+	G4cout << "Started!" << G4endl;
   	  G4AutoLock lock(&myHEPPrimGenMutex);
 // reading in type of particle
 // check if file exists and particle names are OK
@@ -66,6 +67,7 @@ LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
 
 		exit(-1);
 		}
+	G4cout << "Started!2" << G4endl;
 
     std::ifstream f99("energy.txt");
 
@@ -92,6 +94,7 @@ LXeRunAction::LXeRunAction(LXeRecorderBase* r) : fRecorder(r) {
 	//G4cout << Part_Name.size() <<G4endl;
 	//G4cout << "ok" <<G4endl;
     
+	G4cout << "Started!3" << G4endl;
 
 
 // reading in energy spectras for particles:
@@ -146,6 +149,7 @@ while (std::getline(file2, infileline))
 	  lock.unlock();
 
 
+	G4cout << "Started!4" << G4endl;
 
 	
 }
@@ -177,6 +181,7 @@ void LXeRunAction::EndOfRunAction(const G4Run* aRun){
 		G4cout << *it << G4endl;
 		}*/
 	
+	G4cout << "Started!5" << G4endl;
 
 	fpTrackingAction = (LXeTrackingAction*) G4RunManager::GetRunManager()->GetUserTrackingAction();
 

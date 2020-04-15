@@ -91,7 +91,8 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
   G4Track* theTrack = theStep->GetTrack();
   
-  
+
+  /*
   if(theTrack->GetParentID()!=0){
 	if( theTrack->GetCreatorProcess()->GetProcessName() != "Scintillation"    && theTrack->GetCreatorProcess()->GetProcessName() != "Cerenkov"
 	&& theTrack->GetCreatorProcess()->GetProcessName() != "hIoni" 
@@ -101,10 +102,6 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 	&& theTrack->GetCreatorProcess()->GetProcessName() != "hPairProd"
 	//&&  theTrack->GetCreatorProcess()->GetProcessName() != "hadElastic"
 	&&  theTrack->GetCreatorProcess()->GetProcessName() != "compt"
-	
-	
-	
-	
 	)
 	  
 {	 
@@ -112,8 +109,8 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 	if(theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() != "e-") {
   G4cout << theTrack->GetCreatorProcess()->GetProcessName() << G4endl;
   G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;}
-  
-  }}
+  } 
+  } */
    //G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;
         
         
@@ -131,6 +128,24 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
 
   G4StepPoint* thePostPoint = theStep->GetPostStepPoint();
   G4VPhysicalVolume* thePostPV = thePostPoint->GetPhysicalVolume();
+/*
+  if(theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() == "proton"){
+if(theTrack->GetTrackStatus() == fAlive){
+    G4cout << thePostPoint->GetPhysicalVolume()->GetName() << G4endl;
+    G4cout << thePostPoint->GetPhysicalVolume()->GetLogicalVolume()->GetMaterial()->GetName() << G4endl;
+}}
+*/
+
+/*
+  if(theTrack->GetTrackStatus() == fAlive){
+    G4cout << thePostPoint->GetPhysicalVolume()->GetName() << G4endl;
+    G4cout << thePostPoint->GetPhysicalVolume()->GetLogicalVolume()->GetMaterial()->GetName() << G4endl;
+  if(thePostPoint->GetPhysicalVolume()->GetLogicalVolume()->GetMaterial()->GetName() == "Al"){
+    G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;
+  if(theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() == "opticalphoton"){
+    theTrack->SetTrackStatus(fStopAndKill);
+  }}}
+*/
 
   G4OpBoundaryProcessStatus boundaryStatus=Undefined;
   static G4ThreadLocal G4OpBoundaryProcess* boundary=NULL;

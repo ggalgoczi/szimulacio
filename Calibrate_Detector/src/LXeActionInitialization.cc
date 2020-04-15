@@ -43,9 +43,9 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-LXeActionInitialization::LXeActionInitialization(LXeRecorderBase* recorder)
- : G4VUserActionInitialization(), fRecorder(recorder)
-{}
+LXeActionInitialization::LXeActionInitialization()
+ : G4VUserActionInitialization()
+{fRecorder=NULL;}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 

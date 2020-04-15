@@ -58,13 +58,8 @@ CMAKE_BINARY_DIR = /home/galgoczi/cubesat/szimulacio/GRB/build
 
 # Special rule for the target edit_cache
 edit_cache:
-<<<<<<< HEAD
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-=======
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
 	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
->>>>>>> 9622864b82328b659ecfa3b80c6e0706b54005cc
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache

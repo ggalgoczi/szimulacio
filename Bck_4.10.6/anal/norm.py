@@ -7,9 +7,9 @@ import math
 
 pi = 3.1415926
 R = 5000.
-sinTheta = math.sin(0.09 / 180. * pi)
+sinTheta = math.sin(0.5729 / 180. * pi)
 NormFactor = 4. * pi* pi * R* R *sinTheta *sinTheta
-Treshold=30
+Treshold=26
 binsize=100
 
 
@@ -57,19 +57,39 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries):
     f_Out = open("normed/normed_"+filename, 'w')
     Values=[]
     for line_in in f_In:
-        writeout=float(line_in)/float(NumberOfPrimaries)*float(IntegrapSpect)*float(NormFactor)
+        writeout=float(line_in)/float(NumberOfPrimaries)*float(IntegrapSpect)*float(NormFactor) # the norm factor from the real solid angle is taken care later on, 12.5664 is 4 pi
+
+        if filename.find("CXB_gruber500_lines") != -1 or \
+            filename.find("Ajello_et_al_2008_500_lines") != -1 or \
+            filename.find("cr_setting2_fluxes_pos") != -1 or \
+            filename.find("cr_setting2_fluxes_e") != -1 or \
+            filename.find("gcr_magnetosphere_stormy_fluxes_He") != -1 or \
+            filename.find("gcr_magnetosphere_stormy_fluxes_H") != -1:
+                writeout=writeout*0.685
+
+        if filename.find("Albedo_gamma_ray_Ajello_et_al_2008") != -1 or \
+            filename.find("cr_setting1_fluxes_sec_e") != -1 or \
+            filename.find("cr_qarm_setting2_fluxes_albedo_n") != -1 or \
+            filename.find("cr_setting2_fluxes_sec_pos") != -1 or \
+            filename.find("cr_fluxes_sec_p") != -1:
+                writeout=writeout*0.315
+
+        if filename.find("spenvis_tri_electrons") != -1:
+                writeout=writeout/12.56
+
+        Values.append(writeout)
+       # print writeout
+        f_Out.write(str(writeout)+"\n")
 #        print "start"
 #        print "line in:",line_in
 #        print NumberOfPrimaries, IntegrapSpect, NormFactor
 #        print "line out",writeout
 #        print "end"
 
-        Values.append(writeout)
-       # print writeout
-        f_Out.write(str(writeout)+"\n")
+        
     SaveHisto(Values,filename)
-  #  print "For file: ",filename, " integral is:"
-  #  print sum(Values[Treshold:])
+    print "For file: ",filename, " integral is:"
+    print sum(Values[Treshold:])
     return filename,sum(Values[Treshold:])
    # exit()
 
@@ -108,14 +128,18 @@ def PrintTable(ListOfEntries):
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
-               # if Comm.find("CXB_gruber500_lines") != -1:
-              #      f_Out.write(Int+' & ')
+                if Comm.find("CXB_gruber500_lines") != -1:
+                    print "itt", parsedentry[3]
+
+                    Int=str(parsedentry[3]*0.685)
+                    print "itt", Int
+                    f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.685)
                 if Comm.find("Ajello_et_al_2008_500_lines") != -1:
                     f_Out.write(Int+' & ')
 
@@ -123,7 +147,8 @@ def PrintTable(ListOfEntries):
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.315)
                 if Comm.find("Albedo_gamma_ray_Ajello_et_al_2008") != -1:
                     f_Out.write(Int+' & ')
 
@@ -131,21 +156,24 @@ def PrintTable(ListOfEntries):
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.315)
                 if Comm.find("cr_setting1_fluxes_sec_e") != -1:
                     f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.315)
                 if Comm.find("cr_qarm_setting2_fluxes_albedo_n") != -1:
                     f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.315)
 
                 if Comm.find("cr_setting2_fluxes_sec_pos") != -1:
                     f_Out.write(Int+' & ')
@@ -153,21 +181,24 @@ def PrintTable(ListOfEntries):
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.315)
                 if Comm.find("cr_fluxes_sec_p.dat") != -1:
                     f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.685)
                 if Comm.find("cr_setting2_fluxes_pos.dat") != -1:
                     f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.685)
                 if Comm.find("cr_setting2_fluxes_e.dat") != -1:
                     f_Out.write(Int+' & ')
                     print 9
@@ -175,21 +206,24 @@ def PrintTable(ListOfEntries):
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.685)
                 if Comm.find("gcr_magnetosphere_stormy_fluxes_He.dat") != -1:
                     f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux*0.685)
                 if Comm.find("gcr_magnetosphere_stormy_fluxes_H.dat") != -1:
                     f_Out.write(Int+' & ')
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                Int=str(parsedentry[3])
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux/12.65)
                 if Comm.find("spenvis_tri_electrons.txt") != -1:
                     f_Out.write(Int+' & ')
         f_Out.write("\n")
@@ -230,7 +264,7 @@ for filename in os.listdir("../build/"):
         DataFile=filename.split("_")[2:-2]
         DataFileName='_'.join(DataFile)
       #  print DataFileName
-        f = open("../build/master.txt", 'r') # look for the original input spectrum file
+        f = open("../build/master_safe.txt", 'r') # look for the original input spectrum file
         for line in f:
         
             if  line.split()[3].find(DataFileName) != -1 and thickness == line.split()[0]:
