@@ -19,6 +19,10 @@ def poisson_probability(actual, mean):
 # fixed bin size
 #bins = np.arange(0, 4000, 5) # fixed bin size
 
+Flux=2.25023 # particle / cm**2 / sec
+AreaOfIrradiation=30*30 # in cm
+ParticlesSimulated=100000
+Norm=Flux*AreaOfIrradiation/ParticlesSimulated
 
 directory = '../build/'
 NoFound = 0
@@ -28,9 +32,9 @@ for filename in os.listdir(directory):
 		f = open(directory+filename, 'r')
 		Histogram = []
 		for line in f:
-			HistogramEntry = int(line.split()[0])
+			HistogramEntry = float(line.split()[0])*Norm
 			Histogram.append(HistogramEntry)
-		print filename.split(".")[0],sum(Histogram[26:])
+		print filename.split(".")[0],sum(Histogram[1:])
 
 		
 	#	print "run"

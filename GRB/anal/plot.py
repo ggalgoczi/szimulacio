@@ -30,7 +30,7 @@ plt.errorbar(
            marker=".",
             linestyle="None",
  
-            label='Count rate with treshold'
+            label='Count rate with threshold'
             )
 
 
@@ -49,7 +49,7 @@ plt.errorbar(
             yerr=[math.sqrt(x)*Norm for x in value],
             marker=".",
             linestyle="None",
-            label='Count rate without treshold'
+            label='Count rate without threshold'
             )
 plt.legend(  )
 fig.savefig("grb_direction_detection.png")

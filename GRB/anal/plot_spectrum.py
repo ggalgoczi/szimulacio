@@ -6,16 +6,13 @@ import pandas as pd
 import math
 degree=[]
 value=[]
-Flux=2.25023 # particle / cm**2 / sec
-AreaOfIrradiation=30*30 # in cm
-ParticlesSimulated=100000
-Norm=Flux*AreaOfIrradiation/ParticlesSimulated
 
 fig = plt.figure()
 ax = fig.add_subplot(111)
-ax.set_xlabel('Number of detected photons')
+ax.set_xlabel('Energy [keV]')
 ax.set_ylabel('Count rate [cps]')
-
+ax.set_xlim([0,3000])
+ax.set_ylim([0.01,100])
 f = open("../build/5.res", 'r')
 for line in f:
 	value.append(float(line.split()[0]))	
@@ -41,12 +38,12 @@ for i in value:
 value=value_rebinned
 
 plt.errorbar(
-            [x * binsize for x in np.arange(len(value))],
+            [x * binsize / 1.37 for x in np.arange(len(value))],
             [x * Norm for x in value],
             yerr=[math.sqrt(x)*Norm for x in value],
             marker=".",
             linestyle="None",
-            label='Measured scintillation spectrum for 50$^{\circ}$'
+            label='Measured scintillation spectrum for 45$^{\circ}$'
             )
 
 
@@ -78,7 +75,7 @@ value=value_rebinned
 plt.yscale('log')
 
 plt.errorbar(
-            [x * binsize for x in np.arange(len(value))],
+            [x * binsize / 1.37 for x in np.arange(len(value))],
             [x * Norm for x in value],
             yerr=[math.sqrt(x)*Norm for x in value],
             marker=".",
