@@ -58,15 +58,7 @@ int main(int argc, char** argv)
   G4UIExecutive* ui = nullptr;
   if (argc == 1) { ui = new G4UIExecutive(argc,argv); }
 
-#ifdef G4MULTITHREADED
-  G4MTRunManager * runManager = new G4MTRunManager;
-  G4int nThreads = 11;
-  runManager->SetNumberOfThreads(nThreads);
-  G4cout << "===== LXe is started with "
-         <<  runManager->GetNumberOfThreads() << " threads =====" << G4endl;
-#else
   G4RunManager * runManager = new G4RunManager;
-#endif
   LXeDetectorConstruction* det = new LXeDetectorConstruction();
   runManager->SetUserInitialization(det);
 

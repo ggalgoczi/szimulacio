@@ -363,7 +363,7 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
                                                           // phi:   0 ->  2 pi
   //Create and place the Al and Pb sheets
 
-  G4double Al_y = 2.*mm;
+  G4double Al_y = 0.01*mm;
   G4double Offset_Pb1 = fScint_y/2+fD_mtl+1*mm+Pb_y+9.5*mm+Al_y+Pb_y/2;
   G4double Offset_Pb2 = fScint_y/2+fD_mtl+1*mm+Pb_y/2;
   G4double Offset_Al = fScint_y/2+fD_mtl+1*mm+Pb_y+9.5*mm+Al_y/2;
@@ -396,14 +396,14 @@ G4VPhysicalVolume* LXeDetectorConstruction::ConstructDetector()
   G4RotationMatrix* rm_x = new G4RotationMatrix();
   rm_x->rotateX(-90*deg); 
   
-  Pb1_log = new G4LogicalVolume(Pb1_box_With_Hole, Mat_Pb, "Pb1_log",0,0,0);
+  Pb1_log = new G4LogicalVolume(Pb1_box_With_Hole, fVacuum, "Pb1_log",0,0,0);
   Pb1_phys = new G4PVPlacement(rm_x,G4ThreeVector(0,Offset_Pb1,0),
                               Pb1_log,"Pb1",fExperimentalHall_log,false,0);
 
   Pb2_box = new G4Box("Pb2_box",fScint_x/2, Pb_y/2, fScint_z/2);
 //  G4SubtractionSolid Pb2_box_With_Hole("Box-Cylinder", &Pb2_box, &Cylinder1);
  
-  Pb2_log = new G4LogicalVolume(Pb1_box_With_Hole, Mat_Pb, "Pb1_log",0,0,0);
+  Pb2_log = new G4LogicalVolume(Pb1_box_With_Hole, fVacuum, "Pb1_log",0,0,0);
   Pb2_phys = new G4PVPlacement(rm_x,G4ThreeVector(0,Offset_Pb2,0),
                               Pb2_log,"Pb2",fExperimentalHall_log,false,0);
                                                             
