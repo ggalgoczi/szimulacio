@@ -1,0 +1,60 @@
+nohup: ignoring input
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+rm: cannot remove 'totalfluxes.txt': No such file or directory
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
+
+real	20m28,775s
+user	143m9,338s
+sys	0m0,704s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
+
+real	20m14,623s
+user	141m30,337s
+sys	0m0,748s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_Gruber_et_al_1999.dat
+
+real	20m17,200s
+user	141m48,763s
+sys	0m0,812s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat
+
+real	20m14,226s
+user	141m27,982s
+sys	0m0,728s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat
+
+real	20m13,216s
+user	141m18,569s
+sys	0m1,304s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008.dat
+
+real	20m13,378s
+user	141m19,886s
+sys	0m1,128s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+
+LXe: /home/galgoczi/cubesat/Bck/src/LXeDetectorConstruction.cc:830: void LXeDetectorConstruction::SetDefaults(): Assertion `infileline.size() != 0' failed.
+master.sh: line 58:  5089 Aborted                 (core dumped) ./LXe run.mac > "output_${particle}_${file}"
+
+real	0m0,100s
+user	0m0,005s
+sys	0m0,011s
+mv: cannot stat 'PMT1.dat': No such file or directory
+mv: cannot stat 'PMT2.dat': No such file or directory
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/trapped_particles_outside_SAA_and_polar_regions_i20_alt500km_3_orbits/AE9_AP9_Monte_Carlo/100_runs_mean_default_SPENVIS_energies/spenvis_tri_electrons.txt

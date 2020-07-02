@@ -1,3 +1,14 @@
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
-\BOOKMARK [1][-]{section.2}{Results}{}% 2
-\BOOKMARK [1][-]{section.1}{Miscellaneous Formatting Details}{}% 3
+\BOOKMARK [1][-]{section.2}{The implementation of the framework}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Background}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Validation of the light propagation in the scintillators of the CAMELOT satellite}{subsection.2.1}% 4
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Validation of the deposited dose in the SDD of the HERMES satellite}{subsection.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.2}{Proton induced activation}{section.2}% 6
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Validation of proton induced activation}{subsection.2.2}% 7
+\BOOKMARK [1][-]{section.3}{The application of the framework to the CAMELOT and HERMES satellites}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Background from cosmic, trapped and albedo particles for the CAMELOT satellites}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Background from proton induced activation for the HERMES and CAMELOT satellites}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Methodology}{}% 11
+\BOOKMARK [1][-]{section.5}{Simulation of GRB induced signal in the detector}{}% 12
+\BOOKMARK [1][-]{section.6}{Results}{}% 13
+\BOOKMARK [1][-]{section.1}{Miscellaneous Formatting Details}{}% 14

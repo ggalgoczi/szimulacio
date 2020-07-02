@@ -1,0 +1,4 @@
+/run/initialize
+/gun/position 0 25 0 mm
+/gun/energy 5 keV
+/run/beamOn 1000

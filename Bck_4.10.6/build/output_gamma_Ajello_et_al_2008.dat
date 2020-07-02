@@ -1,0 +1,389 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-00-patch-04    (6-March-2015)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+  ASCIITree (ATree)
+  DAWNFILE (DAWNFILE)
+  G4HepRep (HepRepXML)
+  G4HepRepFile (HepRepFile)
+  OpenGLImmediateQt (OGLI, OGLIQt)
+  OpenGLImmediateX (OGLIX, OGLI_FALLBACK, OGLIQt_FALLBACK)
+  OpenGLStoredQt (OGL, OGLS, OGLSQt)
+  OpenGLStoredX (OGLSX, OGL_FALLBACK, OGLS_FALLBACK, OGLSQt_FALLBACK)
+  RayTracer (RayTracer)
+  VRML1FILE (VRML1FILE)
+  VRML2FILE (VRML2FILE)
+  gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+Checking overlaps for volume cad_physical_3 ... OK! 
+Checking overlaps for volume cad_physical_4 ... OK! 
+Checking overlaps for volume cad_physical_6 ... OK! 
+Checking overlaps for volume cad_physical_5 ... OK! 
+Checking overlaps for volume cad_physical ... OK! 
+Checking overlaps for volume cad_physical_7 ... OK! 
+Checking overlaps for volume cad_physical_8 ... OK! 
+Checking overlaps for volume cad_physical_9 ... 
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          apparently fully encapsulating volume cad_physical_5
+          at the same level !
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (49.2601,-23.0251,-8.48634), overlapping by at least: 1.07391 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (31.7565,42.0189,-121.257), overlapping by at least: 4.67114 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (49.0771,-9.49321,1.47605), overlapping by at least: 1.25693 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (49.1658,-31.1607,-5.37358), overlapping by at least: 1.16816 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (39.67,42.5107,-120.576), overlapping by at least: 2.8955 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (-9.68885,42.0189,-122.166), overlapping by at least: 3.76186 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (48.516,-23.6282,-23.6817), overlapping by at least: 1.81804 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (48.516,-8.68928,0.759425), overlapping by at least: 1.81804 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (48.9422,-32.7749,-3.75934), overlapping by at least: 1.39178 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (48.516,-20.3556,-33.3141), overlapping by at least: 1.81804 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (-36.9689,46.9907,-124.894), overlapping by at least: 1.03377 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (0.62713,46.836,-120.494), overlapping by at least: 1.64904 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (23.8525,-40.9811,-121.621), overlapping by at least: 4.30733 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (41.0865,-42.4649,-120.812), overlapping by at least: 1.26284 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (42.016,-41.4015,-123.242), overlapping by at least: 2.11342 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (-6.71168,42.0189,-123.297), overlapping by at least: 2.63165 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (48.516,2.05515,-38.5472), overlapping by at least: 1.81804 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical volume's
+          local point (48.516,-28.626,-17.71), overlapping by at least: 1.81804 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (41.363,-40.9811,-121.194), overlapping by at least: 2.56925 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : GeomVol1002
+      issued by : G4PVPlacement::CheckOverlaps()
+Overlap with volume already placed !
+          Overlap is detected for volume cad_physical_9
+          with cad_physical_5 volume's
+          local point (24.6073,43.5893,-120.494), overlapping by at least: 4.89571 mm 
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+OK! 
+Checking overlaps for volume housing ... OK! 
+Checking overlaps for volume scintillator ... OK! 
+Checking overlaps for volume photocath ... OK! 
+Checking overlaps for volume pbshielding1 ... OK! 
+Checking overlaps for volume pbshielding2 ... OK! 
+Checking overlaps for volume pbshielding3 ... OK! 
+Checking overlaps for volume pbshielding4 ... OK! 
+Checking overlaps for volume pbshielding5 ... OK! 
+a b 0 -32.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -24.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -16.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -8.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 7.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 15.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 23.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 31.5
+Checking overlaps for volume pmt ... OK! 
+Checking overlaps for volume housing ... OK! 
+Checking overlaps for volume scintillator ... OK! 
+Checking overlaps for volume photocath ... OK! 
+Checking overlaps for volume pbshielding1 ... OK! 
+Checking overlaps for volume pbshielding2 ... OK! 
+Checking overlaps for volume pbshielding3 ... OK! 
+Checking overlaps for volume pbshielding4 ... OK! 
+Checking overlaps for volume pbshielding5 ... OK! 
+a b 0 -32.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -24.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -16.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -8.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 7.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 15.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 23.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 31.5
+Checking overlaps for volume pmt ... OK! 
+Checking overlaps for volume housing ... OK! 
+Checking overlaps for volume scintillator ... OK! 
+Checking overlaps for volume photocath ... OK! 
+Checking overlaps for volume pbshielding1 ... OK! 
+Checking overlaps for volume pbshielding2 ... OK! 
+Checking overlaps for volume pbshielding3 ... OK! 
+Checking overlaps for volume pbshielding4 ... OK! 
+Checking overlaps for volume pbshielding5 ... OK! 
+a b 0 -32.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -24.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -16.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -8.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 7.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 15.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 23.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 31.5
+Checking overlaps for volume pmt ... OK! 
+Checking overlaps for volume housing ... OK! 
+Checking overlaps for volume scintillator ... OK! 
+Checking overlaps for volume photocath ... OK! 
+Checking overlaps for volume pbshielding1 ... OK! 
+Checking overlaps for volume pbshielding2 ... OK! 
+Checking overlaps for volume pbshielding3 ... OK! 
+Checking overlaps for volume pbshielding4 ... OK! 
+Checking overlaps for volume pbshielding5 ... OK! 
+a b 0 -32.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -24.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -16.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 -8.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 7.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 15.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 23.5
+Checking overlaps for volume pmt ... OK! 
+a b 0 31.5
+Checking overlaps for volume pmt ... OK! 
+Construction /LXeDet/pmtSD
+Construction /LXeDet/scintSD

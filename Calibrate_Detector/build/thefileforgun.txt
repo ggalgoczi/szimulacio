@@ -1,0 +1,1 @@
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_ray_background-secondary_electrons_and_positrons/cr_setting2_fluxes_sec_e.dat

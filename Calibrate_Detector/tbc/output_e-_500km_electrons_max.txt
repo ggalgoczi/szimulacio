@@ -1,0 +1,13 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-00-patch-04 [MT]   (6-March-2015)
+  << in Multi-threaded mode >> 
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+*******************************
+Abort!!!
+File: /home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt does not exist!
+*******************************

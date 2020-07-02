@@ -1,0 +1,73 @@
+nohup: ignoring input
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_He.dat
+
+real	21m11,276s
+user	167m41,423s
+sys	0m0,316s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/500km_electrons_max.txt
+
+real	3m49,111s
+user	30m7,202s
+sys	0m0,168s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_H.dat
+
+real	22m42,563s
+user	179m43,601s
+sys	0m0,316s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/polar_regions/north/AE9_AP9_Monte_Carlo/100_runs_95th_percentile_default_SPENVIS_energies/spenvis_tri_protons.txt
+
+real	22m36,810s
+user	178m58,426s
+sys	0m0,356s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_rays_primary_electrons_and_positrons/cr_setting1_fluxes_e.dat
+
+real	0m26,822s
+user	3m25,463s
+sys	0m0,108s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_ray_background-secondary_electrons_and_positrons/cr_setting2_fluxes_sec_e.dat
+
+real	0m27,387s
+user	3m29,955s
+sys	0m0,052s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_ray_background-secondary_electrons_and_positrons/cr_setting1_fluxes_sec_e.dat
+
+real	0m27,468s
+user	3m30,568s
+sys	0m0,096s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/albedo_neutrons/cr_qarm_setting2_fluxes_albedo_n.dat
+
+real	2m16,766s
+user	17m56,036s
+sys	0m0,096s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_ray_background-secondary_electrons_and_positrons/cr_setting2_fluxes_sec_pos.dat
+
+real	0m8,583s
+user	0m53,820s
+sys	0m0,072s
+rm: cannot remove 'PMT1.dat': No such file or directory
+rm: cannot remove 'PMT2.dat': No such file or directory
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_rays_primary_electrons_and_positrons/cr_setting2_fluxes_pos.dat
+
+real	0m8,954s
+user	0m55,594s
+sys	0m0,076s

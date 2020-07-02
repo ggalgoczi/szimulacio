@@ -1,0 +1,1 @@
+1.5 10000 proton /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Galactic_Cosmic_Rays/gcr_magnetosphere_stormy_fluxes_H.dat

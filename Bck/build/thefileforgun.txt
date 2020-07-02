@@ -1,0 +1,1 @@
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cr_fluxes_sec_p.dat
