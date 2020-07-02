@@ -1,4 +1,4 @@
-# Install script for directory: /home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons
+# Install script for directory: /home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,7 +33,7 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/CMakeRelink.dir/LXe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/CMakeRelink.dir/LXe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -44,5 +44,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

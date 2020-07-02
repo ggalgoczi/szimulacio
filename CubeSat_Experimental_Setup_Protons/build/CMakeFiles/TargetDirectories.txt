@@ -1,6 +1,6 @@
-/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/install.dir
-/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/list_install_components.dir
-/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/LXe.dir
-/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/install/local.dir
-/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/rebuild_cache.dir
-/home/galgoczi/cubesat/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/edit_cache.dir
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/rebuild_cache.dir
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/edit_cache.dir
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/list_install_components.dir
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/install/local.dir
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/LXe.dir
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/build/CMakeFiles/install.dir

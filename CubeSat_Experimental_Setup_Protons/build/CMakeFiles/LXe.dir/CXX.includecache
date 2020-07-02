@@ -909,6 +909,8 @@ LXeEMPhysics.hh
 /home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/src/LXeEMPhysics.hh
 LXeMuonPhysics.hh
 /home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/src/LXeMuonPhysics.hh
+G4EmLivermorePhysics.hh
+/home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/src/G4EmLivermorePhysics.hh
 G4OpticalPhysics.hh
 /home/galgoczi/cubesat/szimulacio/CubeSat_Experimental_Setup_Protons/src/G4OpticalPhysics.hh
 G4OpticalProcessIndex.hh
@@ -2377,6 +2379,12 @@ Randomize.hh
 /home/galgoczi/ess/geant4/include/Geant4/Randomize.hh
 vector
 -
+
+/home/galgoczi/ess/geant4/include/Geant4/G4EmLivermorePhysics.hh
+G4VPhysicsConstructor.hh
+/home/galgoczi/ess/geant4/include/Geant4/G4VPhysicsConstructor.hh
+globals.hh
+/home/galgoczi/ess/geant4/include/Geant4/globals.hh
 
 /home/galgoczi/ess/geant4/include/Geant4/G4EmModelManager.hh
 globals.hh
