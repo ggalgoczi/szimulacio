@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 1 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/typical_lgrb_spectrum_from_1024ms_peak_comp.dat
 1 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/typical_sgrb_spectrum_from_1024ms_peak_plaw.dat
 1 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/typical_lgrb_fluence_spectrum_comp.dat
@@ -25,3 +26,6 @@
 0.5 100000 e+ /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cosmic_rays_primary_electrons_and_positrons/cr_setting2_fluxes_pos.dat
 0.5 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008_500_lines.dat
 0.5 100000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/CXB_gruber500_lines.dat
+=======
+1.5 1000000 gamma /home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008_500_lines.dat
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0

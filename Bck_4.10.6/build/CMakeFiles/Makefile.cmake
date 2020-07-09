@@ -13,8 +13,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
+<<<<<<< HEAD
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
+=======
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
   "../cerenkov.mac"
   "../defaults.mac"
   "../gui.mac"
@@ -24,6 +27,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../run.png"
   "../vis.mac"
   "../wls.mac"
+<<<<<<< HEAD
   "/home/galgoczi/software/geant4.10.6_MT/G4EXPATShim.cmake"
   "/home/galgoczi/software/geant4.10.6_MT/G4X11Shim.cmake"
   "/home/galgoczi/software/geant4.10.6_MT/Geant4Config.cmake"
@@ -52,10 +56,43 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/CMakeDetermineCompilerId.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeDetermineSystem.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeFindBinUtils.cmake"
+=======
+  "/home/galgoczi/software/cadmesh/CADMesh/build/cadmesh-config.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/G4EXPATShim.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/G4X11Shim.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/Geant4Config.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/Geant4ConfigVersion.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/Geant4LibraryDepends.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/Geant4PackageCache.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/Modules/IntelCompileFeatures.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/Modules/MSVCCompileFeatures.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/UseGeant4.cmake"
+  "/home/galgoczi/software/geant4.10.06_MT/UseGeant4_internal.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5OpenGL/Qt5OpenGLConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
   "/usr/share/cmake-3.10/Modules/CMakeFindDependencyMacro.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeParseArguments.cmake"
+<<<<<<< HEAD
   "/usr/share/cmake-3.10/Modules/CMakeParseImplicitLinkInfo.cmake"
   "/usr/share/cmake-3.10/Modules/CMakePushCheckState.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeSystem.cmake.in"
@@ -118,23 +155,41 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
+=======
+  "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake"
+  "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.10/Modules/CheckFunctionExists.c"
+  "/usr/share/cmake-3.10/Modules/CheckFunctionExists.cmake"
+  "/usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake"
+  "/usr/share/cmake-3.10/Modules/Compiler/GNU.cmake"
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
   "/usr/share/cmake-3.10/Modules/FindEXPAT.cmake"
   "/usr/share/cmake-3.10/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.10/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.10/Modules/FindPkgConfig.cmake"
+<<<<<<< HEAD
   "/usr/share/cmake-3.10/Modules/FindQt4.cmake"
   "/usr/share/cmake-3.10/Modules/FindX11.cmake"
   "/usr/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake"
   "/usr/share/cmake-3.10/Modules/MacroAddFileDependencies.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-Determine-CXX.cmake"
+=======
+  "/usr/share/cmake-3.10/Modules/FindX11.cmake"
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/UnixPaths.cmake"
+<<<<<<< HEAD
   "/usr/share/cmake-3.10/Modules/Qt4ConfigDependentSettings.cmake"
   "/usr/share/cmake-3.10/Modules/Qt4Macros.cmake"
+=======
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
   )
 
 # The corresponding makefile is:
@@ -145,11 +200,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+<<<<<<< HEAD
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
+=======
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
   "LXe.out"
   "LXe.in"
   "defaults.mac"

@@ -62,7 +62,7 @@ int main(int argc, char** argv)
 	// Deleting files those are appended
 	std::remove( "Particles.txt" );
 
-	   long seed = ((long) time(NULL));
+	long seed = ((long) time(NULL));
 
   G4Random::setTheEngine(new CLHEP::MixMaxRng());
   G4Random::setTheSeed(seed);

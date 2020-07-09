@@ -90,7 +90,8 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
                                               GetCurrentEvent()->GetEventID();
 
   G4Track* theTrack = theStep->GetTrack();
-   //G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;
+  
+//  G4cout << theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() << G4endl;
         
         
 
@@ -106,7 +107,16 @@ void LXeSteppingAction::UserSteppingAction(const G4Step * theStep){
   G4VPhysicalVolume* thePrePV = thePrePoint->GetPhysicalVolume();
 
   G4StepPoint* thePostPoint = theStep->GetPostStepPoint();
+
+
+  
   G4VPhysicalVolume* thePostPV = thePostPoint->GetPhysicalVolume();
+
+  if(!thePostPoint){
+  if(thePostPoint->GetPhysicalVolume()->GetLogicalVolume()->GetMaterial()->GetName() == "Al"){
+  if(theTrack->GetDynamicParticle()->GetParticleDefinition()->GetParticleName() == "opticalphoton"){
+    theTrack->SetTrackStatus(fStopAndKill);
+  }}}
 
   G4OpBoundaryProcessStatus boundaryStatus=Undefined;
   static G4ThreadLocal G4OpBoundaryProcess* boundary=NULL;

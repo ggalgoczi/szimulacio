@@ -1,3 +1,9 @@
 /run/initialize
+<<<<<<< HEAD
 /gun/position 65 17.5 27.5 mm
 /run/beamOn 10000
+=======
+/gun/position 0 25 0 mm
+/gun/energy 5 keV
+/run/beamOn 1000
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0

@@ -127,6 +127,7 @@ G4cout << aStep->GetTrack()->GetParentID() << G4endl;
   G4int n=fPMTHitCollection->entries();
   LXePMTHit* hit=NULL;
   for(G4int i=0;i<n;i++){
+  //  G4cout << "beep " << (*fPMTHitCollection)[i]->GetPMTNumber() << G4endl;
     if(
 		(*fPMTHitCollection)[i]->GetPMTNumber()==pmtNumber 
 		&& 

@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /home/galgoczi/cubesat/cosmic_spectras/typical_lgrb_spectrum_from_1024ms_peak_comp.dat
+=======
+/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/Ajello_et_al_2008_500_lines.dat
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0

@@ -28,9 +28,9 @@ for filename in os.listdir(directory):
 		f = open(directory+filename, 'r')
 		Histogram = []
 		for line in f:
-			HistogramEntry = int(line.split()[0])
+			HistogramEntry = float(line.split()[0])
 			Histogram.append(HistogramEntry)
-		print filename.split(".")[0],sum(Histogram[100:])
+		print filename.split(".")[0],sum(Histogram[84:])
 
 		
 	#	print "run"

@@ -43,7 +43,7 @@ class B4DetectorConstruction;
 class LXeActionInitialization : public G4VUserActionInitialization
 {
   public:
-    LXeActionInitialization(LXeRecorderBase*);
+    LXeActionInitialization();
     virtual ~LXeActionInitialization();
 
     virtual void BuildForMaster() const;
