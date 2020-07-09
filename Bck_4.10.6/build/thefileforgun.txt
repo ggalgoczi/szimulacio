@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/hiroshima_stripped/cr_fluxes_sec_p.dat
+/home/galgoczi/cubesat/cosmic_spectras/typical_lgrb_spectrum_from_1024ms_peak_comp.dat

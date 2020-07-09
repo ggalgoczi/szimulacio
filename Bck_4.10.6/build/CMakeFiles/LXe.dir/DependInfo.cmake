@@ -58,7 +58,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../include"
   "/home/galgoczi/Downloads/geant4.10.06/source/analysis/g4tools/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/analysis/accumulables/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/analysis/csv/include"
@@ -205,6 +204,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/galgoczi/Downloads/geant4.10.06/source/visualization/management/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/visualization/modeling/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/visualization/OpenGL/include"
+  "../include"
   "/home/galgoczi/software/geant4.10.6_MT/source/externals/zlib"
   "/usr/include/qt4/QtGui"
   "/usr/include/qt4/QtCore"
