@@ -68,17 +68,24 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries,thickness):
             filename.find("cr_setting2_fluxes_e") != -1 or \
             filename.find("gcr_magnetosphere_stormy_fluxes_He") != -1 or \
             filename.find("gcr_magnetosphere_stormy_fluxes_H") != -1:
-                writeout=writeout*0.685
+                writeout=writeout*0.687
 
-        if filename.find("Albedo_gamma_ray_Ajello_et_al_2008") != -1 or \
+        if  filename.find("Albedo_gamma_ray_Ajello_et_al_2008") != -1 or \
+            filename.find("cr_qarm_setting2_fluxes_albedo_n") != -1:
+                writeout=writeout*0.313
+
+        if  filename.find("cr_setting2_fluxes_sec_pos") != -1 or \
+            filename.find("cr_fluxes_sec_p") != -1  or \
+            filename.find("fluxes_trap_e_AE9_500km_i20_MC_CL50_10s_30days_thr_10") != -1 or \
             filename.find("cr_setting1_fluxes_sec_e") != -1 or \
-            filename.find("cr_qarm_setting2_fluxes_albedo_n") != -1 or \
-            filename.find("cr_setting2_fluxes_sec_pos") != -1 or \
-            filename.find("cr_fluxes_sec_p") != -1:
-                writeout=writeout*0.315
+            filename.find("fluxes_trap_p_AE9_500km_i20_MC_CL50_10s_30days_thr_10") != -1:
+                writeout=writeout
 
-        if filename.find("spenvis_tri_electrons") != -1:
-                writeout=writeout/12.56
+        if filename.find("fluxes_trap_p_AE9_500km_i20_MC_CL50_10s_30days_thr_10") != -1:
+                writeout=writeout
+
+        if filename.find("inner_galaxy_fluxes_gamma") != -1:
+                writeout=writeout*0.04311167674
 
         if float(thickness) == 1:
             if filename.find("CXB_gruber500_lines") == -1:
@@ -91,6 +98,11 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries,thickness):
         if float(thickness) == 2:
             if filename.find("CXB_gruber500_lines") == -1:
                 Master2[PlaceHolder]=Master2[PlaceHolder]+writeout
+
+
+        if float(thickness) == 0.5:
+            if filename.find("CXB_gruber500_lines") == -1:
+                Master0p5[PlaceHolder]=Master0p5[PlaceHolder]+writeout
 
 
         Values.append(writeout)
@@ -125,6 +137,8 @@ def PrintTable(ListOfEntries):
     f_Out1.write("Stormy $\\alpha$ &")
     f_Out1.write("Stormy p$^{+}$ &")
     f_Out1.write("Trapped e$^{-}$ &")
+    f_Out1.write("Trapped p$^{-}$ &")
+    f_Out1.write("Galactic $\gamma$ $^{-}$ &")
     f_Out1.write("\hline"+"\n")
 
 
@@ -163,7 +177,7 @@ def PrintTable(ListOfEntries):
       #  print FullName
 
     # Now iterate through content 
-    for tckness in[1,1.5,2]:    
+    for tckness in[0.5,1,1.5,2]:    
         f_Out1.write(str(tckness)+" mm &")
         f_Out2.write(str(tckness)+" mm &")
 
@@ -277,9 +291,29 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
-                if Comm.find("spenvis_tri_electrons.txt") != -1:
+                if Comm.find("fluxes_trap_e_AP9_500km_i20_MC_CL50_10s_30days_thr_10.txt") != -1:
                     f_Out1.write("{:.3f}".format(float(Int))+' & ')
                     print "OKK", 12
+
+
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux)
+                if Comm.find("fluxes_trap_p_AP9_500km_i20_MC_CL50_10s_30days_thr_10.txt") != -1:
+                    f_Out1.write("{:.3f}".format(float(Int))+' & ')
+                    print "OKK", 13
+
+
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux)
+                if Comm.find("inner_galaxy_fluxes_gamma.txt") != -1:
+                    f_Out1.write("{:.3f}".format(float(Int))+' & ')
+                    print "OKK", 14
 
         f_Out1.write("\n")
         f_Out2.write("\n")
@@ -329,7 +363,7 @@ for filename in os.listdir("../build/"):
       #  print DataFileName
         f = open("../build/master_safe.txt", 'r') # look for the original input spectrum file
         for line in f:
-        
+            print line
             if  line.split()[3].find(DataFileName) != -1 and thickness == line.split()[0]:
                 TheRealNameofInputSpectrum=line.split()[3]
                 NumberOfPrimaries=line.split()[1]
@@ -359,6 +393,7 @@ PrintTable(SumAndFileNamePairList)
 f_master1 = open("bck_1mm", 'w')
 f_master2 = open("bck_1p5mm", 'w')
 f_master3 = open("bck_2mm", 'w')
+f_master4 = open("bck_0p5mm", 'w')
 
 for i in Master1:
     f_master1.write(str(i)+'\n')
@@ -370,5 +405,9 @@ for i in Master1p5:
 
 for i in Master2:
     f_master3.write(str(i)+'\n')    
+
+
+for i in Master0p5:
+    f_master4.write(str(i)+'\n')        
     #f = open(file, 'r')
     #for line in f:
