@@ -14,6 +14,7 @@ binsize=100
 Master1=np.zeros(10001)
 Master1p5=np.zeros(10001)
 Master2=np.zeros(10001)
+Master0p5=np.zeros(10001)
 
 def Rebin(value):
     value_rebinned = []
@@ -130,15 +131,16 @@ def PrintTable(ListOfEntries):
     f_Out1.write("\\begin{tabular}{|c|c|c|c|c|c|c|c|}"+"\n")
     f_Out1.write("\hline"+"\n")
     f_Out1.write("&")
-    f_Out1.write("CXB Gruber &")
     f_Out1.write("CXB Ajello &")
-    f_Out1.write("Cosmic e$^{+}$ &")
-    f_Out1.write("Cosmic e$^{-}$ &")
+    f_Out1.write("CXB Gruber &")
     f_Out1.write("Stormy $\\alpha$ &")
     f_Out1.write("Stormy p$^{+}$ &")
-    f_Out1.write("Trapped e$^{-}$ &")
-    f_Out1.write("Trapped p$^{-}$ &")
     f_Out1.write("Galactic $\gamma$ $^{-}$ &")
+    f_Out1.write("Trapped p$^{-}$ &")
+    f_Out1.write("Cosmic e$^{-}$ &")
+    f_Out1.write("Cosmic e$^{+}$ &")
+
+    f_Out1.write("Trapped e$^{-}$ &")
     f_Out1.write("\hline"+"\n")
 
 
@@ -181,16 +183,6 @@ def PrintTable(ListOfEntries):
         f_Out1.write(str(tckness)+" mm &")
         f_Out2.write(str(tckness)+" mm &")
 
-        for parsedentry in ListOfLists:
-            if float(parsedentry[0]) == tckness:
-                Comm=parsedentry[2]
-                if Comm.find("CXB_gruber500_lines") != -1:
-                    print "itt", parsedentry[3]
-
-                    Int=str(parsedentry[3])
-                    print "itt", Int
-                    f_Out1.write("{:.0f}".format(float(Int))+' & ')
-                    print "OKK", 1
 
 
         for parsedentry in ListOfLists:
@@ -200,8 +192,56 @@ def PrintTable(ListOfEntries):
                 Int=str(TheRealFlux)
                 if Comm.find("Ajello_et_al_2008_500_lines") != -1:
                     f_Out1.write("{:.0f}".format(float(Int))+' & ')
+                    print "OKK", 1
+
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                if Comm.find("CXB_gruber500_lines") != -1:
+                    print "itt", parsedentry[3]
+
+                    Int=str(parsedentry[3])
+                    print "itt", Int
+                    f_Out1.write("{:.0f}".format(float(Int))+' & ')
                     print "OKK", 2
 
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux)
+                if Comm.find("gcr_magnetosphere_stormy_fluxes_He.dat") != -1:
+                    f_Out1.write("{:.2f}".format(float(Int))+' & ')
+                    print "OKK", 10
+
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux)
+                if Comm.find("gcr_magnetosphere_stormy_fluxes_H.dat") != -1:
+                    f_Out1.write("{:.2f}".format(float(Int))+' & ')
+                    print "OKK", 11
+        
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux)
+                if Comm.find("inner_galaxy_fluxes_gamma.dat") != -1:
+                    f_Out1.write("{:.3f}".format(float(Int))+' & ')
+                    print "OKK", 14
+
+
+
+        for parsedentry in ListOfLists:
+            if float(parsedentry[0]) == tckness:
+                Comm=parsedentry[2]
+                TheRealFlux=float(parsedentry[3])
+                Int=str(TheRealFlux)
+                if Comm.find("fluxes_trap_p_AP9_500km_i20_MC_CL50_10s_30days_thr_10.dat") != -1:
+                    f_Out1.write("{:.3f}".format(float(Int))+' & ')
+                    print "OKK", 13
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
@@ -250,14 +290,6 @@ def PrintTable(ListOfEntries):
                     f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 7
 
-        for parsedentry in ListOfLists:
-            if float(parsedentry[0]) == tckness:
-                Comm=parsedentry[2]
-                TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
-                if Comm.find("cr_setting2_fluxes_pos.dat") != -1:
-                    f_Out1.write("{:.4f}".format(float(Int))+' & ')
-                    print "OKK", 8
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
@@ -273,47 +305,26 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
-                if Comm.find("gcr_magnetosphere_stormy_fluxes_He.dat") != -1:
-                    f_Out1.write("{:.2f}".format(float(Int))+' & ')
-                    print "OKK", 10
+                if Comm.find("cr_setting2_fluxes_pos.dat") != -1:
+                    f_Out1.write("{:.4f}".format(float(Int))+' & ')
+                    print "OKK", 8
+
+
+ 
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
-                if Comm.find("gcr_magnetosphere_stormy_fluxes_H.dat") != -1:
-                    f_Out1.write("{:.2f}".format(float(Int))+' & ')
-                    print "OKK", 11
-
-        for parsedentry in ListOfLists:
-            if float(parsedentry[0]) == tckness:
-                Comm=parsedentry[2]
-                TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
-                if Comm.find("fluxes_trap_e_AP9_500km_i20_MC_CL50_10s_30days_thr_10.txt") != -1:
+                if Comm.find("fluxes_trap_e_AE9_500km_i20_MC_CL50_10s_30days_thr_10.dat") != -1:
                     f_Out1.write("{:.3f}".format(float(Int))+' & ')
                     print "OKK", 12
 
 
-        for parsedentry in ListOfLists:
-            if float(parsedentry[0]) == tckness:
-                Comm=parsedentry[2]
-                TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
-                if Comm.find("fluxes_trap_p_AP9_500km_i20_MC_CL50_10s_30days_thr_10.txt") != -1:
-                    f_Out1.write("{:.3f}".format(float(Int))+' & ')
-                    print "OKK", 13
 
 
-        for parsedentry in ListOfLists:
-            if float(parsedentry[0]) == tckness:
-                Comm=parsedentry[2]
-                TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
-                if Comm.find("inner_galaxy_fluxes_gamma.txt") != -1:
-                    f_Out1.write("{:.3f}".format(float(Int))+' & ')
-                    print "OKK", 14
+
 
         f_Out1.write("\n")
         f_Out2.write("\n")
@@ -354,8 +365,8 @@ SumAndFileNamePairList=[]
 Checklist = []
 for filename in os.listdir("../build/"):
     #print filename
-    if filename.find("rate") != -1:
-       # print filename
+    if filename.find("rate_") != -1:
+        print filename
        # print str(filename.split("_")[2:])
         thickness=filename.split("_")[-2]
         DataFile=filename.split("_")[2:-2]

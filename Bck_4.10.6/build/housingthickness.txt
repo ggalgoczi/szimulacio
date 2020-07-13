@@ -1,1 +1,1 @@
-s/cr_qarm_setting2_fluxes_albedo_n.dat
+2

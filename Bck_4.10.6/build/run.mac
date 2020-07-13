@@ -22,9 +22,16 @@
 /gps/ang/maxtheta    0.5729 deg
 
 # Input spectrum
-/gps/particle s/cr_qarm_setting2_fluxes_albedo_n.dat 
+/gps/particle e- 
 /gps/ene/type Arb
 /gps/hist/type arb
 
+/gps/hist/point 0.0400000 0.239158
+/gps/hist/point 0.0700000 0.227313
+/gps/hist/point 0.100000 0.158424
+/gps/hist/point 0.250000 0.0365747
+/gps/hist/point 0.500000 0.00293616
+/gps/hist/point 0.750000 6.98761e-05
+/gps/hist/point 1.00000 2.70736e-10
 /gps/hist/inter Log
-/run/beamOn s/cr_qarm_setting2_fluxes_albedo_n.dat
+/run/beamOn 1000000
