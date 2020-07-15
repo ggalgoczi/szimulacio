@@ -8,7 +8,7 @@ degree=[]
 value=[]
 Flux=2.25023 # particle / cm**2 / sec
 AreaOfIrradiation=60*60 # in cm
-ParticlesSimulated=100000
+ParticlesSimulated=10000
 Norm=Flux*AreaOfIrradiation/ParticlesSimulated
 
 fig = plt.figure()

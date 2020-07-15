@@ -141,7 +141,7 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   G4double RandZ = -1+2*G4UniformRand();
   //G4cout << "hoo " << position2[0] + 300 * std::sin(alpha) * RandXY << G4endl;
   fParticleGun->SetParticlePosition(G4ThreeVector(position2[0] + 300 * std::sin(alpha) * RandXY, position2[1] - 300 * std::cos(alpha) * RandXY, 300*RandZ)); 
-  //cout << "gun was" << position2[0] << " " << position2[1] << " " << position2[2] << "\n";
+  //cout << "gun was" << position2[0] + 300 * std::sin(alpha) * RandXY << " " << position2[1] - 300 * std::cos(alpha) * RandXY << " " << 300*RandZ << "\n";
 	}
 
 	if(Gun_On_Sphere == 1){
@@ -210,7 +210,7 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   double Ener = fRunAction->EnSpectrum->DrawEnergy();
   //G4cout << "Energy was: " << Ener << "\n"; // verbosehoz
 
-  fParticleGun->SetParticleEnergy(5*MeV);
+  fParticleGun->SetParticleEnergy(Ener*MeV);
 	//G4cout << Ener << " was" << G4endl;
   //fParticleGun->SetParticleEnergy(energy*MeV);
   //cout << "Energy was: " << energy << "\n"; // verbosehoz
