@@ -58,8 +58,18 @@ CMAKE_BINARY_DIR = /home/galgoczi/cubesat/szimulacio/Bck_4.10.6/build
 
 # Special rule for the target edit_cache
 edit_cache:
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
 	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+<<<<<<< HEAD
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
+	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+>>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
+>>>>>>> b5f746b2c035719c9829dba341c0b9f80a0470c2
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
