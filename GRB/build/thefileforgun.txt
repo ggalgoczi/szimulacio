@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/typical_sgrb_spectrum_from_1024ms_peak_plaw.dat
+/home/galgoczi/cubesat/cosmic_spectras/typical_sgrb_spectrum_from_256ms_peak_plaw.dat

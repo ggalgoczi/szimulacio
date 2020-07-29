@@ -213,6 +213,6 @@ void LXePrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent){
   fParticleGun->SetParticleEnergy(Ener*MeV);
 	//G4cout << Ener << " was" << G4endl;
   //fParticleGun->SetParticleEnergy(energy*MeV);
-  //cout << "Energy was: " << energy << "\n"; // verbosehoz
+  //cout << "Energy was: " << Ener << "\n"; // verbosehoz
   fParticleGun->GeneratePrimaryVertex(anEvent);
 }
