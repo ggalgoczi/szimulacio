@@ -4,6 +4,7 @@ import numpy as np
 import operator
 import pandas as pd
 import math
+from math import sqrt
 
 pi = 3.1415926
 R = 5000.
@@ -15,6 +16,11 @@ Master1=np.zeros(10001)
 Master1p5=np.zeros(10001)
 Master2=np.zeros(10001)
 Master0p5=np.zeros(10001)
+Bck0p5=2541.8406
+Bck1=2307.5303
+Bck1p5=2037.3582
+Bck2=1941.9659
+
 
 
 def Rebin(value):
@@ -104,7 +110,7 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries,thickness):
 def PrintTable(ListOfEntries):
     
 
-    f_Out2 = open("latex_table_transients", 'w')
+    f_Out2 = open("latex_snr_table_transients", 'w')
     f_Out2.write('\\begin{table}[h!]'+'\n')
     f_Out2.write("\\begin{center}"+"\n")
     f_Out2.write("\\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}"+"\n")
@@ -146,9 +152,18 @@ def PrintTable(ListOfEntries):
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(0.064))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(0.064))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(0.064))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(0.064))
+
+
                 if Comm.find("typical_sgrb_spectrum_from_64ms_peak_plaw") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 1
 
         for parsedentry in ListOfLists:
@@ -157,9 +172,19 @@ def PrintTable(ListOfEntries):
                 if Comm.find("typical_sgrb_spectrum_from_256ms_peak_plaw") != -1:
                     print "itt", parsedentry[3]
 
-                    Int=str(parsedentry[3])
+                    if tckness == 0.5:
+                        Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(0.256))
+                    if tckness == 1:
+                        Int=str(TheRealFlux/sqrt(Bck1)*sqrt(0.256))
+                    if tckness == 1.5:
+                        Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(0.256))
+                    if tckness == 2:
+                        Int=str(TheRealFlux/sqrt(Bck2)*sqrt(0.256))
+
+
+
                     print "itt", Int
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 2
 
         for parsedentry in ListOfLists:
@@ -167,8 +192,18 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(1.024))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(1.024))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(1.024))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(1.024))
+
+
                 if Comm.find("typical_sgrb_spectrum_from_1024ms_peak_plaw") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 3
 
         for parsedentry in ListOfLists:
@@ -176,8 +211,17 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(0.064))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(0.064))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(0.064))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(0.064))
+
                 if Comm.find("typical_lgrb_spectrum_from_64ms_peak_comp") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 4
         
         for parsedentry in ListOfLists:
@@ -185,8 +229,17 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(0.256))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(0.256))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(0.256))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(0.256))
+
                 if Comm.find("typical_lgrb_spectrum_from_256ms_peak_comp") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 5
 
 
@@ -196,17 +249,35 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(1.024))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(1.024))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(1.024))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(1.024))
+
                 if Comm.find("typical_lgrb_spectrum_from_1024ms_peak_comp") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.1f}".format(float(Int))+' & ')
                     print "OKK", 6
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(10))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(10))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(10))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(10))
+         
+
                 if Comm.find("typical_lgrb_fluence_spectrum_comp") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.1f}".format(float(Int))+' & ')
                     print "OKK", 7
 
 
@@ -216,8 +287,17 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(0.0001))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(0.0001))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(0.0001))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(0.0001))
+
                 if Comm.find("TGF_AGILE_Marisaldi_et_al_2014") != -1:
-                    f_Out2.write("{:.0f}".format(float(Int))+' & ')
+                    f_Out2.write("{:.2f}".format(float(Int))+' & ')
                     print "OKK", 8
 
 
@@ -225,7 +305,15 @@ def PrintTable(ListOfEntries):
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
-                Int=str(TheRealFlux)
+                if tckness == 0.5:
+                    Int=str(TheRealFlux/sqrt(Bck0p5)*sqrt(0.2))
+                if tckness == 1:
+                    Int=str(TheRealFlux/sqrt(Bck1)*sqrt(0.2))
+                if tckness == 1.5:
+                    Int=str(TheRealFlux/sqrt(Bck1p5)*sqrt(0.2))
+                if tckness == 2:
+                    Int=str(TheRealFlux/sqrt(Bck2)*sqrt(0.2))
+
                 if Comm.find("example_sgr_spectrum") != -1:
                     f_Out2.write("{:.0f}".format(float(Int))+' \\\\ ')
                     print "OKK", 9
@@ -250,7 +338,7 @@ def PrintTable(ListOfEntries):
     f_Out2.write("\hline"+"\n")
     f_Out2.write("\end{tabular}"+"\n")
     f_Out2.write("\end{center}"+"\n")
-    f_Out2.write("\caption{Simulated detection rate (in counts per second assuming a low-energy threshold of 20 keV) induced by the X-ray/$\gamma$-ray transient sources for different thicknesses of the aluminium support structure of the detector. For short and long GRBs the 64\,ms, 256\,ms and 1024\,ms peak spectra were used. For long GRB also the fluence spectrum (fln. sp.) was used.}"+"\n")
+    f_Out2.write("\caption{Simulated detection SNR for the X-ray/$\gamma$-ray transient sources for different thicknesses of the aluminium support structure of the detector. The assumed background count rate is the sum of all components as described in Ref.~\ref{sec:sim_background}. For the GRB peak spectra were used the exposure time $\Delta t=$ 64\,ms, 256\,ms and 1024\,ms. For the fluence spectrum (fln. sp.) of long GRB we used $\Delta t=10$\,s. For TGF we assume exposure time $\Delta t=0.1$\,ms and for SGR $\Delta t=0.2$\,s.}"+"\n")
     f_Out2.write("\label{table:count_rates_transients}"+"\n")
     f_Out2.write("\end{table}"+"\n")
 #############################################################
