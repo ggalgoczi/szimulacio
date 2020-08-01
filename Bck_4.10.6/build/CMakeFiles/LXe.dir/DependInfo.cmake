@@ -54,13 +54,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "QT_GUI_LIB"
   "QT_NO_DEBUG"
   "QT_OPENGL_LIB"
-  "QT_PRINTSUPPORT_LIB"
-  "QT_WIDGETS_LIB"
   )
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> b5f746b2c035719c9829dba341c0b9f80a0470c2
   "/home/galgoczi/Downloads/geant4.10.06/source/analysis/g4tools/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/analysis/accumulables/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/analysis/csv/include"
@@ -207,6 +208,15 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/galgoczi/Downloads/geant4.10.06/source/visualization/management/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/visualization/modeling/include"
   "/home/galgoczi/Downloads/geant4.10.06/source/visualization/OpenGL/include"
+<<<<<<< HEAD
+  "../include"
+  "/home/galgoczi/software/geant4.10.6_MT/source/externals/zlib"
+  "/usr/include/qt4/QtGui"
+  "/usr/include/qt4/QtCore"
+  "/usr/share/qt4/mkspecs/default"
+  "/usr/include/qt4"
+  "/usr/include/qt4/QtOpenGL"
+=======
   "../include"
   "/home/galgoczi/software/geant4.10.6_MT/source/externals/zlib"
   "/usr/include/qt4/QtGui"
@@ -371,6 +381,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"
   "/usr/include/x86_64-linux-gnu/qt5/QtOpenGL"
 >>>>>>> 45e1acd2736c028c298f8e5d211c6d237e640bf0
+>>>>>>> b5f746b2c035719c9829dba341c0b9f80a0470c2
   )
 
 # Targets to which this target links.

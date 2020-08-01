@@ -116,7 +116,7 @@ G4cout << aStep->GetTrack()->GetParentID() << G4endl;
   aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1); 
  //   aStep->GetPostStepPoint()->GetTouchable()->GetReplicaNumber(1);
     
-    //G4cout << pmtNumber << G4endl;
+//  G4cout << "scintno " << scintNumber << G4endl;
 
     
   G4VPhysicalVolume* physVol=
@@ -178,7 +178,8 @@ fPMTHitCollection->entries() !=0
   for(G4int i=0;i<n;i++){
 	  
       hit=(*fPMTHitCollection)[i];
-     // G4cout << (*fPMTHitCollection)[i]->GetPMTNumber() << " " << (*fPMTHitCollection)[i]->GetScintCpyNo() << " " << hit->GetPhotonCount()  << G4endl;
+     
+      //G4cout << "The no: " << (*fPMTHitCollection)[i]->GetPMTNumber() << " " << (*fPMTHitCollection)[i]->GetScintCpyNo() << " " << hit->GetPhotonCount()  << G4endl;
 
       
       NoOfPhot += hit->GetPhotonCount();

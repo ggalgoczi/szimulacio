@@ -6,7 +6,7 @@ import pandas as pd
 import math
 degree=[]
 value=[]
-Flux=2.25023 # particle / cm**2 / sec
+Flux=2.94113 # particle / cm**2 / sec
 AreaOfIrradiation=60*60 # in cm
 ParticlesSimulated=100000
 Norm=Flux*AreaOfIrradiation/ParticlesSimulated
@@ -47,7 +47,7 @@ plt.errorbar(
             yerr=[math.sqrt(x)*Norm for x in value],
             marker=".",
             linestyle="None",
-            label='Measured scintillation spectrum for 45$^{\circ}$'
+            label='Simulated scintillation spectrum for 50$^{\circ}$'
             )
 
 
@@ -89,5 +89,5 @@ plt.errorbar(
 
 
 plt.legend()
-fig.savefig("grb_spectrum.png")
+fig.savefig("grb_spectrum.eps")
 plt.show()

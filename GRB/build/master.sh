@@ -42,6 +42,7 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	echo $res > "../build/thefileforgun.txt"
 	echo $thickness > "../build/housingthickness.txt"
 	echo "/run/initialize" > "../build/run.mac"
+	echo "/gun/position 229.81334293569341062900 192.83629290596179780900 0" >>  "../build/run.mac"
 	echo "/run/beamOn ${sim_no}" >> "../build/run.mac"
 	
 	#for f in ../macs/*.sh; do  # or wget-*.sh instead of *.sh
@@ -50,10 +51,8 @@ while IFS='' read -r line || [[ -n "$line" ]]; do
 	#done
 
 	time ./LXe run.mac > "output_${particle}_${file}"
-	outputfilename="rate_${particle}_${file}_${thickness}_1_pmt.txt"
-	outputfilename2="rate_${particle}_${file}_${thickness}_2_pmt.txt"
-	mv PMT1.dat $outputfilename
-	mv PMT2.dat $outputfilename2
+	outputfilename="rate_${particle}_${file}_${thickness}_pmt.txt"
+	mv PMT.dat $outputfilename
 	#mv
 done < $inputfilename
 

@@ -30,8 +30,8 @@ for filename in os.listdir(directory):
 		for line in f:
 			HistogramEntry = float(line.split()[0])
 			Histogram.append(HistogramEntry)
-		print filename.split(".")[0],sum(Histogram[84:])
-
+		print filename.split(".")[0],sum(Histogram[1:])
+# should be integration form 84
 		
 	#	print "run"
 #		with open('../build/res.txt', 'a') as the_file:

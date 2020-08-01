@@ -1,1 +1,1 @@
-/home/galgoczi/cubesat/cosmic_spectras/GRB_short_typical.dat
+/home/galgoczi/cubesat/cosmic_spectras/typical_lgrb_fluence_spectrum_comp.dat
