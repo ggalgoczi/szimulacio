@@ -146,14 +146,14 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
-                if Comm.find("typical_sgrb_spectrum_from_64ms_peak_plaw") != -1:
+                if Comm.find("typical_sgrb_spectrum_from_64ms_peak_comp") != -1:
                     f_Out2.write("{:.0f}".format(float(Int))+' & ')
                     print "OKK", 1
 
         for parsedentry in ListOfLists:
             if float(parsedentry[0]) == tckness:
                 Comm=parsedentry[2]
-                if Comm.find("typical_sgrb_spectrum_from_256ms_peak_plaw") != -1:
+                if Comm.find("typical_sgrb_spectrum_from_256ms_peak_comp") != -1:
                     print "itt", parsedentry[3]
 
                     Int=str(parsedentry[3])
@@ -166,7 +166,7 @@ def PrintTable(ListOfEntries):
                 Comm=parsedentry[2]
                 TheRealFlux=float(parsedentry[3])
                 Int=str(TheRealFlux)
-                if Comm.find("typical_sgrb_spectrum_from_1024ms_peak_plaw") != -1:
+                if Comm.find("typical_sgrb_spectrum_from_1024ms_peak_comp") != -1:
                     f_Out2.write("{:.0f}".format(float(Int))+' & ')
                     print "OKK", 3
 

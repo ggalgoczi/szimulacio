@@ -59,10 +59,11 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries,thickness):
     f_In = open("../build/"+filename, 'r')
     f_Out = open("normed/normed_"+filename, 'w')
     Values=[]
+    Values_Unnormed=[]
     PlaceHolder=0
     for line_in in f_In:
         writeout=float(line_in)/float(NumberOfPrimaries)*float(IntegrapSpect)*float(NormFactor) # the norm factor from the real solid angle is taken care later on, 12.5664 is 4 pi
-
+        Values_Unnormed.append(float(line_in))
         if filename.find("CXB_gruber500_lines") != -1 or \
             filename.find("Ajello_et_al_2008_500_lines") != -1 or \
             filename.find("cr_setting2_fluxes_pos") != -1 or \
@@ -119,6 +120,7 @@ def NormHistogram(filename,IntegrapSpect,NumberOfPrimaries,thickness):
     SaveHisto(Values,filename)
 
     print "For file: ",filename, " integral is:"
+    print sum(Values_Unnormed[Treshold:])
     print sum(Values[Treshold:])
     return filename,sum(Values[Treshold:])
    # exit()
