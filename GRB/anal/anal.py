@@ -30,7 +30,7 @@ for filename in os.listdir(directory):
 		for line in f:
 			HistogramEntry = float(line.split()[0])
 			Histogram.append(HistogramEntry)
-		print filename.split(".")[0],sum(Histogram[1:])
+		print filename.split(".")[0],sum(Histogram[82:])
 # should be integration form 84
 		
 	#	print "run"

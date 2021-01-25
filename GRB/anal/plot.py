@@ -6,7 +6,7 @@ import pandas as pd
 import math
 degree=[]
 value=[]
-Flux=2.94113 # particle / cm**2 / sec
+Flux=2.20 # particle / cm**2 / sec
 AreaOfIrradiation=60*60 # in cm
 ParticlesSimulated=100000
 Norm=Flux*AreaOfIrradiation/ParticlesSimulated

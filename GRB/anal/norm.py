@@ -283,6 +283,8 @@ for filename in os.listdir("../build/"):
                 Checklist.append([line.split()[3],line.split()[0]])
                 lineIn=f2.readline() # Get integral spectrum
                 IntegrapSpect=lineIn.split()[2]
+                print "Lol is",IntegrapSpect,filename
+
                 Pair=NormHistogram(filename,IntegrapSpect,NumberOfPrimaries,thickness) 
                 print "Pair is",Pair
                 SumAndFileNamePairList.append(Pair)
